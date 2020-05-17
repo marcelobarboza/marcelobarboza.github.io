@@ -1,0 +1,117 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt_BR">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>2. Espaços vetoriais &#8212; documentação Notas de Curso </title>
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" />
+    <link rel="prev" title="1. Relações de equivalência" href="preliminares.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>documentação Notas de Curso </span></a></h1>
+        <h2 class="heading"><span>2. Espaços vetoriais</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="preliminares.html">1. Relações de equivalência</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Conteúdos</a>
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="espacos-vetoriais">
+<h1>2. Espaços vetoriais<a class="headerlink" href="#espacos-vetoriais" title="Link permanente para este título">¶</a></h1>
+<p>Um espaço vetorial real é um conjunto não vazio <span class="math notranslate nohighlight">\(V\)</span> munido de uma operação
+binária</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{lllll}
++ &amp; : &amp; V\times V &amp; \longrightarrow &amp; V, \\
+&amp; &amp; (x,y) &amp; \longmapsto &amp; x + y
+\end{array}\end{split}\]</div>
+<p>dita adição ou soma, e uma operação unária</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{lllll}
+\cdot &amp; : &amp; \mathbb{R}\times V &amp; \longrightarrow &amp; V, \\
+&amp; &amp; (\alpha,x) &amp; \longmapsto &amp; \alpha\cdot x
+\end{array}\end{split}\]</div>
+<p>dita multiplicação por escalar, as quais se encontram sujeitas às seguintes
+regras de operação:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">associatividade da soma:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">para todos <span class="math notranslate nohighlight">\(x,y,z\in V\)</span>, vale <span class="math notranslate nohighlight">\((x+y)+z=x+(y+z)\)</span>;</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">elemento neutro da soma:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">existe em <span class="math notranslate nohighlight">\(V\)</span> um elemento que se denota por <span class="math notranslate nohighlight">\(0\)</span> e se caracteriza
+pelo fato de que <span class="math notranslate nohighlight">\(x+0=x\)</span>, para todo <span class="math notranslate nohighlight">\(x\in V\)</span>;</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">oposto aditivo:</th><td class="field-body"><p class="first">a cada <span class="math notranslate nohighlight">\(x\in V\)</span> corresponde um <span class="math notranslate nohighlight">\(y\in V\)</span> para o qual
+<span class="math notranslate nohighlight">\(x+y=0\)</span>;</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">comutatividade da soma:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">para todos <span class="math notranslate nohighlight">\(x,y\in V\)</span>, vale <span class="math notranslate nohighlight">\(x+y=y+x\)</span>;</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">compatibilidade entre a soma e a multiplicação por escalares:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">para todos <span class="math notranslate nohighlight">\(\alpha,\beta\in\mathbb{R}\)</span> e <span class="math notranslate nohighlight">\(x\in V\)</span> vale
+<span class="math notranslate nohighlight">\((\alpha+\beta)\cdot x=\alpha\cdot x+\beta\cdot x\)</span>;</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">linearidade da multiplicação por escalares:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ol class="first loweralpha simple">
+<li>para todos <span class="math notranslate nohighlight">\(\alpha\in\mathbb{R}\)</span> e <span class="math notranslate nohighlight">\(x,y\in V\)</span>, vale
+<span class="math notranslate nohighlight">\(\alpha\cdot(x+y)=\alpha\cdot x+\alpha\cdot y\)</span>;</li>
+<li>para todos <span class="math notranslate nohighlight">\(\alpha,\beta\in\mathbb{R}\)</span> e <span class="math notranslate nohighlight">\(x\in V\)</span>, vale
+<span class="math notranslate nohighlight">\(\alpha\cdot(\beta\cdot x)=(\alpha\beta)\cdot x=\beta\cdot(\alpha\cdot x)\)</span>;</li>
+</ol>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">operador neutro:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first last">existe <span class="math notranslate nohighlight">\(1\in\mathbb{R}\)</span> tal que, para todo <span class="math notranslate nohighlight">\(x\in V\)</span>, vale
+<span class="math notranslate nohighlight">\(1\cdot x=x\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="preliminares.html">1. Relações de equivalência</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Conteúdos</a>
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Marcelo Barboza.
+      Criado usando <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>
