@@ -12,7 +12,7 @@ conjunto :math:`R\subseteq X\times X` com as propriedades seguintes:
    se :math:`(x,y)\in R` e :math:`(y,z)\in R` então :math:`(x,z)\in R`.
 
 .. note::
-   Aqui se escreve :math:`xRy` para dizer que :math:`(x,y)\in R`.
+   Às vezes se escreve :math:`xRy` para dizer que :math:`(x,y)\in R`.
 
 Seja :math:`R` uma relação de equivalência em um conjunto (não vazio) :math:`X`.
 A classe de equivalência de um elemento :math:`x\in X`, segundo :math:`R`, é o
@@ -66,7 +66,7 @@ partição de :math:`X` na figura de
 A aplicação
 
 .. math::
-   \begin{array}{lllll}
+   \begin{array}{ccccc}
    \pi & : & X & \longrightarrow & X/R, \\
    & & x & \longmapsto & [x]
    \end{array}
@@ -97,8 +97,8 @@ Exemplos
 
    é uma relação de equivalência em :math:`A`. Com efeito, ocorre que:
 
-   a. para todo :math:`x\in A`, :math:`(x,x)\in R_f` uma vez que :math:`f` é uma
-      bem definida função e, por esta razão, se sabe que :math:`f(x) = f(x)`;
+   a. para todo :math:`x\in A` se tem :math:`(x,x)\in R_f` uma vez que :math:`f`
+   é uma bem definida função e, por esta razão, se sabe que :math:`f(x) = f(x)`;
 
    b. para todos :math:`x,y\in A`, se :math:`(x,y)\in R_f` então
       :math:`f(x)=f(y)` e, assim, :math:`f(y)=f(x)` (pois a igualdade, sim, é
@@ -108,5 +108,4 @@ Exemplos
       :math:`(y,z)\in R_f` é o mesmo que dizer que :math:`f(x)=f(y)` e
       :math:`f(y)=f(z)`. Como a igualdade é transitiva, vê-se que
       :math:`f(x)=f(z)` e, portanto, que :math:`(x,z)\in R_f`.
-       
-
+ 
