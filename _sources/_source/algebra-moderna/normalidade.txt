@@ -1,5 +1,5 @@
 Subgrupos normais
-=================
+-----------------
 
 No parágrafo anterior introduzimos a importante noção de classe de conjugação.
 Neste, vamos introduzir os subgrupos normais e com estes, os grupos quocientes.
@@ -68,3 +68,22 @@ Exemplos
    para todos :math:`g(x)=ax+b\in G` e :math:`h(x)=x+c\in H`, provando que de
    fato :math:`H\mathrel{\unlhd}G` (exercício: prove os detalhes omitidos neste
    exemplo).
+
+Propriedades
+------------
+
+**Proposição**
+    Seja G um grupo. Então,
+
+    #. :math:`N\mathrel{\unlhd}G\iff gN=Ng,\,\forall\,\,g\in G`;
+
+    #. :math:`N_1,N_2\mathrel{\unlhd}G\implies N_1\cap N_2\mathrel{\unlhd} G`;
+
+    #. :math:`H\mathrel{\leqslant}G\mbox{ e }\mathrel{\unlhd}G\implies HN\mathrel{\leqslant}G`, onde :math:`HN=\{hn:h\in H,\,n\in N\}`;
+
+    #. :math:`N_1,N_2\mathrel{\unlhd}G\implies N_1N_2\mathrel{\unlhd}G`;
+
+    #. :math:`H\mathrel{\unlhd}G,N\mathrel{\unlhd}G\implies H\cap N\mathrel{\unlhd}H`.
+
+**Proposição**
+    Sejam G um grupo e :math:`N\mathrel{\unlhd}G`. Então, 

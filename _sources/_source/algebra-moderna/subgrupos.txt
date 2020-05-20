@@ -148,7 +148,7 @@ Teorema de Lagrange
 
 Sejam :math:`G` um grupo e :math:`H` um subconjunto de :math:`G`. Dizemos que
 :math:`x\in G` é congruente a :math:`y\in H`, e escrevemos
-:math:`x\equiv y\mod H`, se :math:`xy^{-1}\in H`.
+:math:`x\mathrel{\equiv}y\mod H`, se :math:`xy^{-1}\in H`.
 
 **Proposição**
     Sejam :math:`G` um grupo e :math:`H` um subconjunto de :math:`G`. Então,

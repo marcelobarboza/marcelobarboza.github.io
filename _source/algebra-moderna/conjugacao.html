@@ -6,33 +6,35 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Conjugação &#8212; Notas de Aula a1 documentação</title>
+    <title>Conjugação &#8212; Notas de Aula</title>
     
-    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
+        URL_ROOT:    '../../',
         VERSION:     'a1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="index" title="Índice" href="genindex.html" />
-    <link rel="search" title="Buscar" href="search.html" />
-    <link rel="top" title="Notas de Aula a1 documentação" href="index.html" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../search.html" />
+    <link rel="top" title="Notas de Aula" href="../../index.html" />
+    <link rel="up" title="Álgebra Moderna" href="index.html" />
+    <link rel="next" title="Subgrupos normais" href="normalidade.html" />
     <link rel="prev" title="Subgrupos" href="subgrupos.html" /> 
   </head>
   <body role="document">
-      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
-          <span>Notas de Aula a1 documentação</span></a></h1>
+      <div class="header" role="banner"><h1 class="heading"><a href="../../index.html">
+          <span>Notas de Aula</span></a></h1>
         <h2 class="heading"><span>Conjugação</span></h2>
       </div>
       <div class="topnav" role="navigation" aria-label="top navigation">
@@ -40,7 +42,9 @@
         <p>
         «&#160;&#160;<a href="subgrupos.html">Subgrupos</a>
         &#160;&#160;::&#160;&#160;
-        <a class="uplink" href="index.html">Conteúdos</a>
+        <a class="uplink" href="../../index.html">Conteúdos</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="normalidade.html">Subgrupos normais</a>&#160;&#160;»
         </p>
 
       </div>
@@ -94,18 +98,15 @@ passa a se escrever assim:</p>
 <dd><p class="first">Sejam G um grupo e x um elemento arbitrariamente fixado em G. Então, a
 função</p>
 <div class="math">
-\[\phi_x:G/C_G(x)\longrightarrow x^G,\quad C_G(x)g\longmapsto x^g,\]</div>
+\[\Phi_x:G/C_G(x)\longrightarrow x^G,\quad C_G(x)g\longmapsto x^g,\]</div>
 <p class="last">é uma bijeção. Segue do Teorema de Lagrange que
 <span class="math">\(\vert x^G\vert=[G:C_G(x)]\)</span>.</p>
 </dd>
 <dt><strong>Prova</strong></dt>
 <dd><p class="first">Basta observar que se <span class="math">\(g,h\in G\)</span>, então</p>
 <div class="math">
-\[\begin{split}\begin{align}
-\phi_x(C_G(x)g)=\phi_x(C_G(x)h)&amp;\iff x^g=x^h\iff x^{gh^{-1}}=x\iff gh^{-1}\in C_G(x)\\
-&amp;\iff C_G(x)g=C_G(x)h,
-\end{align}\end{split}\]</div>
-<p class="last">de onde segue que <span class="math">\(\phi_x\)</span> é uma bem definida e injetora função. Como
+\[\Phi_x(C_G(x)g)=\Phi_x(C_G(x)h)\iff x^g=x^h\iff x^{gh^{-1}}=x\iff gh^{-1}\in C_G(x)\iff C_G(x)g=C_G(x)h,\]</div>
+<p class="last">de onde segue que <span class="math">\(\Phi_x\)</span> é uma bem definida e injetora função. Como
 ela é obviamente sobrejetora, deve ser ainda bijetora. Isto conclui a
 demontração.</p>
 </dd>
@@ -134,7 +135,9 @@ abeliano (exercício);</li>
         <p>
         «&#160;&#160;<a href="subgrupos.html">Subgrupos</a>
         &#160;&#160;::&#160;&#160;
-        <a class="uplink" href="index.html">Conteúdos</a>
+        <a class="uplink" href="../../index.html">Conteúdos</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="normalidade.html">Subgrupos normais</a>&#160;&#160;»
         </p>
 
       </div>

@@ -1,25 +1,17 @@
-.. Notas de Aula documentation master file, created by
-   sphinx-quickstart on Mon May 18 08:19:59 2020.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Notas de Aula
-=============
-
-Contents:
+Bem vindo às minhas notas de aula!
+==================================
 
 .. toctree::
-   :maxdepth: 2
+   :caption: Cursos:
+   :maxdepth: 1
+   :name: Documento Principal
 
-   preliminares.rst
-   subgrupos.rst
-   conjugacao.rst
-   normalidade.rst
+   _source/algebra-linear/index.rst
+   _source/algebra-moderna/index.rst
 
-Indices and tables
-==================
+Índices e tabelas
+=================
 
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-

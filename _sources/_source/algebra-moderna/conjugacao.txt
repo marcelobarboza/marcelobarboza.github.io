@@ -1,5 +1,5 @@
 Conjugação
-==========
+----------
 
 Seja G um grupo. Considere, em G, a seguinte relação binária:
 
@@ -58,7 +58,7 @@ passa a se escrever assim:
     função
 
     .. math::
-       \phi_x:G/C_G(x)\longrightarrow x^G,\quad C_G(x)g\longmapsto x^g,
+       \Phi_x:G/C_G(x)\longrightarrow x^G,\quad C_G(x)g\longmapsto x^g,
 
     é uma bijeção. Segue do Teorema de Lagrange que
     :math:`\vert x^G\vert=[G:C_G(x)]`.
@@ -67,12 +67,9 @@ passa a se escrever assim:
     Basta observar que se :math:`g,h\in G`, então
 
     .. math::
-       \begin{align}
-       \phi_x(C_G(x)g)=\phi_x(C_G(x)h)&\iff x^g=x^h\iff x^{gh^{-1}}=x\iff gh^{-1}\in C_G(x)\\
-       &\iff C_G(x)g=C_G(x)h,
-       \end{align}
+       \Phi_x(C_G(x)g)=\Phi_x(C_G(x)h)\iff x^g=x^h\iff x^{gh^{-1}}=x\iff gh^{-1}\in C_G(x)\iff C_G(x)g=C_G(x)h,
 
-    de onde segue que :math:`\phi_x` é uma bem definida e injetora função. Como
+    de onde segue que :math:`\Phi_x` é uma bem definida e injetora função. Como
     ela é obviamente sobrejetora, deve ser ainda bijetora. Isto conclui a
     demontração.
 
