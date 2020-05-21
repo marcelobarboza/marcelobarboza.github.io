@@ -44,7 +44,7 @@ Se G é um grupo finito, ele contém tão somente a um número finito de classes
 conjugação, digamos: :math:`x_1^G,\ldots,x_n^G`. Como
 
 .. math::
-   G=x_1^G\sqcup\cdots\sqcup x_n^G\quad(\sqcup\mbox{ denota união disjunta}),
+   G=x_1^G\sqcup\cdots\sqcup x_n^G,
 
 nós chegamos à equação de classes:
 
@@ -60,6 +60,9 @@ de modo que a equação de classes passa a se escrever assim:
 
 .. math::
    \vert G\vert=\vert Z(G)\vert+\sum\limits_{x_i\notin Z(G)}\vert x_i^G\vert.
+
+.. note::
+   :math:`\sqcup` denota união disjunta.
 
 **Proposição**
     Sejam G um grupo e x um elemento arbitrariamente fixado em G. Então, a
