@@ -1,0 +1,12 @@
+Álgebra Moderna
+===============
+
+.. toctree::
+   :caption: Conteúdo:
+   :maxdepth: -1
+   :name: Álgebra Moderna
+
+   preliminares.rst
+   subgrupos.rst
+   conjugacao.rst
+   normalidade.rst

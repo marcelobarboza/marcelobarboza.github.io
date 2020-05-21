@@ -6,8 +6,8 @@ Bem vindo às minhas notas de aula!
    :maxdepth: 1
    :name: Documento Principal
 
-   _source/algebra-linear/index.rst
-   _source/algebra-moderna/index.rst
+   _courses/algebra-linear/index.rst
+   _courses/algebra-moderna/index.rst
 
 Índices e tabelas
 =================
