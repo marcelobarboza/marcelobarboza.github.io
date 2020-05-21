@@ -8,3 +8,4 @@
 
    preliminares.rst
    vetores.rst
+   subespacos.rst

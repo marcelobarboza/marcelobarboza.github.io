@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt_BR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Subespaços vetoriais &#8212; Notas de Aula</title>
+    
+    <link rel="stylesheet" href="../../_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     'a1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../search.html" />
+    <link rel="top" title="Notas de Aula" href="../../index.html" />
+    <link rel="up" title="Álgebra Linear" href="index.html" />
+    <link rel="next" title="Álgebra Moderna" href="../algebra-moderna/index.html" />
+    <link rel="prev" title="Espaços vetoriais" href="vetores.html" /> 
+  </head>
+  <body role="document">
+      <div class="header" role="banner"><h1 class="heading"><a href="../../index.html">
+          <span>Notas de Aula</span></a></h1>
+        <h2 class="heading"><span>Subespaços vetoriais</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="vetores.html">Espaços vetoriais</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../../index.html">Conteúdos</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../algebra-moderna/index.html">Álgebra Moderna</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="subespacos-vetoriais">
+<h1>Subespaços vetoriais<a class="headerlink" href="#subespacos-vetoriais" title="Link permanente para este título">¶</a></h1>
+<p>Subespaços vetoriais são ferramentas úteis à obtenção de novos espaços
+vetoriais.</p>
+<dl class="docutils">
+<dt><strong>Definição</strong></dt>
+<dd><p class="first">Seja V um espaço vetorial. Um subconjunto <span class="math">\(W\subseteq V\)</span> é um
+subespaço vetorial de V se:</p>
+<ol class="last arabic simple">
+<li><span class="math">\(0\in V\)</span>;</li>
+<li><span class="math">\(\alpha x+\beta y\in W\)</span> se <span class="math">\(\alpha,\beta\in\mathbb{R}\)</span> e
+<span class="math">\(x,y\in V\)</span>.</li>
+</ol>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Se V é um espaço vetorial, a notação <span class="math">\(W\leqslant V\)</span> indica que
+<span class="math">\(W\subseteq V\)</span> é um subespaço de V.</p>
+</div>
+<dl class="docutils">
+<dt><strong>Exercício</strong></dt>
+<dd>Prove que se <span class="math">\(W\leqslant V\)</span>, então W é por si só um espaço vetorial
+com as operações por ele herdadas de V.</dd>
+</dl>
+<div class="section" id="exemplos">
+<h2>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p class="first"><span class="math">\(W=\{f\in V:f(1)=0\}\leqslant V=F(\{1,\ldots,n\},\mathbb{R})\)</span>;</p>
+</li>
+<li><p class="first"><span class="math">\(W=\{f\in V:f(1,1)+f(2,2)\cdots+f(n,n)=0\}\leqslant V=F(\{1,\ldots,n\}\times\{1,\ldots,n\},\mathbb{R})\)</span>;</p>
+</li>
+<li><p class="first">Sejam V um espaço vetorial e L um conjunto de índices. Se, para cada
+<span class="math">\(\lambda\in L\)</span>, <span class="math">\(W_\lambda\leqslant V\)</span> então a interseção</p>
+<div class="math">
+\[W=\bigcap\limits_{\lambda\in L}W_\lambda,\]</div>
+<p>é um subespaço vetorial de V.</p>
+</li>
+<li><p class="first"><span class="math">\(\mathbb{R}v=\{\alpha v:\alpha\in\mathbb{R}\}\leqslant V\)</span> para todo
+espaço vetorial V e todo <span class="math">\(v\in V\)</span>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="combinacoes-lineares">
+<h2>Combinações lineares<a class="headerlink" href="#combinacoes-lineares" title="Link permanente para este título">¶</a></h2>
+<dl class="docutils">
+<dt><strong>Definição</strong></dt>
+<dd><p class="first">Se V é um espaço vetorial, <span class="math">\(v_1,\ldots,v_n\in V\)</span> e
+<span class="math">\(\alpha_1,\ldots,\alpha_n\in\mathbb{R}\)</span> então o vetor</p>
+<div class="math">
+\[v = \alpha_1 v_1 + \cdots + \alpha_n v_n\in V,\]</div>
+<p class="last">é dito uma <em>combinação linear</em> dos vetores <span class="math">\(v_1,\ldots,v_n\)</span>.</p>
+</dd>
+<dt><strong>Proposição</strong></dt>
+<dd><p class="first">Sejam V um espaço vetorial e <span class="math">\(X\subseteq V\)</span> um subconjunto de V.
+Então, o conjunto</p>
+<div class="math">
+\[\langle X\rangle=\{\alpha v_1+\cdots+\alpha v_n:n\in\mathbb{N},\,\alpha_1,\ldots,\alpha_n\in\mathbb{R},\,v_1,\ldots,v_n\in X\},\]</div>
+<p>de todas as possíveis combinações lineares em V de elementos de X é um
+subespaço vetorial de V, o qual cumpre ainda a seguinte condição:</p>
+<div class="last math">
+\[X\subseteq W\leqslant V\implies\langle X\rangle\leqslant W.\]</div>
+</dd>
+</dl>
+<p>O subespaço <span class="math">\(\langle X\rangle\leqslant V\)</span> é portanto, o menor subespaço
+vetorial de V contendo X.</p>
+<dl class="docutils">
+<dt><strong>Definição</strong></dt>
+<dd>Seja V um espaço vetorial e <span class="math">\(X\subseteq V\)</span>. Dizemos que V é gerado por
+X e que X é um conjunto gerador de V, se <span class="math">\(V=\langle X\rangle\)</span>.</dd>
+</dl>
+<p>Sejam V um espaço vetorial e <span class="math">\(X,Y\subseteq V\)</span> subconjuntos de V. Por
+<span class="math">\(X+Y\)</span> queremos indicar o conjunto</p>
+<div class="math">
+\[X+Y=\{u+v\in V:u\in X,\,v\in Y\},\]</div>
+<p>de todas as somas de elementos <span class="math">\(u\in X,\,v\in Y\)</span>. Se <span class="math">\(X=\{u\}\)</span>
+consiste de um único elemento <span class="math">\(u\in V\)</span>, escrevemos <span class="math">\(u+Y\)</span> em vez de
+<span class="math">\(\{u\}+Y\)</span>.</p>
+<dl class="docutils">
+<dt><strong>Exercício</strong></dt>
+<dd>Sejam V um espaço vetorial e <span class="math">\(W_1,W_2\leqslant V\)</span> dois dos subespaços
+vetoriais de V. Então, <span class="math">\(W_1+W_2\leqslant V\)</span> é também um subespaço
+vetorial de V.</dd>
+</dl>
+<p>Quando subespaços <span class="math">\(W_1,W_2\leqslant V\)</span> contém apenas o vetor nulo
+<span class="math">\(0\in V\)</span> em comum, isto é, <span class="math">\(W_1\cap W_2=\{0\}\)</span>, se escreve
+<span class="math">\(W_1\oplus W_2\)</span> em vez de <span class="math">\(W_1+W_2\)</span> e se diz que
+<span class="math">\(W=W_1\oplus W_2\)</span> é a soma direta dos subespaços <span class="math">\(W_1,W_2\)</span>.</p>
+<dl class="docutils">
+<dt><strong>Proposição</strong></dt>
+<dd><p class="first">Sejam V um espaço vetorial e <span class="math">\(W,W_1,W_2\leqslant V\)</span> subespaços
+vetoriais de V. Então, são equivalentes:</p>
+<ol class="last arabic simple">
+<li><span class="math">\(W=W_1\oplus W_2\)</span>;</li>
+<li>todo <span class="math">\(w\in W\)</span> pode ser escrito na forma <span class="math">\(w=w_1+w_2\)</span>, onde
+<span class="math">\(w_1\in W_1\)</span> e <span class="math">\(w_2\in W_2\)</span>, de uma única maneira.</li>
+</ol>
+</dd>
+</dl>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="vetores.html">Espaços vetoriais</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../../index.html">Conteúdos</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../algebra-moderna/index.html">Álgebra Moderna</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Marcelo Barboza.
+      Criado usando <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+    </div>
+  </body>
+</html>
