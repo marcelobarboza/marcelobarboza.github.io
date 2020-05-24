@@ -1,0 +1,17 @@
+Bem vindo às minhas notas de aula!
+==================================
+
+.. toctree::
+   :caption: Cursos:
+   :maxdepth: 1
+   :name: Documento Principal
+
+   _courses/algebra-linear/index.rst
+   _courses/algebra-moderna/index.rst
+
+Índices e tabelas
+=================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

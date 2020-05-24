@@ -1,0 +1,264 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt_BR">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Homomorfismos de grupos &#8212; Notas de Aula</title>
+    <link rel="stylesheet" href="../../_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../search.html" />
+    <link rel="prev" title="Subgrupos normais" href="normalidade.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../../index.html">
+          <span>Notas de Aula</span></a></h1>
+        <h2 class="heading"><span>Homomorfismos de grupos</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="normalidade.html">Subgrupos normais</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../../index.html">Conteúdos</a>
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="homomorfismos-de-grupos">
+<h1>Homomorfismos de grupos<a class="headerlink" href="#homomorfismos-de-grupos" title="Link permanente para este título">¶</a></h1>
+<p>Sejam G, H grupos. Um homomorfismo de G em H é uma função
+<span class="math notranslate nohighlight">\(f:G\longrightarrow H\)</span> tal que <span class="math notranslate nohighlight">\(f(x\cdot y)=f(x)\cdot f(y)\)</span> para
+todos <span class="math notranslate nohighlight">\(x,y\in G\)</span>.</p>
+<p><strong>Nomenclatura</strong></p>
+<blockquote>
+<div><p>Um homomorfismo de grupos <span class="math notranslate nohighlight">\(f:G\longrightarrow H\)</span> é também chamado de:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">monomorfismo:</th><td class="field-body">se f é uma função injetora;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">epimorfismo:</th><td class="field-body">se f é uma função sobrejetora;</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">isomorfismo:</th><td class="field-body">se f é uma função bijetora;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">automorfismo:</th><td class="field-body">se <span class="math notranslate nohighlight">\(G=H\)</span> e f é uma função bijetora;</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="section" id="exemplos">
+<h2>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p class="first"><span class="math notranslate nohighlight">\(e:\mathbb{R}\longrightarrow(0,\infty),\quad x\longmapsto e^x\)</span></p>
+<div class="math notranslate nohighlight">
+\[x,y\in\mathbb{R}\implies e^{x+y}=e^x\cdot e^y;\]</div>
+</li>
+<li><p class="first"><span class="math notranslate nohighlight">\(\log:(0,\infty)\longrightarrow\mathbb{R},\quad x\longmapsto\log{x}\)</span>;</p>
+<div class="math notranslate nohighlight">
+\[x,y\in(0,\infty)\implies\log{(x\cdot y)}=\log{x}+\log{y};\]</div>
+</li>
+<li><p class="first"><span class="math notranslate nohighlight">\(\mathrm{GL}(n,\mathbb{R})\longrightarrow\mathbb{R}^\star,\quad
+A\longmapsto\det{A}\)</span>;</p>
+</li>
+</ol>
+</div>
+<div class="section" id="propriedades">
+<h2>Propriedades<a class="headerlink" href="#propriedades" title="Link permanente para este título">¶</a></h2>
+<p><strong>Proposição</strong></p>
+<blockquote>
+<div><p>Seja <span class="math notranslate nohighlight">\(f:G\longrightarrow H\)</span> um homomorfismo de grupos. Então:</p>
+<ol class="arabic simple">
+<li><span class="math notranslate nohighlight">\(f(e_G)=e_H\)</span>;</li>
+<li><span class="math notranslate nohighlight">\(f(x^{-1})=f(x)^{-1}\)</span> para todo <span class="math notranslate nohighlight">\(x\in G\)</span>;</li>
+<li><span class="math notranslate nohighlight">\(f(x^n)=f(x)^n\)</span> para todos <span class="math notranslate nohighlight">\(x\in G\)</span> e <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>;</li>
+<li><span class="math notranslate nohighlight">\(f(x^y)=f(x)^{f(y)}\)</span> para todos <span class="math notranslate nohighlight">\(x,y\in G\)</span>.</li>
+</ol>
+</div></blockquote>
+<p><strong>Prova</strong></p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Seja <span class="math notranslate nohighlight">\(y=f(e_G)\in H\)</span>. Observe que:</p>
+<div class="math notranslate nohighlight">
+\[y=f(e_G)=f(e_G\cdot e_G)=f(e_G)\cdot f(e_G)=y\cdot y=y^2,\]</div>
+<p>de onde segue que</p>
+<div class="math notranslate nohighlight">
+\[e_H=y\cdot y^{-1}=y^2\cdot y^{-1}=y;\]</div>
+</li>
+<li><p class="first">Se <span class="math notranslate nohighlight">\(x\in G\)</span> então</p>
+<div class="math notranslate nohighlight">
+\[e_H=f(e_G)=f(x\cdot x^{-1})=f(x)\cdot f(x^{-1}),\]</div>
+<p>de onde segue que <span class="math notranslate nohighlight">\(f(x^{-1})=f(x)^{-1}\)</span> pela unicidade do elemento
+inverso em H;</p>
+</li>
+<li><p class="first">Se <span class="math notranslate nohighlight">\(x\in G\)</span> então</p>
+<div class="math notranslate nohighlight">
+\[f(x^2)=f(x\cdot x)=f(x)\cdot f(x)=f(x)^2,\]</div>
+<p>e mais geralmente, se <span class="math notranslate nohighlight">\(f(x^n)=f(x)^n\)</span> para algum
+<span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(n\geqslant2\)</span>, então</p>
+<div class="math notranslate nohighlight">
+\[f(x^{n+1})=f(x^n\cdot x)=f(x^n)\cdot f(x)=f(x)^n\cdot f(x)=f(x)^{n+1},\]</div>
+<p>de onde segue que <span class="math notranslate nohighlight">\(f(x^n)=f(x)^n\)</span> para todo <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>
+pelo Primeiro Princípio de Indução Matemática;</p>
+</li>
+<li><p class="first">Se <span class="math notranslate nohighlight">\(x,y\in G\)</span> então</p>
+<div class="math notranslate nohighlight">
+\[f(x^y)=f(y^{-1}\cdot x\cdot y)=f(y^{-1})\cdot f(x)\cdot
+f(y)=f(y)^{-1}\cdot f(x)\cdot f(y)=f(x)^{f(y)}.\]</div>
+</li>
+</ol>
+<p>Isto conclui esta argumentação.</p>
+</div></blockquote>
+<p>É uma consequência da proposição acima que <span class="math notranslate nohighlight">\(f(x^n)=f(x)^n\)</span> para todo
+<span class="math notranslate nohighlight">\(n\in\mathbb{Z}\)</span>.</p>
+</div>
+<div class="section" id="teoremas-do-isomorfismo">
+<h2>Teoremas do Isomorfismo<a class="headerlink" href="#teoremas-do-isomorfismo" title="Link permanente para este título">¶</a></h2>
+<p><strong>Primeiro Teorema do Isomorfismo</strong></p>
+<blockquote>
+<div><p>Seja <span class="math notranslate nohighlight">\(f:G\longrightarrow H\)</span> um homomorfismo de gupos. Então:</p>
+<ol class="arabic simple">
+<li><span class="math notranslate nohighlight">\(\ker_f=\{x\in G:f(x)=e_H\}\unlhd G\)</span>;</li>
+<li><span class="math notranslate nohighlight">\(\mathrm{Im}_f=\{y\in H:\exists\,\,x\in G,\,y=f(x)\}\leqslant H\)</span>;</li>
+<li><span class="math notranslate nohighlight">\(G/\ker_f\cong\mathrm{Im}_f\)</span>.</li>
+</ol>
+</div></blockquote>
+<p><strong>Prova</strong></p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Observe que:</p>
+<ol class="loweralpha">
+<li><p class="first"><span class="math notranslate nohighlight">\(e_G\in\ker_f\)</span> pois <span class="math notranslate nohighlight">\(f(e_G)=e_H\)</span>;</p>
+</li>
+<li><p class="first">se <span class="math notranslate nohighlight">\(x,y\in\ker_f\)</span> então</p>
+<div class="math notranslate nohighlight">
+\[f(x\cdot y^{-1})=f(x)\cdot f(y^{-1})=e_H\cdot
+f(y)^{-1}=e_H^{-1}=e_H,\]</div>
+<p>e, assim, <span class="math notranslate nohighlight">\(xy^{-1}\in\ker_f\)</span>;</p>
+</li>
+<li><p class="first">se <span class="math notranslate nohighlight">\(x\in\ker_f,g\in G\)</span> então</p>
+<div class="math notranslate nohighlight">
+\[f(x^g)=f(x)^{f(g)}=e_H^{f(g)}=e_H,\]</div>
+<p>de onde segue que <span class="math notranslate nohighlight">\(x^g\in\ker_f\)</span>. Logo,
+<span class="math notranslate nohighlight">\(\ker_f\unlhd G\)</span>;</p>
+</li>
+</ol>
+</li>
+<li><p class="first">Observe que:</p>
+<ol class="loweralpha">
+<li><p class="first"><span class="math notranslate nohighlight">\(e_H=f(e_G)\in\mathrm{Im}_f\)</span>;</p>
+</li>
+<li><p class="first">se <span class="math notranslate nohighlight">\(x^\prime,y^\prime\in\mathrm{Im}_f\)</span> então
+<span class="math notranslate nohighlight">\(x^\prime=f(x),y^\prime=f(y)\)</span> para certos <span class="math notranslate nohighlight">\(x,y\in G\)</span> e,
+assim, conclui-se que</p>
+<div class="math notranslate nohighlight">
+\[x^\prime\cdot(y^\prime)^{-1}=f(x)\cdot f(y)^{-1}=f(x)\cdot
+f(y^{-1})=f(x\cdot y^{\prime})\in\mathrm{Im}_f,\]</div>
+<p>pois <span class="math notranslate nohighlight">\(x\cdot y^{-1}\in G\)</span>. Portanto,
+<span class="math notranslate nohighlight">\(\mathrm{Im}_f\leqslant H\)</span>;</p>
+</li>
+</ol>
+</li>
+<li><p class="first">Agora, considere a seguinte função:</p>
+<div class="math notranslate nohighlight">
+\[\bar{f}:G/\ker_f\longrightarrow\mathrm{Im}_f,\quad\ker_fx\longmapsto
+f(x).\]</div>
+<ol class="loweralpha">
+<li><p class="first"><span class="math notranslate nohighlight">\(\bar{f}\)</span> é de fato uma função:</p>
+<p>se <span class="math notranslate nohighlight">\(x,y\in G\)</span> e <span class="math notranslate nohighlight">\(\ker_fx=\ker_fy\)</span> então
+<span class="math notranslate nohighlight">\(xy^{-1}\in\ker_f\)</span>, de onde segue que</p>
+<div class="math notranslate nohighlight">
+\[\bar{f}(\ker_fx)=f(x)=f(xy^{-1}\cdot y)=f(xy^{-1})\cdot
+f(y)=e_H\cdot f(y)=f(y)=\bar{f}(\ker_fy),\]</div>
+<p>e <span class="math notranslate nohighlight">\(\bar{f}\)</span> é, como se vê, uma bem definida função;</p>
+</li>
+<li><p class="first"><span class="math notranslate nohighlight">\(\bar{f}\)</span> é um homomorfismo de grupos:</p>
+<p>se <span class="math notranslate nohighlight">\(x,y\in G\)</span> então</p>
+<div class="math notranslate nohighlight">
+\[\bar{f}(\ker_fx\cdot\ker_fy)=\bar{f}(\ker_fx\cdot y)=f(x\cdot
+y)=f(x)\cdot f(y)=\bar{f}(\ker_fx)\cdot\bar{f}(\ker_fy);\]</div>
+</li>
+<li><p class="first"><span class="math notranslate nohighlight">\(\bar{f}\)</span> é injetora:</p>
+<p>se <span class="math notranslate nohighlight">\(x\in G\)</span> então</p>
+<div class="math notranslate nohighlight">
+\[\bar{f}(\ker_fx)=e_H\implies f(x)=e_H\implies
+x\in\ker_f\implies\ker_fx=\ker_f,\]</div>
+<p>de modo que <span class="math notranslate nohighlight">\(\ker_{\bar{f}}=\{\ker_fx\in
+G/\ker_f:\bar{f}(\ker_fx)=e_H\}=\{\ker_f\}\)</span>
+e como tal, <span class="math notranslate nohighlight">\(\bar{f}\)</span> é injetora. Com efeito, se <span class="math notranslate nohighlight">\(x,y\in G\)</span>
+então</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+&amp;
+\bar{f}(\ker_fx)=\bar{f}(\ker_fy)\implies\bar{f}(\ker_fx\cdot
+\ker_fy^{-1})=e_H\implies\ker_fx\cdot\ker_fy^{-1}\in\ker{\bar{f}}=
+\{\ker_f\}\implies \\
+&amp;
+\implies\ker_fx\cdot\ker_fy^{-1}=\ker_f\implies\ker_fx=\ker_f\cdot
+\ker_fy=\ker_fy;
+\end{align}\end{split}\]</div>
+</li>
+<li><p class="first"><span class="math notranslate nohighlight">\(\bar{f}\)</span> é sobrejetora:</p>
+<p>se <span class="math notranslate nohighlight">\(y\in\mathrm{Im}_f\)</span> então <span class="math notranslate nohighlight">\(y=f(x)\)</span> para algum
+<span class="math notranslate nohighlight">\(x\in G\)</span> e, assim,</p>
+<div class="math notranslate nohighlight">
+\[\bar{f}(\ker_fx)=f(x)=y,\]</div>
+<p>de onde segue que <span class="math notranslate nohighlight">\(\bar{f}\)</span> é uma função sobrejetora.</p>
+</li>
+</ol>
+</li>
+</ol>
+</div></blockquote>
+<p><strong>Segundo Teorema do Isomorfismo</strong></p>
+<blockquote>
+<div><p>Sejam G um grupo, <span class="math notranslate nohighlight">\(H\leqslant G\)</span> e <span class="math notranslate nohighlight">\(N\unlhd G\)</span>. Então,
+<span class="math notranslate nohighlight">\(H\cap N\unlhd H\)</span> e</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{HN}{N}\cong\dfrac{H}{H\cap N}.\]</div>
+</div></blockquote>
+<p><strong>Prova</strong></p>
+<blockquote>
+<div>Exercício.</div></blockquote>
+<p><strong>Terceiro Teorema do Isomorfismo</strong></p>
+<blockquote>
+<div><p>Sejam G um grupo, <span class="math notranslate nohighlight">\(M\unlhd G\)</span> e <span class="math notranslate nohighlight">\(N\unlhd G\)</span>. Suponha que
+<span class="math notranslate nohighlight">\(N\subseteq M\)</span>. Então, <span class="math notranslate nohighlight">\(M/N\unlhd G/N\)</span> e</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{G/N}{M/N}\cong\dfrac{G}{M}.\]</div>
+</div></blockquote>
+<p><strong>Prova</strong></p>
+<blockquote>
+<div>Exercício.</div></blockquote>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="normalidade.html">Subgrupos normais</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../../index.html">Conteúdos</a>
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Marcelo Barboza.
+      Criado usando <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>

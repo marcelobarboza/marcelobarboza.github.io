@@ -1,0 +1,223 @@
+Homomorfismos de grupos
+-----------------------
+
+Sejam G, H grupos. Um homomorfismo de G em H é uma função
+:math:`f:G\longrightarrow H` tal que :math:`f(x\cdot y)=f(x)\cdot f(y)` para
+todos :math:`x,y\in G`.
+
+**Nomenclatura**
+
+   Um homomorfismo de grupos :math:`f:G\longrightarrow H` é também chamado de:
+
+   :monomorfismo: se f é uma função injetora;
+   :epimorfismo:  se f é uma função sobrejetora;
+   :isomorfismo:  se f é uma função bijetora;
+   :automorfismo: se :math:`G=H` e f é uma função bijetora;
+
+Exemplos
+~~~~~~~~
+#. :math:`e:\mathbb{R}\longrightarrow(0,\infty),\quad x\longmapsto e^x`
+
+   .. math::
+      x,y\in\mathbb{R}\implies e^{x+y}=e^x\cdot e^y;
+
+#. :math:`\log:(0,\infty)\longrightarrow\mathbb{R},\quad x\longmapsto\log{x}`;
+
+   .. math::
+      x,y\in(0,\infty)\implies\log{(x\cdot y)}=\log{x}+\log{y};
+
+#. :math:`\mathrm{GL}(n,\mathbb{R})\longrightarrow\mathbb{R}^\star,\quad
+   A\longmapsto\det{A}`;
+
+Propriedades
+~~~~~~~~~~~~
+
+**Proposição**
+
+   Seja :math:`f:G\longrightarrow H` um homomorfismo de grupos. Então:
+
+   #. :math:`f(e_G)=e_H`;
+
+   #. :math:`f(x^{-1})=f(x)^{-1}` para todo :math:`x\in G`;
+
+   #. :math:`f(x^n)=f(x)^n` para todos :math:`x\in G` e :math:`n\in\mathbb{N}`;
+
+   #. :math:`f(x^y)=f(x)^{f(y)}` para todos :math:`x,y\in G`.
+
+**Prova**
+
+   #. Seja :math:`y=f(e_G)\in H`. Observe que:
+
+      .. math::
+         y=f(e_G)=f(e_G\cdot e_G)=f(e_G)\cdot f(e_G)=y\cdot y=y^2,
+
+      de onde segue que
+
+      .. math::
+         e_H=y\cdot y^{-1}=y^2\cdot y^{-1}=y;
+
+   #. Se :math:`x\in G` então
+
+      .. math::
+         e_H=f(e_G)=f(x\cdot x^{-1})=f(x)\cdot f(x^{-1}),
+
+      de onde segue que :math:`f(x^{-1})=f(x)^{-1}` pela unicidade do elemento
+      inverso em H;
+
+   #. Se :math:`x\in G` então
+
+      .. math::
+         f(x^2)=f(x\cdot x)=f(x)\cdot f(x)=f(x)^2,
+
+      e mais geralmente, se :math:`f(x^n)=f(x)^n` para algum
+      :math:`n\in\mathbb{N}`, :math:`n\geqslant2`, então
+
+      .. math::
+         f(x^{n+1})=f(x^n\cdot x)=f(x^n)\cdot f(x)=f(x)^n\cdot f(x)=f(x)^{n+1},
+
+      de onde segue que :math:`f(x^n)=f(x)^n` para todo :math:`n\in\mathbb{N}`
+      pelo Primeiro Princípio de Indução Matemática;
+
+   #. Se :math:`x,y\in G` então
+
+      .. math::
+         f(x^y)=f(y^{-1}\cdot x\cdot y)=f(y^{-1})\cdot f(x)\cdot
+         f(y)=f(y)^{-1}\cdot f(x)\cdot f(y)=f(x)^{f(y)}.
+
+   Isto conclui esta argumentação.
+
+É uma consequência da proposição acima que :math:`f(x^n)=f(x)^n` para todo
+:math:`n\in\mathbb{Z}`.
+
+Teoremas do Isomorfismo
+~~~~~~~~~~~~~~~~~~~~~~~
+
+**Primeiro Teorema do Isomorfismo**
+
+   Seja :math:`f:G\longrightarrow H` um homomorfismo de gupos. Então:
+
+   #. :math:`\ker_f=\{x\in G:f(x)=e_H\}\unlhd G`;
+
+   #. :math:`\mathrm{Im}_f=\{y\in H:\exists\,\,x\in G,\,y=f(x)\}\leqslant H`;
+
+   #. :math:`G/\ker_f\cong\mathrm{Im}_f`.
+
+**Prova**
+
+   #. Observe que:
+
+      a. :math:`e_G\in\ker_f` pois :math:`f(e_G)=e_H`;
+
+      b. se :math:`x,y\in\ker_f` então
+
+         .. math::
+            f(x\cdot y^{-1})=f(x)\cdot f(y^{-1})=e_H\cdot
+            f(y)^{-1}=e_H^{-1}=e_H,
+            
+         e, assim, :math:`xy^{-1}\in\ker_f`;
+
+      c. se :math:`x\in\ker_f,g\in G` então
+
+         .. math::
+            f(x^g)=f(x)^{f(g)}=e_H^{f(g)}=e_H,
+
+         de onde segue que :math:`x^g\in\ker_f`. Logo,
+         :math:`\ker_f\unlhd G`;
+
+   #. Observe que:
+
+      a. :math:`e_H=f(e_G)\in\mathrm{Im}_f`;
+      b. se :math:`x^\prime,y^\prime\in\mathrm{Im}_f` então
+         :math:`x^\prime=f(x),y^\prime=f(y)` para certos :math:`x,y\in G` e,
+         assim, conclui-se que
+
+         .. math::
+            x^\prime\cdot(y^\prime)^{-1}=f(x)\cdot f(y)^{-1}=f(x)\cdot
+            f(y^{-1})=f(x\cdot y^{\prime})\in\mathrm{Im}_f,
+
+         pois :math:`x\cdot y^{-1}\in G`. Portanto,
+         :math:`\mathrm{Im}_f\leqslant H`;
+
+   #. Agora, considere a seguinte função:
+
+      .. math::
+         \bar{f}:G/\ker_f\longrightarrow\mathrm{Im}_f,\quad\ker_fx\longmapsto
+         f(x).
+
+      a. :math:`\bar{f}` é de fato uma função:
+
+         se :math:`x,y\in G` e :math:`\ker_fx=\ker_fy` então
+         :math:`xy^{-1}\in\ker_f`, de onde segue que
+
+         .. math::
+            \bar{f}(\ker_fx)=f(x)=f(xy^{-1}\cdot y)=f(xy^{-1})\cdot
+            f(y)=e_H\cdot f(y)=f(y)=\bar{f}(\ker_fy),
+
+         e :math:`\bar{f}` é, como se vê, uma bem definida função;
+
+      b. :math:`\bar{f}` é um homomorfismo de grupos:
+
+         se :math:`x,y\in G` então
+
+         .. math::
+            \bar{f}(\ker_fx\cdot\ker_fy)=\bar{f}(\ker_fx\cdot y)=f(x\cdot
+            y)=f(x)\cdot f(y)=\bar{f}(\ker_fx)\cdot\bar{f}(\ker_fy);
+
+      c. :math:`\bar{f}` é injetora:
+
+         se :math:`x\in G` então
+
+         .. math::
+            \bar{f}(\ker_fx)=e_H\implies f(x)=e_H\implies
+            x\in\ker_f\implies\ker_fx=\ker_f,
+
+         de modo que :math:`\ker_{\bar{f}}=\{\ker_fx\in
+         G/\ker_f:\bar{f}(\ker_fx)=e_H\}=\{\ker_f\}`
+         e como tal, :math:`\bar{f}` é injetora. Com efeito, se :math:`x,y\in G`
+         então
+
+         .. math::
+            \begin{align}
+            &
+            \bar{f}(\ker_fx)=\bar{f}(\ker_fy)\implies\bar{f}(\ker_fx\cdot
+            \ker_fy^{-1})=e_H\implies\ker_fx\cdot\ker_fy^{-1}\in\ker{\bar{f}}=
+            \{\ker_f\}\implies \\
+            &
+            \implies\ker_fx\cdot\ker_fy^{-1}=\ker_f\implies\ker_fx=\ker_f\cdot
+            \ker_fy=\ker_fy;
+            \end{align}
+
+      d. :math:`\bar{f}` é sobrejetora:
+
+         se :math:`y\in\mathrm{Im}_f` então :math:`y=f(x)` para algum
+         :math:`x\in G` e, assim,
+
+         .. math::
+            \bar{f}(\ker_fx)=f(x)=y,
+
+         de onde segue que :math:`\bar{f}` é uma função sobrejetora.
+
+**Segundo Teorema do Isomorfismo**
+
+   Sejam G um grupo, :math:`H\leqslant G` e :math:`N\unlhd G`. Então,
+   :math:`H\cap N\unlhd H` e
+   
+   .. math::
+      \dfrac{HN}{N}\cong\dfrac{H}{H\cap N}.
+
+**Prova**
+
+   Exercício.
+
+**Terceiro Teorema do Isomorfismo**
+
+   Sejam G um grupo, :math:`M\unlhd G` e :math:`N\unlhd G`. Suponha que
+   :math:`N\subseteq M`. Então, :math:`M/N\unlhd G/N` e
+
+   .. math::
+      \dfrac{G/N}{M/N}\cong\dfrac{G}{M}.
+
+**Prova**
+
+   Exercício.
+
