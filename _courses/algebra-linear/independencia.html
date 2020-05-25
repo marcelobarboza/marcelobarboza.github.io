@@ -1,0 +1,160 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt_BR">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Dependência linear &#8212; Notas de Aula</title>
+    <link rel="stylesheet" href="../../_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../search.html" />
+    <link rel="next" title="Álgebra Moderna" href="../algebra-moderna/index.html" />
+    <link rel="prev" title="Subespaços vetoriais" href="subespacos.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../../index.html">
+          <span>Notas de Aula</span></a></h1>
+        <h2 class="heading"><span>Dependência linear</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="subespacos.html">Subespaços vetoriais</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../../index.html">Conteúdos</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../algebra-moderna/index.html">Álgebra Moderna</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="dependencia-linear">
+<h1>Dependência linear<a class="headerlink" href="#dependencia-linear" title="Link permanente para este título">¶</a></h1>
+<p><strong>Definição</strong></p>
+<blockquote>
+<div>Seja V um espaço vetorial real. Vetores <span class="math notranslate nohighlight">\(v_1,\ldots,v_n\in V\)</span> são
+linearmente dependentes se existem escalares
+<span class="math notranslate nohighlight">\(\alpha_1,\ldots,\alpha_n\in\mathbb{R}\)</span> não todos nulos, tais que
+<span class="math notranslate nohighlight">\(\alpha_1 v_1+\cdots+\alpha_n v_n=0\)</span>.</div></blockquote>
+<div class="section" id="exemplos">
+<h2>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Os vetores <span class="math notranslate nohighlight">\(v_1=(1,2),v_2=(-2,-4)\in\mathbb{R}^2\)</span> são linearmente
+dependentes:</p>
+<div class="math notranslate nohighlight">
+\[1\cdot v_1+\dfrac{1}{2}\cdot v_2=(1,2)+(-1,-2)=(1-1,2-2)=(0,0);\]</div>
+</li>
+<li><p class="first">Os vetores <span class="math notranslate nohighlight">\(v_1=(1,2,3),v_2=(0,4,5),v_3=(7,-2,1)\in\mathbb{R}^3\)</span> são
+linearmente dependentes:</p>
+<div class="math notranslate nohighlight">
+\[7\cdot v_1-4\cdot v_2-1\cdot
+v_3=(7,14,21)+(0,-16,-20)+(-7,2,-1)=(7-7,14-16+2,21-20-1)=(0,0,0);\]</div>
+</li>
+<li><p class="first">Se <span class="math notranslate nohighlight">\(v_1=0\in V\)</span> então os vetores <span class="math notranslate nohighlight">\(v_1,v_2,\ldots,v_n\in V\)</span> são
+linearmente dependentes, quaisquer que sejam <span class="math notranslate nohighlight">\(v_2,\ldots,v_n\in V\)</span>:
+basta ver que</p>
+<div class="math notranslate nohighlight">
+\[1\cdot v_1+0\cdot v_2+\cdots+0\cdot v_n=0.\]</div>
+</li>
+</ol>
+<p><strong>Exercícios</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Sejam V um espaço vetorial real e <span class="math notranslate nohighlight">\(S\subseteq V\)</span>. Suponha que
+<span class="math notranslate nohighlight">\(S\)</span> seja linearmente dependente em V. Mostre que se
+<span class="math notranslate nohighlight">\(S\subseteq S^\prime\subseteq V\)</span> então <span class="math notranslate nohighlight">\(S^\prime\)</span> é um
+conjunto de vetores linearmente dependentes em V.</li>
+<li>Sejam V um espaço vetorial real e <span class="math notranslate nohighlight">\(S=\{v_1,v_2,\ldots,v_n\}\subseteq
+V\)</span>. Suponha que <span class="math notranslate nohighlight">\(v_1=v_2\)</span>. Prove que <span class="math notranslate nohighlight">\(S\)</span> é linearmente
+dependente em V.</li>
+<li>Sejam V um espaço vetorial real e <span class="math notranslate nohighlight">\(S=\{v_1,v_2\}\subseteq
+V\setminus\{0\}\)</span>. Prove que S  é linearmente dependente em V se, e somente
+se, os vetores <span class="math notranslate nohighlight">\(v_1,v_2\)</span> são múltiplos um do outro.</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="independencia-linear">
+<h1>Independência linear<a class="headerlink" href="#independencia-linear" title="Link permanente para este título">¶</a></h1>
+<p><strong>Definição</strong></p>
+<blockquote>
+<div>Seja V um espaço vetorial real. Vetores <span class="math notranslate nohighlight">\(v_1,\ldots,v_n\in V\)</span> são
+linearmente independentes se <span class="math notranslate nohighlight">\(\alpha_1,\ldots,\alpha_n\in\mathbb{R}\)</span> e
+<span class="math notranslate nohighlight">\(\alpha_1 v_1+\cdots+\alpha_n v_n=0\)</span> implicar em
+<span class="math notranslate nohighlight">\(\alpha_1=\cdots=\alpha_n=0\)</span>.</div></blockquote>
+<div class="section" id="id1">
+<h2>Exemplos<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Os vetores <span class="math notranslate nohighlight">\(v_1=(1,2),v_2=(-2,4)\in\mathbb{R}^2\)</span> são linearmente
+dependentes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\alpha_1\cdot v_1+\alpha_2\cdot v_2=
+(\alpha_1-2\alpha_2,2\alpha_1+4\alpha_2)=(0,0)\iff\left\{
+\begin{array}{ccccc}
+   1\alpha_1 &amp; - &amp; 2\alpha_2 &amp; = &amp; 0 \\
+   2\alpha_1 &amp; + &amp; 4\alpha_2 &amp; = &amp; 0
+\end{array}
+\right.\iff\alpha_1=\alpha_2=0;\end{split}\]</div>
+</li>
+<li><p class="first">Os vetores <span class="math notranslate nohighlight">\(v_1=(1,2,3),v_2=(0,4,5),v_3=(7,-2,1)\in\mathbb{R}^3\)</span> são
+linearmente independentes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\alpha_1\cdot v_1+\alpha_2\cdot v_2+\alpha_3\cdot v_3=
+(\alpha_1+7\alpha_3,2\alpha_1+4\alpha_2-3\alpha_3,3\alpha_1+5\alpha_2-
+\alpha_3)=(0,0,0)\iff\left\{
+\begin{array}{cccccc}
+   1\alpha_1 &amp; + &amp; 0\alpha_2 &amp; + &amp; 7\alpha_3 &amp; = &amp; 0 \\
+   2\alpha_1 &amp; + &amp; 4\alpha_2 &amp; - &amp; 3\alpha_3 &amp; = &amp; 0 \\
+   3\alpha_1 &amp; + &amp; 5\alpha_2 &amp; - &amp; 1\alpha_3 &amp; = &amp; 0
+\end{array}
+\right.,\end{split}\]</div>
+<p>o que só pode ocorrer se <span class="math notranslate nohighlight">\(\alpha_1=\alpha_2=\alpha_3=0\)</span>.</p>
+</li>
+</ol>
+<p><strong>Exercícios</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Seja <span class="math notranslate nohighlight">\(V=F(\mathbb{R},\mathbb{R})\)</span> o espaço vetorial de todas as
+funções <span class="math notranslate nohighlight">\(f:\mathbb{R}\longrightarrow\mathbb{R}\)</span> reais de uma
+variável real. Mostre que as seguintes funções são linearmente independentes em <span class="math notranslate nohighlight">\(V\)</span>:<ol class="loweralpha">
+<li><span class="math notranslate nohighlight">\(f_1(t)=e^t\mbox{ e }f_2(t)=e^{2t}\)</span>;</li>
+<li><span class="math notranslate nohighlight">\(f_1(t)=e^t\mbox{ e }f_2(t)=\cos{t}\)</span>;</li>
+<li><span class="math notranslate nohighlight">\(f_1(t)=\sin{t}\mbox{ e }f_2(t)=\cos{t}\)</span>.</li>
+</ol>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="subespacos.html">Subespaços vetoriais</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../../index.html">Conteúdos</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../algebra-moderna/index.html">Álgebra Moderna</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Marcelo Barboza.
+      Criado usando <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>

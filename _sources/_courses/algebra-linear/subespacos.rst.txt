@@ -5,6 +5,7 @@ Subespaços vetoriais são ferramentas úteis à obtenção de novos espaços
 vetoriais.
 
 **Definição**
+
     Seja V um espaço vetorial. Um subconjunto :math:`W\subseteq V` é um
     subespaço vetorial de V se:
 
@@ -18,8 +19,9 @@ vetoriais.
    :math:`W\subseteq V` é um subespaço de V.
 
 **Exercício**
-    Prove que se :math:`W\leqslant V`, então W é por si só um espaço vetorial
-    com as operações por ele herdadas de V.
+
+   Prove que se :math:`W\leqslant V`, então W é por si só um espaço vetorial com
+   as operações por ele herdadas de V.
 
 Exemplos
 ~~~~~~~~
@@ -44,6 +46,7 @@ Combinações lineares
 ~~~~~~~~~~~~~~~~~~~~
 
 **Definição**
+
     Se V é um espaço vetorial, :math:`v_1,\ldots,v_n\in V` e
     :math:`\alpha_1,\ldots,\alpha_n\in\mathbb{R}` então o vetor
 
@@ -53,6 +56,7 @@ Combinações lineares
     é dito uma *combinação linear* dos vetores :math:`v_1,\ldots,v_n`.
 
 **Proposição**
+
     Sejam V um espaço vetorial e :math:`X\subseteq V` um subconjunto de V.
     Então, o conjunto
 
@@ -72,6 +76,7 @@ O subespaço :math:`\langle X\rangle\leqslant V` é portanto, o menor subespaço
 vetorial de V contendo X.
 
 **Definição**
+
     Seja V um espaço vetorial e :math:`X\subseteq V`. Dizemos que V é gerado por
     X e que X é um conjunto gerador de V, se :math:`V=\langle X\rangle`.
 
@@ -86,16 +91,18 @@ consiste de um único elemento :math:`u\in V`, escrevemos :math:`u+Y` em vez de
 :math:`\{u\}+Y`.
 
 **Exercício**
+
     Sejam V um espaço vetorial e :math:`W_1,W_2\leqslant V` dois dos subespaços
     vetoriais de V. Então, :math:`W_1+W_2\leqslant V` é também um subespaço
     vetorial de V.
 
 Quando subespaços :math:`W_1,W_2\leqslant V` contém apenas o vetor nulo
 :math:`0\in V` em comum, isto é, :math:`W_1\cap W_2=\{0\}`, se escreve
-:math:`W_1\oplus W_2` em vez de :math:`W_1+W_2` e se diz que
-:math:`W=W_1\oplus W_2` é a soma direta dos subespaços :math:`W_1,W_2`.
+:math:`W_1\oplus W_2` em vez de :math:`W_1+W_2` e se diz que :math:`W=W_1\oplus
+W_2` é a soma direta dos subespaços :math:`W_1,W_2`.
 
 **Proposição**
+
     Sejam V um espaço vetorial e :math:`W,W_1,W_2\leqslant V` subespaços
     vetoriais de V. Então, são equivalentes:
 

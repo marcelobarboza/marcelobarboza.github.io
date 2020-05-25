@@ -9,3 +9,4 @@
    preliminares.rst
    vetores.rst
    subespacos.rst
+   independencia.rst
