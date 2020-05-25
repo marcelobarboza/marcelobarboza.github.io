@@ -11,7 +11,7 @@ vetoriais.
     #. :math:`0\in V`;
 
     #. :math:`\alpha x+\beta y\in W` se :math:`\alpha,\beta\in\mathbb{R}` e
-       :math:`x,y\in V`.
+       :math:`x,y\in W`.
 
 .. note::
    Se V é um espaço vetorial, a notação :math:`W\leqslant V` indica que
@@ -26,7 +26,8 @@ Exemplos
 
 #. :math:`W=\{f\in V:f(1)=0\}\leqslant V=F(\{1,\ldots,n\},\mathbb{R})`; 
 
-#. :math:`W=\{f\in V:f(1,1)+f(2,2)\cdots+f(n,n)=0\}\leqslant V=F(\{1,\ldots,n\}\times\{1,\ldots,n\},\mathbb{R})`;
+#. :math:`W=\{f\in V:f(1,1)+f(2,2)\cdots+f(n,n)=0\}\leqslant
+   V=F(\{1,\ldots,n\}\times\{1,\ldots,n\},\mathbb{R})`;
 
 #. Sejam V um espaço vetorial e L um conjunto de índices. Se, para cada
    :math:`\lambda\in L`, :math:`W_\lambda\leqslant V` então a interseção
@@ -56,7 +57,10 @@ Combinações lineares
     Então, o conjunto
 
     .. math::
-       \langle X\rangle=\{\alpha v_1+\cdots+\alpha v_n:n\in\mathbb{N},\,\alpha_1,\ldots,\alpha_n\in\mathbb{R},\,v_1,\ldots,v_n\in X\},
+       \langle X\rangle=\{\alpha v_1+\cdots+\alpha v_n:
+       n\in\mathbb{N},
+       \,\alpha_1,\ldots,\alpha_n\in\mathbb{R},
+       \,v_1,\ldots,v_n\in X\},
 
     de todas as possíveis combinações lineares em V de elementos de X é um
     subespaço vetorial de V, o qual cumpre ainda a seguinte condição:
