@@ -1,86 +1,92 @@
-Subespaços vetoriais
---------------------
+Subespaços
+----------
 
-Subespaços vetoriais são ferramentas úteis à obtenção de novos espaços
-vetoriais.
+Subespaços vetoriais são ferramentas úteis à obtenção de novos exemplos de
+espaços vetoriais.
 
 **Definição**
 
-    Seja V um espaço vetorial. Um subconjunto :math:`W\subseteq V` é um
-    subespaço vetorial de V se:
+    Seja :math:`V` um espaço vetorial. Um subconjunto :math:`W\subseteq V` é um
+    subespaço vetorial de :math:`V` se:
 
-    #. :math:`0\in V`;
+    #. :math:`0\in W`;
 
-    #. :math:`\alpha x+\beta y\in W` se :math:`\alpha,\beta\in\mathbb{R}` e
-       :math:`x,y\in W`.
+    #. :math:`\alpha\cdot x+\beta\cdot y\in W` se
+       :math:`\alpha,\beta\in\mathbb{R}` e :math:`x,y\in W`.
 
 .. note::
-   Se V é um espaço vetorial, a notação :math:`W\leqslant V` indica que
-   :math:`W\subseteq V` é um subespaço de V.
+   A notação :math:`W\leqslant V` indica que :math:`W` é um subespaço vetorial
+   de :math:`V`.
 
 **Exercício**
 
-   Prove que se :math:`W\leqslant V`, então W é por si só um espaço vetorial com
-   as operações por ele herdadas de V.
+   Prove que se :math:`W\leqslant V`, então :math:`W` é por si só um espaço
+   vetorial com as operações que ele herda de :math:`V`.
 
 Exemplos
 ~~~~~~~~
 
 #. :math:`W=\{f\in V:f(1)=0\}\leqslant V=F(\{1,\ldots,n\},\mathbb{R})`; 
 
-#. :math:`W=\{f\in V:f(1,1)+f(2,2)\cdots+f(n,n)=0\}\leqslant
+#. :math:`W=\{f\in V:f(1,1)+f(2,2)+\cdots+f(n,n)=0\}\leqslant
    V=F(\{1,\ldots,n\}\times\{1,\ldots,n\},\mathbb{R})`;
 
-#. Sejam V um espaço vetorial e L um conjunto de índices. Se, para cada
-   :math:`\lambda\in L`, :math:`W_\lambda\leqslant V` então a interseção
+#. Sejam :math:`V` um espaço vetorial e :math:`L` um conjunto de índices. Se,
+   para cada :math:`\lambda\in L`, :math:`W_\lambda\leqslant V` então
 
    .. math::
       W=\bigcap\limits_{\lambda\in L}W_\lambda,
 
-   é um subespaço vetorial de V.
+   é um subespaço vetorial de :math:`V`;
 
 #. :math:`\mathbb{R}v=\{\alpha v:\alpha\in\mathbb{R}\}\leqslant V` para todo
-   espaço vetorial V e todo :math:`v\in V`.
+   espaço vetorial :math:`V` e todo :math:`v\in V`.
 
 Combinações lineares
 ~~~~~~~~~~~~~~~~~~~~
 
 **Definição**
 
-    Se V é um espaço vetorial, :math:`v_1,\ldots,v_n\in V` e
-    :math:`\alpha_1,\ldots,\alpha_n\in\mathbb{R}` então o vetor
+    Seja :math:`V` um espaço vetorial. Se :math:`v_1,\ldots,v_n\in V` e
+    :math:`\alpha_1,\ldots,\alpha_n\in\mathbb{R}` então
 
     .. math::
-       v = \alpha_1 v_1 + \cdots + \alpha_n v_n\in V,
+       v = \alpha_1\cdot v_1 + \cdots + \alpha_n\cdot v_n\in V,
 
-    é dito uma *combinação linear* dos vetores :math:`v_1,\ldots,v_n`.
+    é uma *combinação linear* de :math:`v_1,\ldots,v_n`.
 
 **Proposição**
 
-    Sejam V um espaço vetorial e :math:`X\subseteq V` um subconjunto de V.
-    Então, o conjunto
+    Sejam :math:`V` um espaço vetorial e :math:`X` um subconjunto de :math:`V`.
+    O conjunto
 
     .. math::
-       \langle X\rangle=\{\alpha v_1+\cdots+\alpha v_n:
+       \langle X\rangle=\{\alpha_1\cdot v_1+\cdots+\alpha_n\cdot v_n:
        n\in\mathbb{N},
        \,\alpha_1,\ldots,\alpha_n\in\mathbb{R},
        \,v_1,\ldots,v_n\in X\},
 
-    de todas as possíveis combinações lineares em V de elementos de X é um
-    subespaço vetorial de V, o qual cumpre ainda a seguinte condição:
+    de todas as possíveis combinações lineares em :math:`V` de elementos de
+    :math:`X`, constitui um subespaço vetorial de :math:`V` com a seguinte
+    propriedade:
 
     .. math::
-       X\subseteq W\leqslant V\implies\langle X\rangle\leqslant W.
+       W\leqslant V\quad\mbox{e}\quad X\subseteq W\implies\langle X\rangle
+       \leqslant W.
 
-O subespaço :math:`\langle X\rangle\leqslant V` é portanto, o menor subespaço
-vetorial de V contendo X.
+Portanto, :math:`\langle X\rangle\leqslant V` é o menor subespaço vetorial de
+:math:`V` que contém :math:`X`.
+
+Conjuntos geradores
+~~~~~~~~~~~~~~~~~~~
 
 **Definição**
 
-    Seja V um espaço vetorial e :math:`X\subseteq V`. Dizemos que V é gerado por
-    X e que X é um conjunto gerador de V, se :math:`V=\langle X\rangle`.
+    Sejam :math:`V` um espaço vetorial e :math:`X` um subconjunto de :math:`V`.
+    Dizemos que :math:`V` é gerado por :math:`X`, e que :math:`X` é um conjunto
+    gerador de :math:`V`, se :math:`V=\langle X\rangle`.
 
-Sejam V um espaço vetorial e :math:`X,Y\subseteq V` subconjuntos de V. Por
+Sejam :math:`V` um espaço vetorial e :math:`X,Y\subseteq V` subconjuntos de :math:`V`. Por
 :math:`X+Y` queremos indicar o conjunto
 
 .. math::
@@ -92,9 +98,12 @@ consiste de um único elemento :math:`u\in V`, escrevemos :math:`u+Y` em vez de
 
 **Exercício**
 
-    Sejam V um espaço vetorial e :math:`W_1,W_2\leqslant V` dois dos subespaços
-    vetoriais de V. Então, :math:`W_1+W_2\leqslant V` é também um subespaço
-    vetorial de V.
+    Sejam :math:`V` um espaço vetorial e :math:`W_1,W_2\leqslant V` dois dos subespaços
+    vetoriais de :math:`V`. Então, :math:`W_1+W_2\leqslant V` é também um subespaço
+    vetorial de :math:`V`.
+
+Soma direta
+~~~~~~~~~~~
 
 Quando subespaços :math:`W_1,W_2\leqslant V` contém apenas o vetor nulo
 :math:`0\in V` em comum, isto é, :math:`W_1\cap W_2=\{0\}`, se escreve
@@ -103,8 +112,8 @@ W_2` é a soma direta dos subespaços :math:`W_1,W_2`.
 
 **Proposição**
 
-    Sejam V um espaço vetorial e :math:`W,W_1,W_2\leqslant V` subespaços
-    vetoriais de V. Então, são equivalentes:
+    Sejam :math:`V` um espaço vetorial e :math:`W,W_1,W_2\leqslant V` subespaços
+    vetoriais de :math:`V`. Então, são equivalentes:
 
     #. :math:`W=W_1\oplus W_2`;
 

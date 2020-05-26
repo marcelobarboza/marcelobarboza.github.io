@@ -1,24 +1,22 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt_BR">
+<html lang="pt_BR">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Relações de equivalência &#8212; Notas de Aula</title>
     <link rel="stylesheet" href="../../_static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Buscar" href="../../search.html" />
-    <link rel="next" title="Espaços vetoriais" href="vetores.html" />
+    <link rel="next" title="Lema de Zorn" href="zorn.html" />
     <link rel="prev" title="Álgebra Linear" href="index.html" /> 
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="../../index.html">
@@ -32,32 +30,31 @@
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="../../index.html">Conteúdos</a>
         &#160;&#160;::&#160;&#160;
-        <a href="vetores.html">Espaços vetoriais</a>&#160;&#160;»
+        <a href="zorn.html">Lema de Zorn</a>&#160;&#160;»
         </p>
 
       </div>
-      <div class="content">
+      <div class="content" role="main">
         
         
   <div class="section" id="relacoes-de-equivalencia">
 <h1>Relações de equivalência<a class="headerlink" href="#relacoes-de-equivalencia" title="Link permanente para este título">¶</a></h1>
 <p>Uma relação de equivalência em um conjunto não vazio <span class="math notranslate nohighlight">\(X\)</span> é qualquer
 conjunto <span class="math notranslate nohighlight">\(R\subseteq X\times X\)</span> com as propriedades seguintes:</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">reflexividade:</th><td class="field-body">se <span class="math notranslate nohighlight">\(x\in X\)</span>, então <span class="math notranslate nohighlight">\((x,x)\in R\)</span>;</td>
-</tr>
-<tr class="field-even field"><th class="field-name">simetria:</th><td class="field-body">se <span class="math notranslate nohighlight">\((x,y)\in R\)</span>, então <span class="math notranslate nohighlight">\((y,x)\in R\)</span>;</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">transitividade:</th><td class="field-body">se <span class="math notranslate nohighlight">\((x,y)\in R\)</span> e <span class="math notranslate nohighlight">\((y,z)\in R\)</span> então <span class="math notranslate nohighlight">\((x,z)\in R\)</span>.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">reflexividade</dt>
+<dd class="field-odd"><p>se <span class="math notranslate nohighlight">\(x\in X\)</span>, então <span class="math notranslate nohighlight">\((x,x)\in R\)</span>;</p>
+</dd>
+<dt class="field-even">simetria</dt>
+<dd class="field-even"><p>se <span class="math notranslate nohighlight">\((x,y)\in R\)</span>, então <span class="math notranslate nohighlight">\((y,x)\in R\)</span>;</p>
+</dd>
+<dt class="field-odd">transitividade</dt>
+<dd class="field-odd"><p>se <span class="math notranslate nohighlight">\((x,y)\in R\)</span> e <span class="math notranslate nohighlight">\((y,z)\in R\)</span> então <span class="math notranslate nohighlight">\((x,z)\in R\)</span>.</p>
+</dd>
+</dl>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">Às vezes se escreve <span class="math notranslate nohighlight">\(xRy\)</span> para dizer que <span class="math notranslate nohighlight">\((x,y)\in R\)</span>.</p>
+<p class="admonition-title">Nota</p>
+<p>Às vezes se escreve <span class="math notranslate nohighlight">\(xRy\)</span> para dizer que <span class="math notranslate nohighlight">\((x,y)\in R\)</span>.</p>
 </div>
 <p>Seja <span class="math notranslate nohighlight">\(R\)</span> uma relação de equivalência em um conjunto (não vazio) <span class="math notranslate nohighlight">\(X\)</span>.
 A classe de equivalência de um elemento <span class="math notranslate nohighlight">\(x\in X\)</span>, segundo <span class="math notranslate nohighlight">\(R\)</span>, é o
@@ -69,13 +66,13 @@ conjunto</p>
 <p>dos elementos em <span class="math notranslate nohighlight">\(X\)</span> que se equivalem a <span class="math notranslate nohighlight">\(x\)</span>, através de <span class="math notranslate nohighlight">\(R\)</span>.
 Note que, se <span class="math notranslate nohighlight">\(x,y\in X\)</span>, então:</p>
 <ol class="arabic">
-<li><p class="first"><span class="math notranslate nohighlight">\(xRy\implies [x]=[y]\)</span>:</p>
+<li><p><span class="math notranslate nohighlight">\(xRy\implies [x]=[y]\)</span>:</p>
 <blockquote>
 <div><p>Como <span class="math notranslate nohighlight">\(xRx\)</span>, tem-se que <span class="math notranslate nohighlight">\(x\in[x]\)</span>. Logo, <span class="math notranslate nohighlight">\(x\in[y]\)</span> e,
 assim, <span class="math notranslate nohighlight">\(xRy\)</span>;</p>
 </div></blockquote>
 </li>
-<li><p class="first"><span class="math notranslate nohighlight">\([x]\cap[y]\neq\emptyset\implies xRy\)</span>:</p>
+<li><p><span class="math notranslate nohighlight">\([x]\cap[y]\neq\emptyset\implies xRy\)</span>:</p>
 <blockquote>
 <div><p>Se <span class="math notranslate nohighlight">\([x]\cap[y]\neq\emptyset\)</span>, existe <span class="math notranslate nohighlight">\(z\in[x]\cap[y]\)</span>. Como
 <span class="math notranslate nohighlight">\(zRx\)</span> e <span class="math notranslate nohighlight">\(zRy\)</span>, conclui-se que <span class="math notranslate nohighlight">\(xRz\)</span> e <span class="math notranslate nohighlight">\(zRy\)</span>, e,
@@ -112,7 +109,7 @@ X = \bigcup_{[x]\in X/R}[x].
 <div class="section" id="exemplos">
 <h2>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h2>
 <ol class="arabic">
-<li><p class="first">A igualdade é uma relação de equivalência em qualquer conjunto não vazio.
+<li><p>A igualdade é uma relação de equivalência em qualquer conjunto não vazio.
 Mais especificamente,</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
@@ -121,7 +118,7 @@ I=\{(x,x):x\in X\}\subseteq X\times X,
 <p>é um relação de equivalência em <span class="math notranslate nohighlight">\(X\)</span>, para todo conjunto não vazio
 <span class="math notranslate nohighlight">\(X\)</span>;</p>
 </li>
-<li><p class="first">Se <span class="math notranslate nohighlight">\(f:A\longrightarrow B\)</span> é uma função qualquer, então</p>
+<li><p>Se <span class="math notranslate nohighlight">\(f:A\longrightarrow B\)</span> é uma função qualquer, então</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
 R_f = \{(x,y)\in A\times A : f(x) = f(y)\},
@@ -130,13 +127,13 @@ R_f = \{(x,y)\in A\times A : f(x) = f(y)\},
 <p>a. para todo <span class="math notranslate nohighlight">\(x\in A\)</span> se tem <span class="math notranslate nohighlight">\((x,x)\in R_f\)</span> uma vez que <span class="math notranslate nohighlight">\(f\)</span>
 é uma bem definida função e, por esta razão, se sabe que <span class="math notranslate nohighlight">\(f(x) = f(x)\)</span>;</p>
 <ol class="loweralpha simple" start="2">
-<li>para todos <span class="math notranslate nohighlight">\(x,y\in A\)</span>, se <span class="math notranslate nohighlight">\((x,y)\in R_f\)</span> então
+<li><p>para todos <span class="math notranslate nohighlight">\(x,y\in A\)</span>, se <span class="math notranslate nohighlight">\((x,y)\in R_f\)</span> então
 <span class="math notranslate nohighlight">\(f(x)=f(y)\)</span> e, assim, <span class="math notranslate nohighlight">\(f(y)=f(x)\)</span> (pois a igualdade, sim, é
-simétrica) de onde segue que <span class="math notranslate nohighlight">\((y,x)\in R_f\)</span>;</li>
-<li>para todos <span class="math notranslate nohighlight">\(x,y,z\in A\)</span>, dizer que <span class="math notranslate nohighlight">\((x,y)\in R_f\)</span> e
+simétrica) de onde segue que <span class="math notranslate nohighlight">\((y,x)\in R_f\)</span>;</p></li>
+<li><p>para todos <span class="math notranslate nohighlight">\(x,y,z\in A\)</span>, dizer que <span class="math notranslate nohighlight">\((x,y)\in R_f\)</span> e
 <span class="math notranslate nohighlight">\((y,z)\in R_f\)</span> é o mesmo que dizer que <span class="math notranslate nohighlight">\(f(x)=f(y)\)</span> e
 <span class="math notranslate nohighlight">\(f(y)=f(z)\)</span>. Como a igualdade é transitiva, vê-se que
-<span class="math notranslate nohighlight">\(f(x)=f(z)\)</span> e, portanto, que <span class="math notranslate nohighlight">\((x,z)\in R_f\)</span>.</li>
+<span class="math notranslate nohighlight">\(f(x)=f(z)\)</span> e, portanto, que <span class="math notranslate nohighlight">\((x,z)\in R_f\)</span>.</p></li>
 </ol>
 </li>
 </ol>
@@ -152,14 +149,14 @@ simétrica) de onde segue que <span class="math notranslate nohighlight">\((y,x)
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="../../index.html">Conteúdos</a>
         &#160;&#160;::&#160;&#160;
-        <a href="vetores.html">Espaços vetoriais</a>&#160;&#160;»
+        <a href="zorn.html">Lema de Zorn</a>&#160;&#160;»
         </p>
 
       </div>
 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, Marcelo Barboza.
-      Criado usando <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+      Criado usando <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.
     </div>
   </body>
 </html>

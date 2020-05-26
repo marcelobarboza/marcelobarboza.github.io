@@ -1,21 +1,19 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt_BR">
+<html lang="pt_BR">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Classe de conjugação &#8212; Notas de Aula</title>
     <link rel="stylesheet" href="../../_static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Buscar" href="../../search.html" />
     <link rel="next" title="Subgrupos normais" href="normalidade.html" />
@@ -36,7 +34,7 @@
         </p>
 
       </div>
-      <div class="content">
+      <div class="content" role="main">
         
         
   <div class="section" id="classe-de-conjugacao">
@@ -46,15 +44,14 @@
 \[\forall\,\,x,y\in G:\quad x\sim_G y\iff\exists\,\,\,g\in G,\,\,g^{-1}xg=y.\]</div>
 <p>Tal relação, dita de conjugação, é uma relação de equivalência em G. Com efeito,</p>
 <ol class="arabic">
-<li><p class="first"><span class="math notranslate nohighlight">\(x\sim_G x\)</span> para todo <span class="math notranslate nohighlight">\(x\in G\)</span>, pois <span class="math notranslate nohighlight">\(e^{-1}xe=x\)</span>;</p>
-</li>
-<li><p class="first">se <span class="math notranslate nohighlight">\(x\sim_G y\)</span>, então <span class="math notranslate nohighlight">\(g^{-1}xg=y\)</span> para algum <span class="math notranslate nohighlight">\(g\in G\)</span>.
+<li><p><span class="math notranslate nohighlight">\(x\sim_G x\)</span> para todo <span class="math notranslate nohighlight">\(x\in G\)</span>, pois <span class="math notranslate nohighlight">\(e^{-1}xe=x\)</span>;</p></li>
+<li><p>se <span class="math notranslate nohighlight">\(x\sim_G y\)</span>, então <span class="math notranslate nohighlight">\(g^{-1}xg=y\)</span> para algum <span class="math notranslate nohighlight">\(g\in G\)</span>.
 Logo, existe <span class="math notranslate nohighlight">\(u=g^{-1}\in G\)</span> tal que</p>
 <div class="math notranslate nohighlight">
 \[u^{-1}yu=g(g^{-1}xg)g^{-1}=x,\]</div>
 <p>e, assim, <span class="math notranslate nohighlight">\(y\sim_G x\)</span>;</p>
 </li>
-<li><p class="first">se <span class="math notranslate nohighlight">\(x\sim_G y\)</span> e <span class="math notranslate nohighlight">\(y\sim_G z\)</span>, então existem certos
+<li><p>se <span class="math notranslate nohighlight">\(x\sim_G y\)</span> e <span class="math notranslate nohighlight">\(y\sim_G z\)</span>, então existem certos
 <span class="math notranslate nohighlight">\(g,h\in G\)</span> próprios para que <span class="math notranslate nohighlight">\(g^{-1}xg=y\)</span> e <span class="math notranslate nohighlight">\(h^{-1}yh=z\)</span>.
 Deste modo,</p>
 <div class="math notranslate nohighlight">
@@ -63,8 +60,8 @@ Deste modo,</p>
 </li>
 </ol>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last"><span class="math notranslate nohighlight">\(x^g=g^{-1}xg\)</span>, para todos <span class="math notranslate nohighlight">\(x,g\in G\)</span>.</p>
+<p class="admonition-title">Nota</p>
+<p><span class="math notranslate nohighlight">\(x^g=g^{-1}xg\)</span>, para todos <span class="math notranslate nohighlight">\(x,g\in G\)</span>.</p>
 </div>
 <p>A classe</p>
 <div class="math notranslate nohighlight">
@@ -86,23 +83,21 @@ conjugação, digamos: <span class="math notranslate nohighlight">\(x_1^G,\ldots
 <div class="math notranslate nohighlight">
 \[\vert G\vert=\vert Z(G)\vert+\sum\limits_{x_i\notin Z(G)}\vert x_i^G\vert.\]</div>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last"><span class="math notranslate nohighlight">\(\sqcup\)</span> denota união disjunta.</p>
+<p class="admonition-title">Nota</p>
+<p><span class="math notranslate nohighlight">\(\sqcup\)</span> denota união disjunta.</p>
 </div>
-<dl class="docutils">
-<dt><strong>Proposição</strong></dt>
-<dd><p class="first">Sejam G um grupo e x um elemento arbitrariamente fixado em G. Então, a
+<dl>
+<dt><strong>Proposição</strong></dt><dd><p>Sejam G um grupo e x um elemento arbitrariamente fixado em G. Então, a
 função</p>
 <div class="math notranslate nohighlight">
 \[\Phi_x:G/C_G(x)\longrightarrow x^G,\quad C_G(x)g\longmapsto x^g,\]</div>
-<p class="last">é uma bijeção. Tem-se, pelo Teorema de Lagrange, que
+<p>é uma bijeção. Tem-se, pelo Teorema de Lagrange, que
 <span class="math notranslate nohighlight">\(\vert x^G\vert=[G:C_G(x)]\)</span>.</p>
 </dd>
-<dt><strong>Prova</strong></dt>
-<dd><p class="first">Basta observar que se <span class="math notranslate nohighlight">\(g,h\in G\)</span>, então</p>
+<dt><strong>Prova</strong></dt><dd><p>Basta observar que se <span class="math notranslate nohighlight">\(g,h\in G\)</span>, então</p>
 <div class="math notranslate nohighlight">
 \[\Phi_x(C_G(x)g)=\Phi_x(C_G(x)h)\iff x^g=x^h\iff x^{gh^{-1}}=x\iff gh^{-1}\in C_G(x)\iff C_G(x)g=C_G(x)h,\]</div>
-<p class="last">de onde segue que <span class="math notranslate nohighlight">\(\Phi_x\)</span> é uma bem definida e injetora função. Como
+<p>de onde segue que <span class="math notranslate nohighlight">\(\Phi_x\)</span> é uma bem definida e injetora função. Como
 ela é obviamente sobrejetora, deve ser ainda bijetora. Isto conclui a
 demontração.</p>
 </dd>
@@ -114,12 +109,12 @@ demontração.</p>
 <div class="section" id="aplicacoes">
 <h2>Aplicações<a class="headerlink" href="#aplicacoes" title="Link permanente para este título">¶</a></h2>
 <ol class="arabic simple">
-<li>Seja G um grupo finito de ordem <span class="math notranslate nohighlight">\(\vert G\vert=p^n&gt;1\)</span>, p um número
-primo. Então, <span class="math notranslate nohighlight">\(Z(G)\neq\{e\}\)</span> (exercício);</li>
-<li>Se G é um grupo finito de ordem <span class="math notranslate nohighlight">\(p^2\)</span>, p um primo, então G é um grupo
-abeliano (exercício);</li>
-<li>Se G é um grupo não abeliano de ordem <span class="math notranslate nohighlight">\(p^3\)</span>, então
-<span class="math notranslate nohighlight">\(\vert Z(G)\vert=p\)</span>.</li>
+<li><p>Seja G um grupo finito de ordem <span class="math notranslate nohighlight">\(\vert G\vert=p^n&gt;1\)</span>, p um número
+primo. Então, <span class="math notranslate nohighlight">\(Z(G)\neq\{e\}\)</span> (exercício);</p></li>
+<li><p>Se G é um grupo finito de ordem <span class="math notranslate nohighlight">\(p^2\)</span>, p um primo, então G é um grupo
+abeliano (exercício);</p></li>
+<li><p>Se G é um grupo não abeliano de ordem <span class="math notranslate nohighlight">\(p^3\)</span>, então
+<span class="math notranslate nohighlight">\(\vert Z(G)\vert=p\)</span>.</p></li>
 </ol>
 </div>
 </div>
@@ -140,7 +135,7 @@ abeliano (exercício);</li>
 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, Marcelo Barboza.
-      Criado usando <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+      Criado usando <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.
     </div>
   </body>
 </html>

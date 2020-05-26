@@ -6,7 +6,8 @@
    :maxdepth: 2
    :name: Álgebra Linear
 
+   zorn.rst
    preliminares.rst
    vetores.rst
    subespacos.rst
-   independencia.rst
+   bases.rst

@@ -1,29 +1,27 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt_BR">
+<html lang="pt_BR">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Subespaços vetoriais &#8212; Notas de Aula</title>
+    <meta charset="utf-8" />
+    <title>Subespaços &#8212; Notas de Aula</title>
     <link rel="stylesheet" href="../../_static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Buscar" href="../../search.html" />
-    <link rel="next" title="Dependência linear" href="independencia.html" />
+    <link rel="next" title="Bases" href="bases.html" />
     <link rel="prev" title="Espaços vetoriais" href="vetores.html" /> 
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="../../index.html">
           <span>Notas de Aula</span></a></h1>
-        <h2 class="heading"><span>Subespaços vetoriais</span></h2>
+        <h2 class="heading"><span>Subespaços</span></h2>
       </div>
       <div class="topnav" role="navigation" aria-label="top navigation">
       
@@ -32,86 +30,91 @@
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="../../index.html">Conteúdos</a>
         &#160;&#160;::&#160;&#160;
-        <a href="independencia.html">Dependência linear</a>&#160;&#160;»
+        <a href="bases.html">Bases</a>&#160;&#160;»
         </p>
 
       </div>
-      <div class="content">
+      <div class="content" role="main">
         
         
-  <div class="section" id="subespacos-vetoriais">
-<h1>Subespaços vetoriais<a class="headerlink" href="#subespacos-vetoriais" title="Link permanente para este título">¶</a></h1>
-<p>Subespaços vetoriais são ferramentas úteis à obtenção de novos espaços
-vetoriais.</p>
+  <div class="section" id="subespacos">
+<h1>Subespaços<a class="headerlink" href="#subespacos" title="Link permanente para este título">¶</a></h1>
+<p>Subespaços vetoriais são ferramentas úteis à obtenção de novos exemplos de
+espaços vetoriais.</p>
 <p><strong>Definição</strong></p>
 <blockquote>
-<div><p>Seja V um espaço vetorial. Um subconjunto <span class="math notranslate nohighlight">\(W\subseteq V\)</span> é um
-subespaço vetorial de V se:</p>
+<div><p>Seja <span class="math notranslate nohighlight">\(V\)</span> um espaço vetorial. Um subconjunto <span class="math notranslate nohighlight">\(W\subseteq V\)</span> é um
+subespaço vetorial de <span class="math notranslate nohighlight">\(V\)</span> se:</p>
 <ol class="arabic simple">
-<li><span class="math notranslate nohighlight">\(0\in V\)</span>;</li>
-<li><span class="math notranslate nohighlight">\(\alpha x+\beta y\in W\)</span> se <span class="math notranslate nohighlight">\(\alpha,\beta\in\mathbb{R}\)</span> e
-<span class="math notranslate nohighlight">\(x,y\in W\)</span>.</li>
+<li><p><span class="math notranslate nohighlight">\(0\in W\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha\cdot x+\beta\cdot y\in W\)</span> se
+<span class="math notranslate nohighlight">\(\alpha,\beta\in\mathbb{R}\)</span> e <span class="math notranslate nohighlight">\(x,y\in W\)</span>.</p></li>
 </ol>
 </div></blockquote>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">Se V é um espaço vetorial, a notação <span class="math notranslate nohighlight">\(W\leqslant V\)</span> indica que
-<span class="math notranslate nohighlight">\(W\subseteq V\)</span> é um subespaço de V.</p>
+<p class="admonition-title">Nota</p>
+<p>A notação <span class="math notranslate nohighlight">\(W\leqslant V\)</span> indica que <span class="math notranslate nohighlight">\(W\)</span> é um subespaço vetorial
+de <span class="math notranslate nohighlight">\(V\)</span>.</p>
 </div>
 <p><strong>Exercício</strong></p>
 <blockquote>
-<div>Prove que se <span class="math notranslate nohighlight">\(W\leqslant V\)</span>, então W é por si só um espaço vetorial com
-as operações por ele herdadas de V.</div></blockquote>
+<div><p>Prove que se <span class="math notranslate nohighlight">\(W\leqslant V\)</span>, então <span class="math notranslate nohighlight">\(W\)</span> é por si só um espaço
+vetorial com as operações que ele herda de <span class="math notranslate nohighlight">\(V\)</span>.</p>
+</div></blockquote>
 <div class="section" id="exemplos">
 <h2>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h2>
 <ol class="arabic">
-<li><p class="first"><span class="math notranslate nohighlight">\(W=\{f\in V:f(1)=0\}\leqslant V=F(\{1,\ldots,n\},\mathbb{R})\)</span>;</p>
-</li>
-<li><p class="first"><span class="math notranslate nohighlight">\(W=\{f\in V:f(1,1)+f(2,2)\cdots+f(n,n)=0\}\leqslant
-V=F(\{1,\ldots,n\}\times\{1,\ldots,n\},\mathbb{R})\)</span>;</p>
-</li>
-<li><p class="first">Sejam V um espaço vetorial e L um conjunto de índices. Se, para cada
-<span class="math notranslate nohighlight">\(\lambda\in L\)</span>, <span class="math notranslate nohighlight">\(W_\lambda\leqslant V\)</span> então a interseção</p>
+<li><p><span class="math notranslate nohighlight">\(W=\{f\in V:f(1)=0\}\leqslant V=F(\{1,\ldots,n\},\mathbb{R})\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(W=\{f\in V:f(1,1)+f(2,2)+\cdots+f(n,n)=0\}\leqslant
+V=F(\{1,\ldots,n\}\times\{1,\ldots,n\},\mathbb{R})\)</span>;</p></li>
+<li><p>Sejam <span class="math notranslate nohighlight">\(V\)</span> um espaço vetorial e <span class="math notranslate nohighlight">\(L\)</span> um conjunto de índices. Se,
+para cada <span class="math notranslate nohighlight">\(\lambda\in L\)</span>, <span class="math notranslate nohighlight">\(W_\lambda\leqslant V\)</span> então</p>
 <div class="math notranslate nohighlight">
 \[W=\bigcap\limits_{\lambda\in L}W_\lambda,\]</div>
-<p>é um subespaço vetorial de V.</p>
+<p>é um subespaço vetorial de <span class="math notranslate nohighlight">\(V\)</span>;</p>
 </li>
-<li><p class="first"><span class="math notranslate nohighlight">\(\mathbb{R}v=\{\alpha v:\alpha\in\mathbb{R}\}\leqslant V\)</span> para todo
-espaço vetorial V e todo <span class="math notranslate nohighlight">\(v\in V\)</span>.</p>
-</li>
+<li><p><span class="math notranslate nohighlight">\(\mathbb{R}v=\{\alpha v:\alpha\in\mathbb{R}\}\leqslant V\)</span> para todo
+espaço vetorial <span class="math notranslate nohighlight">\(V\)</span> e todo <span class="math notranslate nohighlight">\(v\in V\)</span>.</p></li>
 </ol>
 </div>
 <div class="section" id="combinacoes-lineares">
 <h2>Combinações lineares<a class="headerlink" href="#combinacoes-lineares" title="Link permanente para este título">¶</a></h2>
 <p><strong>Definição</strong></p>
 <blockquote>
-<div><p>Se V é um espaço vetorial, <span class="math notranslate nohighlight">\(v_1,\ldots,v_n\in V\)</span> e
-<span class="math notranslate nohighlight">\(\alpha_1,\ldots,\alpha_n\in\mathbb{R}\)</span> então o vetor</p>
+<div><p>Seja <span class="math notranslate nohighlight">\(V\)</span> um espaço vetorial. Se <span class="math notranslate nohighlight">\(v_1,\ldots,v_n\in V\)</span> e
+<span class="math notranslate nohighlight">\(\alpha_1,\ldots,\alpha_n\in\mathbb{R}\)</span> então</p>
 <div class="math notranslate nohighlight">
-\[v = \alpha_1 v_1 + \cdots + \alpha_n v_n\in V,\]</div>
-<p>é dito uma <em>combinação linear</em> dos vetores <span class="math notranslate nohighlight">\(v_1,\ldots,v_n\)</span>.</p>
+\[v = \alpha_1\cdot v_1 + \cdots + \alpha_n\cdot v_n\in V,\]</div>
+<p>é uma <em>combinação linear</em> de <span class="math notranslate nohighlight">\(v_1,\ldots,v_n\)</span>.</p>
 </div></blockquote>
 <p><strong>Proposição</strong></p>
 <blockquote>
-<div><p>Sejam V um espaço vetorial e <span class="math notranslate nohighlight">\(X\subseteq V\)</span> um subconjunto de V.
-Então, o conjunto</p>
+<div><p>Sejam <span class="math notranslate nohighlight">\(V\)</span> um espaço vetorial e <span class="math notranslate nohighlight">\(X\)</span> um subconjunto de <span class="math notranslate nohighlight">\(V\)</span>.
+O conjunto</p>
 <div class="math notranslate nohighlight">
-\[\langle X\rangle=\{\alpha v_1+\cdots+\alpha v_n:
+\[\langle X\rangle=\{\alpha_1\cdot v_1+\cdots+\alpha_n\cdot v_n:
 n\in\mathbb{N},
 \,\alpha_1,\ldots,\alpha_n\in\mathbb{R},
 \,v_1,\ldots,v_n\in X\},\]</div>
-<p>de todas as possíveis combinações lineares em V de elementos de X é um
-subespaço vetorial de V, o qual cumpre ainda a seguinte condição:</p>
+<p>de todas as possíveis combinações lineares em <span class="math notranslate nohighlight">\(V\)</span> de elementos de
+<span class="math notranslate nohighlight">\(X\)</span>, constitui um subespaço vetorial de <span class="math notranslate nohighlight">\(V\)</span> com a seguinte
+propriedade:</p>
 <div class="math notranslate nohighlight">
-\[X\subseteq W\leqslant V\implies\langle X\rangle\leqslant W.\]</div>
+\[W\leqslant V\quad\mbox{e}\quad X\subseteq W\implies\langle X\rangle
+\leqslant W.\]</div>
 </div></blockquote>
-<p>O subespaço <span class="math notranslate nohighlight">\(\langle X\rangle\leqslant V\)</span> é portanto, o menor subespaço
-vetorial de V contendo X.</p>
+<p>Portanto, <span class="math notranslate nohighlight">\(\langle X\rangle\leqslant V\)</span> é o menor subespaço vetorial de
+<span class="math notranslate nohighlight">\(V\)</span> que contém <span class="math notranslate nohighlight">\(X\)</span>.</p>
+</div>
+<div class="section" id="conjuntos-geradores">
+<h2>Conjuntos geradores<a class="headerlink" href="#conjuntos-geradores" title="Link permanente para este título">¶</a></h2>
 <p><strong>Definição</strong></p>
 <blockquote>
-<div>Seja V um espaço vetorial e <span class="math notranslate nohighlight">\(X\subseteq V\)</span>. Dizemos que V é gerado por
-X e que X é um conjunto gerador de V, se <span class="math notranslate nohighlight">\(V=\langle X\rangle\)</span>.</div></blockquote>
-<p>Sejam V um espaço vetorial e <span class="math notranslate nohighlight">\(X,Y\subseteq V\)</span> subconjuntos de V. Por
+<div><p>Sejam <span class="math notranslate nohighlight">\(V\)</span> um espaço vetorial e <span class="math notranslate nohighlight">\(X\)</span> um subconjunto de <span class="math notranslate nohighlight">\(V\)</span>.
+Dizemos que <span class="math notranslate nohighlight">\(V\)</span> é gerado por <span class="math notranslate nohighlight">\(X\)</span>, e que <span class="math notranslate nohighlight">\(X\)</span> é um conjunto
+gerador de <span class="math notranslate nohighlight">\(V\)</span>, se <span class="math notranslate nohighlight">\(V=\langle X\rangle\)</span>.</p>
+</div></blockquote>
+<p>Sejam <span class="math notranslate nohighlight">\(V\)</span> um espaço vetorial e <span class="math notranslate nohighlight">\(X,Y\subseteq V\)</span> subconjuntos de <span class="math notranslate nohighlight">\(V\)</span>. Por
 <span class="math notranslate nohighlight">\(X+Y\)</span> queremos indicar o conjunto</p>
 <div class="math notranslate nohighlight">
 \[X+Y=\{u+v\in V:u\in X,\,v\in Y\},\]</div>
@@ -120,21 +123,25 @@ consiste de um único elemento <span class="math notranslate nohighlight">\(u\in
 <span class="math notranslate nohighlight">\(\{u\}+Y\)</span>.</p>
 <p><strong>Exercício</strong></p>
 <blockquote>
-<div>Sejam V um espaço vetorial e <span class="math notranslate nohighlight">\(W_1,W_2\leqslant V\)</span> dois dos subespaços
-vetoriais de V. Então, <span class="math notranslate nohighlight">\(W_1+W_2\leqslant V\)</span> é também um subespaço
-vetorial de V.</div></blockquote>
+<div><p>Sejam <span class="math notranslate nohighlight">\(V\)</span> um espaço vetorial e <span class="math notranslate nohighlight">\(W_1,W_2\leqslant V\)</span> dois dos subespaços
+vetoriais de <span class="math notranslate nohighlight">\(V\)</span>. Então, <span class="math notranslate nohighlight">\(W_1+W_2\leqslant V\)</span> é também um subespaço
+vetorial de <span class="math notranslate nohighlight">\(V\)</span>.</p>
+</div></blockquote>
+</div>
+<div class="section" id="soma-direta">
+<h2>Soma direta<a class="headerlink" href="#soma-direta" title="Link permanente para este título">¶</a></h2>
 <p>Quando subespaços <span class="math notranslate nohighlight">\(W_1,W_2\leqslant V\)</span> contém apenas o vetor nulo
 <span class="math notranslate nohighlight">\(0\in V\)</span> em comum, isto é, <span class="math notranslate nohighlight">\(W_1\cap W_2=\{0\}\)</span>, se escreve
 <span class="math notranslate nohighlight">\(W_1\oplus W_2\)</span> em vez de <span class="math notranslate nohighlight">\(W_1+W_2\)</span> e se diz que <span class="math notranslate nohighlight">\(W=W_1\oplus
 W_2\)</span> é a soma direta dos subespaços <span class="math notranslate nohighlight">\(W_1,W_2\)</span>.</p>
 <p><strong>Proposição</strong></p>
 <blockquote>
-<div><p>Sejam V um espaço vetorial e <span class="math notranslate nohighlight">\(W,W_1,W_2\leqslant V\)</span> subespaços
-vetoriais de V. Então, são equivalentes:</p>
+<div><p>Sejam <span class="math notranslate nohighlight">\(V\)</span> um espaço vetorial e <span class="math notranslate nohighlight">\(W,W_1,W_2\leqslant V\)</span> subespaços
+vetoriais de <span class="math notranslate nohighlight">\(V\)</span>. Então, são equivalentes:</p>
 <ol class="arabic simple">
-<li><span class="math notranslate nohighlight">\(W=W_1\oplus W_2\)</span>;</li>
-<li>todo <span class="math notranslate nohighlight">\(w\in W\)</span> pode ser escrito na forma <span class="math notranslate nohighlight">\(w=w_1+w_2\)</span>, onde
-<span class="math notranslate nohighlight">\(w_1\in W_1\)</span> e <span class="math notranslate nohighlight">\(w_2\in W_2\)</span>, de uma única maneira.</li>
+<li><p><span class="math notranslate nohighlight">\(W=W_1\oplus W_2\)</span>;</p></li>
+<li><p>todo <span class="math notranslate nohighlight">\(w\in W\)</span> pode ser escrito na forma <span class="math notranslate nohighlight">\(w=w_1+w_2\)</span>, onde
+<span class="math notranslate nohighlight">\(w_1\in W_1\)</span> e <span class="math notranslate nohighlight">\(w_2\in W_2\)</span>, de uma única maneira.</p></li>
 </ol>
 </div></blockquote>
 </div>
@@ -149,14 +156,14 @@ vetoriais de V. Então, são equivalentes:</p>
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="../../index.html">Conteúdos</a>
         &#160;&#160;::&#160;&#160;
-        <a href="independencia.html">Dependência linear</a>&#160;&#160;»
+        <a href="bases.html">Bases</a>&#160;&#160;»
         </p>
 
       </div>
 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, Marcelo Barboza.
-      Criado usando <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+      Criado usando <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.
     </div>
   </body>
 </html>
