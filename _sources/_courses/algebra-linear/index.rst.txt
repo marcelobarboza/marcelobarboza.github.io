@@ -7,7 +7,7 @@
    :name: Álgebra Linear
 
    zorn.rst
-   preliminares.rst
+   equivalencia.rst
    vetores.rst
    subespacos.rst
    bases.rst

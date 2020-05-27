@@ -6,7 +6,8 @@
    :maxdepth: -1
    :name: Álgebra Moderna
 
-   preliminares.rst
+   zorn.rst
+   equivalencia.rst
    subgrupos.rst
    conjugacao.rst
    normalidade.rst
