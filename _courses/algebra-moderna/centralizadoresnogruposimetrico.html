@@ -4,7 +4,7 @@
 <html lang="pt_BR">
   <head>
     <meta charset="utf-8" />
-    <title>Centralizadores em grupos simétricos &#8212; Notas de Aula</title>
+    <title>Fatoração em ciclos disjuntos &#8212; Notas de Aula</title>
     <link rel="stylesheet" href="../../_static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
@@ -20,7 +20,7 @@
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="../../index.html">
           <span>Notas de Aula</span></a></h1>
-        <h2 class="heading"><span>Centralizadores em grupos simétricos</span></h2>
+        <h2 class="heading"><span>Fatoração em ciclos disjuntos</span></h2>
       </div>
       <div class="topnav" role="navigation" aria-label="top navigation">
       
@@ -34,8 +34,8 @@
       <div class="content" role="main">
         
         
-  <div class="section" id="centralizadores-em-grupos-simetricos">
-<h1>Centralizadores em grupos simétricos<a class="headerlink" href="#centralizadores-em-grupos-simetricos" title="Link permanente para este título">¶</a></h1>
+  <div class="section" id="fatoracao-em-ciclos-disjuntos">
+<h1>Fatoração em ciclos disjuntos<a class="headerlink" href="#fatoracao-em-ciclos-disjuntos" title="Link permanente para este título">¶</a></h1>
 <p>Seja <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(n\geqslant2\)</span>. Façamos
 <span class="math notranslate nohighlight">\(X_n=\{1,\ldots,n\}\)</span> e como já é de nosso costume, seja <span class="math notranslate nohighlight">\(S_n\)</span> o
 grupo das permutações <span class="math notranslate nohighlight">\(\sigma:X_n\longrightarrow X_n\)</span> do conjunto
@@ -108,6 +108,48 @@ notação cíclica da maneira seguinte:</p>
 \quad\alpha_\kappa=\alpha\vert_{orb_\alpha(i_\kappa)}=(\,k^\kappa_0\,
 k^\kappa_1\,\cdots\,k^\kappa_{r_\kappa}\,),\]</div>
 <p>para todo <span class="math notranslate nohighlight">\(\kappa=0,1,\ldots,N\)</span>.</p>
+<div class="section" id="conjugacao-de-ciclos-em-s-n">
+<h2>Conjugação de ciclos em <span class="math notranslate nohighlight">\(S_n\)</span><a class="headerlink" href="#conjugacao-de-ciclos-em-s-n" title="Link permanente para este título">¶</a></h2>
+<p>Seja <span class="math notranslate nohighlight">\(\alpha=(\,i_1\,i_2\,\cdots\,i_r\,)\)</span> <span class="math notranslate nohighlight">\(r\)</span>-ciclo em <span class="math notranslate nohighlight">\(S_n\)</span>.
+Então,</p>
+<div class="math notranslate nohighlight">
+\[\alpha^\beta=\beta^{-1}\alpha\beta=(\,\beta^{-1}(i_1)\,\beta^{-1}(i_2)\,
+\cdots\,\beta^{-1}(i_r)\,),\]</div>
+<p>para todo <span class="math notranslate nohighlight">\(\beta\in S_n\)</span>. Com efeito, tem-se que</p>
+<div class="math notranslate nohighlight">
+\[\alpha^\beta(\beta(i_\kappa))=\beta^{-1}\alpha\beta(\beta^{-1}(i_\kappa))=
+\beta^{-1}(\alpha(i_\kappa))=\beta^{-1}(i_{\kappa+1}),\]</div>
+<p>para todo <span class="math notranslate nohighlight">\(\kappa=1,2,\ldots,r\)</span>, onde <span class="math notranslate nohighlight">\(i_{\kappa+1}=i_1\)</span> se
+<span class="math notranslate nohighlight">\(\kappa=r\)</span>. Também, caso <span class="math notranslate nohighlight">\(j\in X_n\setminus\{i_1,\ldots,i_r\}\)</span> então</p>
+<div class="math notranslate nohighlight">
+\[\alpha^\beta(\beta^{-1}(j))=\beta^{-1}\alpha\beta(\beta^{-1}(j))=
+\beta^{-1}(\alpha(j))=\beta^{-1}(j),\]</div>
+<p>de onde segue que <span class="math notranslate nohighlight">\(\alpha^\beta=(\,\beta^{-1}(i_1)\,\beta^{-1}(i_2)\,
+\cdots\,\beta^{-1}(i_r)\,)\)</span> exatamente como afirmamos.</p>
+</div>
+<div class="section" id="exercicios">
+<h2>Exercícios<a class="headerlink" href="#exercicios" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Sejam <span class="math notranslate nohighlight">\(G\)</span> um grupo finito e <span class="math notranslate nohighlight">\(H\leqslant G\)</span> tal que
+<span class="math notranslate nohighlight">\([G:H]=2\)</span>. Prove que:</p>
+<ol class="loweralpha">
+<li><p><span class="math notranslate nohighlight">\(H\mathrel{\unlhd}G\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vert x^H\vert=\vert x^G\vert\)</span> ou <span class="math notranslate nohighlight">\(\vert x^H\vert=
+\dfrac{\vert x^G\vert}{2}\)</span> para todo <span class="math notranslate nohighlight">\(x\in G\)</span>, onde</p>
+<div class="math notranslate nohighlight">
+\[x^H=\{x^h:h\in H\}\quad\mbox{e}\quad x^G=\{x^g:g\in G\};\]</div>
+</li>
+</ol>
+</li>
+<li><p>Calcule:</p>
+<ol class="loweralpha simple">
+<li><p><span class="math notranslate nohighlight">\((123)^{A_4}\)</span> e <span class="math notranslate nohighlight">\((123)^{S_4}\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_{S_7}((123)(45))=\{\alpha\in S_7:\alpha(123)(45)=(123)(45)\alpha
+\}\)</span>.</p></li>
+</ol>
+</li>
+</ol>
+</div>
 </div>
 
 

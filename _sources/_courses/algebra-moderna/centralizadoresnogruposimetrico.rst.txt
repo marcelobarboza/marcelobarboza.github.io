@@ -1,5 +1,5 @@
-Centralizadores em grupos simétricos
-------------------------------------
+Fatoração em ciclos disjuntos
+-----------------------------
 
 Seja :math:`n\in\mathbb{N}`, :math:`n\geqslant2`. Façamos
 :math:`X_n=\{1,\ldots,n\}` e como já é de nosso costume, seja :math:`S_n` o
@@ -112,3 +112,55 @@ onde
    k^\kappa_1\,\cdots\,k^\kappa_{r_\kappa}\,),
 
 para todo :math:`\kappa=0,1,\ldots,N`.
+
+Conjugação de ciclos em :math:`S_n`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Seja :math:`\alpha=(\,i_1\,i_2\,\cdots\,i_r\,)` :math:`r`-ciclo em :math:`S_n`.
+Então,
+
+.. math::
+
+   \alpha^\beta=\beta^{-1}\alpha\beta=(\,\beta^{-1}(i_1)\,\beta^{-1}(i_2)\,
+   \cdots\,\beta^{-1}(i_r)\,),
+
+para todo :math:`\beta\in S_n`. Com efeito, tem-se que
+
+.. math::
+
+   \alpha^\beta(\beta(i_\kappa))=\beta^{-1}\alpha\beta(\beta^{-1}(i_\kappa))=
+   \beta^{-1}(\alpha(i_\kappa))=\beta^{-1}(i_{\kappa+1}),
+
+para todo :math:`\kappa=1,2,\ldots,r`, onde :math:`i_{\kappa+1}=i_1` se
+:math:`\kappa=r`. Também, caso :math:`j\in X_n\setminus\{i_1,\ldots,i_r\}` então
+
+.. math::
+
+   \alpha^\beta(\beta^{-1}(j))=\beta^{-1}\alpha\beta(\beta^{-1}(j))=
+   \beta^{-1}(\alpha(j))=\beta^{-1}(j),
+
+de onde segue que :math:`\alpha^\beta=(\,\beta^{-1}(i_1)\,\beta^{-1}(i_2)\,
+\cdots\,\beta^{-1}(i_r)\,)` exatamente como afirmamos.
+
+Exercícios
+~~~~~~~~~~
+
+#. Sejam :math:`G` um grupo finito e :math:`H\leqslant G` tal que
+   :math:`[G:H]=2`. Prove que:
+
+   a. :math:`H\mathrel{\unlhd}G`;
+
+   b. :math:`\vert x^H\vert=\vert x^G\vert` ou :math:`\vert x^H\vert=
+      \dfrac{\vert x^G\vert}{2}` para todo :math:`x\in G`, onde
+
+      .. math::
+
+         x^H=\{x^h:h\in H\}\quad\mbox{e}\quad x^G=\{x^g:g\in G\};
+
+#. Calcule:
+
+   a. :math:`(123)^{A_4}` e :math:`(123)^{S_4}`;
+
+   b. :math:`C_{S_7}((123)(45))=\{\alpha\in S_7:\alpha(123)(45)=(123)(45)\alpha
+      \}`.
+
