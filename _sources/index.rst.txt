@@ -12,6 +12,4 @@ Bem vindo às minhas notas de aula!
 Índices e tabelas
 =================
 
-* :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`

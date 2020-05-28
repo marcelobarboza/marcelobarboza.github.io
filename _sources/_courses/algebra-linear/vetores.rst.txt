@@ -1,145 +1,115 @@
 Espaços vetoriais
-=================
+-----------------
 
-Um espaço vetorial real é um conjunto não vazio :math:`V` munido de uma operação
-binária
-
-.. math::
-   \begin{array}{ccccc}
-   + & : & V\times V & \longrightarrow & V, \\
-   & & (x,y) & \longmapsto & x + y
-   \end{array}
-
-dita adição, e uma operação unária
+Um espaço vetorial real é um conjunto não vazio :math:`V` e duas operações
 
 .. math::
-   \begin{array}{ccccc}
-   \cdot & : & \mathbb{R}\times V & \longrightarrow & V, \\
-   & & (\alpha,x) & \longmapsto & \alpha\cdot x
+   \left\{
+   \begin{array}{llll}
+      V\times V\longrightarrow V, & (x,y) & \longmapsto & x+y, \\
+      \mathbb{R}\times V\longrightarrow V, & (\alpha,x) & \longmapsto &
+      \alpha\cdot x,
    \end{array}
+   \right.
 
-dita multiplicação por escalar, sujeitas às seguintes regras de operação:
+ditas adição e multiplicação por escalar respectivamente, as quais se encontram
+sujeitas às seguintes regras de manipulação algébrica:
 
-:associatividade da adição:
+#. :math:`(x+y)+z=x+(y+z)` para todos :math:`x,y,z\in V`;
 
-   para todos :math:`x,y,z\in V`, vale :math:`(x+y)+z=x+(y+z)`;
+#. existe em :math:`V` um elemento que se denota por :math:`0` e se caracteriza
+   pelo fato de que :math:`x+0=x` para todo :math:`x\in V`;
 
-:elemento neutro da adição:
+#. a cada :math:`x\in V` corresponde um :math:`y\in V` tal que :math:`x+y=0`;
 
-   existe em :math:`V` um elemento que se denota por :math:`0` e se caracteriza
-   pelo fato de que :math:`x+0=x`, para todo :math:`x\in V`;
+#. :math:`x+y=y+x` para todos :math:`x,y\in V`;
 
-:oposto aditivo:
+#. :math:`\alpha\cdot(x+y)=\alpha\cdot x+\alpha\cdot y` para todos
+   :math:`\alpha\in\mathbb{R}` e :math:`x,y\in V`;
 
-   a cada :math:`x\in V` corresponde um :math:`y\in V` para o qual
-   :math:`x+y=0`;
+#. :math:`(\alpha+\beta)\cdot x=\alpha\cdot x+\beta\cdot x` para todos
+   :math:`\alpha,\beta\in\mathbb{R}` e :math:`x\in V`;
 
-:comutatividade da adição:
+#. :math:`\alpha\cdot(\beta\cdot x)=(\alpha\beta)\cdot x` para todos
+   :math:`\alpha,\beta\in\mathbb{R}` e :math:`x\in V`;
 
-   para todos :math:`x,y\in V`, vale :math:`x+y=y+x`;
+#. :math:`1\cdot x=x` para todo :math:`x\in V`.
 
-:linearidade da multiplicação por escalares:
+Propriedades
+~~~~~~~~~~~~
 
-   a. para todos :math:`\alpha\in\mathbb{R}` e :math:`x,y\in V`, vale
-      :math:`\alpha\cdot(x+y)=\alpha\cdot x+\alpha\cdot y`;
-
-   b. para todos :math:`\alpha,\beta\in\mathbb{R}` e :math:`x\in V`, vale
-      :math:`\alpha\cdot(\beta\cdot x)=(\alpha\beta)\cdot x=\beta\cdot(\alpha\cdot x)`;
-
-:distributividade:
-
-   para todos :math:`\alpha,\beta\in\mathbb{R}` e :math:`x\in V`, vale
-   :math:`(\alpha+\beta)\cdot x=\alpha\cdot x+\beta\cdot x`;
-
-:ação neutra da unidade:
-
-   existe :math:`1\in\mathbb{R}` tal que, para todo :math:`x\in V`, vale
-   :math:`1\cdot x=x`.
-
-Propriedades elementares
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Se :math:`V` um espaço vetorial real, então:
+Se :math:`V` é um espaço vetorial real, então:
 
 #. há em :math:`V` um único elemento neutro com respeito à adição. Com efeito,
-   se :math:`0,0^\prime\in V` são ambos neutros para a adição em :math:`V`,
-   então
+   se :math:`0,0^\prime\in V` são ambos neutros para a adição em :math:`V` então
 
    .. math::
-      0=0+0^\prime=0^\prime+0=0^\prime;
+      0^\prime=0+0^\prime=0^\prime+0=0;
 
-#. há em :math:`V`, para cada :math:`x\in V`, um único :math:`y\in V` tal que
-   :math:`x+y=0`. De fato, se :math:`y,z\in V` são tais que :math:`x+y=0` e
-   :math:`x+z= 0`, então
+#. para cada :math:`x\in V` é único o elemento :math:`y\in V` tal que
+   :math:`x+y=0`. De fato, se :math:`y,z\in V` cumprem :math:`x+y=x+z=0` então
 
    .. math::
       y=y+0=y+(x+z)=(y+x)+z=(x+y)+z=0+z=z.
  
-   Consequentemente, dado :math:`x\in V`, não há ambiguidade em se denotar por
-   :math:`-x` ao único :math:`y\in V` para o qual :math:`x+y=0`. 
+   Portanto, não há ambiguidade em se denotar por :math:`-x` ao único elemento
+   :math:`y\in V` para o qual se tem :math:`x+y=0`. Observe que :math:`-(-x)=x`.
 
-#. para todo :math:`x\in V` se tem :math:`0\cdot x=0`. De fato,
+#. :math:`0\cdot x=0` para todo :math:`x\in V`. De fato,
 
    .. math::
       0\cdot x=(0+0)\cdot x=0\cdot x+0\cdot x.
 
-   Agora, tome :math:`y\in V` tal que :math:`0\cdot x+y=0` para veres que
+   Agora tome :math:`y\in V` tal que :math:`0\cdot x+y=0` e veja que
 
    .. math::
-      0=0\cdot x+y=(0\cdot x+0\cdot x)+y=0\cdot x+(0\cdot x+y)=0\cdot x+0=0\cdot x;
+      0\cdot x=0\cdot x+0=0\cdot x+(0\cdot x+y)=(0\cdot x+0\cdot x)+y=0\cdot
+      x+y=0;
 
-#. para todo :math:`\alpha\in\mathbb{R}` se tem :math:`\alpha\cdot 0=0`. A
-   demonstração deste fato é análoga a anterior e por este motivo não a faremos
-   aqui, mas você deveria praticá-la.
+#. :math:`\alpha\cdot0=0` para todo :math:`\alpha\in\mathbb{R}`. De fato,
 
-#. se :math:`\alpha\in\mathbb{R}` e :math:`x\in V` são tais que
-   :math:`\alpha\cdot x=0`, então :math:`\alpha=0` ou :math:`x=0`. Suponha, por
-   exemplo, que :math:`\alpha\neq0`. Então,
+   .. math::
+      \alpha\cdot0=\alpha\cdot(0+0)=\alpha\cdot0+\alpha\cdot0.
+
+   Agora tome :math:`y\in V` tal que :math:`\alpha\cdot0+y=0` e veja que
+
+   .. math::
+      \alpha\cdot0=\alpha\cdot0+0=\alpha\cdot0+(\alpha\cdot0+y)=(\alpha\cdot0+
+      \alpha\cdot0)+y=\alpha\cdot0+y=0;
+
+#. se :math:`\alpha\in\mathbb{R},\,x\in V` e :math:`\alpha\cdot x=0` então
+   :math:`\alpha=0` ou :math:`x=0`. Suponha que :math:`\alpha\neq0`. Então,
    
    .. math::
-      x=1\cdot x=\left(\dfrac{1}{\alpha}\alpha\right)\cdot x=\dfrac{1}{\alpha}\cdot(\alpha\cdot x)=\dfrac{1}{\alpha}\cdot0=0.
+      x=1\cdot x=\left(\dfrac{1}{\alpha}\alpha\right)\cdot
+      x=\dfrac{1}{\alpha}\cdot(\alpha\cdot x)=\dfrac{1}{\alpha}\cdot0=0.
 
 Exemplos
 ~~~~~~~~
 
-#. Seja :math:`X` um conjunto não vazio, arbitrariamente fixado. Denote por
-   :math:`F(X,\mathbb{R})` ao conjunto de todas as funções
-   :math:`f:X\longrightarrow\mathbb{R}`, de :math:`X` em :math:`\mathbb{R}`.
-   Defina
+#. Seja :math:`X` um conjunto não vazio qualquer. Sobre
 
    .. math::
-      \begin{array}{ccccc}
-      + & : & F(X,\mathbb{R})\times F(X,\mathbb{R}) & \longrightarrow & F(X,\mathbb{R}), \\
-      & & (f,g) & \longmapsto & f+g
-      \end{array}
-
-   onde
+      F(X,\mathbb{R})=\{f:X\longrightarrow\mathbb{R}:f\mbox{ é uma função}\},
+      
+   defina
 
    .. math::
-      \begin{array}{ccccl}
-      f+g & : & X & \longrightarrow & \mathbb{R}, \\
-      & & x & \longmapsto & f(x)+g(x)
+      \left\{
+      \begin{array}{rccccrcl}
+         F(X,\mathbb{R})\times F(X,\mathbb{R}) & \longrightarrow &
+         F(X,\mathbb{R}), & (f,g) & \longmapsto & f+g & : & X & \longrightarrow
+         & \mathbb{R} \\
+         & & & & & & & x & \longmapsto & \alpha f(x)+g(x), \\
+         \mathbb{R}\times F(X,\mathbb{R}) & \longrightarrow & F(X,\mathbb{R}), &
+         (\alpha,f) & \longmapsto & \alpha\cdot f & : & X & \longrightarrow &
+         \mathbb{R} \\
+         & & & & & & & x & \longmapsto & \alpha f(x).
       \end{array}
+      \right.
 
-   e também,
-
-   .. math::
-      \begin{array}{ccccc}
-      \cdot & : & \mathbb{R}\times F(X,\mathbb{R}) & \longrightarrow & F(X,\mathbb{R}), \\
-      & & (\alpha,f) & \longmapsto & \alpha\cdot f
-      \end{array}
-
-   onde
-
-   .. math::
-      \begin{array}{ccccl}
-      \alpha\cdot f & : & X & \longrightarrow & \mathbb{R}. \\
-      & & x & \longmapsto & \alpha f(x)
-      \end{array}
-
-   Afirmamos que :math:`F(X,\mathbb{R})` é um espaço vetorial real quando munido
-   das operações de adição e multiplicação por escalres acima definidas. Com
-   efeito, tem-se que:
+   Afirmamos que :math:`F(X,\mathbb{R})` é um espaço vetorial com estas
+   operações. Com efeito, tem-se que:
 
    #. para todos :math:`f,g,h\in F(X,\mathbb{R})` e :math:`x\in X`, as seguintes
       identidades se verificam:

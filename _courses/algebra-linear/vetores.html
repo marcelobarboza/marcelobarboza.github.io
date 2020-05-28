@@ -1,159 +1,263 @@
 
-<!DOCTYPE html>
 
-<html lang="pt_BR">
-  <head>
-    <meta charset="utf-8" />
-    <title>Espaços vetoriais &#8212; Notas de Aula</title>
-    <link rel="stylesheet" href="../../_static/haiku.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
-    <script src="../../_static/translations.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Espaços vetoriais &mdash; Notas de Aula</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Buscar" href="../../search.html" />
     <link rel="next" title="Subespaços" href="subespacos.html" />
     <link rel="prev" title="Relações de equivalência" href="equivalencia.html" /> 
-  </head><body>
-      <div class="header" role="banner"><h1 class="heading"><a href="../../index.html">
-          <span>Notas de Aula</span></a></h1>
-        <h2 class="heading"><span>Espaços vetoriais</span></h2>
-      </div>
-      <div class="topnav" role="navigation" aria-label="top navigation">
-      
-        <p>
-        «&#160;&#160;<a href="equivalencia.html">Relações de equivalência</a>
-        &#160;&#160;::&#160;&#160;
-        <a class="uplink" href="../../index.html">Conteúdos</a>
-        &#160;&#160;::&#160;&#160;
-        <a href="subespacos.html">Subespaços</a>&#160;&#160;»
-        </p>
+</head>
 
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Notas de Aula
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Cursos:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Álgebra Linear</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="zorn.html">Ordens parciais</a></li>
+<li class="toctree-l2"><a class="reference internal" href="equivalencia.html">Relações de equivalência</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Espaços vetoriais</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#propriedades">Propriedades</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exemplos">Exemplos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="subespacos.html">Subespaços</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bases.html">Dependência linear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bases.html#independencia-linear">Independência linear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bases.html#bases">Bases</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../algebra-moderna/index.html">Álgebra Moderna</a></li>
+</ul>
+
+            
+          
+        </div>
       </div>
-      <div class="content" role="main">
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
         
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Notas de Aula</a>
         
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Álgebra Linear</a> &raquo;</li>
+        
+      <li>Espaços vetoriais</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/_courses/algebra-linear/vetores.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
   <div class="section" id="espacos-vetoriais">
 <h1>Espaços vetoriais<a class="headerlink" href="#espacos-vetoriais" title="Link permanente para este título">¶</a></h1>
-<p>Um espaço vetorial real é um conjunto não vazio <span class="math notranslate nohighlight">\(V\)</span> munido de uma operação
-binária</p>
+<p>Um espaço vetorial real é um conjunto não vazio <span class="math notranslate nohighlight">\(V\)</span> e duas operações</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{array}{ccccc}
-+ &amp; : &amp; V\times V &amp; \longrightarrow &amp; V, \\
-&amp; &amp; (x,y) &amp; \longmapsto &amp; x + y
-\end{array}\end{split}\]</div>
-<p>dita adição, e uma operação unária</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{array}{ccccc}
-\cdot &amp; : &amp; \mathbb{R}\times V &amp; \longrightarrow &amp; V, \\
-&amp; &amp; (\alpha,x) &amp; \longmapsto &amp; \alpha\cdot x
-\end{array}\end{split}\]</div>
-<p>dita multiplicação por escalar, sujeitas às seguintes regras de operação:</p>
-<dl class="field-list simple">
-<dt class="field-odd">associatividade da adição</dt>
-<dd class="field-odd"><p>para todos <span class="math notranslate nohighlight">\(x,y,z\in V\)</span>, vale <span class="math notranslate nohighlight">\((x+y)+z=x+(y+z)\)</span>;</p>
-</dd>
-<dt class="field-even">elemento neutro da adição</dt>
-<dd class="field-even"><p>existe em <span class="math notranslate nohighlight">\(V\)</span> um elemento que se denota por <span class="math notranslate nohighlight">\(0\)</span> e se caracteriza
-pelo fato de que <span class="math notranslate nohighlight">\(x+0=x\)</span>, para todo <span class="math notranslate nohighlight">\(x\in V\)</span>;</p>
-</dd>
-<dt class="field-odd">oposto aditivo</dt>
-<dd class="field-odd"><p>a cada <span class="math notranslate nohighlight">\(x\in V\)</span> corresponde um <span class="math notranslate nohighlight">\(y\in V\)</span> para o qual
-<span class="math notranslate nohighlight">\(x+y=0\)</span>;</p>
-</dd>
-<dt class="field-even">comutatividade da adição</dt>
-<dd class="field-even"><p>para todos <span class="math notranslate nohighlight">\(x,y\in V\)</span>, vale <span class="math notranslate nohighlight">\(x+y=y+x\)</span>;</p>
-</dd>
-<dt class="field-odd">linearidade da multiplicação por escalares</dt>
-<dd class="field-odd"><ol class="loweralpha simple">
-<li><p>para todos <span class="math notranslate nohighlight">\(\alpha\in\mathbb{R}\)</span> e <span class="math notranslate nohighlight">\(x,y\in V\)</span>, vale
-<span class="math notranslate nohighlight">\(\alpha\cdot(x+y)=\alpha\cdot x+\alpha\cdot y\)</span>;</p></li>
-<li><p>para todos <span class="math notranslate nohighlight">\(\alpha,\beta\in\mathbb{R}\)</span> e <span class="math notranslate nohighlight">\(x\in V\)</span>, vale
-<span class="math notranslate nohighlight">\(\alpha\cdot(\beta\cdot x)=(\alpha\beta)\cdot x=\beta\cdot(\alpha\cdot x)\)</span>;</p></li>
+\[\begin{split}\left\{
+\begin{array}{llll}
+   V\times V\longrightarrow V, &amp; (x,y) &amp; \longmapsto &amp; x+y, \\
+   \mathbb{R}\times V\longrightarrow V, &amp; (\alpha,x) &amp; \longmapsto &amp;
+   \alpha\cdot x,
+\end{array}
+\right.\end{split}\]</div>
+<p>ditas adição e multiplicação por escalar respectivamente, as quais se encontram
+sujeitas às seguintes regras de manipulação algébrica:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\((x+y)+z=x+(y+z)\)</span> para todos <span class="math notranslate nohighlight">\(x,y,z\in V\)</span>;</p></li>
+<li><p>existe em <span class="math notranslate nohighlight">\(V\)</span> um elemento que se denota por <span class="math notranslate nohighlight">\(0\)</span> e se caracteriza
+pelo fato de que <span class="math notranslate nohighlight">\(x+0=x\)</span> para todo <span class="math notranslate nohighlight">\(x\in V\)</span>;</p></li>
+<li><p>a cada <span class="math notranslate nohighlight">\(x\in V\)</span> corresponde um <span class="math notranslate nohighlight">\(y\in V\)</span> tal que <span class="math notranslate nohighlight">\(x+y=0\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(x+y=y+x\)</span> para todos <span class="math notranslate nohighlight">\(x,y\in V\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha\cdot(x+y)=\alpha\cdot x+\alpha\cdot y\)</span> para todos
+<span class="math notranslate nohighlight">\(\alpha\in\mathbb{R}\)</span> e <span class="math notranslate nohighlight">\(x,y\in V\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\((\alpha+\beta)\cdot x=\alpha\cdot x+\beta\cdot x\)</span> para todos
+<span class="math notranslate nohighlight">\(\alpha,\beta\in\mathbb{R}\)</span> e <span class="math notranslate nohighlight">\(x\in V\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha\cdot(\beta\cdot x)=(\alpha\beta)\cdot x\)</span> para todos
+<span class="math notranslate nohighlight">\(\alpha,\beta\in\mathbb{R}\)</span> e <span class="math notranslate nohighlight">\(x\in V\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(1\cdot x=x\)</span> para todo <span class="math notranslate nohighlight">\(x\in V\)</span>.</p></li>
 </ol>
-</dd>
-<dt class="field-even">distributividade</dt>
-<dd class="field-even"><p>para todos <span class="math notranslate nohighlight">\(\alpha,\beta\in\mathbb{R}\)</span> e <span class="math notranslate nohighlight">\(x\in V\)</span>, vale
-<span class="math notranslate nohighlight">\((\alpha+\beta)\cdot x=\alpha\cdot x+\beta\cdot x\)</span>;</p>
-</dd>
-<dt class="field-odd">ação neutra da unidade</dt>
-<dd class="field-odd"><p>existe <span class="math notranslate nohighlight">\(1\in\mathbb{R}\)</span> tal que, para todo <span class="math notranslate nohighlight">\(x\in V\)</span>, vale
-<span class="math notranslate nohighlight">\(1\cdot x=x\)</span>.</p>
-</dd>
-</dl>
-<div class="section" id="propriedades-elementares">
-<h2>Propriedades elementares<a class="headerlink" href="#propriedades-elementares" title="Link permanente para este título">¶</a></h2>
-<p>Se <span class="math notranslate nohighlight">\(V\)</span> um espaço vetorial real, então:</p>
+<div class="section" id="propriedades">
+<h2>Propriedades<a class="headerlink" href="#propriedades" title="Link permanente para este título">¶</a></h2>
+<p>Se <span class="math notranslate nohighlight">\(V\)</span> é um espaço vetorial real, então:</p>
 <ol class="arabic">
 <li><p>há em <span class="math notranslate nohighlight">\(V\)</span> um único elemento neutro com respeito à adição. Com efeito,
-se <span class="math notranslate nohighlight">\(0,0^\prime\in V\)</span> são ambos neutros para a adição em <span class="math notranslate nohighlight">\(V\)</span>,
-então</p>
+se <span class="math notranslate nohighlight">\(0,0^\prime\in V\)</span> são ambos neutros para a adição em <span class="math notranslate nohighlight">\(V\)</span> então</p>
 <div class="math notranslate nohighlight">
-\[0=0+0^\prime=0^\prime+0=0^\prime;\]</div>
+\[0^\prime=0+0^\prime=0^\prime+0=0;\]</div>
 </li>
-<li><p>há em <span class="math notranslate nohighlight">\(V\)</span>, para cada <span class="math notranslate nohighlight">\(x\in V\)</span>, um único <span class="math notranslate nohighlight">\(y\in V\)</span> tal que
-<span class="math notranslate nohighlight">\(x+y=0\)</span>. De fato, se <span class="math notranslate nohighlight">\(y,z\in V\)</span> são tais que <span class="math notranslate nohighlight">\(x+y=0\)</span> e
-<span class="math notranslate nohighlight">\(x+z= 0\)</span>, então</p>
+<li><p>para cada <span class="math notranslate nohighlight">\(x\in V\)</span> é único o elemento <span class="math notranslate nohighlight">\(y\in V\)</span> tal que
+<span class="math notranslate nohighlight">\(x+y=0\)</span>. De fato, se <span class="math notranslate nohighlight">\(y,z\in V\)</span> cumprem <span class="math notranslate nohighlight">\(x+y=x+z=0\)</span> então</p>
 <div class="math notranslate nohighlight">
 \[y=y+0=y+(x+z)=(y+x)+z=(x+y)+z=0+z=z.\]</div>
-<p>Consequentemente, dado <span class="math notranslate nohighlight">\(x\in V\)</span>, não há ambiguidade em se denotar por
-<span class="math notranslate nohighlight">\(-x\)</span> ao único <span class="math notranslate nohighlight">\(y\in V\)</span> para o qual <span class="math notranslate nohighlight">\(x+y=0\)</span>.</p>
+<p>Portanto, não há ambiguidade em se denotar por <span class="math notranslate nohighlight">\(-x\)</span> ao único elemento
+<span class="math notranslate nohighlight">\(y\in V\)</span> para o qual se tem <span class="math notranslate nohighlight">\(x+y=0\)</span>. Observe que <span class="math notranslate nohighlight">\(-(-x)=x\)</span>.</p>
 </li>
-<li><p>para todo <span class="math notranslate nohighlight">\(x\in V\)</span> se tem <span class="math notranslate nohighlight">\(0\cdot x=0\)</span>. De fato,</p>
+<li><p><span class="math notranslate nohighlight">\(0\cdot x=0\)</span> para todo <span class="math notranslate nohighlight">\(x\in V\)</span>. De fato,</p>
 <div class="math notranslate nohighlight">
 \[0\cdot x=(0+0)\cdot x=0\cdot x+0\cdot x.\]</div>
-<p>Agora, tome <span class="math notranslate nohighlight">\(y\in V\)</span> tal que <span class="math notranslate nohighlight">\(0\cdot x+y=0\)</span> para veres que</p>
+<p>Agora tome <span class="math notranslate nohighlight">\(y\in V\)</span> tal que <span class="math notranslate nohighlight">\(0\cdot x+y=0\)</span> e veja que</p>
 <div class="math notranslate nohighlight">
-\[0=0\cdot x+y=(0\cdot x+0\cdot x)+y=0\cdot x+(0\cdot x+y)=0\cdot x+0=0\cdot x;\]</div>
+\[0\cdot x=0\cdot x+0=0\cdot x+(0\cdot x+y)=(0\cdot x+0\cdot x)+y=0\cdot
+x+y=0;\]</div>
 </li>
-<li><p>para todo <span class="math notranslate nohighlight">\(\alpha\in\mathbb{R}\)</span> se tem <span class="math notranslate nohighlight">\(\alpha\cdot 0=0\)</span>. A
-demonstração deste fato é análoga a anterior e por este motivo não a faremos
-aqui, mas você deveria praticá-la.</p></li>
-<li><p>se <span class="math notranslate nohighlight">\(\alpha\in\mathbb{R}\)</span> e <span class="math notranslate nohighlight">\(x\in V\)</span> são tais que
-<span class="math notranslate nohighlight">\(\alpha\cdot x=0\)</span>, então <span class="math notranslate nohighlight">\(\alpha=0\)</span> ou <span class="math notranslate nohighlight">\(x=0\)</span>. Suponha, por
-exemplo, que <span class="math notranslate nohighlight">\(\alpha\neq0\)</span>. Então,</p>
+<li><p><span class="math notranslate nohighlight">\(\alpha\cdot0=0\)</span> para todo <span class="math notranslate nohighlight">\(\alpha\in\mathbb{R}\)</span>. De fato,</p>
 <div class="math notranslate nohighlight">
-\[x=1\cdot x=\left(\dfrac{1}{\alpha}\alpha\right)\cdot x=\dfrac{1}{\alpha}\cdot(\alpha\cdot x)=\dfrac{1}{\alpha}\cdot0=0.\]</div>
+\[\alpha\cdot0=\alpha\cdot(0+0)=\alpha\cdot0+\alpha\cdot0.\]</div>
+<p>Agora tome <span class="math notranslate nohighlight">\(y\in V\)</span> tal que <span class="math notranslate nohighlight">\(\alpha\cdot0+y=0\)</span> e veja que</p>
+<div class="math notranslate nohighlight">
+\[\alpha\cdot0=\alpha\cdot0+0=\alpha\cdot0+(\alpha\cdot0+y)=(\alpha\cdot0+
+\alpha\cdot0)+y=\alpha\cdot0+y=0;\]</div>
+</li>
+<li><p>se <span class="math notranslate nohighlight">\(\alpha\in\mathbb{R},\,x\in V\)</span> e <span class="math notranslate nohighlight">\(\alpha\cdot x=0\)</span> então
+<span class="math notranslate nohighlight">\(\alpha=0\)</span> ou <span class="math notranslate nohighlight">\(x=0\)</span>. Suponha que <span class="math notranslate nohighlight">\(\alpha\neq0\)</span>. Então,</p>
+<div class="math notranslate nohighlight">
+\[x=1\cdot x=\left(\dfrac{1}{\alpha}\alpha\right)\cdot
+x=\dfrac{1}{\alpha}\cdot(\alpha\cdot x)=\dfrac{1}{\alpha}\cdot0=0.\]</div>
 </li>
 </ol>
 </div>
 <div class="section" id="exemplos">
 <h2>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h2>
 <ol class="arabic">
-<li><p>Seja <span class="math notranslate nohighlight">\(X\)</span> um conjunto não vazio, arbitrariamente fixado. Denote por
-<span class="math notranslate nohighlight">\(F(X,\mathbb{R})\)</span> ao conjunto de todas as funções
-<span class="math notranslate nohighlight">\(f:X\longrightarrow\mathbb{R}\)</span>, de <span class="math notranslate nohighlight">\(X\)</span> em <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.
-Defina</p>
+<li><p>Seja <span class="math notranslate nohighlight">\(X\)</span> um conjunto não vazio qualquer. Sobre</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{array}{ccccc}
-+ &amp; : &amp; F(X,\mathbb{R})\times F(X,\mathbb{R}) &amp; \longrightarrow &amp; F(X,\mathbb{R}), \\
-&amp; &amp; (f,g) &amp; \longmapsto &amp; f+g
-\end{array}\end{split}\]</div>
-<p>onde</p>
+\[F(X,\mathbb{R})=\{f:X\longrightarrow\mathbb{R}:f\mbox{ é uma função}\},\]</div>
+<p>defina</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{array}{ccccl}
-f+g &amp; : &amp; X &amp; \longrightarrow &amp; \mathbb{R}, \\
-&amp; &amp; x &amp; \longmapsto &amp; f(x)+g(x)
-\end{array}\end{split}\]</div>
-<p>e também,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{array}{ccccc}
-\cdot &amp; : &amp; \mathbb{R}\times F(X,\mathbb{R}) &amp; \longrightarrow &amp; F(X,\mathbb{R}), \\
-&amp; &amp; (\alpha,f) &amp; \longmapsto &amp; \alpha\cdot f
-\end{array}\end{split}\]</div>
-<p>onde</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{array}{ccccl}
-\alpha\cdot f &amp; : &amp; X &amp; \longrightarrow &amp; \mathbb{R}. \\
-&amp; &amp; x &amp; \longmapsto &amp; \alpha f(x)
-\end{array}\end{split}\]</div>
-<p>Afirmamos que <span class="math notranslate nohighlight">\(F(X,\mathbb{R})\)</span> é um espaço vetorial real quando munido
-das operações de adição e multiplicação por escalres acima definidas. Com
-efeito, tem-se que:</p>
+\[\begin{split}\left\{
+\begin{array}{rccccrcl}
+   F(X,\mathbb{R})\times F(X,\mathbb{R}) &amp; \longrightarrow &amp;
+   F(X,\mathbb{R}), &amp; (f,g) &amp; \longmapsto &amp; f+g &amp; : &amp; X &amp; \longrightarrow
+   &amp; \mathbb{R} \\
+   &amp; &amp; &amp; &amp; &amp; &amp; &amp; x &amp; \longmapsto &amp; \alpha f(x)+g(x), \\
+   \mathbb{R}\times F(X,\mathbb{R}) &amp; \longrightarrow &amp; F(X,\mathbb{R}), &amp;
+   (\alpha,f) &amp; \longmapsto &amp; \alpha\cdot f &amp; : &amp; X &amp; \longrightarrow &amp;
+   \mathbb{R} \\
+   &amp; &amp; &amp; &amp; &amp; &amp; &amp; x &amp; \longmapsto &amp; \alpha f(x).
+\end{array}
+\right.\end{split}\]</div>
+<p>Afirmamos que <span class="math notranslate nohighlight">\(F(X,\mathbb{R})\)</span> é um espaço vetorial com estas
+operações. Com efeito, tem-se que:</p>
 <ol class="arabic">
 <li><p>para todos <span class="math notranslate nohighlight">\(f,g,h\in F(X,\mathbb{R})\)</span> e <span class="math notranslate nohighlight">\(x\in X\)</span>, as seguintes
 identidades se verificam:</p>
@@ -228,22 +332,52 @@ importantes exemplos:</p>
 </div>
 
 
-      </div>
-      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <p>
-        «&#160;&#160;<a href="equivalencia.html">Relações de equivalência</a>
-        &#160;&#160;::&#160;&#160;
-        <a class="uplink" href="../../index.html">Conteúdos</a>
-        &#160;&#160;::&#160;&#160;
-        <a href="subespacos.html">Subespaços</a>&#160;&#160;»
-        </p>
+        <a href="subespacos.html" class="btn btn-neutral float-right" title="Subespaços" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="equivalencia.html" class="btn btn-neutral float-left" title="Relações de equivalência" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Marcelo Barboza
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
       </div>
 
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, Marcelo Barboza.
-      Criado usando <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.
-    </div>
-  </body>
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
 </html>

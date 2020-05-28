@@ -31,6 +31,9 @@ Exemplos
 #. :math:`W=\{f\in V:f(1,1)+f(2,2)+\cdots+f(n,n)=0\}\leqslant
    V=F(\{1,\ldots,n\}\times\{1,\ldots,n\},\mathbb{R})`;
 
+#. :math:`\mathbb{R}v=\{\alpha v:\alpha\in\mathbb{R}\}\leqslant V` para todo
+   espaço vetorial :math:`V` e todo :math:`v\in V`.
+
 #. Sejam :math:`V` um espaço vetorial e :math:`L` um conjunto de índices. Se,
    para cada :math:`\lambda\in L`, :math:`W_\lambda\leqslant V` então
 
@@ -38,9 +41,6 @@ Exemplos
       W=\bigcap\limits_{\lambda\in L}W_\lambda,
 
    é um subespaço vetorial de :math:`V`;
-
-#. :math:`\mathbb{R}v=\{\alpha v:\alpha\in\mathbb{R}\}\leqslant V` para todo
-   espaço vetorial :math:`V` e todo :math:`v\in V`.
 
 Combinações lineares
 ~~~~~~~~~~~~~~~~~~~~
@@ -86,8 +86,11 @@ Conjuntos geradores
     Dizemos que :math:`V` é gerado por :math:`X`, e que :math:`X` é um conjunto
     gerador de :math:`V`, se :math:`V=\langle X\rangle`.
 
-Sejam :math:`V` um espaço vetorial e :math:`X,Y\subseteq V` subconjuntos de :math:`V`. Por
-:math:`X+Y` queremos indicar o conjunto
+Soma direta
+~~~~~~~~~~~
+
+Sejam :math:`V` um espaço vetorial e :math:`X,Y\subseteq V` subconjuntos de
+:math:`V`. Por :math:`X+Y` queremos indicar o conjunto
 
 .. math::
    X+Y=\{u+v\in V:u\in X,\,v\in Y\},
@@ -98,12 +101,9 @@ consiste de um único elemento :math:`u\in V`, escrevemos :math:`u+Y` em vez de
 
 **Exercício**
 
-    Sejam :math:`V` um espaço vetorial e :math:`W_1,W_2\leqslant V` dois dos subespaços
-    vetoriais de :math:`V`. Então, :math:`W_1+W_2\leqslant V` é também um subespaço
-    vetorial de :math:`V`.
-
-Soma direta
-~~~~~~~~~~~
+    Sejam :math:`V` um espaço vetorial e :math:`W_1,W_2\leqslant V` dois dos
+    subespaços vetoriais de :math:`V`. Então, :math:`W_1+W_2\leqslant V` é
+    também um subespaço vetorial de :math:`V`.
 
 Quando subespaços :math:`W_1,W_2\leqslant V` contém apenas o vetor nulo
 :math:`0\in V` em comum, isto é, :math:`W_1\cap W_2=\{0\}`, se escreve

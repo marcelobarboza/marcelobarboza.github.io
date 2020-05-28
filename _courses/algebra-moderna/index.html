@@ -1,42 +1,168 @@
 
-<!DOCTYPE html>
 
-<html lang="pt_BR">
-  <head>
-    <meta charset="utf-8" />
-    <title>Álgebra Moderna &#8212; Notas de Aula</title>
-    <link rel="stylesheet" href="../../_static/haiku.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
-    <script src="../../_static/translations.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Álgebra Moderna &mdash; Notas de Aula</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Buscar" href="../../search.html" />
     <link rel="next" title="Ordens parciais" href="zorn.html" />
-    <link rel="prev" title="Bases" href="../algebra-linear/bases.html" /> 
-  </head><body>
-      <div class="header" role="banner"><h1 class="heading"><a href="../../index.html">
-          <span>Notas de Aula</span></a></h1>
-        <h2 class="heading"><span>Álgebra Moderna</span></h2>
-      </div>
-      <div class="topnav" role="navigation" aria-label="top navigation">
-      
-        <p>
-        «&#160;&#160;<a href="../algebra-linear/bases.html">Bases</a>
-        &#160;&#160;::&#160;&#160;
-        <a class="uplink" href="../../index.html">Conteúdos</a>
-        &#160;&#160;::&#160;&#160;
-        <a href="zorn.html">Ordens parciais</a>&#160;&#160;»
-        </p>
+    <link rel="prev" title="Dependência linear" href="../algebra-linear/bases.html" /> 
+</head>
 
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Notas de Aula
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Cursos:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../algebra-linear/index.html">Álgebra Linear</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Álgebra Moderna</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="zorn.html">Ordens parciais</a></li>
+<li class="toctree-l2"><a class="reference internal" href="equivalencia.html">Relações de equivalência</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subgrupos.html">Subgrupos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conjugacao.html">Classe de conjugação</a></li>
+<li class="toctree-l2"><a class="reference internal" href="normalidade.html">Subgrupos normais</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homomorfismos.html">Homomorfismos de grupos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="centralizadoresnogruposimetrico.html">Fatoração em ciclos disjuntos</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
       </div>
-      <div class="content" role="main">
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
         
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Notas de Aula</a>
         
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Álgebra Moderna</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/_courses/algebra-moderna/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
   <div class="section" id="algebra-moderna">
 <h1>Álgebra Moderna<a class="headerlink" href="#algebra-moderna" title="Link permanente para este título">¶</a></h1>
 <div class="toctree-wrapper compound" id="id1">
@@ -87,22 +213,52 @@
 </div>
 
 
-      </div>
-      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <p>
-        «&#160;&#160;<a href="../algebra-linear/bases.html">Bases</a>
-        &#160;&#160;::&#160;&#160;
-        <a class="uplink" href="../../index.html">Conteúdos</a>
-        &#160;&#160;::&#160;&#160;
-        <a href="zorn.html">Ordens parciais</a>&#160;&#160;»
-        </p>
+        <a href="zorn.html" class="btn btn-neutral float-right" title="Ordens parciais" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../algebra-linear/bases.html" class="btn btn-neutral float-left" title="Dependência linear" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Marcelo Barboza
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
       </div>
 
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, Marcelo Barboza.
-      Criado usando <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.
-    </div>
-  </body>
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
 </html>
