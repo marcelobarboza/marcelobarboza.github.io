@@ -174,6 +174,64 @@ H\vert=p^\alpha\}\neq\emptyset\)</span>;</p></li>
 <span class="math notranslate nohighlight">\(n_p=\#(\mathrm{Syl}_p(G))\)</span>.</p></li>
 </ol>
 </div></blockquote>
+<p><strong>Prova</strong></p>
+<blockquote>
+<div><p>Seja</p>
+<div class="math notranslate nohighlight">
+\[\Omega_p(G)=\{X\subseteq G:\vert X\vert=p^\alpha\},\]</div>
+<p>o conjunto das partes de <span class="math notranslate nohighlight">\(G\)</span> contendo exatos <span class="math notranslate nohighlight">\(p^\alpha\)</span>
+elementos. É nosso objetivo provar que há um subgrupo de <span class="math notranslate nohighlight">\(G\)</span> dentre os
+elementos de <span class="math notranslate nohighlight">\(\Omega_p(G)\)</span>. Como se sabe, há</p>
+<div class="math notranslate nohighlight">
+\[\vert\Omega_p(G)\vert=\binom{\vert G\vert}{p^\alpha}=\dfrac{\vert G\vert
+\cdot(\vert G\vert-1)\cdot\ldots\cdot(\vert G\vert-p^\alpha+2)\cdot(\vert
+G\vert-p^\alpha+1)}{p^\alpha\cdot(p^\alpha-1)\cdot\ldots\cdot2\cdot1},\]</div>
+<p>elementos em <span class="math notranslate nohighlight">\(\Omega_p(G)\)</span>. Observe que</p>
+<div class="math notranslate nohighlight">
+\[\forall\,\,i\in\{0,1,\ldots,p^\alpha-1\}:\quad p^\beta\mid(\vert G\vert-i)
+\iff p^\beta\mid(p^\alpha-i).\]</div>
+<p>Com efeito, se <span class="math notranslate nohighlight">\(p^\beta\mid(p^\alpha m-i)\)</span> então <span class="math notranslate nohighlight">\(p^\alpha
+m-i=qp^\beta\)</span> para algum <span class="math notranslate nohighlight">\(q\in\mathbb{Z}\)</span>. Deste modo, tem-se que
+<span class="math notranslate nohighlight">\(i=(p^{\alpha-\beta}m-q)p^\beta\)</span> e, assim, que <span class="math notranslate nohighlight">\(p^\beta\mid i\)</span>.
+Logo, deve-se admitir que <span class="math notranslate nohighlight">\(p^\beta\mid(p^\alpha-i)\)</span>. A demonstração de
+que <span class="math notranslate nohighlight">\(p^\beta\mid(p^\alpha-i)\)</span> implica em <span class="math notranslate nohighlight">\(p^\beta\mid(p^\alpha
+m-i)\)</span> pode ser feita de maneira análoga à já aqui apresentada e a deixamos a
+cargo do leitor. Pois bem, tem-se assim que</p>
+<div class="math notranslate nohighlight">
+\[p\nmid\vert\Omega_p(G)\vert.\]</div>
+<p>A ação</p>
+<div class="math notranslate nohighlight">
+\[G\times\Omega_p(G)\longrightarrow\Omega_p(G),\quad(g,X)\longmapsto gX=
+\{gx:x\in X\},\]</div>
+<p>de <span class="math notranslate nohighlight">\(G\)</span> por translação à esquerda de <span class="math notranslate nohighlight">\(\Omega_p(G)\)</span> particiona,
+como sabemos, o conjunto <span class="math notranslate nohighlight">\(\Omega_p(G)\)</span> em classes de equivalência
+(órbitas da ação), a saber,</p>
+<div class="math notranslate nohighlight">
+\[\Omega_p(G)=\bigsqcup_{\kappa=1}^NOrb_G(X_\kappa).\]</div>
+<p>Desta forma, tem-se que</p>
+<div class="math notranslate nohighlight">
+\[\vert\Omega_p(G)\vert=\sum_{\kappa=1}^N[G:Stab_G(X_\kappa)],\]</div>
+<p>de onde se conclui que <span class="math notranslate nohighlight">\(p\nmid[G:Stab_G(X_k)]\)</span> para ao menos um
+<span class="math notranslate nohighlight">\(\kappa\in\{1,\ldots,N\}\)</span> (veja, se tivéssemos
+<span class="math notranslate nohighlight">\(p\mid[G:Stab_G(X_\kappa)]\)</span> para todo <span class="math notranslate nohighlight">\(\kappa\in\{1,\ldots,N\}\)</span>
+também teríamos
+<span class="math notranslate nohighlight">\(p\mid\sum_{\kappa=1}^N[G:Stab_G(X_\kappa)]=\vert\Omega_p(G)\vert\)</span> o
+que, como sabemos, não é o caso). De</p>
+<div class="math notranslate nohighlight">
+\[p^\alpha\mid\vert G\vert=[G:Stab_G(X_\kappa)]\cdot\vert
+Stab_G(X_\kappa)\vert\quad\mbox{e}\quad
+p\nmid[G:Stab_G(X_\kappa)]\implies p^\alpha\mid\vert
+Stab_G(X_\kappa)\vert,\]</div>
+<p>conclui-se que <span class="math notranslate nohighlight">\(p^\alpha\leqslant\vert Stab_G(X_\kappa)\vert\)</span>.
+Reciprovamente, a função</p>
+<div class="math notranslate nohighlight">
+\[\Phi_\kappa^a:Stab_G(X_\kappa)\longrightarrow X_\kappa,\quad g\longmapsto
+ga,\]</div>
+<p>em que <span class="math notranslate nohighlight">\(a\in X_\kappa\)</span> é um elemento arbitrariamente fixado, é
+obviamente injetora e, assim, tem-se também que <span class="math notranslate nohighlight">\(\vert
+Stab_G(X_\kappa)\vert\leqslant\vert X_\kappa\vert=p^\alpha\)</span>, de onde segue
+que <span class="math notranslate nohighlight">\(\vert Stab_G(X_\kappa)\vert=p^\alpha\)</span>.</p>
+</div></blockquote>
 </div>
 </div>
 

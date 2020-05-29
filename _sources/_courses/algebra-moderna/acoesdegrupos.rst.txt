@@ -172,4 +172,81 @@ Teorema de Sylow
    2. :math:`H,K\in\mathrm{Syl}_p(G)\implies H^g=K` para algum :math:`g\in G`;
    3. :math:`n_p\equiv1\pmod p` e :math:`n_p\mid m`, onde
       :math:`n_p=\#(\mathrm{Syl}_p(G))`.
+
+**Prova**
+
+   Seja
+
+   .. math::
+      \Omega_p(G)=\{X\subseteq G:\vert X\vert=p^\alpha\},
+
+   o conjunto das partes de :math:`G` contendo exatos :math:`p^\alpha`
+   elementos. É nosso objetivo provar que há um subgrupo de :math:`G` dentre os
+   elementos de :math:`\Omega_p(G)`. Como se sabe, há 
+
+   .. math::
+      \vert\Omega_p(G)\vert=\binom{\vert G\vert}{p^\alpha}=\dfrac{\vert G\vert
+      \cdot(\vert G\vert-1)\cdot\ldots\cdot(\vert G\vert-p^\alpha+2)\cdot(\vert
+      G\vert-p^\alpha+1)}{p^\alpha\cdot(p^\alpha-1)\cdot\ldots\cdot2\cdot1},
+
+   elementos em :math:`\Omega_p(G)`. Observe que
+
+   .. math::
+      \forall\,\,i\in\{0,1,\ldots,p^\alpha-1\}:\quad p^\beta\mid(\vert G\vert-i)
+      \iff p^\beta\mid(p^\alpha-i).
+
+   Com efeito, se :math:`p^\beta\mid(p^\alpha m-i)` então :math:`p^\alpha
+   m-i=qp^\beta` para algum :math:`q\in\mathbb{Z}`. Deste modo, tem-se que
+   :math:`i=(p^{\alpha-\beta}m-q)p^\beta` e, assim, que :math:`p^\beta\mid i`.
+   Logo, deve-se admitir que :math:`p^\beta\mid(p^\alpha-i)`. A demonstração de
+   que :math:`p^\beta\mid(p^\alpha-i)` implica em :math:`p^\beta\mid(p^\alpha
+   m-i)` pode ser feita de maneira análoga à já aqui apresentada e a deixamos a
+   cargo do leitor. Pois bem, tem-se assim que
+
+   .. math::
+      p\nmid\vert\Omega_p(G)\vert.
+
+   A ação
+
+   .. math::
+      G\times\Omega_p(G)\longrightarrow\Omega_p(G),\quad(g,X)\longmapsto gX=
+      \{gx:x\in X\},
       
+   de :math:`G` por translação à esquerda de :math:`\Omega_p(G)` particiona,
+   como sabemos, o conjunto :math:`\Omega_p(G)` em classes de equivalência
+   (órbitas da ação), a saber,
+   
+   .. math::
+      \Omega_p(G)=\bigsqcup_{\kappa=1}^NOrb_G(X_\kappa).
+
+   Desta forma, tem-se que
+
+   .. math::
+      \vert\Omega_p(G)\vert=\sum_{\kappa=1}^N[G:Stab_G(X_\kappa)],
+
+   de onde se conclui que :math:`p\nmid[G:Stab_G(X_k)]` para ao menos um
+   :math:`\kappa\in\{1,\ldots,N\}` (veja, se tivéssemos
+   :math:`p\mid[G:Stab_G(X_\kappa)]` para todo :math:`\kappa\in\{1,\ldots,N\}`
+   também teríamos
+   :math:`p\mid\sum_{\kappa=1}^N[G:Stab_G(X_\kappa)]=\vert\Omega_p(G)\vert` o
+   que, como sabemos, não é o caso). De
+
+   .. math::
+      p^\alpha\mid\vert G\vert=[G:Stab_G(X_\kappa)]\cdot\vert
+      Stab_G(X_\kappa)\vert\quad\mbox{e}\quad
+      p\nmid[G:Stab_G(X_\kappa)]\implies p^\alpha\mid\vert
+      Stab_G(X_\kappa)\vert,
+
+   conclui-se que :math:`p^\alpha\leqslant\vert Stab_G(X_\kappa)\vert`.
+   Reciprovamente, a função
+
+   .. math::
+      \Phi_\kappa^a:Stab_G(X_\kappa)\longrightarrow X_\kappa,\quad g\longmapsto
+      ga,
+
+   em que :math:`a\in X_\kappa` é um elemento arbitrariamente fixado, é
+   obviamente injetora e, assim, tem-se também que :math:`\vert
+   Stab_G(X_\kappa)\vert\leqslant\vert X_\kappa\vert=p^\alpha`, de onde segue
+   que :math:`\vert Stab_G(X_\kappa)\vert=p^\alpha`.
+
+
