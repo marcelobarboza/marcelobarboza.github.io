@@ -100,7 +100,7 @@ Exemplos
          F(X,\mathbb{R})\times F(X,\mathbb{R}) & \longrightarrow &
          F(X,\mathbb{R}), & (f,g) & \longmapsto & f+g & : & X & \longrightarrow
          & \mathbb{R} \\
-         & & & & & & & x & \longmapsto & \alpha f(x)+g(x), \\
+         & & & & & & & x & \longmapsto & f(x)+g(x), \\
          \mathbb{R}\times F(X,\mathbb{R}) & \longrightarrow & F(X,\mathbb{R}), &
          (\alpha,f) & \longmapsto & \alpha\cdot f & : & X & \longrightarrow &
          \mathbb{R} \\

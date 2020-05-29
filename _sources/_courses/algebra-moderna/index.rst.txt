@@ -12,4 +12,5 @@
    conjugacao.rst
    normalidade.rst
    homomorfismos.rst
-   centralizadoresnogruposimetrico.rst
+   centralizadores.rst
+   acoesdegrupos.rst
