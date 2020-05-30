@@ -51,6 +51,13 @@ respectivamente.
 
 **Proposição**
 
+   Seja :math:`G` um grupo agindo à esquerda de um conjunto :math:`X`. Então,
+   :math:`Stab_G(x)` é um subgrupo de :math:`G` para todo :math:`x\in X`.
+
+**Prova** Exercício.
+
+**Proposição**
+
    Seja :math:`G` um grupo agindo à esquerda de um conjunto :math:`X`. Então, a
    função
 
@@ -61,7 +68,7 @@ respectivamente.
 
 **Prova**
 
-   Para cada :math:`x\in X` arbitrariamente fixado, tem-se que:
+   Tem-se, para cada :math:`x\in X` arbitrariamente fixado, que:
 
    .. math::
       \forall\,\,g,h\in G:\quad gx=hx\iff(h^{-1}g)x=x\iff h^{-1}g\in
@@ -101,7 +108,7 @@ Teorema de Cauchy
       (\bar{i},(x_1,\ldots,x_p))\longmapsto\bar{i}\cdot(x_1,\ldots,x_p)=
       (x_{1+i},\ldots,x_{p+i}),
 
-   em que a soma de índices *deve ser tomada modulo p*, do grupo aditivo
+   em que a soma de índices *deve ser tomada módulo p*, do grupo aditivo
    :math:`\mathbb{Z}_p` à esquerda de :math:`\Omega_p(G)`. Note que
 
    .. math::

@@ -11,3 +11,4 @@
    vetores.rst
    subespacos.rst
    bases.rst
+   aplicacoeslineares.rst

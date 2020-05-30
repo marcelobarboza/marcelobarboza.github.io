@@ -66,6 +66,12 @@ Se :math:`V` é um espaço vetorial real, então:
       0\cdot x=0\cdot x+0=0\cdot x+(0\cdot x+y)=(0\cdot x+0\cdot x)+y=0\cdot
       x+y=0;
 
+#. :math:`-1\cdot x=-x` para todo :math:`x\in V`. Com efeito, tem-se que
+
+   .. math::
+      -1\cdot x+x=-1\cdot x+1\cdot x=(-1+1)\cdot x=0\cdot x=0\implies-1\cdot
+      x=-x;
+
 #. :math:`\alpha\cdot0=0` para todo :math:`\alpha\in\mathbb{R}`. De fato,
 
    .. math::

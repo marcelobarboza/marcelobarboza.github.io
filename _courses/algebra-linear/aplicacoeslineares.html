@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+
+<html lang="pt_BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Aplicações lineares &#8212; Notas de Aula</title>
+    <link rel="stylesheet" href="../../_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../search.html" />
+    <link rel="next" title="Álgebra Moderna" href="../algebra-moderna/index.html" />
+    <link rel="prev" title="Dependência linear" href="bases.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../../index.html">
+          <span>Notas de Aula</span></a></h1>
+        <h2 class="heading"><span>Aplicações lineares</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="bases.html">Dependência linear</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../../index.html">Conteúdos</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../algebra-moderna/index.html">Álgebra Moderna</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <div class="section" id="aplicacoes-lineares">
+<h1>Aplicações lineares<a class="headerlink" href="#aplicacoes-lineares" title="Link permanente para este título">¶</a></h1>
+<p><strong>Definição</strong></p>
+<blockquote>
+<div><p>Uma função <span class="math notranslate nohighlight">\(A:V\longrightarrow W\)</span> entre espaços vetoriais é dita uma
+transformação linear se</p>
+<div class="math notranslate nohighlight">
+\[A(\alpha\cdot x+\beta\cdot y)=\alpha\cdot A(x)+\beta\cdot A(y),\]</div>
+<p>para todos <span class="math notranslate nohighlight">\(x,y\in V\)</span> e <span class="math notranslate nohighlight">\(\alpha,\beta\in\mathbb{R}\)</span>.</p>
+</div></blockquote>
+<p>Observe que se <span class="math notranslate nohighlight">\(A:V\longrightarrow W\)</span> é linear então</p>
+<div class="math notranslate nohighlight">
+\[A(0)=A(0+0)=A(0)+A(0)\implies A(0)=0,\]</div>
+<p>e daí, que</p>
+<div class="math notranslate nohighlight">
+\[\forall\,\,\alpha\in\mathbb{R},\,x\in V:\quad A(\alpha\cdot x)=A(\alpha\cdot
+x+1\cdot0)=\alpha\cdot A(x)+1\cdot A(0)=\alpha\cdot A(x)+1\cdot0=\alpha\cdot
+A(x)+0=\alpha\cdot A(x),\]</div>
+<p>de onde segue, por exemplo, que</p>
+<div class="math notranslate nohighlight">
+\[A(-x)=A(-1\cdot x)=-1\cdot A(x).\]</div>
+<p>O conjunto</p>
+<div class="math notranslate nohighlight">
+\[\mathfrak{L}(V,W)=\{A:V\longrightarrow W:A\mbox{ é linear}\},\]</div>
+<p>de todas as transformações lineares <span class="math notranslate nohighlight">\(V\longrightarrow W\)</span> é por si mesmo um
+espaço vetorial (verifique!) com as operações seguintes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left\{
+\begin{array}{rccccrcl}
+   \mathfrak{L}(V,W)\times \mathfrak{L}(V,W) &amp; \longrightarrow &amp;
+   \mathfrak{L}(V,W), &amp; (A,B) &amp; \longmapsto &amp; A+B &amp; : &amp; V &amp; \longrightarrow
+   &amp; W \\
+   &amp; &amp; &amp; &amp; &amp; &amp; &amp; x &amp; \longmapsto &amp; A(x)+B(x), \\
+   \mathbb{R}\times \mathfrak{L}(V,W) &amp; \longrightarrow &amp; \mathfrak{L}(V,W), &amp;
+   (\alpha,A) &amp; \longmapsto &amp; \alpha\cdot A &amp; : &amp; V &amp; \longrightarrow &amp;
+   W \\
+   &amp; &amp; &amp; &amp; &amp; &amp; &amp; x &amp; \longmapsto &amp; \alpha\cdot A(x).
+\end{array}
+\right.\end{split}\]</div>
+<p>Casos particulares da situação acima incluem os dois seguintes exemplos:</p>
+<ol class="arabic">
+<li><p><span class="math notranslate nohighlight">\(\mathfrak{L}(V)=\mathfrak{L}(V,V)\)</span>: os elementos de
+<span class="math notranslate nohighlight">\(\mathfrak{L}(V)\)</span> são <em>operadores lineares</em> em <span class="math notranslate nohighlight">\(V\)</span>. Observe que a
+função indentidade</p>
+<div class="math notranslate nohighlight">
+\[1_V:V\longrightarrow V,\quad x\longmapsto x,\]</div>
+<p>pertence a <span class="math notranslate nohighlight">\(\mathfrak{L}(V)\)</span>;</p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(V^*=\mathfrak{L}(V,\mathbb{R})\)</span>: os elementos de <span class="math notranslate nohighlight">\(V^*\)</span> são
+<em>funcionais lineares</em> em <span class="math notranslate nohighlight">\(V\)</span>.</p></li>
+</ol>
+<div class="section" id="propriedades">
+<h2>Propriedades<a class="headerlink" href="#propriedades" title="Link permanente para este título">¶</a></h2>
+<p><strong>Teorema</strong></p>
+<blockquote>
+<div><p>Sejam <span class="math notranslate nohighlight">\(V,W\)</span> espaços vetoriais e <span class="math notranslate nohighlight">\(\mathfrak{B}\)</span> uma base de
+<span class="math notranslate nohighlight">\(V\)</span>. Então, a cada função <span class="math notranslate nohighlight">\(f:\mathfrak{B}\longrightarrow W\)</span>
+corresponde uma única transformação linear <span class="math notranslate nohighlight">\(A:V\longrightarrow W\)</span> tal
+que <span class="math notranslate nohighlight">\(A\vert_\mathfrak{B}=f\)</span>.</p>
+</div></blockquote>
+</div>
+<div class="section" id="kernel-e-imagem">
+<h2>Kernel e imagem<a class="headerlink" href="#kernel-e-imagem" title="Link permanente para este título">¶</a></h2>
+<p><strong>Proposição</strong></p>
+<blockquote>
+<div><p>Sejam <span class="math notranslate nohighlight">\(V,W\)</span> espaços vetoriais e <span class="math notranslate nohighlight">\(A:V\longrightarrow W\)</span> uma
+transformação linear. Então,</p>
+<ol class="loweralpha">
+<li><p><span class="math notranslate nohighlight">\(\ker_A=\{x\in V:A(x)=0\}\leqslant V\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathrm{Im}_A=\{y\in W:\exists\,\,x\in V,\,y=A(x)\}\leqslant W\)</span>;</p></li>
+<li><p>a correspondência</p>
+<div class="math notranslate nohighlight">
+\[\mathfrak{A}:V/\ker_A\longrightarrow\mathrm{Im}_A,\quad
+x+\ker_A\longmapsto A(x),\]</div>
+<p>é um isomorfismo de espaços vetoriais.</p>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="bases.html">Dependência linear</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../../index.html">Conteúdos</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../algebra-moderna/index.html">Álgebra Moderna</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Marcelo Barboza.
+      Criado usando <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.
+    </div>
+  </body>
+</html>
