@@ -1,0 +1,116 @@
+Ordens parciais
+---------------
+
+**Definição**
+
+   Seja :math:`X` um conjunto não vazio. Uma relação de ordem parcial em
+   :math:`X` é um conjunto :math:`R\subseteq X\times X` com as seguintes
+   propriedades:
+
+   :reflexidade:
+
+      :math:`(x,x)\in R` para todo :math:`x\in X`;
+
+   :anti-simetria:
+
+      se :math:`(x,y)\in R` e :math:`(y,x)\in R` então :math:`x=y`;
+
+   :transitividade:
+
+      se :math:`(x,y)\in R` e :math:`(y,z)\in R` então :math:`(x,z)\in R`.
+
+Um conjunto parcialmente ordenado é um par :math:`(X,R)` em que :math:`X` é um
+conjunto não vazio e :math:`R` é uma relação de ordem parcial em :math:`X`.
+
+.. note::
+   :math:`x\leqslant_R y\iff(x,y)\in R`
+
+Exemplos
+~~~~~~~~
+
+#. Seja :math:`X=\{d\in\mathbb{N}:d\mid54\}` o conjunto dos divisores
+   inteiros e positivos do número :math:`54=2\cdot3^3`. O conjunto
+
+   .. math::
+      R=\{(x,y)\in X\times X:x\mid y\},
+
+   constitui uma relação de ordem parcial em :math:`X`, como se pode facilmente
+   verificar. Uma imagem fala mais que 1000 palavras, certo? Pois bem, a relação
+   de ordem :math:`R` pode ser representada por seu *diagrama de Hasse*: o grafo
+   :math:`\mathfrak{H}_R` definido pelos conjuntos
+
+   .. math::
+      V(\mathfrak{H}_R)=\{1,2,3,6,9,18,27,54\}=X,
+
+   de seus vértices, e
+
+   .. math::
+      E(\mathfrak{H}_R)=\{(x,y)\in R:\nexists\,z\in X,\,(x,z)\in R\mbox{ e
+      }(z,y)\in R\},
+
+   de suas arestas. Tem-se, enfim, a seguinte representação de :math:`R`:
+
+   .. tikz::
+
+      \draw[fill=black] ( 0.0, 0.0) circle (1pt);
+      \draw[fill=black] (-2.5, 0.5) circle (1pt);
+      \draw[fill=black] ( 2.5, 0.5) circle (1pt);
+      \draw[fill=black] (-2.5, 1.0) circle (1pt);
+      \draw[fill=black] ( 2.5, 1.0) circle (1pt);
+      \draw[fill=black] (-2.5, 1.5) circle (1pt);
+      \draw[fill=black] ( 2.5, 1.5) circle (1pt);
+      \draw[fill=black] ( 0.0, 2.0) circle (1pt);
+
+      \node at ( 0.0,-0.5)  {1};
+      \node at (-3.0, 0.5)  {2};
+      \node at ( 3.0, 0.5)  {3};
+      \node at (-3.0, 1.0)  {6};
+      \node at ( 3.0, 1.0)  {9};
+      \node at (-3.0, 1.5) {18};
+      \node at ( 3.0, 1.5) {27};
+      \node at ( 0.0, 2.5) {54};
+
+      \draw[->,>=latex] ( 0.0, 0.0) -- (-2.5, 0.5);
+      \draw[->,>=latex] ( 0.0, 0.0) -- ( 2.5, 0.5);
+      \draw[->,>=latex] (-2.5, 0.5) -- (-2.5, 1.0);
+      \draw[->,>=latex] ( 2.5, 0.5) -- ( 2.5, 1.0);
+      \draw[->,>=latex] (-2.5, 1.0) -- (-2.5, 1.5);
+      \draw[->,>=latex] ( 2.5, 1.0) -- ( 2.5, 1.5);
+      \draw[->,>=latex] (-2.5, 1.5) -- ( 0.0, 2.0);
+      \draw[->,>=latex] ( 2.5, 1.5) -- ( 0.0, 2.0);
+      \draw[->,>=latex] ( 2.5, 0.5) -- (-2.5, 1.0);
+      \draw[->,>=latex] ( 2.5, 1.0) -- (-2.5, 1.5);
+
+   Note que apenas se tem :math:`x\leqslant_R y` caso exista em
+   :math:`\mathfrak{H}_R` um caminho com início em :math:`x` e término em
+   :math:`y`. Deste modo é que se pode dizer, por exemplo, que
+   :math:`2\nleqslant_R 27` por uma simples inspeção de :math:`\mathfrak{H}_R`.
+
+Lema de Zorn
+~~~~~~~~~~~~
+
+**Definição**
+
+   Seja :math:`(X,R)` um conjunto parcialmente ordenado. Um conjunto
+   :math:`C\subseteq X` é dito :math:`R`-simplesmente ordenado se:
+
+   .. math::
+      x,y\in C\implies x\leqslant_R y\quad\mbox{ou}\quad y\leqslant_R x.
+
+   Um elemento :math:`\omega\in X` é dito uma :math:`R`-cota superior de
+   :math:`C` se:
+
+   .. math::
+      x\in C\implies x\leqslant_R\omega.
+
+   Um elemento :math:`\omega\in X` é dito :math:`R`-maximal se:
+
+   .. math::
+      y\in X\quad\mbox{e}\quad \omega\leqslant_R y\implies y=\omega.
+
+**Lema de Zorn**
+
+   Seja :math:`(X,R)` um conjunto parcialmente ordenado. Se todo conjunto
+   :math:`R`-simplesmente ordenado :math:`C\subseteq X`  possui uma
+   :math:`R`-cota superior em :math:`X`, então :math:`X` possui um elemento
+   :math:`R`-maximal.

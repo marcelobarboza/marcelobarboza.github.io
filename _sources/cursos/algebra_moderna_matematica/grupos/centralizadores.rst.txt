@@ -1,0 +1,166 @@
+Fatoração em ciclos disjuntos
+-----------------------------
+
+Seja :math:`n\in\mathbb{N}`, :math:`n\geqslant2`. Façamos
+:math:`X_n=\{1,\ldots,n\}` e como já é de nosso costume, seja :math:`S_n` o
+grupo das permutações :math:`\sigma:X_n\longrightarrow X_n` do conjunto
+:math:`X_n` com respeito à operação de composição de funções. Seja
+:math:`\alpha\in S_n` uma permutação arbitrariamente fixada. A relação
+
+.. math::
+
+   \forall\,\,i,j\in X_n:\quad i\sim_\alpha
+   j\iff\exists\,\,t\in\mathbb{Z}\mbox{ para o qual }\alpha^t(i)=j,
+
+é uma relação de equivalência em :math:`X_n` (verifique!). A classe de
+equivalência de um elemento :math:`i_0\in X_n` segundo :math:`\sim_\alpha` é o
+conjunto
+
+.. math::
+
+   orb_\alpha(i_0)=\{j\in X_n:j\sim_\alpha
+   i_0\}=\{\alpha^t(i_0):t\in\mathbb{Z}\}.
+   
+Observe que
+
+.. math::
+
+   \{i_0,\alpha(i_0),\alpha^2(i_0),\ldots\}\subseteq orb_\alpha(i_0)\subseteq
+   X_n,
+
+e, então, que existe
+
+.. math::
+
+   r_0=\max\{t\in\mathbb{N}:\alpha^t(i_0)\notin\{i_0,\alpha(i_0),\ldots,
+   \alpha^{t-1}(i_0)\}\}.
+
+Como :math:`\alpha^{r_0+1}(i_0)\in\{i_0,\alpha(i_0),\ldots,\alpha^{r_0}(i_0)\}`,
+nós temos que :math:`\alpha^{r_0+1}(i_0)=\alpha^t(i_0)` para algum
+:math:`t=0,1,\ldots,r_0`. Afirmamos que :math:`t=0`. Com efeito, se fosse
+:math:`\alpha^{r_0+1}(i_0)=\alpha^t(i_0)` para algum :math:`1\leqslant
+t\leqslant r_0`, nós então teríamos :math:`\alpha^{r_0+1-t}(i_0)=i_0` com
+:math:`1\leqslant r_0+1-t\leqslant r_0`. Portanto, o maior número
+:math:`u\in\mathbb{Z}` tal que
+:math:`\alpha^u(i_0)\notin\{i_0,\alpha(i_0),\ldots,\alpha^{u-1}(i_0)\}` deveria
+ser menor do que ou igual a :math:`r_0-t\leqslant r_0-1<r_0`, contrariando a
+escolha de :math:`r_0`. Portanto, :math:`\alpha^{r_0+1}(i_0)=i_0`. Finalmente,
+afirmamos que
+
+.. math::
+
+   orb_\alpha(i_0)=\{i_0,\alpha(i_0),\ldots,\alpha^{r_0}(i_0)\}.
+   
+De fato, os elementos :math:`i_0,\alpha(i_0),\ldots,\alpha^{r_0}(i_0)` são *dois
+a dois distintos* e naturalmente pertencem à classe :math:`orb_\alpha(i_0)`.
+Reciprocamete, se :math:`t\in\mathbb{Z}` então
+
+.. math::
+
+   t=a\cdot(r_0+1)+b,
+   
+para certos :math:`a,b\in\mathbb{Z}`, :math:`0\leqslant b<r_0+1`. Logo, o
+elemento
+
+.. math::
+
+   \alpha^t(i_0)=\alpha^{a\cdot(r_0+1)+b}(i_0)=\alpha^b(\alpha^{a\cdot(r_0+1)}
+   (i_0))=\alpha^b(i_0),
+
+pertence também a :math:`\{i_0,\alpha(i_0),\ldots,\alpha^{r_0}(i_0)\}` e, assim,
+:math:`orb_\alpha(i_0)=\{i_0,\alpha(i_0),\ldots,\alpha^{r_0}(i_0)\}` do modo que
+havíamos afirmado. Se escrevermos
+
+.. math::
+
+   k^0_0=i_0,\,k^0_1=\alpha(i_0),\,\ldots,\,k^0_{r_0}=\alpha^{r_0}(i_0),
+
+poderemos expressar a restrição
+
+.. math::
+
+   \alpha_0=\alpha\vert_{orb_\alpha(i_0)}:orb_\alpha(i_0)\longrightarrow
+   orb_\alpha(i_0),
+
+de :math:`\alpha` a :math:`orb_\alpha(i_0)` em
+notação cíclica da maneira seguinte:
+
+.. math::
+
+   \alpha_0=(\,k^0_0\,k^0_1\,\cdots\,k^0_{r_0}\,),
+
+como é de fácil verificação. Sendo :math:`X_n` um conjunto finito, existem
+:math:`i_0,i_1,\ldots,i_N\in X_n` tais que
+
+.. math::
+
+   X_n=\bigsqcup_{\kappa=0}^N orb_\alpha(i_\kappa),
+
+e, assim, :math:`\alpha` se fatora num produto de ciclos disjuntos
+
+.. math::
+
+   \alpha=\alpha_0\cdot\alpha_1\cdot\ldots\cdot\alpha_N,
+
+onde
+
+.. math::
+
+   orb_\alpha(i_\kappa)=\{k^\kappa_0=i_\kappa,k^\kappa_1=\alpha(i_\kappa),
+   \ldots,k^\kappa_{r_\kappa}=\alpha^{r_\kappa}(i_\kappa)\}\quad\mbox{e}
+   \quad\alpha_\kappa=\alpha\vert_{orb_\alpha(i_\kappa)}=(\,k^\kappa_0\,
+   k^\kappa_1\,\cdots\,k^\kappa_{r_\kappa}\,),
+
+para todo :math:`\kappa=0,1,\ldots,N`.
+
+Conjugação de ciclos em :math:`S_n`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Seja :math:`\alpha=(\,i_1\,i_2\,\cdots\,i_r\,)` :math:`r`-ciclo em :math:`S_n`.
+Então,
+
+.. math::
+
+   \alpha^\beta=\beta^{-1}\alpha\beta=(\,\beta^{-1}(i_1)\,\beta^{-1}(i_2)\,
+   \cdots\,\beta^{-1}(i_r)\,),
+
+para todo :math:`\beta\in S_n`. Com efeito, tem-se que
+
+.. math::
+
+   \alpha^\beta(\beta(i_\kappa))=\beta^{-1}\alpha\beta(\beta^{-1}(i_\kappa))=
+   \beta^{-1}(\alpha(i_\kappa))=\beta^{-1}(i_{\kappa+1}),
+
+para todo :math:`\kappa=1,2,\ldots,r`, onde :math:`i_{\kappa+1}=i_1` se
+:math:`\kappa=r`. Também, caso :math:`j\in X_n\setminus\{i_1,\ldots,i_r\}` então
+
+.. math::
+
+   \alpha^\beta(\beta^{-1}(j))=\beta^{-1}\alpha\beta(\beta^{-1}(j))=
+   \beta^{-1}(\alpha(j))=\beta^{-1}(j),
+
+de onde segue que :math:`\alpha^\beta=(\,\beta^{-1}(i_1)\,\beta^{-1}(i_2)\,
+\cdots\,\beta^{-1}(i_r)\,)` exatamente como afirmamos.
+
+Exercícios
+~~~~~~~~~~
+
+#. Sejam :math:`G` um grupo finito e :math:`H\leqslant G` tal que
+   :math:`[G:H]=2`. Prove que:
+
+   a. :math:`H\mathrel{\unlhd}G`;
+
+   b. :math:`\vert x^H\vert=\vert x^G\vert` ou :math:`\vert x^H\vert=
+      \dfrac{\vert x^G\vert}{2}` para todo :math:`x\in G`, onde
+
+      .. math::
+
+         x^H=\{x^h:h\in H\}\quad\mbox{e}\quad x^G=\{x^g:g\in G\};
+
+#. Calcule:
+
+   a. :math:`(123)^{A_4}` e :math:`(123)^{S_4}`;
+
+   b. :math:`C_{S_7}((123)(45))=\{\alpha\in S_7:\alpha(123)(45)=(123)(45)\alpha
+      \}`.
+

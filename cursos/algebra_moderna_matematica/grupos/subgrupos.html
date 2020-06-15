@@ -1,0 +1,471 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Subgrupos &mdash; documentação Material de Apoio às Aulas 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../../search.html" />
+    <link rel="next" title="Classe de conjugação" href="conjugacao.html" />
+    <link rel="prev" title="Relações de equivalência" href="../preliminares/relacoes_de_equivalencia.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Material de Apoio às Aulas
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Conteúdo:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../planos/index.html">Planos de Ensino 2020/1</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Notas de Aula</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../algebra_linear_matematica/index.html">Álgebra Linear</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Álgebra Moderna</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../preliminares/lema_de_zorn.html">Ordens parciais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../preliminares/relacoes_de_equivalencia.html">Relações de equivalência</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Subgrupos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#exemplos">Exemplos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#classes-laterais">Classes laterais</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#teorema-de-lagrange">Teorema de Lagrange</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="conjugacao.html">Classe de conjugação</a></li>
+<li class="toctree-l3"><a class="reference internal" href="normalidade.html">Subgrupos normais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="homomorfismos.html">Homomorfismos de grupos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="centralizadores.html">Fatoração em ciclos disjuntos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="centralizadores_em_grupos_simetricos.html">Fatoração em ciclos disjuntos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acoes_de_grupos.html">Ações de grupos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Material de Apoio às Aulas</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Notas de Aula</a> &raquo;</li>
+        
+          <li><a href="../index.html">Álgebra Moderna</a> &raquo;</li>
+        
+      <li>Subgrupos</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/cursos/algebra_moderna_matematica/grupos/subgrupos.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="subgrupos">
+<h1>Subgrupos<a class="headerlink" href="#subgrupos" title="Link permanente para este título">¶</a></h1>
+<p>Um subgrupo de <span class="math notranslate nohighlight">\(G\)</span> é um subconjunto <span class="math notranslate nohighlight">\(H\subseteq G\)</span> que, com a
+operação induzida daquela em <span class="math notranslate nohighlight">\(G\)</span>, é por si só um grupo.</p>
+<dl class="simple">
+<dt><strong>Definição</strong></dt><dd><p>Seja <span class="math notranslate nohighlight">\(G\)</span> um grupo. Um subgrupo de <span class="math notranslate nohighlight">\(G\)</span> é um subconjunto
+<span class="math notranslate nohighlight">\(H\subseteq G\)</span> com as seguintes características:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(xy\in H\)</span> se <span class="math notranslate nohighlight">\(x\in H\)</span> e <span class="math notranslate nohighlight">\(y\in H\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(e\in H\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(x^{-1}\in H\)</span> se <span class="math notranslate nohighlight">\(x\in H\)</span>.</p></li>
+</ul>
+</dd>
+<dt><strong>Proposição</strong></dt><dd><p>Sejam <span class="math notranslate nohighlight">\(G\)</span> um grupo e <span class="math notranslate nohighlight">\(H\)</span> um subconjunto de <span class="math notranslate nohighlight">\(G\)</span>. Então,
+<span class="math notranslate nohighlight">\(H\)</span> é um subgrupo de <span class="math notranslate nohighlight">\(G\)</span> se, e somente se, as seguintes
+condições forem satisfeitas:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(e\in H\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(xy^{-1}\in H\)</span> se <span class="math notranslate nohighlight">\(x\in H\)</span> e <span class="math notranslate nohighlight">\(y\in H\)</span>.</p></li>
+</ul>
+</dd>
+<dt><strong>Prova</strong></dt><dd><p>Suponha que <span class="math notranslate nohighlight">\(H\)</span> seja um subgrupo de <span class="math notranslate nohighlight">\(G\)</span>. Então, só nos resta
+provar que <span class="math notranslate nohighlight">\(xy^{-1}\in H\)</span> sempre que <span class="math notranslate nohighlight">\(x\in H\)</span> e <span class="math notranslate nohighlight">\(y\in H\)</span>,
+já que <span class="math notranslate nohighlight">\(e\in H\)</span> está em nossas hipóteses. Sendo assim, tome
+<span class="math notranslate nohighlight">\(x,y\in H\)</span> quaisquer e observe que, por ser subgrupo,
+<span class="math notranslate nohighlight">\(y^{-1}\in H\)</span>, de modo que <span class="math notranslate nohighlight">\(x,y^{-1}\in H\)</span> e, assim,
+<span class="math notranslate nohighlight">\(xy^{-1}\in H\)</span>. Reciprocamente, suponha que <span class="math notranslate nohighlight">\(H\subseteq G\)</span>,
+<span class="math notranslate nohighlight">\(e\in H\)</span> e <span class="math notranslate nohighlight">\(xy^{-1}\in H\)</span> sempre que <span class="math notranslate nohighlight">\(x\in H\)</span> e
+<span class="math notranslate nohighlight">\(y\in H\)</span>. Se <span class="math notranslate nohighlight">\(x\in H\)</span> então <span class="math notranslate nohighlight">\(e,x\in H\)</span> e, assim,
+<span class="math notranslate nohighlight">\(x^{-1}=ex^{-1}\in H\)</span>. Se <span class="math notranslate nohighlight">\(x,y\in H\)</span>, como acabamos de
+constatar, <span class="math notranslate nohighlight">\(y^{-1}\in H\)</span> e por esta razão <span class="math notranslate nohighlight">\(x,y^{-1}\in H\)</span>, de
+onde segue, enfim, que <span class="math notranslate nohighlight">\(xy=x(y^{-1})^{-1}\in H\)</span>, o que conclui esta
+demonstração.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p><span class="math notranslate nohighlight">\(H\leqslant G\)</span> denota que <span class="math notranslate nohighlight">\(H\)</span> é subgrupo de <span class="math notranslate nohighlight">\(G\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\vert G\vert\)</span> denota a cardinalidade de <span class="math notranslate nohighlight">\(G\)</span>.</p>
+</div>
+<div class="section" id="exemplos">
+<h2>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h2>
+<p>Subgrupos fornecem um caminho rápido para a obtenção de novos exemplos de
+grupos.</p>
+<ol class="arabic">
+<li><p><span class="math notranslate nohighlight">\(2\mathbb{Z}=\{2x:x\in\mathbb{Z}\}\leqslant\mathbb{Z}\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbb{Q}\leqslant\mathbb{R}\)</span> (grupos aditivos);</p></li>
+<li><p>Seja G um grupo. Então:</p>
+<ol class="loweralpha simple">
+<li><p><span class="math notranslate nohighlight">\(Z(G)=\{g\in G:gx=xg,\,\forall\,\,x\in G\}\)</span> é um subgrupo de G,
+chamado <em>centro de G</em>;</p></li>
+</ol>
+<p>b. para cada <span class="math notranslate nohighlight">\(x\in G\)</span> fixado, <span class="math notranslate nohighlight">\(C_G(x)=\{g\in G:gx=xg\}\)</span> é um
+subgrupo de G, chamado <em>centralizador de x em G</em>;</p>
+</li>
+<li><p>Este exemplo requer conhecimentos básicos de Álgebra Linear, incluindo
+determinantes. Represente os vetores de <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> segundo colunas,
+da maneira seguinte:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x = \left[
+\begin{array}{c}
+x_1 \\ \vdots \\ x_n
+\end{array}
+\right].\end{split}\]</div>
+<p>Recorde que o delta de Kronecker é dado por</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\delta_{ij} =
+\begin{cases}
+1 \mbox{, se } i=j, \\
+0 \mbox{, se } i\neq j,
+\end{cases}\end{split}\]</div>
+<p>com o que podemos escrever os vetores canônicos de <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> da
+seguinte maneira:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}e_i=\left[
+\begin{array}{c}
+\delta_{1i} \\ \vdots \\ \delta_{ni}
+\end{array}
+\right],\end{split}\]</div>
+<p>para <span class="math notranslate nohighlight">\(i=1,\ldots,n\)</span>. Represente matrizes em
+<span class="math notranslate nohighlight">\(\mbox{Mat}(n\times n,\mathbb{R})\)</span> em função de suas colunas. Assim,
+por exemplo, a matriz</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \left[
+\begin{array}{}
+a_{11} &amp; \dots &amp; a_{1n} \\
+\vdots &amp; \ddots &amp; \vdots \\
+a_{n1} &amp; \dots &amp; a_{nn}
+\end{array}
+\right]\end{split}\]</div>
+<p>passa a ser <span class="math notranslate nohighlight">\(A=[a_1,\ldots,a_n]\)</span>, onde</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}a_1 = \left[
+\begin{array}{c}
+a_{11} \\ \vdots \\ a_{n1}
+\end{array}
+\right],\,\ldots\,,\,a_n = \left[
+\begin{array}{c}
+a_{1n} \\ \vdots \\ a_{nn}
+\end{array}
+\right].\end{split}\]</div>
+<p>O grupo linear geral é o conjunto</p>
+<div class="math notranslate nohighlight">
+\[\mbox{GL}(n,\mathbb{R})=\{A\in\mbox{Mat}(n\times n,\mathbb{R}):\det(A)\neq0\},\]</div>
+<p>das matrizes reais invertíveis de ordem <span class="math notranslate nohighlight">\(n\)</span>, dotado da operação usual
+de multiplicação de matrizes (prove que <span class="math notranslate nohighlight">\(\mbox{GL}(n,\mathbb{R})\)</span> é, de
+fato, um grupo). Como é de nosso costume denotar, seja</p>
+<div class="math notranslate nohighlight">
+\[S_n=\{\sigma:\{1,\ldots,n\}\longrightarrow\{1,\ldots,n\}:\sigma\mbox{ é uma bijeção}\},\]</div>
+<p>o grupo das permutações de <span class="math notranslate nohighlight">\(\{1,\ldots,n\}\)</span> com a operação de
+composição de funções. Uma matriz de permutação é qualquer matriz obtida a
+partir da matriz identidade, <span class="math notranslate nohighlight">\(E=[e_1,\ldots,e_n]\)</span>, por uma permutação
+de suas colunas. Portanto, seja</p>
+<div class="math notranslate nohighlight">
+\[P_n=\{E^\sigma=[e_{\sigma(1)},\ldots,e_{\sigma(n)}]:\sigma\in S_n\}\subseteq\mbox{GL}(n,\mathbb{R}),\]</div>
+<p>o conjunto de todas matrizes de permutação de ordem <span class="math notranslate nohighlight">\(n\)</span> (justifique a
+inclusão <span class="math notranslate nohighlight">\(P_n\subseteq\mbox{GL}(n,\mathbb{R})\)</span>). Finalmente, o grupo
+alternado <span class="math notranslate nohighlight">\(n\)</span> é o conjunto</p>
+<div class="math notranslate nohighlight">
+\[A_n=\{\sigma\in S_n:\det(E^\sigma)=1\},\]</div>
+<p>com a operação por ele herdade de <span class="math notranslate nohighlight">\(S_n\)</span>. Prove que <span class="math notranslate nohighlight">\(A_n\)</span> é
+efetivamente um subgrupo de <span class="math notranslate nohighlight">\(S_n\)</span>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="classes-laterais">
+<h2>Classes laterais<a class="headerlink" href="#classes-laterais" title="Link permanente para este título">¶</a></h2>
+<p>Sejam <span class="math notranslate nohighlight">\(G\)</span> um grupo e <span class="math notranslate nohighlight">\(H\)</span> um subconjunto de <span class="math notranslate nohighlight">\(G\)</span>. Dizemos que
+<span class="math notranslate nohighlight">\(x\in G\)</span> é congruente a <span class="math notranslate nohighlight">\(y\in H\)</span>, e escrevemos
+<span class="math notranslate nohighlight">\(x\mathrel{\equiv}y\pmod H\)</span>, se <span class="math notranslate nohighlight">\(xy^{-1}\in H\)</span>.</p>
+<dl>
+<dt><strong>Proposição</strong></dt><dd><p>Sejam <span class="math notranslate nohighlight">\(G\)</span> um grupo e <span class="math notranslate nohighlight">\(H\subseteq G\)</span> um subconjunto. Então,
+<span class="math notranslate nohighlight">\(\cdot\equiv\cdot\pmod H\)</span> é uma relação de equivalência em <span class="math notranslate nohighlight">\(G\)</span>
+se, e somente se, <span class="math notranslate nohighlight">\(H\leqslant G\)</span>.</p>
+</dd>
+<dt><strong>Prova</strong></dt><dd><p>Suponha que <span class="math notranslate nohighlight">\(H\)</span> seja um subgrupo de <span class="math notranslate nohighlight">\(G\)</span>. Neste caso, temos que:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x\equiv x\pmod H\)</span> pois <span class="math notranslate nohighlight">\(e=xx^{-1}\in H\)</span>;</p></li>
+<li><p>se <span class="math notranslate nohighlight">\(x\equiv y\pmod H\)</span>, então <span class="math notranslate nohighlight">\(xy^{-1}\in H\)</span> e, assim,
+<span class="math notranslate nohighlight">\(yx^{-1}=(xy^{-1})^{-1}\in H\)</span> de onde segue que, também,
+<span class="math notranslate nohighlight">\(y\equiv x\pmod H\)</span>;</p></li>
+<li><p>se <span class="math notranslate nohighlight">\(x\equiv y\pmod H\)</span> e <span class="math notranslate nohighlight">\(y\equiv z\pmod H\)</span>, então
+<span class="math notranslate nohighlight">\(xy^{-1},yz^{-1}\in H\)</span> e, portanto,
+<span class="math notranslate nohighlight">\(xz^{-1}=(xy^{-1})(yz^{-1})\in H\)</span> de forma que
+<span class="math notranslate nohighlight">\(x\equiv z\pmod H\)</span>.</p></li>
+</ul>
+<p>A relação <span class="math notranslate nohighlight">\(\equiv \pmod H\)</span> é, deste modo, uma relação de equivalência
+em <span class="math notranslate nohighlight">\(G\)</span>.</p>
+<p>A demonstração de que, se <span class="math notranslate nohighlight">\(\cdot\equiv\cdot\pmod H\)</span> é uma relação de
+equivalência em <span class="math notranslate nohighlight">\(G\)</span>, então <span class="math notranslate nohighlight">\(H\)</span> é um subgrupo de <span class="math notranslate nohighlight">\(G\)</span>, fica
+a cargo do leitor. Em verdade, este é um dos exercícios do questionário.</p>
+</dd>
+</dl>
+<p>Como vimos, se <span class="math notranslate nohighlight">\(G\)</span> é um grupo e <span class="math notranslate nohighlight">\(H\)</span> é um de seus subgrupos, então
+<span class="math notranslate nohighlight">\(\cdot\equiv\cdot\pmod H\)</span> é uma relação de equivalência em <span class="math notranslate nohighlight">\(G\)</span>. Mas
+como são as classes de equivalência de tal relação? Para responder a esta
+pergunta, considere conjuntos da forma</p>
+<div class="math notranslate nohighlight">
+\[Hx=\{hx:h\in H\},\]</div>
+<p>onde <span class="math notranslate nohighlight">\(x\in H\)</span>, ditos classes laterais à direita de <span class="math notranslate nohighlight">\(H\)</span> em <span class="math notranslate nohighlight">\(G\)</span>
+(lembre-se de que a operação de um grupo não é, necessariamente, comutativa).
+Uma coisa é clara: se <span class="math notranslate nohighlight">\(h\in H\)</span>, então <span class="math notranslate nohighlight">\(hx\equiv x\pmod H\)</span> dado que
+<span class="math notranslate nohighlight">\((hx)x^{-1}=h\in H\)</span> e, deste modo, tem-se que</p>
+<div class="math notranslate nohighlight">
+\[Hx\subseteq\bar{x}=\{y\in G:y\equiv x\pmod H\},\]</div>
+<p>para todo <span class="math notranslate nohighlight">\(x\in G\)</span> (<span class="math notranslate nohighlight">\(\bar{x}\)</span> é a classe de conjugação de <span class="math notranslate nohighlight">\(x\)</span> em
+<span class="math notranslate nohighlight">\(G\)</span> segundo <span class="math notranslate nohighlight">\(\cdot\equiv\cdot\pmod H\)</span>). O que dizer do contrário,
+isto é, se <span class="math notranslate nohighlight">\(y\in\bar{x}\)</span>, se segue daí que ele pertença também a <span class="math notranslate nohighlight">\(Hx\)</span>?
+A resposta é <em>sim</em>. Veja, se <span class="math notranslate nohighlight">\(y\in\bar{x}\)</span> então <span class="math notranslate nohighlight">\(yx^{-1}=h\in H\)</span> e
+<span class="math notranslate nohighlight">\(y=hx\in Hx\)</span>. Logo, <span class="math notranslate nohighlight">\(\bar{x}\subseteq Hx\)</span> e, portanto,</p>
+<div class="math notranslate nohighlight">
+\[\{hx:h\in H\}=Hx=\bar{x}=\{y\in G:y\equiv x\pmod H\},\]</div>
+<p>para todo <span class="math notranslate nohighlight">\(x\in G\)</span>.</p>
+<p>Da mesma forma que definimos classes laterais à direita de <span class="math notranslate nohighlight">\(H\)</span> em
+<span class="math notranslate nohighlight">\(G\)</span>, poderíamos também ter definido classes laterais à esquerda:
+<span class="math notranslate nohighlight">\(xH=\{xh:h\in H\}\)</span>, para todo <span class="math notranslate nohighlight">\(x\in G\)</span>. Não é verdade que classes
+laterais à esquerda coincidam com classes laterais à direita, ou seja, em geral,
+<span class="math notranslate nohighlight">\(xH\neq Hx\)</span>. Entretanto, a cardinalidade das classes laterais à esquerda
+é a mesma que a cardinalidade das classes laterais à direita. Com efeito, basta
+ver que a função</p>
+<div class="math notranslate nohighlight">
+\[f:\{xH:x\in G\}\longrightarrow\{Hx:x\in G\},\quad xH\longmapsto Hx^{-1},\]</div>
+<p>é uma bijeção (exercício).</p>
+<dl class="simple">
+<dt><strong>Definição</strong></dt><dd><p>Sejam <span class="math notranslate nohighlight">\(G\)</span> um grupo e <span class="math notranslate nohighlight">\(H\leqslant G\)</span>. O índice de <span class="math notranslate nohighlight">\(H\)</span> em
+<span class="math notranslate nohighlight">\(G\)</span>, denotado por <span class="math notranslate nohighlight">\([G:H]\)</span>, é o número de classes laterais à
+direita (ou à esquerda) de <span class="math notranslate nohighlight">\(H\)</span> em <span class="math notranslate nohighlight">\(G\)</span>.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Se <span class="math notranslate nohighlight">\(H\leqslant G\)</span>, então <span class="math notranslate nohighlight">\(G/H=\{Hx:x\in G\}\)</span>. Observe que
+<span class="math notranslate nohighlight">\(\vert G/H\vert=[G:H]\)</span>.</p>
+</div>
+<p>Uma outra pergunta que devemos nos fazer é a seguinte: podem duas classes
+laterais, à direita ou à esquerda, ter cardinalidades distintas uma da outra?
+Não. Entenda o porquê: tome um elemento <span class="math notranslate nohighlight">\(x\in G\)</span> qualquer e considere a
+seguinte função (para classes laterais à esquerda a definição é análoga):</p>
+<div class="math notranslate nohighlight">
+\[\Phi_x:H\longrightarrow Hx,\quad h\longmapsto hx.\]</div>
+<p>Afirmamos que <span class="math notranslate nohighlight">\(\Phi_x\)</span> é uma bijeção. Com efeito, dados <span class="math notranslate nohighlight">\(a,b\in H\)</span>
+quaisquer, observe que:</p>
+<div class="math notranslate nohighlight">
+\[\Phi_x(a)=\Phi_x(b)\iff ax=bx\iff a=b,\]</div>
+<p>de onde segue que <span class="math notranslate nohighlight">\(\Phi_x\)</span> é injetora. Como <span class="math notranslate nohighlight">\(\Phi_x\)</span> é obviamente
+sobrejetora, ela é então uma função bijetora. As classes laterais <span class="math notranslate nohighlight">\(H\)</span> e
+<span class="math notranslate nohighlight">\(Hx\)</span> têm, portanto, a mesma cardinalidade.</p>
+</div>
+<div class="section" id="teorema-de-lagrange">
+<h2>Teorema de Lagrange<a class="headerlink" href="#teorema-de-lagrange" title="Link permanente para este título">¶</a></h2>
+<dl class="simple">
+<dt><strong>Teorema de Lagrange</strong></dt><dd><p>Seja <span class="math notranslate nohighlight">\(G\)</span> um grupo <strong>finito</strong>. Se <span class="math notranslate nohighlight">\(H\)</span> é subgrupo de <span class="math notranslate nohighlight">\(G\)</span>,
+então <span class="math notranslate nohighlight">\(\vert H\vert\)</span> divide <span class="math notranslate nohighlight">\(\vert G\vert\)</span>.</p>
+</dd>
+</dl>
+<p>O Teorema de Lagrange é de suma importância para o estudo dos grupos finitos.
+Ele nos diz, por exemplo, que na tarefa de se encontrar a todos os subgrupos de
+um grupo com 1024 elementos, devemos nos ater aos subconjuntos de cardinalidade
+um divisor de 1024. Devemos, portanto, procurar apenas entre os subconjuntos de
+<span class="math notranslate nohighlight">\(2^\alpha\)</span>, <span class="math notranslate nohighlight">\(\alpha=0,1,2,\ldots,10\)</span>. Ainda tem-se um enorme espaço
+de busca, é verdade. Acontece que se desconhecessemos o Teorema, o espaço de
+busca teria <span class="math notranslate nohighlight">\(2^{1024}-1\)</span> elementos!</p>
+<dl>
+<dt><strong>Demonstação do Teorema de Lagrange</strong></dt><dd><p>O trabalho está essencialmente feito, só nos resta juntar as peças. Sejam
+<span class="math notranslate nohighlight">\(G\)</span> um grupo finito e <span class="math notranslate nohighlight">\(H\leqslant G\)</span>. Já sabemos que as classes
+laterais à direita de <span class="math notranslate nohighlight">\(H\)</span> em <span class="math notranslate nohighlight">\(G\)</span> particionam o conjunto
+<span class="math notranslate nohighlight">\(G\)</span>. Como cada classe lateral é não vazia e <span class="math notranslate nohighlight">\(G\)</span> é finito, o
+número de classes deve também ser finito, digamos: <span class="math notranslate nohighlight">\(Hx_1=H,
+Hx_2, \ldots, Hx_x\)</span>. Logo,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{lllllllll}
+\vert G\vert&amp;=&amp;\vert Hx_1\vert&amp;+&amp;\vert Hx_2\vert&amp;+&amp;\cdots&amp;+&amp;\vert Hx_n\vert\\
+&amp;=&amp;\vert H\vert&amp;+&amp;\vert H\vert&amp;+&amp;\cdots&amp;+&amp;\vert H\vert,\\
+\end{array}\end{split}\]</div>
+<p>de onde segue que <span class="math notranslate nohighlight">\(\vert G\vert=n\vert H\vert\)</span>, o que conclui a
+argumentação.</p>
+</dd>
+</dl>
+<p>Uma consequência do Teorema de Lagrange é que, quando <span class="math notranslate nohighlight">\(G\)</span> é finito, o
+índice de <span class="math notranslate nohighlight">\(H\leqslant G\)</span> pode ser calculado assim:</p>
+<div class="math notranslate nohighlight">
+\[[G:H]=\dfrac{\vert G\vert}{\vert H\vert}.\]</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="conjugacao.html" class="btn btn-neutral float-right" title="Classe de conjugação" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../preliminares/relacoes_de_equivalencia.html" class="btn btn-neutral float-left" title="Relações de equivalência" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Marcelo Barboza
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Álgebra Moderna &mdash; documentação Material de Apoio às Aulas 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../search.html" />
+    <link rel="next" title="Ordens parciais" href="preliminares/lema_de_zorn.html" />
+    <link rel="prev" title="Aplicações lineares" href="../algebra_linear_matematica/aplicacoes_lineares.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Material de Apoio às Aulas
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Conteúdo:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../planos/index.html">Planos de Ensino 2020/1</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Notas de Aula</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../algebra_linear_matematica/index.html">Álgebra Linear</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Álgebra Moderna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="preliminares/lema_de_zorn.html">Ordens parciais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preliminares/relacoes_de_equivalencia.html">Relações de equivalência</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grupos/subgrupos.html">Subgrupos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grupos/conjugacao.html">Classe de conjugação</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grupos/normalidade.html">Subgrupos normais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grupos/homomorfismos.html">Homomorfismos de grupos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grupos/centralizadores.html">Fatoração em ciclos disjuntos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grupos/centralizadores_em_grupos_simetricos.html">Fatoração em ciclos disjuntos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grupos/acoes_de_grupos.html">Ações de grupos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Material de Apoio às Aulas</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Notas de Aula</a> &raquo;</li>
+        
+      <li>Álgebra Moderna</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/cursos/algebra_moderna_matematica/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="algebra-moderna">
+<h1>Álgebra Moderna<a class="headerlink" href="#algebra-moderna" title="Link permanente para este título">¶</a></h1>
+<div class="toctree-wrapper compound" id="id1">
+<p class="caption"><span class="caption-text">Conteúdo:</span><a class="headerlink" href="#id1" title="Link permanente para esse "toctree"">¶</a></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="preliminares/lema_de_zorn.html">Ordens parciais</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preliminares/lema_de_zorn.html#exemplos">Exemplos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preliminares/lema_de_zorn.html#lema-de-zorn">Lema de Zorn</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="preliminares/relacoes_de_equivalencia.html">Relações de equivalência</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preliminares/relacoes_de_equivalencia.html#exemplos">Exemplos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preliminares/relacoes_de_equivalencia.html#conjuntos-quocientes">Conjuntos quocientes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="grupos/subgrupos.html">Subgrupos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="grupos/subgrupos.html#exemplos">Exemplos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grupos/subgrupos.html#classes-laterais">Classes laterais</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grupos/subgrupos.html#teorema-de-lagrange">Teorema de Lagrange</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="grupos/conjugacao.html">Classe de conjugação</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="grupos/conjugacao.html#equacao-de-classes">Equação de classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grupos/conjugacao.html#aplicacoes">Aplicações</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="grupos/normalidade.html">Subgrupos normais</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="grupos/normalidade.html#exemplos">Exemplos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grupos/normalidade.html#propriedades">Propriedades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grupos/normalidade.html#grupos-quocientes">Grupos quocientes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="grupos/homomorfismos.html">Homomorfismos de grupos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="grupos/homomorfismos.html#exemplos">Exemplos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grupos/homomorfismos.html#propriedades">Propriedades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grupos/homomorfismos.html#teoremas-do-isomorfismo">Teoremas do Isomorfismo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grupos/homomorfismos.html#teorema-da-correspondencia">Teorema da correspondência</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grupos/homomorfismos.html#teorema-de-cayley">Teorema de Cayley</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="grupos/centralizadores.html">Fatoração em ciclos disjuntos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="grupos/centralizadores.html#conjugacao-de-ciclos-em-s-n">Conjugação de ciclos em <span class="math notranslate nohighlight">\(S_n\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="grupos/centralizadores.html#exercicios">Exercícios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="grupos/centralizadores_em_grupos_simetricos.html">Fatoração em ciclos disjuntos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="grupos/centralizadores_em_grupos_simetricos.html#conjugacao-de-ciclos-em-s-n">Conjugação de ciclos em <span class="math notranslate nohighlight">\(S_n\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="grupos/centralizadores_em_grupos_simetricos.html#exercicios">Exercícios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="grupos/acoes_de_grupos.html">Ações de grupos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="grupos/acoes_de_grupos.html#exemplos">Exemplos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grupos/acoes_de_grupos.html#orbitas-e-estabilizadores">Órbitas e estabilizadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grupos/acoes_de_grupos.html#teorema-de-cauchy">Teorema de Cauchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grupos/acoes_de_grupos.html#teorema-de-sylow">Teorema de Sylow</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="preliminares/lema_de_zorn.html" class="btn btn-neutral float-right" title="Ordens parciais" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../algebra_linear_matematica/aplicacoes_lineares.html" class="btn btn-neutral float-left" title="Aplicações lineares" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Marcelo Barboza
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

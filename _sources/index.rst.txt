@@ -1,15 +1,16 @@
-Bem vindo às minhas notas de aula!
-==================================
+Bem vindo à página do Professor Marcelo Barboza!
+================================================
 
 .. toctree::
-   :caption: Cursos:
+   :caption: Conteúdo:
    :maxdepth: 1
-   :name: Documento Principal
 
-   _courses/algebra-linear/index.rst
-   _courses/algebra-moderna/index.rst
+   planos/index.rst
+   cursos/index.rst
 
-Índices e tabelas
-=================
 
-* :ref:`search`
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
