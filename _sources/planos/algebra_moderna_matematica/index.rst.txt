@@ -1,5 +1,5 @@
-Plano de Ensino
-===============
+Plano de Ensino de Álgebra Moderna
+==================================
 
 Identificação
 -------------
@@ -300,3 +300,4 @@ Cronograma
    :header: "Previsão", "Aulas", "Conteúdo"
    :widths: 4, 5, 20
    :file: cronograma.csv
+
