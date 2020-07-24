@@ -2,8 +2,8 @@ Notas de Aula
 =============
 
 .. toctree::
-   :caption: Cursos:
    :maxdepth: 1
+   :caption: Cursos:
 
    algebra_linear_matematica/index.rst
    algebra_moderna_matematica/index.rst

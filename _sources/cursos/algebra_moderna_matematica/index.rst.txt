@@ -6,8 +6,10 @@
    :maxdepth: 2
    :name: Álgebra Moderna
 
+   preliminares/conjuntos.rst
    preliminares/lema_de_zorn.rst
    preliminares/relacoes_de_equivalencia.rst
+   grupos/monoides.rst
    grupos/subgrupos.rst
    grupos/conjugacao.rst
    grupos/normalidade.rst

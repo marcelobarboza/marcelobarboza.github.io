@@ -5,9 +5,8 @@ Bem vindo à página do Professor Marcelo Barboza!
    :caption: Conteúdo:
    :maxdepth: 1
 
-   planos/index.rst
    cursos/index.rst
-
+   planos/index.rst
 
 Indices and tables
 ==================

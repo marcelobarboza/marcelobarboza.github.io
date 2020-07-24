@@ -31,8 +31,8 @@ Seja :math:`G` um grupo agindo à esquerda de um conjunto :math:`X`. A relação
 2. :math:`x\sim_Gy\implies\exists\,\,g\in G,\,\,
    gx=y\implies\exists\,\,g^{-1}\in G,\,\,
    g^{-1}y=g^{-1}(gx)=(g^{-1}g)x=ex=x\implies y\sim_Gx`;
-3. :math:`x\sim_Gy\mbox{ e }y\sim_Gz\implies\exists\,\,g\in G,\,\,gx=y\mbox{ e
-   }\exists\,\,h\in G,\,\,hy=z\implies\exists\,\,hg\in
+3. :math:`x\sim_Gy\mbox{e}y\sim_Gz\implies\exists\,\,g,h\in
+   G:\,\,gx=y\mbox{e}\,\,hy=z\implies\exists\,\,hg\in
    G,\,\,(hg)x=h(gx)=hy=x\implies x\sim_Gz`,
 
 de onde segue então que :math:`\sim_G` é uma relação de equivalência em
