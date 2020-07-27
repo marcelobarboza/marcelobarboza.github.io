@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="pt-BR" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Monóides &mdash; documentação Material de Apoio às Aulas 0.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../../search.html" />
+    <link rel="next" title="Subgrupos" href="subgrupos.html" />
+    <link rel="prev" title="Relações de equivalência" href="../preliminares/relacoes_de_equivalencia.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> Material de Apoio às Aulas
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Pesquisar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Conteúdo:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Notas de Aula</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../algebra_linear_matematica/index.html">Álgebra Linear</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Álgebra Moderna</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../preliminares/conjuntos.html">Conjuntos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../preliminares/lema_de_zorn.html">Ordens parciais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../preliminares/relacoes_de_equivalencia.html">Relações de equivalência</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Monóides</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#exemplos">Exemplos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercicios">Exercícios</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="subgrupos.html">Subgrupos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conjugacao.html">Classe de conjugação</a></li>
+<li class="toctree-l3"><a class="reference internal" href="normalidade.html">Subgrupos normais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="homomorfismos.html">Homomorfismos de grupos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="centralizadores.html">Fatoração em ciclos disjuntos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="centralizadores_em_grupos_simetricos.html">Fatoração em ciclos disjuntos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acoes_de_grupos.html">Ações de grupos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../planos/index.html">Planos de Ensino: 2020/1</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Material de Apoio às Aulas</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Notas de Aula</a> &raquo;</li>
+        
+          <li><a href="../index.html">Álgebra Moderna</a> &raquo;</li>
+        
+      <li>Monóides</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/cursos/algebra_moderna_matematica/grupos/monoides.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="monoides">
+<h1>Monóides<a class="headerlink" href="#monoides" title="Link permanente para este título">¶</a></h1>
+<dl>
+<dt><strong>Definição</strong></dt><dd><p>Um monóide é uma terna ordenada <span class="math notranslate nohighlight">\((M,p,1)\)</span> em que <span class="math notranslate nohighlight">\(M\)</span> é um
+conjunto não vazio, <span class="math notranslate nohighlight">\(p\)</span> é uma operação binária associativa (um
+produto) em <span class="math notranslate nohighlight">\(M\)</span> e <span class="math notranslate nohighlight">\(1\)</span> é um elemento de <span class="math notranslate nohighlight">\(M\)</span> tal que</p>
+<div class="math notranslate nohighlight">
+\[p(1,a)=a=p(a,1),\]</div>
+<p>para todo <span class="math notranslate nohighlight">\(a\in M\)</span>.</p>
+</dd>
+</dl>
+<div class="section" id="exemplos">
+<h2>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p><span class="math notranslate nohighlight">\((\mathbb{N},+,0)\)</span>, em que <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> é o conjunto dos números
+naturais, <span class="math notranslate nohighlight">\(+\)</span> é a soma usual em <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> e <span class="math notranslate nohighlight">\(0\)</span> é o
+menor elemento de <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\((\mathbb{N},\cdot,1)\)</span>, em que <span class="math notranslate nohighlight">\(\cdot\)</span> é o produto usual de
+números naturais e <span class="math notranslate nohighlight">\(1\)</span> é o sucessor de <span class="math notranslate nohighlight">\(0\)</span> em <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\((\mathbb{P},\cdot,1)\)</span>, em que <span class="math notranslate nohighlight">\(\mathbb{P}\)</span> é o conjunto dos
+números naturais positivos, <span class="math notranslate nohighlight">\(\cdot\)</span> e <span class="math notranslate nohighlight">\(1\)</span> são os do exemplo
+anterior;</p></li>
+<li><p><span class="math notranslate nohighlight">\((\mathbb{Z},+,0)\)</span>, em que <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> é o conjunto dos números
+inteiros, <span class="math notranslate nohighlight">\(+\)</span> e <span class="math notranslate nohighlight">\(0\)</span> são os usuais;</p></li>
+<li><p><span class="math notranslate nohighlight">\((\mathbb{Z},\cdot,1)\)</span>, em que <span class="math notranslate nohighlight">\(\cdot\)</span> e <span class="math notranslate nohighlight">\(1\)</span> são os usuais;</p></li>
+<li><p>Sejam <span class="math notranslate nohighlight">\(S\)</span> um conjunto não vazio qualquer e <span class="math notranslate nohighlight">\(2^\mathbb{N}\)</span> o
+conjunto dos subconjuntos de <span class="math notranslate nohighlight">\(S\)</span>. Isto dá origem a dois monóides,
+<span class="math notranslate nohighlight">\((2^\mathbb{N},\cup,\emptyset)\)</span> e <span class="math notranslate nohighlight">\((2^\mathbb{N},\cap,S)\)</span>;</p></li>
+<li><p>Seja <span class="math notranslate nohighlight">\(\alpha:S\longrightarrow S\)</span> uma função qualquer. Defina</p>
+<div class="math notranslate nohighlight">
+\[\alpha^0=1_S,\quad\alpha^r=\alpha^{r-1}\alpha\quad(r&gt;0).\]</div>
+<p>Então, <span class="math notranslate nohighlight">\(\langle\alpha\rangle=\{\alpha^k:k\in\mathbb{N}\}\)</span> é um monóide
+quando acompanhado da composição usual de funções e de <span class="math notranslate nohighlight">\(\alpha^0=1_S\)</span>.</p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(f:A\longrightarrow B\)</span></p></li>
+</ol>
+</div>
+<div class="section" id="exercicios">
+<h2>Exercícios<a class="headerlink" href="#exercicios" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Seja <span class="math notranslate nohighlight">\(S\)</span> um conjunto não vazio. Defina um produto em <span class="math notranslate nohighlight">\(S\)</span> pondo
+<span class="math notranslate nohighlight">\(ab=b\)</span>. Mostre que <span class="math notranslate nohighlight">\(S\)</span> é um semigrupo. Sob que circunstâncias
+<span class="math notranslate nohighlight">\(S\)</span> contém uma unidade?</p></li>
+<li><p>Seja <span class="math notranslate nohighlight">\(M=\mathbb{Z}\times\mathbb{Z}\)</span> o conjunto dos pares ordenados
+<span class="math notranslate nohighlight">\((x_1,x_2)\)</span> de números inteiros. Defina</p>
+<div class="math notranslate nohighlight">
+\[(x_1,x_2)(y_1,y_2)=(x_1y_1+2x_2y_2,x_1y_2+x_2y_1),\quad1=(1,0).\]</div>
+<p>Mostre que isto define um monóide. Mostre que se <span class="math notranslate nohighlight">\((x_1,x_2)\neq(0,0)\)</span>
+então a lei do cancelamento se aplica a <span class="math notranslate nohighlight">\((x_1,x_2)\)</span>, isto é,</p>
+<div class="math notranslate nohighlight">
+\[(x_1,x_2)(y_1,y_2)=(x_1,x_2)(z_1,z_2)\implies(y_1,y_2)=(z_1,z_2).\]</div>
+</li>
+<li><p>Uma máquina aceita palavras com oito letras de comprimento (definidas como
+sequências de oito letras quaisquer do alfabeto, possivelmente sem sentido) e
+imprime uma palavra de oito letras, formada pelas cinco primeiras letras da
+primeira palavra e das três últimas da segunda. Mostre que o conjunto das
+palavras de comprimento oito munido deste produto é um semigrupo. O que dizer
+se a máquina imprime as quatro últimas letras da primeira seguidas das quatro
+primeiras da segunda? É qualquer destes conjuntos um monóide?</p></li>
+<li><p>Seja <span class="math notranslate nohighlight">\((M,p,1)\)</span> um monóide e seja <span class="math notranslate nohighlight">\(m\in M\)</span>. Defina um novo produto
+<span class="math notranslate nohighlight">\(p_m\)</span> em <span class="math notranslate nohighlight">\(M\)</span> por</p>
+<div class="math notranslate nohighlight">
+\[p_m(a,b)=amb.\]</div>
+<p>Mostre que isto define um semigrupo. Quais condições devemos impor sobre
+<span class="math notranslate nohighlight">\(m\)</span> para que tenhamos em <span class="math notranslate nohighlight">\(M\)</span> uma unidade relativa a <span class="math notranslate nohighlight">\(p_m\)</span>?</p>
+</li>
+<li><p>Sejam <span class="math notranslate nohighlight">\(S\)</span> um semigrupo, <span class="math notranslate nohighlight">\(u\)</span> um elemento não pertencente a
+<span class="math notranslate nohighlight">\(S\)</span>. Faça <span class="math notranslate nohighlight">\(M=S\cup\{u\}\)</span> e extenda o produto em <span class="math notranslate nohighlight">\(S\)</span> a
+<span class="math notranslate nohighlight">\(S\)</span> ao definir que <span class="math notranslate nohighlight">\(ua=a=au\)</span> para todo <span class="math notranslate nohighlight">\(a\in M\)</span>. Mostre que
+<span class="math notranslate nohighlight">\(M\)</span> é um monóide.</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="subgrupos.html" class="btn btn-neutral float-right" title="Subgrupos" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../preliminares/relacoes_de_equivalencia.html" class="btn btn-neutral float-left" title="Relações de equivalência" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Marcelo Barboza
+
+    </p>
+  </div>
+    
+    
+    
+    Compilado com <a href="http://sphinx-doc.org/">Sphinx</a> usando um
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">tema</a>
+    
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

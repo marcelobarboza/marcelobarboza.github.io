@@ -1,0 +1,81 @@
+Monóides
+--------
+
+**Definição**
+    Um monóide é uma terna ordenada :math:`(M,p,1)` em que :math:`M` é um
+    conjunto não vazio, :math:`p` é uma operação binária associativa (um
+    produto) em :math:`M` e :math:`1` é um elemento de :math:`M` tal que
+
+    .. math:: p(1,a)=a=p(a,1),
+
+    para todo :math:`a\in M`.
+
+Exemplos
+~~~~~~~~
+
+#. :math:`(\mathbb{N},+,0)`, em que :math:`\mathbb{N}` é o conjunto dos números
+   naturais, :math:`+` é a soma usual em :math:`\mathbb{N}` e :math:`0` é o
+   menor elemento de :math:`\mathbb{N}`;
+
+#. :math:`(\mathbb{N},\cdot,1)`, em que :math:`\cdot` é o produto usual de
+   números naturais e :math:`1` é o sucessor de :math:`0` em :math:`\mathbb{N}`;
+
+#. :math:`(\mathbb{P},\cdot,1)`, em que :math:`\mathbb{P}` é o conjunto dos
+   números naturais positivos, :math:`\cdot` e :math:`1` são os do exemplo
+   anterior;
+
+#. :math:`(\mathbb{Z},+,0)`, em que :math:`\mathbb{Z}` é o conjunto dos números
+   inteiros, :math:`+` e :math:`0` são os usuais;
+
+#. :math:`(\mathbb{Z},\cdot,1)`, em que :math:`\cdot` e :math:`1` são os usuais;
+
+#. Sejam :math:`S` um conjunto não vazio qualquer e :math:`2^\mathbb{N}` o
+   conjunto dos subconjuntos de :math:`S`. Isto dá origem a dois monóides,
+   :math:`(2^\mathbb{N},\cup,\emptyset)` e :math:`(2^\mathbb{N},\cap,S)`;
+
+#. Seja :math:`\alpha:S\longrightarrow S` uma função qualquer. Defina
+
+   .. math:: \alpha^0=1_S,\quad\alpha^r=\alpha^{r-1}\alpha\quad(r>0).
+
+   Então, :math:`\langle\alpha\rangle=\{\alpha^k:k\in\mathbb{N}\}` é um monóide
+   quando acompanhado da composição usual de funções e de :math:`\alpha^0=1_S`.
+
+#. :math:`f:A\longrightarrow B`
+
+Exercícios
+~~~~~~~~~~
+
+#. Seja :math:`S` um conjunto não vazio. Defina um produto em :math:`S` pondo
+   :math:`ab=b`. Mostre que :math:`S` é um semigrupo. Sob que circunstâncias
+   :math:`S` contém uma unidade?
+
+#. Seja :math:`M=\mathbb{Z}\times\mathbb{Z}` o conjunto dos pares ordenados
+   :math:`(x_1,x_2)` de números inteiros. Defina
+
+   .. math:: (x_1,x_2)(y_1,y_2)=(x_1y_1+2x_2y_2,x_1y_2+x_2y_1),\quad1=(1,0).
+
+   Mostre que isto define um monóide. Mostre que se :math:`(x_1,x_2)\neq(0,0)`
+   então a lei do cancelamento se aplica a :math:`(x_1,x_2)`, isto é,
+
+   .. math:: (x_1,x_2)(y_1,y_2)=(x_1,x_2)(z_1,z_2)\implies(y_1,y_2)=(z_1,z_2).
+
+#. Uma máquina aceita palavras com oito letras de comprimento (definidas como
+   sequências de oito letras quaisquer do alfabeto, possivelmente sem sentido) e
+   imprime uma palavra de oito letras, formada pelas cinco primeiras letras da
+   primeira palavra e das três últimas da segunda. Mostre que o conjunto das
+   palavras de comprimento oito munido deste produto é um semigrupo. O que dizer
+   se a máquina imprime as quatro últimas letras da primeira seguidas das quatro
+   primeiras da segunda? É qualquer destes conjuntos um monóide?
+
+#. Seja :math:`(M,p,1)` um monóide e seja :math:`m\in M`. Defina um novo produto
+   :math:`p_m` em :math:`M` por
+
+   .. math:: p_m(a,b)=amb.
+
+   Mostre que isto define um semigrupo. Quais condições devemos impor sobre
+   :math:`m` para que tenhamos em :math:`M` uma unidade relativa a :math:`p_m`?
+
+#. Sejam :math:`S` um semigrupo, :math:`u` um elemento não pertencente a
+   :math:`S`. Faça :math:`M=S\cup\{u\}` e extenda o produto em :math:`S` a
+   :math:`S` ao definir que :math:`ua=a=au` para todo :math:`a\in M`. Mostre que
+   :math:`M` é um monóide.

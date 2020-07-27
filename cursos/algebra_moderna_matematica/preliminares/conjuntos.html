@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="pt-BR" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Conjuntos &mdash; documentação Material de Apoio às Aulas 0.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../../search.html" />
+    <link rel="next" title="Ordens parciais" href="lema_de_zorn.html" />
+    <link rel="prev" title="Álgebra Moderna" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> Material de Apoio às Aulas
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Pesquisar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Conteúdo:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Notas de Aula</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../algebra_linear_matematica/index.html">Álgebra Linear</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Álgebra Moderna</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Conjuntos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lema_de_zorn.html">Ordens parciais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="relacoes_de_equivalencia.html">Relações de equivalência</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../grupos/monoides.html">Monóides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../grupos/subgrupos.html">Subgrupos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../grupos/conjugacao.html">Classe de conjugação</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../grupos/normalidade.html">Subgrupos normais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../grupos/homomorfismos.html">Homomorfismos de grupos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../grupos/centralizadores.html">Fatoração em ciclos disjuntos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../grupos/centralizadores_em_grupos_simetricos.html">Fatoração em ciclos disjuntos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../grupos/acoes_de_grupos.html">Ações de grupos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../planos/index.html">Planos de Ensino: 2020/1</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Material de Apoio às Aulas</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Notas de Aula</a> &raquo;</li>
+        
+          <li><a href="../index.html">Álgebra Moderna</a> &raquo;</li>
+        
+      <li>Conjuntos</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/cursos/algebra_moderna_matematica/preliminares/conjuntos.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="conjuntos">
+<h1>Conjuntos<a class="headerlink" href="#conjuntos" title="Link permanente para este título">¶</a></h1>
+<p>Nossa conversa se inicia, como não poderia deixar de ser, com uma breve revisão
+de conjuntos e funções. Aproveitamos o ensejo para introduzir a terminologia e a
+notação utilizadas neste curso, as quais são, se é que assim podemos chamá-las,
+tradicionais.</p>
+<p>Seja <span class="math notranslate nohighlight">\(S\)</span> um conjunto de elementos <span class="math notranslate nohighlight">\(a,b,c,\ldots\)</span> cuja natureza é
+irrelevante para os objetivos da presente discussão. Indicamos a pertinência de
+um determinado elemento <span class="math notranslate nohighlight">\(a\)</span> ao conjunto <span class="math notranslate nohighlight">\(S\)</span> ao escrevermos
+<span class="math notranslate nohighlight">\(a\in S\)</span> (às vezes <span class="math notranslate nohighlight">\(S\ni a\)</span>). A negação de <span class="math notranslate nohighlight">\(a\in S\)</span> se escreve
+como <span class="math notranslate nohighlight">\(a\notin S\)</span>. Se <span class="math notranslate nohighlight">\(A\)</span> é um conjunto finito constituído pelos
+elementos</p>
+<div class="math notranslate nohighlight">
+\[a_1,\dots,a_n\]</div>
+<p>nós escrevemos <span class="math notranslate nohighlight">\(S=\{a_1,\ldots,a_n\}\)</span>. Todo conjunto <span class="math notranslate nohighlight">\(S\)</span> dá origem
+ao conjunto <span class="math notranslate nohighlight">\(P(S)\)</span> de suas partes, dentre as quais se encontram o próprio
+<span class="math notranslate nohighlight">\(S\)</span> e o conjunto vazio <span class="math notranslate nohighlight">\(\emptyset\)</span> (que não contém qualquer
+elemento).  Estas podem muito bem ser as únicas partes de <span class="math notranslate nohighlight">\(S\)</span> como no caso
+de <span class="math notranslate nohighlight">\(S=\{0\}\)</span>. Quando <span class="math notranslate nohighlight">\(S=\{a_1,\ldots,a_n\}\)</span> nós podemos agrupar as
+partes de <span class="math notranslate nohighlight">\(S\)</span> segundo sua cardinalidade, como na tabela seguite:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 48%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Cardinalidade</p></th>
+<th class="head"><p>Partes</p></th>
+<th class="head"><p>Quantidade</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p><span class="math notranslate nohighlight">\(\emptyset\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\binom{n}{0}=1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p><span class="math notranslate nohighlight">\(\{a_1\},\ldots,\{a_n\}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\binom{n}{1}=\frac{n(n-1)}{2}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p><span class="math notranslate nohighlight">\(\{a_1,a_2\},\{a_1,a_3\},\ldots,\{a_{n-1},a_n\}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\binom{n}{2}=\frac{n(n-1)(n-2)}{6}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>n</p></td>
+<td><p><span class="math notranslate nohighlight">\(\{a_1,\ldots,a_n\}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\binom{n}{n}=1\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>de onde vemos que a cardinalidade de <span class="math notranslate nohighlight">\(P(S)\)</span> é (neste caso) dada por</p>
+<div class="math notranslate nohighlight">
+\[\binom{n}{0}+\binom{n}{1}+\binom{n}{2}+\cdots+\binom{n}{n}=(1+1)^n=2^n.\]</div>
+<p>Frequentemente designamos um subconjunto de <span class="math notranslate nohighlight">\(S\)</span> por uma propriedade ou
+lista de propriedades. A maneira usual de se fazer isto é escrever</p>
+<div class="math notranslate nohighlight">
+\[A=\{x\in S:\cdots\}\]</div>
+<p>onde <span class="math notranslate nohighlight">\(\cdots\)</span> é uma lista das propriedades que caracterizam o conjunto
+<span class="math notranslate nohighlight">\(A\)</span>. Por exemplo, se <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> denota o conjunto dos números
+inteiros, então</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{N}=\{x\in\mathbb{Z}:x\geqslant0\}\]</div>
+<p>é o conjunto dos números inteiros não negativos ou números naturais.</p>
+<p>Se <span class="math notranslate nohighlight">\(A,B\in P(S)\)</span> nós dizemos que <span class="math notranslate nohighlight">\(A\)</span> está contido em <span class="math notranslate nohighlight">\(B\)</span> e
+escrevemos <span class="math notranslate nohighlight">\(A\subseteq B\)</span> se todo elemento de <span class="math notranslate nohighlight">\(A\)</span> é também um
+elemento de <span class="math notranslate nohighlight">\(B\)</span>, isto é, se</p>
+<div class="math notranslate nohighlight">
+\[x\in A\implies x\in B\]</div>
+<p>onde <span class="math notranslate nohighlight">\(\implies\)</span> se lê <em>implica</em>. A afirmação de que <span class="math notranslate nohighlight">\(A=B\)</span> equivale
+às afirmaçãoes simultâneas de que <span class="math notranslate nohighlight">\(A\subseteq B\)</span> e <span class="math notranslate nohighlight">\(B\subseteq A\)</span>, o
+que em símbolos se escreve como</p>
+<div class="math notranslate nohighlight">
+\[A=B\iff A\subseteq B\quad\mbox{e}\quad B\subseteq A\]</div>
+<p>onde <span class="math notranslate nohighlight">\(\iff\)</span> se lê <em>se, e somente se</em>. Se <span class="math notranslate nohighlight">\(A\subseteq B\)</span> e
+<span class="math notranslate nohighlight">\(A\neq B\)</span> nós escrevemos <span class="math notranslate nohighlight">\(A\subsetneq B\)</span> e dizemos que <span class="math notranslate nohighlight">\(A\)</span> é
+um subconjunto próprio de <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<p>Sejam <span class="math notranslate nohighlight">\(A,B\in P(S)\)</span>. O conjunto</p>
+<div class="math notranslate nohighlight">
+\[A\cap B=\{x\in S:x\in A\mbox{ e }x\in B\}\]</div>
+<p>dos elementos de <span class="math notranslate nohighlight">\(S\)</span> que pertencem tanto a <span class="math notranslate nohighlight">\(A\)</span> quanto a <span class="math notranslate nohighlight">\(B\)</span> é
+a <em>interseção</em> de <span class="math notranslate nohighlight">\(A\)</span> e <span class="math notranslate nohighlight">\(B\)</span>. É claro que se <span class="math notranslate nohighlight">\(A\)</span> e <span class="math notranslate nohighlight">\(B\)</span>
+não possuem elementos em comum, então <span class="math notranslate nohighlight">\(A\cap B=\emptyset\)</span>. O conjunto</p>
+<div class="math notranslate nohighlight">
+\[A\cup B=\{x\in S:x\in A\mbox{ ou }x\in B\}\]</div>
+<p>dos elementos de <span class="math notranslate nohighlight">\(S\)</span> que pertencem a <span class="math notranslate nohighlight">\(A\)</span> ou a <span class="math notranslate nohighlight">\(B\)</span>
+(possivelmente a ambos!) é a <em>união</em> de <span class="math notranslate nohighlight">\(A\)</span> e <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<p>As leis distributivas são uma expressão da harmonia existente entre as operações
+<span class="math notranslate nohighlight">\(\cap\)</span> e <span class="math notranslate nohighlight">\(\cup\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}A\cap(B\cup C)=(A\cap B)\cup(A\cap C)\\A\cup(B\cup C)=(A\cup B)\cap(A\cup B)\end{aligned}\end{align} \]</div>
+<p>válidas para todos <span class="math notranslate nohighlight">\(A,B,C\in P(S)\)</span>.</p>
+<p>Interseções e uniões podem ser extendidas a arbitrários subconjuntos de
+<span class="math notranslate nohighlight">\(P(S)\)</span>. Com efeito, se <span class="math notranslate nohighlight">\(\Gamma\subseteq P(S)\)</span> então</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\bigcap_{A\in \Gamma}&amp;=\{x\in S:x\in A\mbox{ para todo }A\in\Gamma\}\\\bigcup_{A\in \Gamma}&amp;=\{x\in S:x\in A\mbox{ para algum }A\in\Gamma\}\end{aligned}\end{align} \]</div>
+<p>Quando <span class="math notranslate nohighlight">\(\Gamma=\{A_1,\ldots,A_n\}\)</span> é um conjunto finito, nós escrevemos</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\bigcap_{A\in \Gamma}=A_1\cap\cdots\cap A_n\\\bigcup_{A\in \Gamma}=A_1\cup\cdots\cup A_n\end{aligned}\end{align} \]</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lema_de_zorn.html" class="btn btn-neutral float-right" title="Ordens parciais" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="Álgebra Moderna" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Marcelo Barboza
+
+    </p>
+  </div>
+    
+    
+    
+    Compilado com <a href="http://sphinx-doc.org/">Sphinx</a> usando um
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">tema</a>
+    
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

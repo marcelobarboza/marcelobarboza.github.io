@@ -1,0 +1,111 @@
+Conjuntos
+---------
+
+Nossa conversa se inicia, como não poderia deixar de ser, com uma breve revisão
+de conjuntos e funções. Aproveitamos o ensejo para introduzir a terminologia e a
+notação utilizadas neste curso, as quais são, se é que assim podemos chamá-las,
+tradicionais.
+
+Seja :math:`S` um conjunto de elementos :math:`a,b,c,\ldots` cuja natureza é
+irrelevante para os objetivos da presente discussão. Indicamos a pertinência de
+um determinado elemento :math:`a` ao conjunto :math:`S` ao escrevermos
+:math:`a\in S` (às vezes :math:`S\ni a`). A negação de :math:`a\in S` se escreve
+como :math:`a\notin S`. Se :math:`A` é um conjunto finito constituído pelos
+elementos
+
+.. math:: a_1,\dots,a_n
+
+nós escrevemos :math:`S=\{a_1,\ldots,a_n\}`. Todo conjunto :math:`S` dá origem
+ao conjunto :math:`P(S)` de suas partes, dentre as quais se encontram o próprio
+:math:`S` e o conjunto vazio :math:`\emptyset` (que não contém qualquer
+elemento).  Estas podem muito bem ser as únicas partes de :math:`S` como no caso
+de :math:`S=\{0\}`. Quando :math:`S=\{a_1,\ldots,a_n\}` nós podemos agrupar as
+partes de :math:`S` segundo sua cardinalidade, como na tabela seguite:
+
++----------------+--------------------------------------------------------+--------------------------------------------+
+| Cardinalidade  | Partes                                                 | Quantidade                                 |
++================+========================================================+============================================+
+| 0              | :math:`\emptyset`                                      | :math:`\binom{n}{0}=1`                     |
++----------------+--------------------------------------------------------+--------------------------------------------+
+| 1              | :math:`\{a_1\},\ldots,\{a_n\}`                         | :math:`\binom{n}{1}=\frac{n(n-1)}{2}`      |
++----------------+--------------------------------------------------------+--------------------------------------------+
+| 2              | :math:`\{a_1,a_2\},\{a_1,a_3\},\ldots,\{a_{n-1},a_n\}` | :math:`\binom{n}{2}=\frac{n(n-1)(n-2)}{6}` |
++----------------+--------------------------------------------------------+--------------------------------------------+
+| :math:`\vdots` | :math:`\vdots`                                         | :math:`\vdots`                             |
++----------------+--------------------------------------------------------+--------------------------------------------+
+| n              | :math:`\{a_1,\ldots,a_n\}`                             | :math:`\binom{n}{n}=1`                     |
++----------------+--------------------------------------------------------+--------------------------------------------+
+
+de onde vemos que a cardinalidade de :math:`P(S)` é (neste caso) dada por
+
+.. math:: \binom{n}{0}+\binom{n}{1}+\binom{n}{2}+\cdots+\binom{n}{n}=(1+1)^n=2^n.
+
+Frequentemente designamos um subconjunto de :math:`S` por uma propriedade ou
+lista de propriedades. A maneira usual de se fazer isto é escrever
+
+.. math:: A=\{x\in S:\cdots\}
+
+onde :math:`\cdots` é uma lista das propriedades que caracterizam o conjunto
+:math:`A`. Por exemplo, se :math:`\mathbb{Z}` denota o conjunto dos números
+inteiros, então
+
+.. math:: \mathbb{N}=\{x\in\mathbb{Z}:x\geqslant0\}
+
+é o conjunto dos números inteiros não negativos ou números naturais.
+
+Se :math:`A,B\in P(S)` nós dizemos que :math:`A` está contido em :math:`B` e
+escrevemos :math:`A\subseteq B` se todo elemento de :math:`A` é também um
+elemento de :math:`B`, isto é, se
+
+.. math:: x\in A\implies x\in B
+
+onde :math:`\implies` se lê *implica*. A afirmação de que :math:`A=B` equivale
+às afirmaçãoes simultâneas de que :math:`A\subseteq B` e :math:`B\subseteq A`, o
+que em símbolos se escreve como
+
+.. math:: A=B\iff A\subseteq B\quad\mbox{e}\quad B\subseteq A
+
+onde :math:`\iff` se lê *se, e somente se*. Se :math:`A\subseteq B` e
+:math:`A\neq B` nós escrevemos :math:`A\subsetneq B` e dizemos que :math:`A` é
+um subconjunto próprio de :math:`B`.
+
+Sejam :math:`A,B\in P(S)`. O conjunto
+
+.. math:: A\cap B=\{x\in S:x\in A\mbox{ e }x\in B\}
+
+dos elementos de :math:`S` que pertencem tanto a :math:`A` quanto a :math:`B` é
+a *interseção* de :math:`A` e :math:`B`. É claro que se :math:`A` e :math:`B`
+não possuem elementos em comum, então :math:`A\cap B=\emptyset`. O conjunto
+
+.. math:: A\cup B=\{x\in S:x\in A\mbox{ ou }x\in B\}
+
+dos elementos de :math:`S` que pertencem a :math:`A` ou a :math:`B`
+(possivelmente a ambos!) é a *união* de :math:`A` e :math:`B`.
+
+As leis distributivas são uma expressão da harmonia existente entre as operações
+:math:`\cap` e :math:`\cup`:
+
+.. math::
+
+   A\cap(B\cup C)=(A\cap B)\cup(A\cap C)
+
+   A\cup(B\cup C)=(A\cup B)\cap(A\cup B)
+
+válidas para todos :math:`A,B,C\in P(S)`.
+
+Interseções e uniões podem ser extendidas a arbitrários subconjuntos de
+:math:`P(S)`. Com efeito, se :math:`\Gamma\subseteq P(S)` então
+
+.. math::
+
+   \bigcap_{A\in \Gamma}&=\{x\in S:x\in A\mbox{ para todo }A\in\Gamma\}
+
+   \bigcup_{A\in \Gamma}&=\{x\in S:x\in A\mbox{ para algum }A\in\Gamma\}
+
+Quando :math:`\Gamma=\{A_1,\ldots,A_n\}` é um conjunto finito, nós escrevemos
+
+.. math::
+
+   \bigcap_{A\in \Gamma}=A_1\cap\cdots\cap A_n
+
+   \bigcup_{A\in \Gamma}=A_1\cup\cdots\cup A_n
