@@ -21,19 +21,19 @@ Estas podem muito bem ser as únicas partes de :math:`S` como é o caso do
 conjunto :math:`S=\{0\}`. Quando :math:`S=\{a_1,\ldots,a_n\}` nós podemos
 agrupar as partes de :math:`S` segundo sua cardinalidade como na tabela seguite:
 
-+----------------+--------------------------------------------------------+--------------------------------------------+
-| Cardinalidade  | Partes                                                 | Quantidade                                 |
-+================+========================================================+============================================+
-| 0              | :math:`\emptyset`                                      | :math:`\binom{n}{0}=1`                     |
-+----------------+--------------------------------------------------------+--------------------------------------------+
-| 1              | :math:`\{a_1\},\ldots,\{a_n\}`                         | :math:`\binom{n}{1}=n`                     |
-+----------------+--------------------------------------------------------+--------------------------------------------+
-| 2              | :math:`\{a_1,a_2\},\{a_1,a_3\},\ldots,\{a_{n-1},a_n\}` | :math:`\binom{n}{2}=\frac{n(n-1)}{2}`      |
-+----------------+--------------------------------------------------------+--------------------------------------------+
-| :math:`\vdots` | :math:`\vdots`                                         | :math:`\vdots`                             |
-+----------------+--------------------------------------------------------+--------------------------------------------+
-| n              | :math:`\{a_1,\ldots,a_n\}`                             | :math:`\binom{n}{n}=1`                     |
-+----------------+--------------------------------------------------------+--------------------------------------------+
++----------------+--------------------------------------------------------+---------------------------------------+
+| Cardinalidade  | Partes                                                 | Quantidade                            |
++================+========================================================+=======================================+
+| 0              | :math:`\emptyset`                                      | :math:`\binom{n}{0}=1`                |
++----------------+--------------------------------------------------------+---------------------------------------+
+| 1              | :math:`\{a_1\},\ldots,\{a_n\}`                         | :math:`\binom{n}{1}=n`                |
++----------------+--------------------------------------------------------+---------------------------------------+
+| 2              | :math:`\{a_1,a_2\},\{a_1,a_3\},\ldots,\{a_{n-1},a_n\}` | :math:`\binom{n}{2}=\frac{n(n-1)}{2}` |
++----------------+--------------------------------------------------------+---------------------------------------+
+| :math:`\vdots` | :math:`\vdots`                                         | :math:`\vdots`                        |
++----------------+--------------------------------------------------------+---------------------------------------+
+| n              | :math:`\{a_1,\ldots,a_n\}`                             | :math:`\binom{n}{n}=1`                |
++----------------+--------------------------------------------------------+---------------------------------------+
 
 de onde vemos que a cardinalidade de :math:`P(S)` é (neste caso) dada por
 
@@ -122,18 +122,31 @@ elementos.
 Sejam :math:`S,T` conjuntos não vazios. Uma função de :math:`S` em :math:`T` é
 um subconjunto :math:`f\subseteq S\times T` com as seguintes propriedades:
 
+   .. _primeira:
+
    1. :math:`s\in S\implies\exists\,\,t\in T,\,\,(s,t)\in f`,
 
 onde :math:`\exists` significa *existe*, e
+
+   .. _segunda:
 
    2. :math:`(s,t)\in f\mbox{ e }(s,t^\prime)\in f\implies t=t^\prime`.
 
 Combinadas, as condições **1** e **2** acima nos dizem que a cada :math:`s\in S`
 corresponde um único :math:`t\in T` de modo que :math:`(s,t)\in f`. A notação
 clássica para tal elemento :math:`t` é :math:`f(s)`, o qual se diz *a imagem de*
-:math:`s` *através de* :math:`f`. Se :math:`f` é uma função de :math:`S` em
-:math:`T` nós escrevemos :math:`f:S\longrightarrow T`. Uma função
-:math:`f:S\longrightarrow T` é dita *injetiva* quando
+:math:`s` *através de* :math:`f`. O conjuntos :math:`S` e :math:`T` são o
+*domínio* e o *contradomínio* da função :math:`f`, respectivamente. Se :math:`f`
+é uma função de :math:`S` em :math:`T` nós escrevemos :math:`f:S\longrightarrow
+T`.
+
+Funções :math:`f:S\longrightarrow T` e :math:`g:U\longrightarrow V` são iguais
+quando:
+
+   #. :math:`S=U` e :math:`T=V`;
+   #. :math:`s\in S\implies f(s)=g(s)`.
+
+Uma função :math:`f:S\longrightarrow T` é dita *injetiva* quando
 
 .. math:: \forall\,\,s,s^\prime\in S:\quad f(s)=f(s^\prime)\implies s=s^\prime,
 
@@ -142,14 +155,8 @@ onde :math:`\forall` significa *para todo*. Se :math:`A\subseteq S`, o conjunto
 .. math:: f(A)=\{t\in T:\exists\,\,s\in S,\,f(s)=t\}
 
 é dito *a imagem de* :math:`A` por :math:`f`. A função :math:`f` se diz
-*sobrejetora* quando :math:`f(S)=T`. Uma função simultaneamente injetora e
-sobrejetora é dita *bijetora*.
-
-Funções :math:`f:S\longrightarrow T` e :math:`g:U\longrightarrow V` são iguais
-quando:
-
-   #. :math:`S=U` e :math:`T=V`;
-   #. :math:`s\in S\implies f(s)=g(s)`.
+*sobrejetiva* quando :math:`f(S)=T`. Uma função simultaneamente injetiva e
+sobrejetiva é dita *bijetiva*.
 
 Sejam :math:`f:S\longrightarrow T` e :math:`S_1\subseteq S`. Nós obtemos uma
 função :math:`f_1:S_1\longrightarrow T` pela exigência de que
@@ -161,3 +168,53 @@ a função composta :math:`g\circ f` pela regra
 
 .. math:: \forall\,\,s\in S:\quad g\circ f(s)=g(f(s))
 
+A composição de funções satisfaz a lei associativa: se :math:`f:S\longrightarrow
+T`, :math:`g:T\longrightarrow U` e :math:`h:U\longrightarrow V`, então
+:math:`h\circ(g\circ f)=(h\circ g)\circ f`. De fato, estas funções tem os mesmos
+domínio e contradomínio. Além disso, para cada :math:`s\in S` nós temos
+
+.. math::
+
+   (h\circ(g\circ f))(s)=h((g\circ f)(s))=h(g(f(s)))=(h\circ g)(f(s))=((h\circ g)\circ f)(s)
+
+de modo que :math:`h\circ(g\circ f)` e :math:`(h\circ g)\circ f` são uma e a
+mesma função.
+
+Se :math:`S` é um conjunto não vazio, então
+
+.. math:: 1_S:S\longrightarrow S,\quad s\longmapsto s,
+
+é a função identidade em :math:`S`, onde :math:`s\longmapsto s` significa que a
+função associa ao elemento :math:`s` à esquerda, o elemento :math:`s` à direita
+(simples, não?). É imediato verificar que se :math:`f:S\longrightarrow T` então
+:math:`1_T\circ f=f=f\circ1_S`.
+
+**Teorema**
+    Uma função :math:`f:S\longrightarrow T` é bijetiva se, e somente se, existe
+    uma função :math:`g:T\longrightarrow S` tal que
+
+    .. math:: f\circ g=1_T\quad\mbox{e}\quad g\circ f=1_S
+
+**Demonstração**
+    Suponha que :math:`f:S\longrightarrow T` seja bijetiva. Defina
+    :math:`g:T\longrightarrow S` da maneira seguinte:
+
+    .. math:: g=\{(f(s),s):s\in S\}\subseteq T\times S
+
+    Como :math:`f` é sobrejetiva, a cada :math:`t\in T` corresponde um
+    :math:`s\in S` para o qual :math:`f(s)=t` e, deste modo, :math:`(t,s)\in g`.
+    Logo, :math:`g` cumpre à primeira_ das condições que definem uma função.
+    Decorre da própria definição de :math:`g` que se :math:`(t,s)\in g` e
+    :math:`(t,s^\prime)\in g` para algum :math:`t\in T`, então
+    :math:`f(s)=t=f(s^\prime)` e, assim, como :math:`f` é injetiva,
+    :math:`s=s^\prime`. Portanto, :math:`g` cumpre também à segunda_ (e última)
+    condição na definição de uma função. É claro que :math:`f\circ g=1_T` e
+    :math:`g\circ f=1_S`.
+
+    Deixamos a cargo do leitor a demonstração de que a existência de
+    :math:`g:T\longrightarrow S` com a qual a se verifiquem as identidades
+    :math:`f\circ g=1_T` e :math:`g\circ f=1_S` acarreta a bijetividade de
+    :math:`f`.
+
+A partir de agora, nós vamos denotar a função :math:`g` de que fala o Teorema
+acima por :math:`g=f^{-1}`.

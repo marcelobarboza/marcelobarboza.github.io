@@ -38,7 +38,7 @@
     
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Buscar" href="../../search.html" />
-    <link rel="next" title="Monóides" href="monoides.html" />
+    <link rel="next" title="Ordens parciais" href="zorn.html" />
     <link rel="prev" title="Álgebra Moderna" href="index.html" /> 
 </head>
 
@@ -90,6 +90,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../algebra_linear_matematica/index.html">Álgebra Linear</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Álgebra Moderna</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Conjuntos e Funções</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zorn.html">Ordens parciais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="equivalencia.html">Relações de equivalência</a></li>
 <li class="toctree-l3"><a class="reference internal" href="monoides.html">Monóides</a></li>
 <li class="toctree-l3"><a class="reference internal" href="subgrupos.html">Subgrupos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="conjugacao.html">Classe de conjugação</a></li>
@@ -193,8 +195,8 @@ agrupar as partes de <span class="math notranslate nohighlight">\(S\)</span> seg
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 14%" />
-<col style="width: 48%" />
-<col style="width: 38%" />
+<col style="width: 50%" />
+<col style="width: 35%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Cardinalidade</p></th>
@@ -286,30 +288,23 @@ elementos.</p>
 <p>Sejam <span class="math notranslate nohighlight">\(S,T\)</span> conjuntos não vazios. Uma função de <span class="math notranslate nohighlight">\(S\)</span> em <span class="math notranslate nohighlight">\(T\)</span> é
 um subconjunto <span class="math notranslate nohighlight">\(f\subseteq S\times T\)</span> com as seguintes propriedades:</p>
 <blockquote>
-<div><ol class="arabic simple">
+<div><ol class="arabic simple" id="primeira">
 <li><p><span class="math notranslate nohighlight">\(s\in S\implies\exists\,\,t\in T,\,\,(s,t)\in f\)</span>,</p></li>
 </ol>
 </div></blockquote>
 <p>onde <span class="math notranslate nohighlight">\(\exists\)</span> significa <em>existe</em>, e</p>
 <blockquote>
-<div><ol class="arabic simple" start="2">
+<div><ol class="arabic simple" id="segunda" start="2">
 <li><p><span class="math notranslate nohighlight">\((s,t)\in f\mbox{ e }(s,t^\prime)\in f\implies t=t^\prime\)</span>.</p></li>
 </ol>
 </div></blockquote>
 <p>Combinadas, as condições <strong>1</strong> e <strong>2</strong> acima nos dizem que a cada <span class="math notranslate nohighlight">\(s\in S\)</span>
 corresponde um único <span class="math notranslate nohighlight">\(t\in T\)</span> de modo que <span class="math notranslate nohighlight">\((s,t)\in f\)</span>. A notação
 clássica para tal elemento <span class="math notranslate nohighlight">\(t\)</span> é <span class="math notranslate nohighlight">\(f(s)\)</span>, o qual se diz <em>a imagem de</em>
-<span class="math notranslate nohighlight">\(s\)</span> <em>através de</em> <span class="math notranslate nohighlight">\(f\)</span>. Se <span class="math notranslate nohighlight">\(f\)</span> é uma função de <span class="math notranslate nohighlight">\(S\)</span> em
-<span class="math notranslate nohighlight">\(T\)</span> nós escrevemos <span class="math notranslate nohighlight">\(f:S\longrightarrow T\)</span>. Uma função
-<span class="math notranslate nohighlight">\(f:S\longrightarrow T\)</span> é dita <em>injetiva</em> quando</p>
-<div class="math notranslate nohighlight">
-\[\forall\,\,s,s^\prime\in S:\quad f(s)=f(s^\prime)\implies s=s^\prime,\]</div>
-<p>onde <span class="math notranslate nohighlight">\(\forall\)</span> significa <em>para todo</em>. Se <span class="math notranslate nohighlight">\(A\subseteq S\)</span>, o conjunto</p>
-<div class="math notranslate nohighlight">
-\[f(A)=\{t\in T:\exists\,\,s\in S,\,f(s)=t\}\]</div>
-<p>é dito <em>a imagem de</em> <span class="math notranslate nohighlight">\(A\)</span> por <span class="math notranslate nohighlight">\(f\)</span>. A função <span class="math notranslate nohighlight">\(f\)</span> se diz
-<em>sobrejetora</em> quando <span class="math notranslate nohighlight">\(f(S)=T\)</span>. Uma função simultaneamente injetora e
-sobrejetora é dita <em>bijetora</em>.</p>
+<span class="math notranslate nohighlight">\(s\)</span> <em>através de</em> <span class="math notranslate nohighlight">\(f\)</span>. O conjuntos <span class="math notranslate nohighlight">\(S\)</span> e <span class="math notranslate nohighlight">\(T\)</span> são o
+<em>domínio</em> e o <em>contradomínio</em> da função <span class="math notranslate nohighlight">\(f\)</span>, respectivamente. Se <span class="math notranslate nohighlight">\(f\)</span>
+é uma função de <span class="math notranslate nohighlight">\(S\)</span> em <span class="math notranslate nohighlight">\(T\)</span> nós escrevemos <span class="math notranslate nohighlight">\(f:S\longrightarrow
+T\)</span>.</p>
 <p>Funções <span class="math notranslate nohighlight">\(f:S\longrightarrow T\)</span> e <span class="math notranslate nohighlight">\(g:U\longrightarrow V\)</span> são iguais
 quando:</p>
 <blockquote>
@@ -318,6 +313,15 @@ quando:</p>
 <li><p><span class="math notranslate nohighlight">\(s\in S\implies f(s)=g(s)\)</span>.</p></li>
 </ol>
 </div></blockquote>
+<p>Uma função <span class="math notranslate nohighlight">\(f:S\longrightarrow T\)</span> é dita <em>injetiva</em> quando</p>
+<div class="math notranslate nohighlight">
+\[\forall\,\,s,s^\prime\in S:\quad f(s)=f(s^\prime)\implies s=s^\prime,\]</div>
+<p>onde <span class="math notranslate nohighlight">\(\forall\)</span> significa <em>para todo</em>. Se <span class="math notranslate nohighlight">\(A\subseteq S\)</span>, o conjunto</p>
+<div class="math notranslate nohighlight">
+\[f(A)=\{t\in T:\exists\,\,s\in S,\,f(s)=t\}\]</div>
+<p>é dito <em>a imagem de</em> <span class="math notranslate nohighlight">\(A\)</span> por <span class="math notranslate nohighlight">\(f\)</span>. A função <span class="math notranslate nohighlight">\(f\)</span> se diz
+<em>sobrejetiva</em> quando <span class="math notranslate nohighlight">\(f(S)=T\)</span>. Uma função simultaneamente injetiva e
+sobrejetiva é dita <em>bijetiva</em>.</p>
 <p>Sejam <span class="math notranslate nohighlight">\(f:S\longrightarrow T\)</span> e <span class="math notranslate nohighlight">\(S_1\subseteq S\)</span>. Nós obtemos uma
 função <span class="math notranslate nohighlight">\(f_1:S_1\longrightarrow T\)</span> pela exigência de que
 <span class="math notranslate nohighlight">\(f_1(s)=f(s)\)</span> para todo <span class="math notranslate nohighlight">\(s\in S_1\)</span>. Tal função se chama <em>restrição
@@ -326,6 +330,48 @@ de</em> <span class="math notranslate nohighlight">\(f\)</span> a <span class="m
 a função composta <span class="math notranslate nohighlight">\(g\circ f\)</span> pela regra</p>
 <div class="math notranslate nohighlight">
 \[\forall\,\,s\in S:\quad g\circ f(s)=g(f(s))\]</div>
+<p>A composição de funções satisfaz a lei associativa: se <span class="math notranslate nohighlight">\(f:S\longrightarrow
+T\)</span>, <span class="math notranslate nohighlight">\(g:T\longrightarrow U\)</span> e <span class="math notranslate nohighlight">\(h:U\longrightarrow V\)</span>, então
+<span class="math notranslate nohighlight">\(h\circ(g\circ f)=(h\circ g)\circ f\)</span>. De fato, estas funções tem os mesmos
+domínio e contradomínio. Além disso, para cada <span class="math notranslate nohighlight">\(s\in S\)</span> nós temos</p>
+<div class="math notranslate nohighlight">
+\[(h\circ(g\circ f))(s)=h((g\circ f)(s))=h(g(f(s)))=(h\circ g)(f(s))=((h\circ g)\circ f)(s)\]</div>
+<p>de modo que <span class="math notranslate nohighlight">\(h\circ(g\circ f)\)</span> e <span class="math notranslate nohighlight">\((h\circ g)\circ f\)</span> são uma e a
+mesma função.</p>
+<p>Se <span class="math notranslate nohighlight">\(S\)</span> é um conjunto não vazio, então</p>
+<div class="math notranslate nohighlight">
+\[1_S:S\longrightarrow S,\quad s\longmapsto s,\]</div>
+<p>é a função identidade em <span class="math notranslate nohighlight">\(S\)</span>, onde <span class="math notranslate nohighlight">\(s\longmapsto s\)</span> significa que a
+função associa ao elemento <span class="math notranslate nohighlight">\(s\)</span> à esquerda, o elemento <span class="math notranslate nohighlight">\(s\)</span> à direita
+(simples, não?). É imediato verificar que se <span class="math notranslate nohighlight">\(f:S\longrightarrow T\)</span> então
+<span class="math notranslate nohighlight">\(1_T\circ f=f=f\circ1_S\)</span>.</p>
+<dl>
+<dt><strong>Teorema</strong></dt><dd><p>Uma função <span class="math notranslate nohighlight">\(f:S\longrightarrow T\)</span> é bijetiva se, e somente se, existe
+uma função <span class="math notranslate nohighlight">\(g:T\longrightarrow S\)</span> tal que</p>
+<div class="math notranslate nohighlight">
+\[f\circ g=1_T\quad\mbox{e}\quad g\circ f=1_S\]</div>
+</dd>
+<dt><strong>Demonstração</strong></dt><dd><p>Suponha que <span class="math notranslate nohighlight">\(f:S\longrightarrow T\)</span> seja bijetiva. Defina
+<span class="math notranslate nohighlight">\(g:T\longrightarrow S\)</span> da maneira seguinte:</p>
+<div class="math notranslate nohighlight">
+\[g=\{(f(s),s):s\in S\}\subseteq T\times S\]</div>
+<p>Como <span class="math notranslate nohighlight">\(f\)</span> é sobrejetiva, a cada <span class="math notranslate nohighlight">\(t\in T\)</span> corresponde um
+<span class="math notranslate nohighlight">\(s\in S\)</span> para o qual <span class="math notranslate nohighlight">\(f(s)=t\)</span> e, deste modo, <span class="math notranslate nohighlight">\((t,s)\in g\)</span>.
+Logo, <span class="math notranslate nohighlight">\(g\)</span> cumpre à <a class="reference internal" href="#primeira">primeira</a> das condições que definem uma função.
+Decorre da própria definição de <span class="math notranslate nohighlight">\(g\)</span> que se <span class="math notranslate nohighlight">\((t,s)\in g\)</span> e
+<span class="math notranslate nohighlight">\((t,s^\prime)\in g\)</span> para algum <span class="math notranslate nohighlight">\(t\in T\)</span>, então
+<span class="math notranslate nohighlight">\(f(s)=t=f(s^\prime)\)</span> e, assim, como <span class="math notranslate nohighlight">\(f\)</span> é injetiva,
+<span class="math notranslate nohighlight">\(s=s^\prime\)</span>. Portanto, <span class="math notranslate nohighlight">\(g\)</span> cumpre também à <a class="reference internal" href="#segunda">segunda</a> (e última)
+condição na definição de uma função. É claro que <span class="math notranslate nohighlight">\(f\circ g=1_T\)</span> e
+<span class="math notranslate nohighlight">\(g\circ f=1_S\)</span>.</p>
+<p>Deixamos a cargo do leitor a demonstração de que a existência de
+<span class="math notranslate nohighlight">\(g:T\longrightarrow S\)</span> com a qual a se verifiquem as identidades
+<span class="math notranslate nohighlight">\(f\circ g=1_T\)</span> e <span class="math notranslate nohighlight">\(g\circ f=1_S\)</span> acarreta a bijetividade de
+<span class="math notranslate nohighlight">\(f\)</span>.</p>
+</dd>
+</dl>
+<p>A partir de agora, nós vamos denotar a função <span class="math notranslate nohighlight">\(g\)</span> de que fala o Teorema
+acima por <span class="math notranslate nohighlight">\(g=f^{-1}\)</span>.</p>
 </div>
 
 
@@ -336,7 +382,7 @@ a função composta <span class="math notranslate nohighlight">\(g\circ f\)</spa
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="monoides.html" class="btn btn-neutral float-right" title="Monóides" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="zorn.html" class="btn btn-neutral float-right" title="Ordens parciais" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="Álgebra Moderna" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Anterior</a>

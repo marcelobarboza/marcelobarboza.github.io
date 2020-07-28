@@ -7,8 +7,8 @@
    :name: Álgebra Moderna
 
    conjuntos.rst
-   lema_de_zorn.rst
-   relacoes_de_equivalencia.rst
+   zorn.rst
+   equivalencia.rst
    monoides.rst
    subgrupos.rst
    conjugacao.rst
