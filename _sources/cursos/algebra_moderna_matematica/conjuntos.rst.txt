@@ -93,9 +93,9 @@ Sejam :math:`A,B\in P(S)`. Os conjuntos
 
 .. math::
 
-   S\setminus A=\{x\in S:x\notin A\}
+   S\setminus A&=\{x\in S:x\notin A\}
 
-   A\setminus B=A\cap (S\setminus B)
+   A\setminus B&=A\cap (S\setminus B)
 
 são o *complementar* de :math:`A` e o *complementar relativo* de :math:`B` em
 :math:`A`, respectivamente.  As regras de De Morgan exibem o comportamento de
@@ -308,10 +308,10 @@ Exercícios
 
       S\setminus\bigcup_{B\in\Gamma}B=\bigcap_{B\in\Gamma}S\setminus B
 
-#. Sejam :math:`f:S\longrightarrow T` e :math:`A,B\subseteq S`. Prove que:
+#. Sejam :math:`f:S\longrightarrow T` e :math:`A,B\subseteq S`. Prove:
 
    a. :math:`f(A\cap B)\subseteq f(A)\cap f(B)`;
-   b. é possível que se tenha :math:`f(A\cap B)\subsetneq f(A)\cap f(B)`;
+   b. ser possível que :math:`f(A\cap B)\subsetneq f(A)\cap f(B)`;
    c. se :math:`f` é injetiva, então :math:`f(A\cap B)=f(A)\cap f(B)`;
    d. :math:`f(A\cup B)=f(A)\cup f(B)`;
    e. :math:`f(S\setminus A)=T\setminus f(A)`.
