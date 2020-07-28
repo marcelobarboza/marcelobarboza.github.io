@@ -4,7 +4,7 @@
 SOURCE='~/projects/bitbucket/notas_de_aula/sphinx/build'
 DESTINATION='~/projects/github/marcelobarboza.github.io'
 
-cp "$SOURCE"/* "$DESTINATION"/
+cp "$SOURCE"/* "$DESTINATION"
 
 git add .
 git commit -m "made with <3"
