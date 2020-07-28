@@ -1,0 +1,163 @@
+Conjuntos e Funções
+-------------------
+
+Nossa conversa se inicia, como não poderia deixar de ser, com uma breve revisão
+de conjuntos e funções. Aproveitamos o ensejo para introduzir a terminologia e a
+notação utilizadas neste curso, as quais são, se é que assim podemos chamá-las,
+um tanto quanto tradicionais.
+
+Seja :math:`S` um conjunto de elementos :math:`a,b,c,\ldots` cuja natureza é
+irrelevante para os objetivos desta discussão. Indicamos a pertinência de um
+determinado elemento :math:`a` ao conjunto :math:`S` ao escrevermos :math:`a\in
+S` (às vezes :math:`S\ni a`). Já a negação de :math:`a\in S`, se escreve como
+:math:`a\notin S`. Se :math:`A` é um conjunto finito constituído pelos elementos
+
+.. math:: a_1,\dots,a_n
+
+nós escrevemos :math:`S=\{a_1,\ldots,a_n\}`. Todo conjunto :math:`S` dá origem
+ao conjunto :math:`P(S)` de suas partes, dentre as quais se encontram o próprio
+:math:`S` e o conjunto vazio :math:`\emptyset` (que não contém elemento algum).
+Estas podem muito bem ser as únicas partes de :math:`S` como é o caso do
+conjunto :math:`S=\{0\}`. Quando :math:`S=\{a_1,\ldots,a_n\}` nós podemos
+agrupar as partes de :math:`S` segundo sua cardinalidade como na tabela seguite:
+
++----------------+--------------------------------------------------------+--------------------------------------------+
+| Cardinalidade  | Partes                                                 | Quantidade                                 |
++================+========================================================+============================================+
+| 0              | :math:`\emptyset`                                      | :math:`\binom{n}{0}=1`                     |
++----------------+--------------------------------------------------------+--------------------------------------------+
+| 1              | :math:`\{a_1\},\ldots,\{a_n\}`                         | :math:`\binom{n}{1}=n`                     |
++----------------+--------------------------------------------------------+--------------------------------------------+
+| 2              | :math:`\{a_1,a_2\},\{a_1,a_3\},\ldots,\{a_{n-1},a_n\}` | :math:`\binom{n}{2}=\frac{n(n-1)}{2}`      |
++----------------+--------------------------------------------------------+--------------------------------------------+
+| :math:`\vdots` | :math:`\vdots`                                         | :math:`\vdots`                             |
++----------------+--------------------------------------------------------+--------------------------------------------+
+| n              | :math:`\{a_1,\ldots,a_n\}`                             | :math:`\binom{n}{n}=1`                     |
++----------------+--------------------------------------------------------+--------------------------------------------+
+
+de onde vemos que a cardinalidade de :math:`P(S)` é (neste caso) dada por
+
+.. math:: \binom{n}{0}+\binom{n}{1}+\binom{n}{2}+\cdots+\binom{n}{n}=(1+1)^n=2^n.
+
+Frequentemente designamos um subconjunto de :math:`S` por uma propriedade ou
+lista de propriedades. A maneira usual de se fazer isto é escrever
+
+.. math:: A=\{x\in S:\cdots\}
+
+onde :math:`\cdots` é uma lista das propriedades que caracterizam o conjunto
+:math:`A`. Por exemplo, se :math:`\mathbb{Z}` denota o conjunto dos números
+inteiros, então
+
+.. math:: \mathbb{N}=\{x\in\mathbb{Z}:x\geqslant0\}
+
+é o conjunto dos números inteiros não negativos ou números naturais.
+
+Se :math:`A,B\in P(S)` nós dizemos que :math:`A` está contido em :math:`B` e
+escrevemos :math:`A\subseteq B` quando todo elemento de :math:`A` é também um
+elemento de :math:`B`, ou seja, quando
+
+.. math:: x\in A\implies x\in B
+
+onde :math:`\implies` significa *implica*. A afirmação de que :math:`A=B`
+equivale às afirmaçãoes simultâneas de que :math:`A\subseteq B` e
+:math:`B\subseteq A`. Em símbolos, nós temos
+
+.. math:: A=B\iff A\subseteq B\mbox{ e }B\subseteq A
+
+onde :math:`\iff` significa *se, e somente se*. Se :math:`A\subseteq B` e
+:math:`A\neq B` nós escrevemos :math:`A\subsetneq B` e dizemos que :math:`A` é
+um subconjunto próprio de :math:`B`.
+
+Sejam :math:`A,B\in P(S)`. O conjunto
+
+.. math:: A\cap B=\{x\in S:x\in A\mbox{ e }x\in B\}
+
+dos elementos de :math:`S` que pertencem tanto a :math:`A` quanto a :math:`B` é
+a *interseção* de :math:`A` e :math:`B`. O conjunto
+
+.. math:: A\cup B=\{x\in S:x\in A\mbox{ ou }x\in B\}
+
+dos elementos de :math:`S` que pertencem a :math:`A` ou a :math:`B`
+(possivelmente a ambos!) é a *união* de :math:`A` e :math:`B`.  As leis
+distributivas são uma expressão da harmonia entre :math:`\cap` e :math:`\cup`:
+
+.. math::
+
+   A\cap(B\cup C)=(A\cap B)\cup(A\cap C)
+
+   A\cup(B\cap C)=(A\cup B)\cap(A\cup C)
+
+válidas para quaisquer :math:`A,B,C\in P(S)`. Interseções e uniões podem ser
+extendidas a arbitrários subconjuntos de :math:`P(S)`. Com efeito, se
+:math:`\Gamma\subseteq P(S)` então
+
+.. math::
+
+   \bigcap_{A\in \Gamma}A&=\{x\in S:x\in A\mbox{ para todo }A\in\Gamma\}
+
+   \bigcup_{A\in \Gamma}A&=\{x\in S:x\in A\mbox{ para algum }A\in\Gamma\}
+
+Quando :math:`\Gamma=\{A_1,\ldots,A_n\}` nós simplesmente escrevemos
+
+.. math::
+
+   \bigcap_{A\in \Gamma}A=A_1\cap\cdots\cap A_n
+
+   \bigcup_{A\in \Gamma}A=A_1\cup\cdots\cup A_n
+
+O produto Cartesiano :math:`S\times T` de arbitrários conjuntos :math:`S` e
+:math:`T` é o conjunto de todos os pares ordenados :math:`(s,t)` com :math:`s\in
+S` e :math:`t\in T`. Em :math:`S\times T` elementos :math:`(s,t)` e
+:math:`(s^\prime,t^\prime)` apenas são iguais quando :math:`s=s^\prime` e
+:math:`t=t^\prime`. Note que os conjuntos :math:`S` e :math:`T` não precisam ser
+distintos entre si.  No caso em que :math:`S=\{s_1,\ldots,s_m\}` e
+:math:`T=\{t_1,\ldots,t_n\}` nós temos
+
+.. math:: S\times T=\{(s_1,t_1),\ldots,(s_m,t_1),\ldots,(s_m,t_n),\ldots,(s_m,t_n)\}
+
+de onde segue que se :math:`S` e :math:`T` possuem :math:`m` e :math:`n`
+elementos respectivamente, então :math:`S\times T` possui :math:`m\cdot n`
+elementos.
+
+Sejam :math:`S,T` conjuntos não vazios. Uma função de :math:`S` em :math:`T` é
+um subconjunto :math:`f\subseteq S\times T` com as seguintes propriedades:
+
+   1. :math:`s\in S\implies\exists\,\,t\in T,\,\,(s,t)\in f`,
+
+onde :math:`\exists` significa *existe*, e
+
+   2. :math:`(s,t)\in f\mbox{ e }(s,t^\prime)\in f\implies t=t^\prime`.
+
+Combinadas, as condições **1** e **2** acima nos dizem que a cada :math:`s\in S`
+corresponde um único :math:`t\in T` de modo que :math:`(s,t)\in f`. A notação
+clássica para tal elemento :math:`t` é :math:`f(s)`, o qual se diz *a imagem de*
+:math:`s` *através de* :math:`f`. Se :math:`f` é uma função de :math:`S` em
+:math:`T` nós escrevemos :math:`f:S\longrightarrow T`. Uma função
+:math:`f:S\longrightarrow T` é dita *injetiva* quando
+
+.. math:: \forall\,\,s,s^\prime\in S:\quad f(s)=f(s^\prime)\implies s=s^\prime,
+
+onde :math:`\forall` significa *para todo*. Se :math:`A\subseteq S`, o conjunto
+
+.. math:: f(A)=\{t\in T:\exists\,\,s\in S,\,f(s)=t\}
+
+é dito *a imagem de* :math:`A` por :math:`f`. A função :math:`f` se diz
+*sobrejetora* quando :math:`f(S)=T`. Uma função simultaneamente injetora e
+sobrejetora é dita *bijetora*.
+
+Funções :math:`f:S\longrightarrow T` e :math:`g:U\longrightarrow V` são iguais
+quando:
+
+   #. :math:`S=U` e :math:`T=V`;
+   #. :math:`s\in S\implies f(s)=g(s)`.
+
+Sejam :math:`f:S\longrightarrow T` e :math:`S_1\subseteq S`. Nós obtemos uma
+função :math:`f_1:S_1\longrightarrow T` pela exigência de que
+:math:`f_1(s)=f(s)` para todo :math:`s\in S_1`. Tal função se chama *restrição
+de* :math:`f` a :math:`S_1` e se escreve como :math:`f_1=f\vert_{S_1}`.
+
+Sejam :math:`f:S\longrightarrow T` e :math:`g:T\longrightarrow V`. Nós definimos
+a função composta :math:`g\circ f` pela regra
+
+.. math:: \forall\,\,s\in S:\quad g\circ f(s)=g(f(s))
+

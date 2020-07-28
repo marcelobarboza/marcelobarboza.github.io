@@ -6,14 +6,14 @@
    :maxdepth: 2
    :name: Álgebra Moderna
 
-   preliminares/conjuntos.rst
-   preliminares/lema_de_zorn.rst
-   preliminares/relacoes_de_equivalencia.rst
-   grupos/monoides.rst
-   grupos/subgrupos.rst
-   grupos/conjugacao.rst
-   grupos/normalidade.rst
-   grupos/homomorfismos.rst
-   grupos/centralizadores.rst
-   grupos/centralizadores_em_grupos_simetricos.rst
-   grupos/acoes_de_grupos.rst
+   conjuntos.rst
+   lema_de_zorn.rst
+   relacoes_de_equivalencia.rst
+   monoides.rst
+   subgrupos.rst
+   conjugacao.rst
+   normalidade.rst
+   homomorfismos.rst
+   centralizadores.rst
+   centralizadores_em_grupos_simetricos.rst
+   acoes_de_grupos.rst
