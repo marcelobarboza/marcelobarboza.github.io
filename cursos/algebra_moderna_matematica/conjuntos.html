@@ -89,7 +89,11 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Notas de Aula</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../algebra_linear_matematica/index.html">Álgebra Linear</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Álgebra Moderna</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Conjuntos e Funções</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Conjuntos e Funções</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#exemplos">Exemplos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exercicios">Exercícios</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="zorn.html">Ordens parciais</a></li>
 <li class="toctree-l3"><a class="reference internal" href="equivalencia.html">Relações de equivalência</a></li>
 <li class="toctree-l3"><a class="reference internal" href="monoides.html">Monóides</a></li>
@@ -262,17 +266,27 @@ a <em>interseção</em> de <span class="math notranslate nohighlight">\(A\)</spa
 \[A\cup B=\{x\in S:x\in A\mbox{ ou }x\in B\}\]</div>
 <p>dos elementos de <span class="math notranslate nohighlight">\(S\)</span> que pertencem a <span class="math notranslate nohighlight">\(A\)</span> ou a <span class="math notranslate nohighlight">\(B\)</span>
 (possivelmente a ambos!) é a <em>união</em> de <span class="math notranslate nohighlight">\(A\)</span> e <span class="math notranslate nohighlight">\(B\)</span>.  As leis
-distributivas são uma expressão da harmonia entre <span class="math notranslate nohighlight">\(\cap\)</span> e <span class="math notranslate nohighlight">\(\cup\)</span>:</p>
+distributivas são a expressão da harmonia entre <span class="math notranslate nohighlight">\(\cap\)</span> e <span class="math notranslate nohighlight">\(\cup\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}A\cap(B\cup C)=(A\cap B)\cup(A\cap C)\\A\cup(B\cap C)=(A\cup B)\cap(A\cup C)\end{aligned}\end{align} \]</div>
-<p>válidas para quaisquer <span class="math notranslate nohighlight">\(A,B,C\in P(S)\)</span>. Interseções e uniões podem ser
-extendidas a arbitrários subconjuntos de <span class="math notranslate nohighlight">\(P(S)\)</span>. Com efeito, se
-<span class="math notranslate nohighlight">\(\Gamma\subseteq P(S)\)</span> então</p>
+<p>válidas para quaisquer <span class="math notranslate nohighlight">\(A,B,C\in P(S)\)</span>.</p>
+<p>Sejam <span class="math notranslate nohighlight">\(A,B\in P(S)\)</span>. Os conjuntos</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}S\setminus A=\{x\in S:x\notin A\}\\A\setminus B=A\cap (S\setminus B)\end{aligned}\end{align} \]</div>
+<p>são o <em>complementar</em> de <span class="math notranslate nohighlight">\(A\)</span> e o <em>complementar relativo</em> de <span class="math notranslate nohighlight">\(B\)</span> em
+<span class="math notranslate nohighlight">\(A\)</span>, respectivamente.  As regras de De Morgan exibem o comportamento de
+<span class="math notranslate nohighlight">\(\cap\)</span> e <span class="math notranslate nohighlight">\(\cup\)</span> com respeito a <span class="math notranslate nohighlight">\(\setminus\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}S\setminus(A\cap B)=(S\setminus A)\cup(S\setminus B)\\S\setminus(A\cup B)=(S\setminus A)\cap(S\setminus B)\end{aligned}\end{align} \]</div>
+<p>Interseções e uniões podem ser extendidas a arbitrários subconjuntos de
+<span class="math notranslate nohighlight">\(P(S)\)</span>. Com efeito, se <span class="math notranslate nohighlight">\(\Gamma\subseteq P(S)\)</span> então</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}\bigcap_{A\in \Gamma}A&amp;=\{x\in S:x\in A\mbox{ para todo }A\in\Gamma\}\\\bigcup_{A\in \Gamma}A&amp;=\{x\in S:x\in A\mbox{ para algum }A\in\Gamma\}\end{aligned}\end{align} \]</div>
 <p>Quando <span class="math notranslate nohighlight">\(\Gamma=\{A_1,\ldots,A_n\}\)</span> nós simplesmente escrevemos</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}\bigcap_{A\in \Gamma}A=A_1\cap\cdots\cap A_n\\\bigcup_{A\in \Gamma}A=A_1\cup\cdots\cup A_n\end{aligned}\end{align} \]</div>
+<p>Observamos que existem versões análogas das leis distributivas e regras de De
+Morgan para interseções e uniões quaisquer de subconjuntos de <span class="math notranslate nohighlight">\(S\)</span>.</p>
 <p>O produto Cartesiano <span class="math notranslate nohighlight">\(S\times T\)</span> de arbitrários conjuntos <span class="math notranslate nohighlight">\(S\)</span> e
 <span class="math notranslate nohighlight">\(T\)</span> é o conjunto de todos os pares ordenados <span class="math notranslate nohighlight">\((s,t)\)</span> com <span class="math notranslate nohighlight">\(s\in
 S\)</span> e <span class="math notranslate nohighlight">\(t\in T\)</span>. Em <span class="math notranslate nohighlight">\(S\times T\)</span> elementos <span class="math notranslate nohighlight">\((s,t)\)</span> e
@@ -372,6 +386,68 @@ condição na definição de uma função. É claro que <span class="math notran
 </dl>
 <p>A partir de agora, nós vamos denotar a função <span class="math notranslate nohighlight">\(g\)</span> de que fala o Teorema
 acima por <span class="math notranslate nohighlight">\(g=f^{-1}\)</span>.</p>
+<div class="section" id="exemplos">
+<h2>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Funções afim:</p>
+<div class="math notranslate nohighlight">
+\[f:\mathbb{R}\longrightarrow\mathbb{R},\quad x\longmapsto b+ax,\]</div>
+<p>onde <span class="math notranslate nohighlight">\(a,b\in\mathbb{R}\)</span> e <span class="math notranslate nohighlight">\(a\neq0\)</span>;</p>
+</li>
+<li><p>Funções quadráticas:</p>
+<div class="math notranslate nohighlight">
+\[f:\mathbb{R}\longrightarrow\mathbb{R},\quad x\longrightarrow c+bx+ax^2,\]</div>
+<p>onde <span class="math notranslate nohighlight">\(a,b,c\in\mathbb{R}\)</span> e <span class="math notranslate nohighlight">\(a\neq0\)</span>;</p>
+</li>
+<li><p>Funções polinomiais: sejam <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> e
+<span class="math notranslate nohighlight">\(a_0,a_1,\ldots,a_n\in\mathbb{R}\)</span>, com <span class="math notranslate nohighlight">\(a_n\neq0\)</span>. A função</p>
+<div class="math notranslate nohighlight">
+\[f:\mathbb{R}\longrightarrow\mathbb{R},\quad x\longmapsto a_0+a_1x+\cdots+a_nx^n,\]</div>
+<p>é chamada <em>polinomial de grau</em> <span class="math notranslate nohighlight">\(n\)</span>. Observe funções afim e quadráticas
+são ambas polinomais de graus 1 e 2, respectivamente;</p>
+</li>
+<li><p>Função área: seja <span class="math notranslate nohighlight">\(\mathfrak{T}\)</span> o conjunto de todos os triângulos no
+plano cartesiano <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>. A função</p>
+<div class="math notranslate nohighlight">
+\[f:\mathfrak{T}\longrightarrow\mathbb{R},\quad T\longmapsto\mbox{Área}(T),\]</div>
+<p>que a cada triângulo <span class="math notranslate nohighlight">\(T\)</span> associa a sua área <span class="math notranslate nohighlight">\(\mbox{Área}(T)\)</span>, não
+recebe um nome específico na literatura (pelo contrário, ela e tantas outras
+funções são chamadas <em>medidas</em>), mas nos referiremos a ela, aqui, como função
+área;</p>
+</li>
+<li><p>Uma função sem nome. Sejam <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> o conjunto dos números naturais
+e <span class="math notranslate nohighlight">\(P(\mathbb{N})\)</span> o conjunto das partes de <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>.
+Considere a função</p>
+<div class="math notranslate nohighlight">
+\[f:P(\mathbb{N})\longrightarrow\mathbb{R},\quad A\longmapsto\sum_{n\in A}3^{-n},\]</div>
+<p>que a cada conjunto <span class="math notranslate nohighlight">\(A\)</span> associa a soma dos <em>pesos</em> de seus elementos
+(ao número <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> é atribuído o peso <span class="math notranslate nohighlight">\(3^{-n}\)</span>). A
+função <span class="math notranslate nohighlight">\(f\)</span> é injetiva? E quanto à imagem, qual é a imagem de <span class="math notranslate nohighlight">\(f\)</span>?</p>
+</li>
+</ol>
+</div>
+<div class="section" id="exercicios">
+<h2>Exercícios<a class="headerlink" href="#exercicios" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Sejam <span class="math notranslate nohighlight">\(A\in P(S)\)</span> e <span class="math notranslate nohighlight">\(\Gamma\subseteq P(S)\)</span>. Prove as leis
+distributivas:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}A\cap\bigcup_{B\in\Gamma}B&amp;=\bigcup_{B\in\Gamma}A\cap B\\A\cup\bigcap_{B\in\Gamma}B&amp;=\bigcap_{B\in\Gamma}A\cup B\end{aligned}\end{align} \]</div>
+<p>e as regras de De Morgan:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}S\setminus\bigcap_{B\in\Gamma}B=\bigcup_{B\in\Gamma}S\setminus B\\S\setminus\bigcup_{B\in\Gamma}B=\bigcap_{B\in\Gamma}S\setminus B\end{aligned}\end{align} \]</div>
+</li>
+<li><p>Sejam <span class="math notranslate nohighlight">\(f:S\longrightarrow T\)</span> e <span class="math notranslate nohighlight">\(A,B\subseteq S\)</span>. Prove que:</p>
+<ol class="loweralpha simple">
+<li><p><span class="math notranslate nohighlight">\(f(A\cap B)\subseteq f(A)\cap f(B)\)</span>;</p></li>
+<li><p>é possível que se tenha <span class="math notranslate nohighlight">\(f(A\cap B)\subsetneq f(A)\cap f(B)\)</span>;</p></li>
+<li><p>se <span class="math notranslate nohighlight">\(f\)</span> é injetiva, então <span class="math notranslate nohighlight">\(f(A\cap B)=f(A)\cap f(B)\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(A\cup B)=f(A)\cup f(B)\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(S\setminus A)=T\setminus f(A)\)</span>.</p></li>
+</ol>
+</li>
+</ol>
+</div>
 </div>
 
 
