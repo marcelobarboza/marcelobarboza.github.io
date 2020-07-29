@@ -55,13 +55,13 @@ Partições de Conjunto
 
 Seja :math:`X` um conjunto não vazio. Uma partição :math:`\pi(X)` de :math:`X` é
 um subconjunto de :math:`P(X)\setminus\{\emptyset\}` (note que :math:`\pi(X)`
-não contém o conjunto :math:`\emptyset`) para o qual:
+não contém o conjunto :math:`\emptyset`) tal que:
 
-#. a união dos membros de :math:`\pi(X)` é todo o conjunto :math:`X`:
+#. a união de seus membros é todo o conjunto :math:`X`:
 
    .. math:: \bigcup_{A\in\pi(X)}A=X;
 
-#. distintos membros de :math:`\pi(X)` não contém elementos em comum:
+#. membros distintos entre em si são sempre disjuntos:
 
    .. math:: A\neq B\mbox{ em }\pi(X)\implies A\cap B=\emptyset.
 
