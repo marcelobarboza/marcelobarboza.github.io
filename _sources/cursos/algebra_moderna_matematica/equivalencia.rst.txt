@@ -61,7 +61,7 @@ não contém o conjunto :math:`\emptyset`) tal que:
 
    .. math:: \bigcup_{A\in\pi(X)}A=X;
 
-#. membros distintos entre em si são sempre disjuntos:
+#. elementos distintos são sempre disjuntos:
 
    .. math:: A\neq B\mbox{ em }\pi(X)\implies A\cap B=\emptyset.
 
