@@ -37,7 +37,7 @@ Exemplos
 
    é uma relação de equivalência em :math:`X`;
 
-#. Se :math:`f:X\longrightarrow Y`, então
+#. Se :math:`f:X\longrightarrow Y` então
 
    .. math:: R = \{(x,y)\in X\times X : f(x) = f(y)\},
 
