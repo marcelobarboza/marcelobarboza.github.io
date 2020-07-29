@@ -1,5 +1,5 @@
 #!/bin/bash
-# automator_for_a_very_boring_stuff.sh
+# automator_of_a_very_boring_task.sh
 
 SOURCE="/home/barboza/projects/bitbucket/notas_de_aula/sphinx/build/*"
 DESTINATION="/home/barboza/projects/github/marcelobarboza.github.io/"
