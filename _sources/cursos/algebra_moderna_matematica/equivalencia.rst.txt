@@ -53,9 +53,9 @@ Exemplos
 Partições de Conjunto
 ~~~~~~~~~~~~~~~~~~~~~
 
-Xe :math:`X` é um conjunto não vazio, nós definimos uma partição :math:`\pi(X)`
-como sendo um subconjunto de :math:`P(X)\setminus\{\emptyset\}` (note que
-:math:`\pi(X)` não contém o conjunto :math:`\emptyset`) tal que:
+Seja :math:`X` um conjunto não vazio. Uma partição :math:`\pi(X)` de :math:`X` é
+um subconjunto de :math:`P(X)\setminus\{\emptyset\}` (note que :math:`\pi(X)`
+não contém o conjunto :math:`\emptyset`) para o qual:
 
 #. a união dos membros de :math:`\pi(X)` é todo o conjunto :math:`X`:
 
