@@ -1,4 +1,4 @@
-#!/bin/ksh
+#!/bin/bash
 # automator_for_a_very_boring_stuff.sh
 
 SOURCE="/home/barboza/projects/bitbucket/notas_de_aula/sphinx/build/*"

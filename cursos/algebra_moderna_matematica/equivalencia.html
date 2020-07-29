@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Relações de equivalência &mdash; documentação Material de Apoio às Aulas 0.1</title>
+  <title>Relações de Binárias &mdash; documentação Material de Apoio às Aulas 0.1</title>
   
 
   
@@ -91,9 +91,11 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Álgebra Moderna</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="conjuntos.html">Conjuntos e Funções</a></li>
 <li class="toctree-l3"><a class="reference internal" href="zorn.html">Ordens parciais</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Relações de equivalência</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Relações de Binárias</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#relacoes-de-equivalencia">Relações de Equivalência</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#exemplos">Exemplos</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#conjuntos-quocientes">Conjuntos quocientes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#particoes-de-conjunto">Partições de Conjunto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conjuntos-quocientes">Conjuntos Quocientes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="monoides.html">Monóides</a></li>
@@ -158,7 +160,7 @@
         
           <li><a href="index.html">Álgebra Moderna</a> &raquo;</li>
         
-      <li>Relações de equivalência</li>
+      <li>Relações de Binárias</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -177,105 +179,88 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="relacoes-de-equivalencia">
-<h1>Relações de equivalência<a class="headerlink" href="#relacoes-de-equivalencia" title="Link permanente para este título">¶</a></h1>
-<p><strong>Definição</strong></p>
-<blockquote>
-<div><p>Seja <span class="math notranslate nohighlight">\(X\)</span> um conjunto não vazio. Uma relação de equivalência em
-<span class="math notranslate nohighlight">\(X\)</span> é um conjunto <span class="math notranslate nohighlight">\(R\subseteq X\times X\)</span> com as seguintes
-propriedades :</p>
+  <div class="section" id="relacoes-de-binarias">
+<h1>Relações de Binárias<a class="headerlink" href="#relacoes-de-binarias" title="Link permanente para este título">¶</a></h1>
+<p>Nós dizemos que uma relação (binária) está definida em um conjunto <span class="math notranslate nohighlight">\(S\)</span> se,
+para cada par ordenado <span class="math notranslate nohighlight">\((a,b)\in S\times S\)</span>, nós somos capazes de
+discernir se <span class="math notranslate nohighlight">\(a\)</span> está ou não relacionado ao elemento <span class="math notranslate nohighlight">\(b\)</span> (através da
+referida relação). Por exemplo, se considerarmos a relação de ordem usual entre
+os números reais nós presumivelmente saberemos dizer se <span class="math notranslate nohighlight">\(a&gt;b\)</span> ou não.
+Outra relação corriqueira em nossas vidas é a ordem lexicográfica (do
+dicionário) no conjunto de todas as palavras. Um outro exemplo ainda é a relação
+de <em>primos primeiros</em>, segundo a qual duas pessoas estão relacionadas se possuem
+um um avô ou avó em comum.  Abstraindo o que há de comum a todas estas
+situações, nós dizemos que uma relação binária num conjunto <span class="math notranslate nohighlight">\(S\)</span> é
+simplesmente um subconjunto <span class="math notranslate nohighlight">\(R\)</span> do produto cartesiano <span class="math notranslate nohighlight">\(S\times S\)</span>.
+Se um par ordenado <span class="math notranslate nohighlight">\((a,b)\)</span> está em <span class="math notranslate nohighlight">\(R\)</span> nós dizemos que <span class="math notranslate nohighlight">\(a\)</span>
+relaciona-se com <span class="math notranslate nohighlight">\(b\)</span> através de <span class="math notranslate nohighlight">\(R\)</span> e escrevemos <span class="math notranslate nohighlight">\(aRb\)</span>.</p>
+<div class="section" id="relacoes-de-equivalencia">
+<h2>Relações de Equivalência<a class="headerlink" href="#relacoes-de-equivalencia" title="Link permanente para este título">¶</a></h2>
+<dl class="simple">
+<dt><strong>Definição</strong></dt><dd><p>Seja <span class="math notranslate nohighlight">\(X\)</span> um conjunto não vazio. Uma relação binária <span class="math notranslate nohighlight">\(R\)</span> em
+<span class="math notranslate nohighlight">\(X\)</span> é dita uma relação de equivalência se as seguintes condições são
+válidas para quaisquer elementos <span class="math notranslate nohighlight">\(x,y,z\in R\)</span>:</p>
 <dl class="field-list simple">
 <dt class="field-odd">reflexividade</dt>
-<dd class="field-odd"><p><span class="math notranslate nohighlight">\((x,x)\in R\)</span> para todo <span class="math notranslate nohighlight">\(x\in X\)</span>;</p>
+<dd class="field-odd"><p><span class="math notranslate nohighlight">\(xRx\)</span>;</p>
 </dd>
 <dt class="field-even">simetria</dt>
-<dd class="field-even"><p>se <span class="math notranslate nohighlight">\((x,y)\in R\)</span> então <span class="math notranslate nohighlight">\((y,x)\in R\)</span>;</p>
+<dd class="field-even"><p><span class="math notranslate nohighlight">\(xRy\implies yRx\)</span>;</p>
 </dd>
 <dt class="field-odd">transitividade</dt>
-<dd class="field-odd"><p>se <span class="math notranslate nohighlight">\((x,y)\in R\)</span> e <span class="math notranslate nohighlight">\((y,z)\in R\)</span> então <span class="math notranslate nohighlight">\((x,z)\in R\)</span>.</p>
+<dd class="field-odd"><p><span class="math notranslate nohighlight">\(xRy\mbox{ e }yRz\implies xRz\)</span>.</p>
 </dd>
 </dl>
-</div></blockquote>
-<div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p><span class="math notranslate nohighlight">\(xRy\iff(x,y)\in R\)</span></p>
+</dd>
+</dl>
 </div>
 <div class="section" id="exemplos">
 <h2>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h2>
 <ol class="arabic">
-<li><p>A igualdade é uma relação de equivalência em todo conjunto não vazio. Mais
-especificamente, se <span class="math notranslate nohighlight">\(X\)</span> é qualquer conjunto não vazio, então</p>
+<li><p>A igualdade é uma relação de equivalência em qualquer conjunto não vazio.
+Mais especificamente, se <span class="math notranslate nohighlight">\(X\)</span> é um conjunto não vazio, então</p>
 <div class="math notranslate nohighlight">
 \[R=\{(x,y)\in X\times X:x=y\},\]</div>
 <p>é uma relação de equivalência em <span class="math notranslate nohighlight">\(X\)</span>;</p>
 </li>
-<li><p>Este exemplo é uma generalização de seu antecessor. Se
-<span class="math notranslate nohighlight">\(f:X\longrightarrow Y\)</span> é uma função, então</p>
+<li><p>Se <span class="math notranslate nohighlight">\(f:X\longrightarrow Y\)</span>, então</p>
 <div class="math notranslate nohighlight">
-\[\begin{equation}
-R = \{(x,y)\in X\times X : f(x) = f(y)\},
-\end{equation}\]</div>
-<p>é uma relação de equivalência em <span class="math notranslate nohighlight">\(X\)</span>.</p>
+\[R = \{(x,y)\in X\times X : f(x) = f(y)\},\]</div>
+<p>é uma relação de equivalência em <span class="math notranslate nohighlight">\(X\)</span>. Como este exemplo generaliza o
+anterior?</p>
 </li>
-<li><p>O exemplo obrigatório: se <span class="math notranslate nohighlight">\(n\in\mathbb{Z}\)</span>, <span class="math notranslate nohighlight">\(n\geqslant2\)</span>, então</p>
+<li><p>O exemplo obrigatório. Se <span class="math notranslate nohighlight">\(n\in\mathbb{N}\setminus\{0\}\)</span> então</p>
 <div class="math notranslate nohighlight">
-\[R=\{(x,y)\in\mathbb{Z}\times\mathbb{Z}:x\equiv y\hspace{-6pt}\pmod n\},\]</div>
+\[R=\{(x,y)\in\mathbb{Z}\times\mathbb{Z}:x\equiv y\pmod n\},\]</div>
 <p>é uma relação de equivalência em <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>.</p>
 </li>
 </ol>
 </div>
-<div class="section" id="conjuntos-quocientes">
-<h2>Conjuntos quocientes<a class="headerlink" href="#conjuntos-quocientes" title="Link permanente para este título">¶</a></h2>
-<p>Sejam <span class="math notranslate nohighlight">\(X\)</span> um conjunto não vazio e <span class="math notranslate nohighlight">\(R\)</span> uma relação de equivalência em
-<span class="math notranslate nohighlight">\(X\)</span>. A <em>classe de equivalência</em> de <span class="math notranslate nohighlight">\(x\in X\)</span> segundo <span class="math notranslate nohighlight">\(R\)</span> é o
-conjunto</p>
-<div class="math notranslate nohighlight">
-\[[x]_R=\{y\in X : yRx\},\]</div>
-<p>daqueles elementos de <span class="math notranslate nohighlight">\(X\)</span> que se equivalem a <span class="math notranslate nohighlight">\(x\in X\)</span> através de
-<span class="math notranslate nohighlight">\(R\)</span>. Note que:</p>
+<div class="section" id="particoes-de-conjunto">
+<h2>Partições de Conjunto<a class="headerlink" href="#particoes-de-conjunto" title="Link permanente para este título">¶</a></h2>
+<p>Xe <span class="math notranslate nohighlight">\(X\)</span> é um conjunto não vazio, nós definimos uma partição <span class="math notranslate nohighlight">\(\pi(X)\)</span>
+como sendo um subconjunto de <span class="math notranslate nohighlight">\(P(X)\setminus\{\emptyset\}\)</span> (note que
+<span class="math notranslate nohighlight">\(\pi(X)\)</span> não contém o conjunto <span class="math notranslate nohighlight">\(\emptyset\)</span>) tal que:</p>
 <ol class="arabic">
-<li><p><span class="math notranslate nohighlight">\(xRy\implies[x]_R=[y]_R\)</span>:</p>
-<p>de fato, tem-se que</p>
+<li><p>a união dos membros de <span class="math notranslate nohighlight">\(\pi(X)\)</span> é todo o conjunto <span class="math notranslate nohighlight">\(X\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[z\in[x]_R\implies zRx\implies zRx\quad\mbox{e}\quad xRy\implies
-zRy\implies z\in[y]_R,\]</div>
-<p>e</p>
-<div class="math notranslate nohighlight">
-\[z\in[y]_R\implies zRy\implies zRy\quad\mbox{e}\quad xRy\implies
-zRy\quad\mbox{e}\quad yRx\implies zRx\implies z\in[x]_R,\]</div>
-<p>pelo que se chega à conclusão de que</p>
-<div class="math notranslate nohighlight">
-\[z\in[x]_R\iff z\in[y]_R,\]</div>
-<p>e, assim, que estes são um e o mesmo conjunto;</p>
+\[\bigcup_{A\in\pi(X)}A=X;\]</div>
 </li>
-<li><p><span class="math notranslate nohighlight">\([x]_R\cap[y]_R\neq\emptyset\implies xRy\)</span>:</p>
+<li><p>distintos membros de <span class="math notranslate nohighlight">\(\pi(X)\)</span> não contém elementos em comum:</p>
 <div class="math notranslate nohighlight">
-\[z\in[x]_R\cap[y]_R\implies zRx\quad\mbox{e}\quad zRy\implies
-xRz\quad\mbox{e}\quad zRy\implies xRy\implies[x]_R=[y]_R.\]</div>
+\[A\neq B\mbox{ em }\pi(X)\implies A\cap B=\emptyset.\]</div>
 </li>
 </ol>
-<p>Portanto, é correto dizer que</p>
-<div class="math notranslate nohighlight" id="disjunta">
-\[\forall\,\,x,y\in X:\quad[x]_R\cap[y]_R\neq\emptyset\iff xRy.\]</div>
-<p>O conjunto</p>
-<div class="math notranslate nohighlight">
-\[X/R=\{[x]_R : x\in X\},\]</div>
-<p>de todas as classes de equivalência de elementos de <span class="math notranslate nohighlight">\(X\)</span> segundo <span class="math notranslate nohighlight">\(R\)</span>
-é chamado <em>conjunto quociente</em> de <span class="math notranslate nohighlight">\(X\)</span> por <span class="math notranslate nohighlight">\(R\)</span>. Observe que</p>
-<div class="math notranslate nohighlight">
-\[X=\bigsqcup\limits_{[x]_R\in X/R}[x]_R.\]</div>
-<div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p><span class="math notranslate nohighlight">\(\bigsqcup\)</span> denota união <a class="reference internal" href="#disjunta">disjunta</a>.</p>
+<p>Os elementos de <span class="math notranslate nohighlight">\(\pi(X)\)</span> são os blocos da partição. Como logo veremos,
+toda relação de equivalência <span class="math notranslate nohighlight">\(R\)</span> em <span class="math notranslate nohighlight">\(X\)</span> dá origem a uma partição de
+conjunto <span class="math notranslate nohighlight">\(\pi_R(X)\)</span> e reciprocamente, toda partição de conjunto
+<span class="math notranslate nohighlight">\(\pi(X)\)</span> dá origem a uma relação de equivalência <span class="math notranslate nohighlight">\(R_\pi\)</span> em
+<span class="math notranslate nohighlight">\(X\)</span>. Tais conceitos são, portanto, equivalentes.</p>
 </div>
-<p>A aplicação</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{array}{ccccc}
-   \pi_R &amp; : &amp; X &amp; \longrightarrow &amp; X/R, \\
-   &amp; &amp; x &amp; \longmapsto &amp; [x]_R
-\end{array}\end{split}\]</div>
-<p>que a cada elemento <span class="math notranslate nohighlight">\(x\in X\)</span> associa a sua classe de equivalência segundo
-<span class="math notranslate nohighlight">\(R\)</span>, é chamada de <em>aplicação quociente</em>.</p>
+<div class="section" id="conjuntos-quocientes">
+<h2>Conjuntos Quocientes<a class="headerlink" href="#conjuntos-quocientes" title="Link permanente para este título">¶</a></h2>
+<p>Sejam <span class="math notranslate nohighlight">\(X\)</span> um conjunto não vazio e <span class="math notranslate nohighlight">\(R\)</span> uma relação de equivalência em
+<span class="math notranslate nohighlight">\(X\)</span>.</p>
 </div>
 </div>
 

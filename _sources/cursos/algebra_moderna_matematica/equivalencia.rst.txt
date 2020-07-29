@@ -1,132 +1,78 @@
-Relações de equivalência
-------------------------
+Relações de Binárias
+--------------------
+
+Nós dizemos que uma relação (binária) está definida em um conjunto :math:`S` se,
+para cada par ordenado :math:`(a,b)\in S\times S`, nós somos capazes de
+discernir se :math:`a` está ou não relacionado ao elemento :math:`b` (através da
+referida relação). Por exemplo, se considerarmos a relação de ordem usual entre
+os números reais nós presumivelmente saberemos dizer se :math:`a>b` ou não.
+Outra relação corriqueira em nossas vidas é a ordem lexicográfica (do
+dicionário) no conjunto de todas as palavras. Um outro exemplo ainda é a relação
+de *primos primeiros*, segundo a qual duas pessoas estão relacionadas se possuem
+um um avô ou avó em comum.  Abstraindo o que há de comum a todas estas
+situações, nós dizemos que uma relação binária num conjunto :math:`S` é
+simplesmente um subconjunto :math:`R` do produto cartesiano :math:`S\times S`.
+Se um par ordenado :math:`(a,b)` está em :math:`R` nós dizemos que :math:`a`
+relaciona-se com :math:`b` através de :math:`R` e escrevemos :math:`aRb`.
+
+Relações de Equivalência
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Definição**
+   Seja :math:`X` um conjunto não vazio. Uma relação binária :math:`R` em
+   :math:`X` é dita uma relação de equivalência se as seguintes condições são
+   válidas para quaisquer elementos :math:`x,y,z\in R`:
 
-   Seja :math:`X` um conjunto não vazio. Uma relação de equivalência em
-   :math:`X` é um conjunto :math:`R\subseteq X\times X` com as seguintes
-   propriedades :
-
-   :reflexividade:
-
-      :math:`(x,x)\in R` para todo :math:`x\in X`;
-
-   :simetria:
-
-      se :math:`(x,y)\in R` então :math:`(y,x)\in R`;
-
-   :transitividade:
-
-      se :math:`(x,y)\in R` e :math:`(y,z)\in R` então :math:`(x,z)\in R`.
-
-.. note::
-   :math:`xRy\iff(x,y)\in R`
+   :reflexividade: :math:`xRx`;
+   :simetria: :math:`xRy\implies yRx`;
+   :transitividade: :math:`xRy\mbox{ e }yRz\implies xRz`.
 
 Exemplos
 ~~~~~~~~
 
-#. A igualdade é uma relação de equivalência em todo conjunto não vazio. Mais
-   especificamente, se :math:`X` é qualquer conjunto não vazio, então
-   
-   .. math::
-      R=\{(x,y)\in X\times X:x=y\},
+#. A igualdade é uma relação de equivalência em qualquer conjunto não vazio.
+   Mais especificamente, se :math:`X` é um conjunto não vazio, então
+
+   .. math:: R=\{(x,y)\in X\times X:x=y\},
 
    é uma relação de equivalência em :math:`X`;
 
-#. Este exemplo é uma generalização de seu antecessor. Se
-   :math:`f:X\longrightarrow Y` é uma função, então
+#. Se :math:`f:X\longrightarrow Y`, então
 
-   .. math::
-      \begin{equation}
-      R = \{(x,y)\in X\times X : f(x) = f(y)\},
-      \end{equation}
+   .. math:: R = \{(x,y)\in X\times X : f(x) = f(y)\},
 
-   é uma relação de equivalência em :math:`X`.
- 
-#. O exemplo obrigatório: se :math:`n\in\mathbb{Z}`, :math:`n\geqslant2`, então
+   é uma relação de equivalência em :math:`X`. Como este exemplo generaliza o
+   anterior?
 
-   .. math::
-      R=\{(x,y)\in\mathbb{Z}\times\mathbb{Z}:x\equiv y\hspace{-6pt}\pmod n\},
+#. O exemplo obrigatório. Se :math:`n\in\mathbb{N}\setminus\{0\}` então
+
+   .. math:: R=\{(x,y)\in\mathbb{Z}\times\mathbb{Z}:x\equiv y\pmod n\},
 
    é uma relação de equivalência em :math:`\mathbb{Z}`.
 
-Conjuntos quocientes
+Partições de Conjunto
+~~~~~~~~~~~~~~~~~~~~~
+
+Xe :math:`X` é um conjunto não vazio, nós definimos uma partição :math:`\pi(X)`
+como sendo um subconjunto de :math:`P(X)\setminus\{\emptyset\}` (note que
+:math:`\pi(X)` não contém o conjunto :math:`\emptyset`) tal que:
+
+#. a união dos membros de :math:`\pi(X)` é todo o conjunto :math:`X`:
+
+   .. math:: \bigcup_{A\in\pi(X)}A=X;
+
+#. distintos membros de :math:`\pi(X)` não contém elementos em comum:
+
+   .. math:: A\neq B\mbox{ em }\pi(X)\implies A\cap B=\emptyset.
+
+Os elementos de :math:`\pi(X)` são os blocos da partição. Como logo veremos,
+toda relação de equivalência :math:`R` em :math:`X` dá origem a uma partição de
+conjunto :math:`\pi_R(X)` e reciprocamente, toda partição de conjunto
+:math:`\pi(X)` dá origem a uma relação de equivalência :math:`R_\pi` em
+:math:`X`. Tais conceitos são, portanto, equivalentes.
+
+Conjuntos Quocientes
 ~~~~~~~~~~~~~~~~~~~~
 
 Sejam :math:`X` um conjunto não vazio e :math:`R` uma relação de equivalência em
-:math:`X`. A *classe de equivalência* de :math:`x\in X` segundo :math:`R` é o
-conjunto
-
-.. math::
-   [x]_R=\{y\in X : yRx\},
-
-daqueles elementos de :math:`X` que se equivalem a :math:`x\in X` através de
-:math:`R`. Note que:
-
-#. :math:`xRy\implies[x]_R=[y]_R`:
-   
-   de fato, tem-se que
-
-   .. math::
-
-      z\in[x]_R\implies zRx\implies zRx\quad\mbox{e}\quad xRy\implies
-      zRy\implies z\in[y]_R,
-
-   e
-
-   .. math::
-
-      z\in[y]_R\implies zRy\implies zRy\quad\mbox{e}\quad xRy\implies
-      zRy\quad\mbox{e}\quad yRx\implies zRx\implies z\in[x]_R,
-
-   pelo que se chega à conclusão de que
-
-   .. math::
-
-      z\in[x]_R\iff z\in[y]_R,
-
-   e, assim, que estes são um e o mesmo conjunto;
-
-#. :math:`[x]_R\cap[y]_R\neq\emptyset\implies xRy`:
-
-   .. math::
-
-      z\in[x]_R\cap[y]_R\implies zRx\quad\mbox{e}\quad zRy\implies
-      xRz\quad\mbox{e}\quad zRy\implies xRy\implies[x]_R=[y]_R.
-
-Portanto, é correto dizer que
-
-.. _disjunta:
-
-.. math::
-
-   \forall\,\,x,y\in X:\quad[x]_R\cap[y]_R\neq\emptyset\iff xRy.
-
-O conjunto 
-
-.. math::
-
-   X/R=\{[x]_R : x\in X\},
-
-de todas as classes de equivalência de elementos de :math:`X` segundo :math:`R`
-é chamado *conjunto quociente* de :math:`X` por :math:`R`. Observe que
-
-.. math::
-
-   X=\bigsqcup\limits_{[x]_R\in X/R}[x]_R.
-
-.. note::
-
-   :math:`\bigsqcup` denota união disjunta_.
-
-A aplicação
-
-.. math::
-
-   \begin{array}{ccccc}
-      \pi_R & : & X & \longrightarrow & X/R, \\
-      & & x & \longmapsto & [x]_R
-   \end{array}
-
-que a cada elemento :math:`x\in X` associa a sua classe de equivalência segundo
-:math:`R`, é chamada de *aplicação quociente*.
+:math:`X`.
