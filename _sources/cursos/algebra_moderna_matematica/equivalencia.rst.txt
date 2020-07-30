@@ -122,8 +122,8 @@ Exemplos
 
    .. math:: X=\{d\in\mathbb{N}:d\mid54\}
 
-   o conjunto dos divisores inteiros e positivos do número :math:`54=2\cdot3^3`.
-   O conjunto
+   o conjunto dos divisores inteiros e positivos de :math:`54=2\cdot3^3`. O
+   conjunto
 
    .. math:: R=\{(x,y)\in X\times X:x\mid y\},
 
@@ -135,13 +135,14 @@ Exemplos
    .. math::
       V(\mathfrak{H}_R)=\{1,2,3,6,9,18,27,54\}=X,
 
-   de seus vértices, e
+   de seus vértices e
 
    .. math::
       E(\mathfrak{H}_R)=\{(x,y)\in R:\nexists\,z\in X,\,(x,z)\in R\mbox{ e
       }(z,y)\in R\},
 
-   de suas arestas. Tem-se, enfim, a seguinte representação de :math:`R`:
+   de suas arestas. Tem-se, enfim, a seguinte representação gráfica de
+   :math:`R`:
 
    .. tikz::
 
@@ -177,7 +178,7 @@ Exemplos
    Note que apenas se tem :math:`x\leqslant_R y` caso exista em
    :math:`\mathfrak{H}_R` um caminho com início em :math:`x` e término em
    :math:`y`. Deste modo é que se pode dizer, por exemplo, que
-   :math:`2\nleqslant_R 27` por uma simples inspeção de :math:`\mathfrak{H}_R`.
+   :math:`2\nleqslant_R 27` por uma rápida inspeção de :math:`\mathfrak{H}_R`.
 
 Lema de Zorn
 ~~~~~~~~~~~~
