@@ -94,8 +94,10 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Relações de Binárias</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#relacoes-de-equivalencia">Relações de Equivalência</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#exemplos">Exemplos</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#particoes-de-conjunto">Partições de Conjunto</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#conjuntos-quocientes">Conjuntos Quocientes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conjuntos-quociente">Conjuntos Quociente</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#relacoes-de-ordem">Relações de Ordem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Exemplos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lema-de-zorn">Lema de Zorn</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="monoides.html">Monóides</a></li>
@@ -236,31 +238,156 @@ anterior?</p>
 </li>
 </ol>
 </div>
-<div class="section" id="particoes-de-conjunto">
-<h2>Partições de Conjunto<a class="headerlink" href="#particoes-de-conjunto" title="Link permanente para este título">¶</a></h2>
-<p>Seja <span class="math notranslate nohighlight">\(X\)</span> um conjunto não vazio. Uma partição <span class="math notranslate nohighlight">\(\pi(X)\)</span> de <span class="math notranslate nohighlight">\(X\)</span> é
-um subconjunto de <span class="math notranslate nohighlight">\(P(X)\setminus\{\emptyset\}\)</span> (note que <span class="math notranslate nohighlight">\(\pi(X)\)</span>
-não contém o conjunto <span class="math notranslate nohighlight">\(\emptyset\)</span>) tal que:</p>
+<div class="section" id="conjuntos-quociente">
+<h2>Conjuntos Quociente<a class="headerlink" href="#conjuntos-quociente" title="Link permanente para este título">¶</a></h2>
+<p>Seja <span class="math notranslate nohighlight">\(X\)</span> um conjunto não vazio. Uma partição de <span class="math notranslate nohighlight">\(X\)</span> é um subconjunto
+de <span class="math notranslate nohighlight">\(\pi\subseteq P(X)\setminus\{\emptyset\}\)</span> (perceba que
+<span class="math notranslate nohighlight">\(\emptyset\notin\pi\)</span>) tal que:</p>
 <ol class="arabic">
-<li><p>a união de seus membros é todo o conjunto <span class="math notranslate nohighlight">\(X\)</span>:</p>
+<li><p>a união dos membros de <span class="math notranslate nohighlight">\(\pi\)</span> é todo o conjunto <span class="math notranslate nohighlight">\(X\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\bigcup_{A\in\pi(X)}A=X;\]</div>
+\[\bigcup_{A\in\pi}A=X;\]</div>
 </li>
-<li><p>elementos distintos são sempre disjuntos:</p>
+<li><p>elementos de <span class="math notranslate nohighlight">\(\pi\)</span> distintos entre si são sempre disjuntos:</p>
 <div class="math notranslate nohighlight">
-\[A\neq B\mbox{ em }\pi(X)\implies A\cap B=\emptyset.\]</div>
+\[A\neq B\mbox{ em }\pi\implies A\cap B=\emptyset.\]</div>
 </li>
 </ol>
-<p>Os elementos de <span class="math notranslate nohighlight">\(\pi(X)\)</span> são os blocos da partição. Como logo veremos,
-toda relação de equivalência <span class="math notranslate nohighlight">\(R\)</span> em <span class="math notranslate nohighlight">\(X\)</span> dá origem a uma partição de
-conjunto <span class="math notranslate nohighlight">\(\pi_R(X)\)</span> e reciprocamente, toda partição de conjunto
-<span class="math notranslate nohighlight">\(\pi(X)\)</span> dá origem a uma relação de equivalência <span class="math notranslate nohighlight">\(R_\pi\)</span> em
-<span class="math notranslate nohighlight">\(X\)</span>. Tais conceitos são, portanto, equivalentes.</p>
-</div>
-<div class="section" id="conjuntos-quocientes">
-<h2>Conjuntos Quocientes<a class="headerlink" href="#conjuntos-quocientes" title="Link permanente para este título">¶</a></h2>
+<p>Os elementos de <span class="math notranslate nohighlight">\(\pi\)</span> são os blocos da partição. Como logo veremos, há uma
+estreita relação entre relações de equivalência e partições de conjuto.</p>
 <p>Sejam <span class="math notranslate nohighlight">\(X\)</span> um conjunto não vazio e <span class="math notranslate nohighlight">\(R\)</span> uma relação de equivalência em
-<span class="math notranslate nohighlight">\(X\)</span>.</p>
+<span class="math notranslate nohighlight">\(X\)</span>. Se <span class="math notranslate nohighlight">\(x\in X\)</span> nós dizemos que o conjunto</p>
+<div class="math notranslate nohighlight">
+\[\bar{x}_R=\{y\in X:yRx\}\]</div>
+<p>é a <span class="math notranslate nohighlight">\(R\)</span>-classe de equivalência de <span class="math notranslate nohighlight">\(x\)</span> ou a classe de equivalência de
+<span class="math notranslate nohighlight">\(x\)</span> segundo <span class="math notranslate nohighlight">\(R\)</span>. Seja</p>
+<div class="math notranslate nohighlight">
+\[\pi_R=\{\bar{x}_R:x\in X\}\]</div>
+<p>o conjunto de todas as <span class="math notranslate nohighlight">\(R\)</span>-classes de equivalência em <span class="math notranslate nohighlight">\(X\)</span>. Afirmamos
+que <span class="math notranslate nohighlight">\(\pi_R\)</span> constitui uma partição de <span class="math notranslate nohighlight">\(X\)</span>. Com efeito, decorre de
+<span class="math notranslate nohighlight">\(xRx\)</span> que <span class="math notranslate nohighlight">\(x\in\bar{x}_R\)</span> para cada <span class="math notranslate nohighlight">\(x\in X\)</span> arbitrariamente
+fixado e daí, que <span class="math notranslate nohighlight">\(X=\cup_{x\in X}\bar{x}_R\)</span> como exige a primeira das
+condições que definem uma partição. Para que possamos concluir que <span class="math notranslate nohighlight">\(\pi_R\)</span>
+é realmente uma partição de <span class="math notranslate nohighlight">\(X\)</span> nos resta apenas provar que são disjuntas
+quaisquer duas <span class="math notranslate nohighlight">\(R\)</span>-classes de equivalência distintas em <span class="math notranslate nohighlight">\(X\)</span>. Ora, se
+<span class="math notranslate nohighlight">\(z\in\bar{x}_R\cap\bar{y}_R\)</span> para certas
+<span class="math notranslate nohighlight">\(\bar{x}_R,\bar{y}_R\in\pi_R\)</span>, então <span class="math notranslate nohighlight">\(zRx\)</span> e <span class="math notranslate nohighlight">\(zRy\)</span>. Desta
+forma, nós temos que <span class="math notranslate nohighlight">\(xRz\)</span> e <span class="math notranslate nohighlight">\(zRy\)</span> e, assim, que <span class="math notranslate nohighlight">\(xRy\)</span>. O
+argumento que acabamos de utilizar pode ser modificado (apenas ligeiramente)
+para mostrar que, neste caso, <span class="math notranslate nohighlight">\(\bar{x}_R\subseteq\bar{y}_R\)</span> e
+<span class="math notranslate nohighlight">\(\bar{x}_R\subseteq\bar{y}_R\)</span>, ou seja, que <span class="math notranslate nohighlight">\(\bar{x}_R=\bar{y}_R\)</span>. O
+conjunto <span class="math notranslate nohighlight">\(\pi_R\)</span> é, portanto e como havíamos afirmado, uma partição de
+<span class="math notranslate nohighlight">\(X\)</span>. Deixamos a cargo do leitor a prova de que toda partição de conjunto
+determina uma relação de equivalência cujos blocos são justamente as classes de
+equivalência de tal relação. De fato, este é um dos exercícios ao final desta
+seção.</p>
+</div>
+<div class="section" id="relacoes-de-ordem">
+<h2>Relações de Ordem<a class="headerlink" href="#relacoes-de-ordem" title="Link permanente para este título">¶</a></h2>
+<dl class="simple">
+<dt><strong>Definição</strong></dt><dd><p>Seja <span class="math notranslate nohighlight">\(X\)</span> um conjunto não vazio. Uma relação binária <span class="math notranslate nohighlight">\(R\)</span> em
+<span class="math notranslate nohighlight">\(X\)</span> é dita uma relação de ordem parcial se as seguintes condições são
+válidas para quaisquer elementos <span class="math notranslate nohighlight">\(x,y,z\in X\)</span>:</p>
+<dl class="field-list simple">
+<dt class="field-odd">reflexidade</dt>
+<dd class="field-odd"><p><span class="math notranslate nohighlight">\(xRx\)</span>;</p>
+</dd>
+<dt class="field-even">anti-simetria</dt>
+<dd class="field-even"><p><span class="math notranslate nohighlight">\(xRy\mbox{ e }yRx\implies x=y\)</span>;</p>
+</dd>
+<dt class="field-odd">transitividade</dt>
+<dd class="field-odd"><p><span class="math notranslate nohighlight">\(xRy\mbox{ e }yRz\implies xRy\)</span>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>Um conjunto parcialmente ordenado é um par <span class="math notranslate nohighlight">\((X,R)\)</span> em que <span class="math notranslate nohighlight">\(X\)</span> é um
+conjunto não vazio e <span class="math notranslate nohighlight">\(R\)</span> é uma relação de ordem parcial em <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p><span class="math notranslate nohighlight">\(x\leqslant_R y\iff(x,y)\in R\)</span></p>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Exemplos<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Seja</p>
+<div class="math notranslate nohighlight">
+\[X=\{d\in\mathbb{N}:d\mid54\}\]</div>
+<p>o conjunto dos divisores inteiros e positivos do número <span class="math notranslate nohighlight">\(54=2\cdot3^3\)</span>.
+O conjunto</p>
+<div class="math notranslate nohighlight">
+\[R=\{(x,y)\in X\times X:x\mid y\},\]</div>
+<p>constitui uma relação de ordem parcial em <span class="math notranslate nohighlight">\(X\)</span>, como se pode facilmente
+verificar. Uma imagem fala mais que 1000 palavras, certo? Pois bem, a relação
+de ordem <span class="math notranslate nohighlight">\(R\)</span> pode ser representada por seu <em>diagrama de Hasse</em>: o grafo
+<span class="math notranslate nohighlight">\(\mathfrak{H}_R\)</span> definido pelos conjuntos</p>
+<div class="math notranslate nohighlight">
+\[V(\mathfrak{H}_R)=\{1,2,3,6,9,18,27,54\}=X,\]</div>
+<p>de seus vértices, e</p>
+<div class="math notranslate nohighlight">
+\[E(\mathfrak{H}_R)=\{(x,y)\in R:\nexists\,z\in X,\,(x,z)\in R\mbox{ e
+}(z,y)\in R\},\]</div>
+<p>de suas arestas. Tem-se, enfim, a seguinte representação de <span class="math notranslate nohighlight">\(R\)</span>:</p>
+<div class="figure">
+<p><img src="../../_images/tikz-aedf1011b8b926758b019f278559e6e9e636e138.png" alt="\draw[fill=black] ( 0.0, 0.0) circle (1pt);
+\draw[fill=black] (-2.5, 0.5) circle (1pt);
+\draw[fill=black] ( 2.5, 0.5) circle (1pt);
+\draw[fill=black] (-2.5, 1.0) circle (1pt);
+\draw[fill=black] ( 2.5, 1.0) circle (1pt);
+\draw[fill=black] (-2.5, 1.5) circle (1pt);
+\draw[fill=black] ( 2.5, 1.5) circle (1pt);
+\draw[fill=black] ( 0.0, 2.0) circle (1pt);
+
+\node at ( 0.0,-0.5)  {1};
+\node at (-3.0, 0.5)  {2};
+\node at ( 3.0, 0.5)  {3};
+\node at (-3.0, 1.0)  {6};
+\node at ( 3.0, 1.0)  {9};
+\node at (-3.0, 1.5) {18};
+\node at ( 3.0, 1.5) {27};
+\node at ( 0.0, 2.5) {54};
+
+\draw[-&gt;,&gt;=latex] ( 0.0, 0.0) -- (-2.5, 0.5);
+\draw[-&gt;,&gt;=latex] ( 0.0, 0.0) -- ( 2.5, 0.5);
+\draw[-&gt;,&gt;=latex] (-2.5, 0.5) -- (-2.5, 1.0);
+\draw[-&gt;,&gt;=latex] ( 2.5, 0.5) -- ( 2.5, 1.0);
+\draw[-&gt;,&gt;=latex] (-2.5, 1.0) -- (-2.5, 1.5);
+\draw[-&gt;,&gt;=latex] ( 2.5, 1.0) -- ( 2.5, 1.5);
+\draw[-&gt;,&gt;=latex] (-2.5, 1.5) -- ( 0.0, 2.0);
+\draw[-&gt;,&gt;=latex] ( 2.5, 1.5) -- ( 0.0, 2.0);
+\draw[-&gt;,&gt;=latex] ( 2.5, 0.5) -- (-2.5, 1.0);
+\draw[-&gt;,&gt;=latex] ( 2.5, 1.0) -- (-2.5, 1.5);" /></p>
+</div><p>Note que apenas se tem <span class="math notranslate nohighlight">\(x\leqslant_R y\)</span> caso exista em
+<span class="math notranslate nohighlight">\(\mathfrak{H}_R\)</span> um caminho com início em <span class="math notranslate nohighlight">\(x\)</span> e término em
+<span class="math notranslate nohighlight">\(y\)</span>. Deste modo é que se pode dizer, por exemplo, que
+<span class="math notranslate nohighlight">\(2\nleqslant_R 27\)</span> por uma simples inspeção de <span class="math notranslate nohighlight">\(\mathfrak{H}_R\)</span>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="lema-de-zorn">
+<h2>Lema de Zorn<a class="headerlink" href="#lema-de-zorn" title="Link permanente para este título">¶</a></h2>
+<p><strong>Definição</strong></p>
+<blockquote>
+<div><p>Seja <span class="math notranslate nohighlight">\((X,R)\)</span> um conjunto parcialmente ordenado. Um conjunto
+<span class="math notranslate nohighlight">\(C\subseteq X\)</span> é dito <span class="math notranslate nohighlight">\(R\)</span>-simplesmente ordenado se:</p>
+<div class="math notranslate nohighlight">
+\[x,y\in C\implies x\leqslant_R y\quad\mbox{ou}\quad y\leqslant_R x.\]</div>
+<p>Um elemento <span class="math notranslate nohighlight">\(\omega\in X\)</span> é dito uma <span class="math notranslate nohighlight">\(R\)</span>-cota superior de
+<span class="math notranslate nohighlight">\(C\)</span> se:</p>
+<div class="math notranslate nohighlight">
+\[x\in C\implies x\leqslant_R\omega.\]</div>
+<p>Um elemento <span class="math notranslate nohighlight">\(\omega\in X\)</span> é dito <span class="math notranslate nohighlight">\(R\)</span>-maximal se:</p>
+<div class="math notranslate nohighlight">
+\[y\in X\quad\mbox{e}\quad \omega\leqslant_R y\implies y=\omega.\]</div>
+</div></blockquote>
+<p><strong>Lema de Zorn</strong></p>
+<blockquote>
+<div><p>Seja <span class="math notranslate nohighlight">\((X,R)\)</span> um conjunto parcialmente ordenado. Se todo conjunto
+<span class="math notranslate nohighlight">\(R\)</span>-simplesmente ordenado <span class="math notranslate nohighlight">\(C\subseteq X\)</span>  possui uma
+<span class="math notranslate nohighlight">\(R\)</span>-cota superior em <span class="math notranslate nohighlight">\(X\)</span>, então <span class="math notranslate nohighlight">\(X\)</span> possui um elemento
+<span class="math notranslate nohighlight">\(R\)</span>-maximal.</p>
+</div></blockquote>
 </div>
 </div>
 
