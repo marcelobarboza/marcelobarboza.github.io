@@ -94,8 +94,9 @@
 <li class="toctree-l4"><a class="reference internal" href="#relacoes-de-equivalencia">Relações de Equivalência</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#exemplos">Exemplos</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#conjuntos-quociente">Conjuntos Quociente</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#relacoes-de-ordem">Relações de Ordem</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id1">Exemplos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#relacoes-de-ordem">Relações de Ordem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Exemplos</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lema-de-zorn">Lema de Zorn</a></li>
 </ul>
 </li>
@@ -280,6 +281,29 @@ conjunto <span class="math notranslate nohighlight">\(\pi_R\)</span> é, portant
 determina uma relação de equivalência cujos blocos são justamente as classes de
 equivalência de tal relação. De fato, este é um dos exercícios ao final desta
 seção.</p>
+<p>A partição de conjunto <span class="math notranslate nohighlight">\(\pi_R\)</span> associada à relação de equivalência
+<span class="math notranslate nohighlight">\(R\)</span> é chamada <em>conjunto quociente</em> de <span class="math notranslate nohighlight">\(X\)</span> por <span class="math notranslate nohighlight">\(R\)</span> e nós
+geralmente a representaremos como <span class="math notranslate nohighlight">\(X/R\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Lembre-se: <span class="math notranslate nohighlight">\(X/R\subseteq P(X)\)</span>.</p>
+</div>
+<p>A função</p>
+<div class="math notranslate nohighlight">
+\[\pi:X\longrightarrow X/R,\quad x\longmapsto\bar{x}_R\]</div>
+<p>que a cada <span class="math notranslate nohighlight">\(x\in X\)</span> associa a sua <span class="math notranslate nohighlight">\(R\)</span>-classe de equivalência, é
+chamada <em>projeção natural</em>. Claramente, esta é uma função sobrejetiva.</p>
+</div>
+<div class="section" id="id1">
+<h2>Exemplos<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Seja <span class="math notranslate nohighlight">\(f:\mathbb{R}^2\longrightarrow\mathbb{R}\)</span>, <span class="math notranslate nohighlight">\((x,y)\longmapsto
+x^2+y^2\)</span>. As classes de equivalência</p>
+<div class="math notranslate nohighlight">
+\[R=\{(p,q)\in\mathbb{R}^2\times\mathbb{R}:f(p)=f(q)\}\]</div>
+<p>são</p>
+</li>
+</ol>
 </div>
 <div class="section" id="relacoes-de-ordem">
 <h2>Relações de Ordem<a class="headerlink" href="#relacoes-de-ordem" title="Link permanente para este título">¶</a></h2>
@@ -302,13 +326,13 @@ válidas para quaisquer elementos <span class="math notranslate nohighlight">\(x
 </dl>
 <p>Um conjunto parcialmente ordenado é um par <span class="math notranslate nohighlight">\((X,R)\)</span> em que <span class="math notranslate nohighlight">\(X\)</span> é um
 conjunto não vazio e <span class="math notranslate nohighlight">\(R\)</span> é uma relação de ordem parcial em <span class="math notranslate nohighlight">\(X\)</span>.</p>
-<div class="admonition note">
-<p class="admonition-title">Nota</p>
+<div class="admonition warning">
+<p class="admonition-title">Aviso</p>
 <p><span class="math notranslate nohighlight">\(x\leqslant_R y\iff(x,y)\in R\)</span></p>
 </div>
 </div>
-<div class="section" id="id1">
-<h2>Exemplos<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="id2">
+<h2>Exemplos<a class="headerlink" href="#id2" title="Link permanente para este título">¶</a></h2>
 <ol class="arabic">
 <li><p>Seja</p>
 <div class="math notranslate nohighlight">

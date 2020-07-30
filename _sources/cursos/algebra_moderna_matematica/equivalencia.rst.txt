@@ -97,6 +97,31 @@ determina uma relação de equivalência cujos blocos são justamente as classes
 equivalência de tal relação. De fato, este é um dos exercícios ao final desta
 seção.
 
+A partição de conjunto :math:`\pi_R` associada à relação de equivalência
+:math:`R` é chamada *conjunto quociente* de :math:`X` por :math:`R` e nós
+geralmente a representaremos como :math:`X/R`.
+
+.. note:: Lembre-se: :math:`X/R\subseteq P(X)`.
+
+A função
+
+.. math:: \pi:X\longrightarrow X/R,\quad x\longmapsto\bar{x}_R
+
+que a cada :math:`x\in X` associa a sua :math:`R`-classe de equivalência, é
+chamada *projeção natural*. Claramente, esta é uma função sobrejetiva.
+
+Exemplos
+~~~~~~~~
+
+#. Seja :math:`f:\mathbb{R}^2\longrightarrow\mathbb{R}`, :math:`(x,y)\longmapsto
+   x^2+y^2`. As classes de equivalência
+
+   .. math:: R=\{(p,q)\in\mathbb{R}^2\times\mathbb{R}:f(p)=f(q)\}
+
+   são
+
+
+
 Relações de Ordem
 ~~~~~~~~~~~~~~~~~
 
@@ -112,7 +137,7 @@ Relações de Ordem
 Um conjunto parcialmente ordenado é um par :math:`(X,R)` em que :math:`X` é um
 conjunto não vazio e :math:`R` é uma relação de ordem parcial em :math:`X`.
 
-.. note::
+.. warning::
    :math:`x\leqslant_R y\iff(x,y)\in R`
 
 Exemplos
