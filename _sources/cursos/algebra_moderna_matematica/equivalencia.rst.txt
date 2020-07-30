@@ -128,9 +128,9 @@ Exemplos
    .. math:: R=\{(x,y)\in X\times X:x\mid y\},
 
    constitui uma relação de ordem parcial em :math:`X`, como se pode facilmente
-   verificar. Uma imagem fala mais que 1000 palavras, certo? Pois bem, a relação
-   de ordem :math:`R` pode ser representada por seu *diagrama de Hasse*: o grafo
-   :math:`\mathfrak{H}_R` definido pelos conjuntos
+   verificar. Uma imagem fala mais que 1000 palavras, certo? Neste caso, a
+   relação de ordem :math:`R` pode ser representada por seu *diagrama de Hasse*:
+   o grafo :math:`\mathfrak{H}_R` definido pelos conjuntos
 
    .. math::
       V(\mathfrak{H}_R)=\{1,2,3,6,9,18,27,54\}=X,
