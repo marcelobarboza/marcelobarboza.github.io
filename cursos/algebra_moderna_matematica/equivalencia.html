@@ -298,14 +298,31 @@ chamada <em>projeção natural</em>. Claramente, esta é uma função sobrejetiv
 <h2>Exemplos<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h2>
 <ol class="arabic">
 <li><p>Seja <span class="math notranslate nohighlight">\(f:\mathbb{R}^2\longrightarrow\mathbb{R}\)</span>, <span class="math notranslate nohighlight">\((x,y)\longmapsto
-x^2+y^2\)</span>. As classes de equivalência</p>
+x^2+y^2\)</span>. As classes de equivalência de</p>
 <div class="math notranslate nohighlight">
 \[R=\{(p,q)\in\mathbb{R}^2\times\mathbb{R}^2:f(p)=f(q)\}\]</div>
-<p>são os círculos (concêntricos) com centro em <span class="math notranslate nohighlight">\((0,0)\in\mathbb{R}^2\)</span>.
-Círculos são figuras geométricas que se caracterizam por um centro e um raio.
-Como todos estes círculos têm o mesmo centro, o que muda de um deles para
-outro é apenas o seus raios</p>
-</li>
+<p>em <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> são as curvas de nível</p>
+<div class="math notranslate nohighlight">
+\[f^{-1}(r)=\{(x,y)\in\mathbb{R}^2:x^2+y^2=r\}\]</div>
+<p>de <span class="math notranslate nohighlight">\(f\)</span> (círculos com centro em <span class="math notranslate nohighlight">\((0,0)\in\mathbb{R}^2\)</span> e raio
+<span class="math notranslate nohighlight">\(\sqrt{r}\)</span>) para todo <span class="math notranslate nohighlight">\(r&gt;0\)</span>. O conjunto quociente
+<span class="math notranslate nohighlight">\(\mathbb{R}^2/R\)</span> pode, portanto, ser identificado à semi-reta
+<span class="math notranslate nohighlight">\([0,\infty)\)</span> (o círculo <span class="math notranslate nohighlight">\(f^{-1}(r)\)</span> corresponde ao raio
+<span class="math notranslate nohighlight">\(\sqrt{r}\)</span>, onde <span class="math notranslate nohighlight">\(r&gt;0\)</span>, e vice-virsa).</p>
+<div class="figure">
+<p><img src="../../_images/tikz-410b3cf0a2591863151a86591901e69d845d3eaa.png" alt="\draw[line width=0.1mm] (0.0,0.0) -- (4.0,0.0);
+\draw[thin] (0.0,0.0) circle (0.8cm);
+\draw[thin] (0.0,0.0) circle (1.6cm);
+\draw[thin] (0.0,0.0) circle (2.4cm);
+\draw[fill=black] (0.0,0.0) circle (1pt);
+\draw[fill=black] (0.8,0.0) circle (1pt);
+\draw[fill=black] (1.6,0.0) circle (1pt);
+\draw[fill=black] (2.4,0.0) circle (1pt);
+\node at (0.0,0.3) {0};
+\node at (1.1,0.2) {$r_1$};
+\node at (1.9,0.2) {$r_2$};
+\node at (2.7,0.2) {$r_3$};" /></p>
+</div></li>
 </ol>
 </div>
 <div class="section" id="relacoes-de-ordem">

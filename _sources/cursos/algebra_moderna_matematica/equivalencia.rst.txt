@@ -114,14 +114,34 @@ Exemplos
 ~~~~~~~~
 
 #. Seja :math:`f:\mathbb{R}^2\longrightarrow\mathbb{R}`, :math:`(x,y)\longmapsto
-   x^2+y^2`. As classes de equivalência
+   x^2+y^2`. As classes de equivalência de
 
    .. math:: R=\{(p,q)\in\mathbb{R}^2\times\mathbb{R}^2:f(p)=f(q)\}
 
-   são os círculos (concêntricos) com centro em :math:`(0,0)\in\mathbb{R}^2`.
-   Círculos são figuras geométricas que se caracterizam por um centro e um raio.
-   Como todos estes círculos têm o mesmo centro, o que muda de um deles para
-   outro é apenas o seus raios
+   em :math:`\mathbb{R}^2` são as curvas de nível
+
+   .. math:: f^{-1}(r)=\{(x,y)\in\mathbb{R}^2:x^2+y^2=r\}
+
+   de :math:`f` (círculos com centro em :math:`(0,0)\in\mathbb{R}^2` e raio
+   :math:`\sqrt{r}`) para todo :math:`r>0`. O conjunto quociente
+   :math:`\mathbb{R}^2/R` pode, portanto, ser identificado à semi-reta
+   :math:`[0,\infty)` (o círculo :math:`f^{-1}(r)` corresponde ao raio
+   :math:`\sqrt{r}`, onde :math:`r>0`, e vice-virsa).
+
+   .. tikz::
+      \draw[line width=0.1mm] (0.0,0.0) -- (4.0,0.0);
+      \draw[thin] (0.0,0.0) circle (0.8cm);
+      \draw[thin] (0.0,0.0) circle (1.6cm);
+      \draw[thin] (0.0,0.0) circle (2.4cm);
+      \draw[fill=black] (0.0,0.0) circle (1pt);
+      \draw[fill=black] (0.8,0.0) circle (1pt);
+      \draw[fill=black] (1.6,0.0) circle (1pt);
+      \draw[fill=black] (2.4,0.0) circle (1pt);
+      \node at (0.0,0.3) {0};
+      \node at (1.1,0.2) {$r_1$};
+      \node at (1.9,0.2) {$r_2$};
+      \node at (2.7,0.2) {$r_3$};
+
 
 Relações de Ordem
 ~~~~~~~~~~~~~~~~~
