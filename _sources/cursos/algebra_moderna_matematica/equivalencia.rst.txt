@@ -125,11 +125,11 @@ Exemplos
    de :math:`f` (círculos com centro em :math:`(0,0)\in\mathbb{R}^2` e raio
    :math:`\sqrt{r}`) para todo :math:`r>0`. O conjunto quociente
    :math:`\mathbb{R}^2/R` pode, portanto, ser identificado à semi-reta
-   :math:`[0,\infty)` (o círculo :math:`f^{-1}(r)` corresponde ao raio
-   :math:`\sqrt{r}`, onde :math:`r>0`, e vice-virsa).
+   :math:`[0,\infty)` (o círculo :math:`f^{-1}(r)` corresponde ao número
+   :math:`\sqrt{r}` e vice-virsa).
 
    .. tikz::
-      \draw[line width=0.1mm] (0.0,0.0) -- (4.0,0.0);
+      \draw[->,>=latex] (0.0,0.0) -- (5.0,0.0);
       \draw[thin] (0.0,0.0) circle (0.8cm);
       \draw[thin] (0.0,0.0) circle (1.6cm);
       \draw[thin] (0.0,0.0) circle (2.4cm);
@@ -137,7 +137,7 @@ Exemplos
       \draw[fill=black] (0.8,0.0) circle (1pt);
       \draw[fill=black] (1.6,0.0) circle (1pt);
       \draw[fill=black] (2.4,0.0) circle (1pt);
-      \node at (0.0,0.3) {0};
+      \node at (0.0,0.25) {0};
       \node at (1.1,0.2) {$r_1$};
       \node at (1.9,0.2) {$r_2$};
       \node at (2.7,0.2) {$r_3$};
