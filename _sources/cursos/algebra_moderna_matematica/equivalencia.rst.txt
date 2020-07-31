@@ -101,11 +101,11 @@ A partição de conjunto :math:`\pi_R` associada à relação de equivalência
 :math:`R` é chamada *conjunto quociente* de :math:`X` por :math:`R` e nós
 geralmente a representaremos como :math:`X/R`.
 
-.. note:: Lembre-se: :math:`X/R\subseteq P(X)`.
+.. note:: Lembre-se de que :math:`X/R\subseteq P(X)`
 
 A função
 
-.. math:: \pi:X\longrightarrow X/R,\quad x\longmapsto\bar{x}_R
+.. math:: \pi:X\longrightarrow X/R,\quad x\longmapsto\bar{x}_R,
 
 que a cada :math:`x\in X` associa a sua :math:`R`-classe de equivalência, é
 chamada *projeção natural*. Claramente, esta é uma função sobrejetiva.
@@ -116,11 +116,12 @@ Exemplos
 #. Seja :math:`f:\mathbb{R}^2\longrightarrow\mathbb{R}`, :math:`(x,y)\longmapsto
    x^2+y^2`. As classes de equivalência
 
-   .. math:: R=\{(p,q)\in\mathbb{R}^2\times\mathbb{R}:f(p)=f(q)\}
+   .. math:: R=\{(p,q)\in\mathbb{R}^2\times\mathbb{R}^2:f(p)=f(q)\}
 
-   são
-
-
+   são os círculos (concêntricos) com centro em :math:`(0,0)\in\mathbb{R}^2`.
+   Círculos são figuras geométricas que se caracterizam por um centro e um raio.
+   Como todos estes círculos têm o mesmo centro, o que muda de um deles para
+   outro é apenas o seus raios
 
 Relações de Ordem
 ~~~~~~~~~~~~~~~~~
@@ -137,8 +138,7 @@ Relações de Ordem
 Um conjunto parcialmente ordenado é um par :math:`(X,R)` em que :math:`X` é um
 conjunto não vazio e :math:`R` é uma relação de ordem parcial em :math:`X`.
 
-.. warning::
-   :math:`x\leqslant_R y\iff(x,y)\in R`
+.. warning:: :math:`x\leqslant_R y\iff(x,y)\in R`
 
 Exemplos
 ~~~~~~~~
