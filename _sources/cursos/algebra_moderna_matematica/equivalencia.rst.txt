@@ -142,6 +142,10 @@ Exemplos
       \node at (1.9,0.2) {$r_2$};
       \node at (2.7,0.2) {$r_3$};
 
+   Com a identificação entre :math:`\mathbb{R}^2/R` e :math:`[0,\infty)` a
+   projeção natural passa a se escrever como
+
+   .. math:: \pi:\mathbb{R}^2\longrightarrow[0,\infty),\quad(x,y)\longmapsto\sqrt{x^2+y^2}.
 
 Relações de Ordem
 ~~~~~~~~~~~~~~~~~
