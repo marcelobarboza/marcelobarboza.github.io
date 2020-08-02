@@ -1,0 +1,498 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="pt-BR" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Relações de Binárias &mdash; documentação Material de Apoio às Aulas 0.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../search.html" />
+    <link rel="next" title="Monóides" href="monoides.html" />
+    <link rel="prev" title="Conjuntos e Funções" href="conjuntos.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Material de Apoio às Aulas
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Pesquisar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Conteúdo:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Notas de Aula</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../algebra_linear_matematica/index.html">Álgebra Linear</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Álgebra Moderna</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="conjuntos.html">Conjuntos e Funções</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Relações de Binárias</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#relacoes-de-equivalencia">Relações de Equivalência</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exemplos">Exemplos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conjuntos-quociente">Conjuntos Quociente</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Exemplos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#relacoes-de-ordem">Relações de Ordem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Exemplos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lema-de-zorn">Lema de Zorn</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="monoides.html">Monóides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subgrupos.html">Subgrupos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conjugacao.html">Classe de conjugação</a></li>
+<li class="toctree-l3"><a class="reference internal" href="normalidade.html">Subgrupos normais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="homomorfismos.html">Homomorfismos de grupos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="centralizadores.html">Fatoração em ciclos disjuntos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="centralizadores_em_grupos_simetricos.html">Fatoração em ciclos disjuntos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../plano/index.html">Planos de Ensino: 2020/1</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Material de Apoio às Aulas</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Notas de Aula</a> &raquo;</li>
+        
+          <li><a href="index.html">Álgebra Moderna</a> &raquo;</li>
+        
+      <li>Relações de Binárias</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/curso/algebra_moderna_matematica/equivalencia.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="relacoes-de-binarias">
+<h1>Relações de Binárias<a class="headerlink" href="#relacoes-de-binarias" title="Link permanente para este título">¶</a></h1>
+<p>Nós dizemos que uma relação (binária) está definida em um conjunto <span class="math notranslate nohighlight">\(S\)</span> se,
+para cada par ordenado <span class="math notranslate nohighlight">\((a,b)\in S\times S\)</span>, nós somos capazes de
+discernir se <span class="math notranslate nohighlight">\(a\)</span> está ou não relacionado ao elemento <span class="math notranslate nohighlight">\(b\)</span> (através da
+referida relação). Por exemplo, se considerarmos a relação de ordem usual entre
+os números reais nós presumivelmente saberemos dizer se <span class="math notranslate nohighlight">\(a&gt;b\)</span> ou não.
+Outra relação corriqueira em nossas vidas é a ordem lexicográfica (do
+dicionário) no conjunto de todas as palavras. Um outro exemplo ainda é a relação
+de <em>primos primeiros</em>, segundo a qual duas pessoas estão relacionadas se possuem
+um um avô ou avó em comum.  Abstraindo o que há de comum a todas estas
+situações, nós dizemos que uma relação binária num conjunto <span class="math notranslate nohighlight">\(S\)</span> é
+simplesmente um subconjunto <span class="math notranslate nohighlight">\(R\)</span> do produto cartesiano <span class="math notranslate nohighlight">\(S\times S\)</span>.
+Se um par ordenado <span class="math notranslate nohighlight">\((a,b)\)</span> está em <span class="math notranslate nohighlight">\(R\)</span> nós dizemos que <span class="math notranslate nohighlight">\(a\)</span>
+relaciona-se com <span class="math notranslate nohighlight">\(b\)</span> através de <span class="math notranslate nohighlight">\(R\)</span> e escrevemos <span class="math notranslate nohighlight">\(aRb\)</span>.</p>
+<div class="section" id="relacoes-de-equivalencia">
+<h2>Relações de Equivalência<a class="headerlink" href="#relacoes-de-equivalencia" title="Link permanente para este título">¶</a></h2>
+<dl class="simple">
+<dt><strong>Definição</strong></dt><dd><p>Seja <span class="math notranslate nohighlight">\(X\)</span> um conjunto não vazio. Uma relação binária <span class="math notranslate nohighlight">\(R\)</span> em
+<span class="math notranslate nohighlight">\(X\)</span> é dita uma relação de equivalência se as seguintes condições são
+válidas para quaisquer elementos <span class="math notranslate nohighlight">\(x,y,z\in R\)</span>:</p>
+<dl class="field-list simple">
+<dt class="field-odd">reflexividade</dt>
+<dd class="field-odd"><p><span class="math notranslate nohighlight">\(xRx\)</span>;</p>
+</dd>
+<dt class="field-even">simetria</dt>
+<dd class="field-even"><p><span class="math notranslate nohighlight">\(xRy\implies yRx\)</span>;</p>
+</dd>
+<dt class="field-odd">transitividade</dt>
+<dd class="field-odd"><p><span class="math notranslate nohighlight">\(xRy\mbox{ e }yRz\implies xRz\)</span>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="exemplos">
+<h2>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>A igualdade é uma relação de equivalência em qualquer conjunto não vazio.
+Mais especificamente, se <span class="math notranslate nohighlight">\(X\)</span> é um conjunto não vazio, então</p>
+<div class="math notranslate nohighlight">
+\[R=\{(x,y)\in X\times X:x=y\},\]</div>
+<p>é uma relação de equivalência em <span class="math notranslate nohighlight">\(X\)</span>;</p>
+</li>
+<li><p>Se <span class="math notranslate nohighlight">\(f:X\longrightarrow Y\)</span> então</p>
+<div class="math notranslate nohighlight">
+\[R = \{(x,y)\in X\times X : f(x) = f(y)\},\]</div>
+<p>é uma relação de equivalência em <span class="math notranslate nohighlight">\(X\)</span>. Como este exemplo generaliza o
+anterior?</p>
+</li>
+<li><p>O exemplo obrigatório. Se <span class="math notranslate nohighlight">\(n\in\mathbb{N}\setminus\{0\}\)</span> então</p>
+<div class="math notranslate nohighlight">
+\[R=\{(x,y)\in\mathbb{Z}\times\mathbb{Z}:x\equiv y\pmod n\},\]</div>
+<p>é uma relação de equivalência em <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="conjuntos-quociente">
+<h2>Conjuntos Quociente<a class="headerlink" href="#conjuntos-quociente" title="Link permanente para este título">¶</a></h2>
+<p>Seja <span class="math notranslate nohighlight">\(X\)</span> um conjunto não vazio. Uma partição de <span class="math notranslate nohighlight">\(X\)</span> é um subconjunto
+de <span class="math notranslate nohighlight">\(\pi\subseteq P(X)\setminus\{\emptyset\}\)</span> (perceba que
+<span class="math notranslate nohighlight">\(\emptyset\notin\pi\)</span>) tal que:</p>
+<ol class="arabic">
+<li><p>a união dos membros de <span class="math notranslate nohighlight">\(\pi\)</span> é todo o conjunto <span class="math notranslate nohighlight">\(X\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\bigcup_{A\in\pi}A=X;\]</div>
+</li>
+<li><p>elementos de <span class="math notranslate nohighlight">\(\pi\)</span> distintos entre si são sempre disjuntos:</p>
+<div class="math notranslate nohighlight">
+\[A\neq B\mbox{ em }\pi\implies A\cap B=\emptyset.\]</div>
+</li>
+</ol>
+<p>Os elementos de <span class="math notranslate nohighlight">\(\pi\)</span> são os blocos da partição. Como logo veremos, há uma
+estreita relação entre relações de equivalência e partições de conjuto.</p>
+<p>Sejam <span class="math notranslate nohighlight">\(X\)</span> um conjunto não vazio e <span class="math notranslate nohighlight">\(R\)</span> uma relação de equivalência em
+<span class="math notranslate nohighlight">\(X\)</span>. Se <span class="math notranslate nohighlight">\(x\in X\)</span> nós dizemos que o conjunto</p>
+<div class="math notranslate nohighlight">
+\[\bar{x}_R=\{y\in X:yRx\}\]</div>
+<p>é a <span class="math notranslate nohighlight">\(R\)</span>-classe de equivalência de <span class="math notranslate nohighlight">\(x\)</span> ou a classe de equivalência de
+<span class="math notranslate nohighlight">\(x\)</span> segundo <span class="math notranslate nohighlight">\(R\)</span>. Seja</p>
+<div class="math notranslate nohighlight">
+\[\pi_R=\{\bar{x}_R:x\in X\}\]</div>
+<p>o conjunto de todas as <span class="math notranslate nohighlight">\(R\)</span>-classes de equivalência em <span class="math notranslate nohighlight">\(X\)</span>. Afirmamos
+que <span class="math notranslate nohighlight">\(\pi_R\)</span> constitui uma partição de <span class="math notranslate nohighlight">\(X\)</span>. Com efeito, decorre de
+<span class="math notranslate nohighlight">\(xRx\)</span> que <span class="math notranslate nohighlight">\(x\in\bar{x}_R\)</span> para cada <span class="math notranslate nohighlight">\(x\in X\)</span> arbitrariamente
+fixado e daí, que <span class="math notranslate nohighlight">\(X=\cup_{x\in X}\bar{x}_R\)</span> como exige a primeira das
+condições que definem uma partição. Para que possamos concluir que <span class="math notranslate nohighlight">\(\pi_R\)</span>
+é realmente uma partição de <span class="math notranslate nohighlight">\(X\)</span> nos resta apenas provar que são disjuntas
+quaisquer duas <span class="math notranslate nohighlight">\(R\)</span>-classes de equivalência distintas em <span class="math notranslate nohighlight">\(X\)</span>. Ora, se
+<span class="math notranslate nohighlight">\(z\in\bar{x}_R\cap\bar{y}_R\)</span> para certas
+<span class="math notranslate nohighlight">\(\bar{x}_R,\bar{y}_R\in\pi_R\)</span>, então <span class="math notranslate nohighlight">\(zRx\)</span> e <span class="math notranslate nohighlight">\(zRy\)</span>. Desta
+forma, nós temos que <span class="math notranslate nohighlight">\(xRz\)</span> e <span class="math notranslate nohighlight">\(zRy\)</span> e, assim, que <span class="math notranslate nohighlight">\(xRy\)</span>. O
+argumento que acabamos de utilizar pode ser modificado (apenas ligeiramente)
+para mostrar que, neste caso, <span class="math notranslate nohighlight">\(\bar{x}_R\subseteq\bar{y}_R\)</span> e
+<span class="math notranslate nohighlight">\(\bar{x}_R\subseteq\bar{y}_R\)</span>, ou seja, que <span class="math notranslate nohighlight">\(\bar{x}_R=\bar{y}_R\)</span>. O
+conjunto <span class="math notranslate nohighlight">\(\pi_R\)</span> é, portanto e como havíamos afirmado, uma partição de
+<span class="math notranslate nohighlight">\(X\)</span>. Deixamos a cargo do leitor a prova de que toda partição de conjunto
+determina uma relação de equivalência cujos blocos são justamente as classes de
+equivalência de tal relação. De fato, este é um dos exercícios ao final desta
+seção.</p>
+<p>A partição de conjunto <span class="math notranslate nohighlight">\(\pi_R\)</span> associada à relação de equivalência
+<span class="math notranslate nohighlight">\(R\)</span> é chamada <em>conjunto quociente</em> de <span class="math notranslate nohighlight">\(X\)</span> por <span class="math notranslate nohighlight">\(R\)</span> e nós
+geralmente a representaremos como <span class="math notranslate nohighlight">\(X/R\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Lembre-se de que <span class="math notranslate nohighlight">\(X/R\subseteq P(X)\)</span></p>
+</div>
+<p>A função</p>
+<div class="math notranslate nohighlight">
+\[\pi:X\longrightarrow X/R,\quad x\longmapsto\bar{x}_R,\]</div>
+<p>que a cada <span class="math notranslate nohighlight">\(x\in X\)</span> associa a sua <span class="math notranslate nohighlight">\(R\)</span>-classe de equivalência, é
+chamada <em>projeção natural</em>. Claramente, esta é uma função sobrejetiva.</p>
+</div>
+<div class="section" id="id1">
+<h2>Exemplos<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Seja <span class="math notranslate nohighlight">\(f:\mathbb{R}^2\longrightarrow\mathbb{R}\)</span>, <span class="math notranslate nohighlight">\((x,y)\longmapsto
+x^2+y^2\)</span>. As classes de equivalência de</p>
+<div class="math notranslate nohighlight">
+\[R=\{(p,q)\in\mathbb{R}^2\times\mathbb{R}^2:f(p)=f(q)\}\]</div>
+<p>em <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> são as curvas de nível</p>
+<div class="math notranslate nohighlight">
+\[f^{-1}(r)=\{(x,y)\in\mathbb{R}^2:x^2+y^2=r\}\]</div>
+<p>de <span class="math notranslate nohighlight">\(f\)</span> (círculos com centro em <span class="math notranslate nohighlight">\((0,0)\in\mathbb{R}^2\)</span> e raio
+<span class="math notranslate nohighlight">\(\sqrt{r}\)</span>) para todo <span class="math notranslate nohighlight">\(r&gt;0\)</span>. O conjunto quociente
+<span class="math notranslate nohighlight">\(\mathbb{R}^2/R\)</span> pode, portanto, ser identificado à semi-reta
+<span class="math notranslate nohighlight">\([0,\infty)\)</span> (o círculo <span class="math notranslate nohighlight">\(f^{-1}(r)\)</span> corresponde ao número
+<span class="math notranslate nohighlight">\(\sqrt{r}\)</span> e vice-virsa).</p>
+<div class="figure">
+<p><img src="../../_images/tikz-b4713355b5471d8c969a690aa83653f8cb834f86.png" alt="\draw[-&gt;,&gt;=latex] (0.0,0.0) -- (5.0,0.0);
+\draw[thin] (0.0,0.0) circle (0.8cm);
+\draw[thin] (0.0,0.0) circle (1.6cm);
+\draw[thin] (0.0,0.0) circle (2.4cm);
+\draw[fill=black] (0.0,0.0) circle (1pt);
+\draw[fill=black] (0.8,0.0) circle (1pt);
+\draw[fill=black] (1.6,0.0) circle (1pt);
+\draw[fill=black] (2.4,0.0) circle (1pt);
+\node at (0.0,0.25) {0};
+\node at (1.1,0.2) {$r_1$};
+\node at (1.9,0.2) {$r_2$};
+\node at (2.7,0.2) {$r_3$};" /></p>
+</div><p>Com a identificação entre <span class="math notranslate nohighlight">\(\mathbb{R}^2/R\)</span> e <span class="math notranslate nohighlight">\([0,\infty)\)</span> a
+projeção natural passa a se escrever como</p>
+<div class="math notranslate nohighlight">
+\[\pi:\mathbb{R}^2\longrightarrow[0,\infty),\quad(x,y)\longmapsto\sqrt{x^2+y^2}.\]</div>
+</li>
+</ol>
+</div>
+<div class="section" id="relacoes-de-ordem">
+<h2>Relações de Ordem<a class="headerlink" href="#relacoes-de-ordem" title="Link permanente para este título">¶</a></h2>
+<dl class="simple">
+<dt><strong>Definição</strong></dt><dd><p>Seja <span class="math notranslate nohighlight">\(X\)</span> um conjunto não vazio. Uma relação binária <span class="math notranslate nohighlight">\(R\)</span> em
+<span class="math notranslate nohighlight">\(X\)</span> é dita uma relação de ordem parcial se as seguintes condições são
+válidas para quaisquer elementos <span class="math notranslate nohighlight">\(x,y,z\in X\)</span>:</p>
+<dl class="field-list simple">
+<dt class="field-odd">reflexidade</dt>
+<dd class="field-odd"><p><span class="math notranslate nohighlight">\(xRx\)</span>;</p>
+</dd>
+<dt class="field-even">anti-simetria</dt>
+<dd class="field-even"><p><span class="math notranslate nohighlight">\(xRy\mbox{ e }yRx\implies x=y\)</span>;</p>
+</dd>
+<dt class="field-odd">transitividade</dt>
+<dd class="field-odd"><p><span class="math notranslate nohighlight">\(xRy\mbox{ e }yRz\implies xRy\)</span>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>Um conjunto parcialmente ordenado é um par <span class="math notranslate nohighlight">\((X,R)\)</span> em que <span class="math notranslate nohighlight">\(X\)</span> é um
+conjunto não vazio e <span class="math notranslate nohighlight">\(R\)</span> é uma relação de ordem parcial em <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Aviso</p>
+<p><span class="math notranslate nohighlight">\(x\leqslant_R y\iff(x,y)\in R\)</span></p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Exemplos<a class="headerlink" href="#id2" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Seja</p>
+<div class="math notranslate nohighlight">
+\[X=\{d\in\mathbb{N}:d\mid54\}\]</div>
+<p>o conjunto dos divisores inteiros e positivos de <span class="math notranslate nohighlight">\(54=2\cdot3^3\)</span>. O
+conjunto</p>
+<div class="math notranslate nohighlight">
+\[R=\{(x,y)\in X\times X:x\mid y\},\]</div>
+<p>constitui uma relação de ordem parcial em <span class="math notranslate nohighlight">\(X\)</span>, como se pode facilmente
+verificar. Uma imagem fala mais que 1000 palavras, certo? Neste caso, a
+relação de ordem <span class="math notranslate nohighlight">\(R\)</span> pode ser representada por seu <em>diagrama de Hasse</em>:
+o grafo <span class="math notranslate nohighlight">\(\mathfrak{H}_R\)</span> definido pelos conjuntos</p>
+<div class="math notranslate nohighlight">
+\[V(\mathfrak{H}_R)=\{1,2,3,6,9,18,27,54\}=X,\]</div>
+<p>de seus vértices e</p>
+<div class="math notranslate nohighlight">
+\[E(\mathfrak{H}_R)=\{(x,y)\in R:\nexists\,z\in X,\,(x,z)\in R\mbox{ e
+}(z,y)\in R\},\]</div>
+<p>de suas arestas. Tem-se, enfim, a seguinte representação gráfica de
+<span class="math notranslate nohighlight">\(R\)</span>:</p>
+<div class="figure">
+<p><img src="../../_images/tikz-aedf1011b8b926758b019f278559e6e9e636e138.png" alt="\draw[fill=black] ( 0.0, 0.0) circle (1pt);
+\draw[fill=black] (-2.5, 0.5) circle (1pt);
+\draw[fill=black] ( 2.5, 0.5) circle (1pt);
+\draw[fill=black] (-2.5, 1.0) circle (1pt);
+\draw[fill=black] ( 2.5, 1.0) circle (1pt);
+\draw[fill=black] (-2.5, 1.5) circle (1pt);
+\draw[fill=black] ( 2.5, 1.5) circle (1pt);
+\draw[fill=black] ( 0.0, 2.0) circle (1pt);
+
+\node at ( 0.0,-0.5)  {1};
+\node at (-3.0, 0.5)  {2};
+\node at ( 3.0, 0.5)  {3};
+\node at (-3.0, 1.0)  {6};
+\node at ( 3.0, 1.0)  {9};
+\node at (-3.0, 1.5) {18};
+\node at ( 3.0, 1.5) {27};
+\node at ( 0.0, 2.5) {54};
+
+\draw[-&gt;,&gt;=latex] ( 0.0, 0.0) -- (-2.5, 0.5);
+\draw[-&gt;,&gt;=latex] ( 0.0, 0.0) -- ( 2.5, 0.5);
+\draw[-&gt;,&gt;=latex] (-2.5, 0.5) -- (-2.5, 1.0);
+\draw[-&gt;,&gt;=latex] ( 2.5, 0.5) -- ( 2.5, 1.0);
+\draw[-&gt;,&gt;=latex] (-2.5, 1.0) -- (-2.5, 1.5);
+\draw[-&gt;,&gt;=latex] ( 2.5, 1.0) -- ( 2.5, 1.5);
+\draw[-&gt;,&gt;=latex] (-2.5, 1.5) -- ( 0.0, 2.0);
+\draw[-&gt;,&gt;=latex] ( 2.5, 1.5) -- ( 0.0, 2.0);
+\draw[-&gt;,&gt;=latex] ( 2.5, 0.5) -- (-2.5, 1.0);
+\draw[-&gt;,&gt;=latex] ( 2.5, 1.0) -- (-2.5, 1.5);" /></p>
+</div><p>Note que apenas se tem <span class="math notranslate nohighlight">\(x\leqslant_R y\)</span> caso exista em
+<span class="math notranslate nohighlight">\(\mathfrak{H}_R\)</span> um caminho com início em <span class="math notranslate nohighlight">\(x\)</span> e término em
+<span class="math notranslate nohighlight">\(y\)</span>. Deste modo é que se pode dizer, por exemplo, que
+<span class="math notranslate nohighlight">\(2\nleqslant_R 27\)</span> por uma rápida inspeção de <span class="math notranslate nohighlight">\(\mathfrak{H}_R\)</span>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="lema-de-zorn">
+<h2>Lema de Zorn<a class="headerlink" href="#lema-de-zorn" title="Link permanente para este título">¶</a></h2>
+<p><strong>Definição</strong></p>
+<blockquote>
+<div><p>Seja <span class="math notranslate nohighlight">\((X,R)\)</span> um conjunto parcialmente ordenado. Um conjunto
+<span class="math notranslate nohighlight">\(C\subseteq X\)</span> é dito <span class="math notranslate nohighlight">\(R\)</span>-simplesmente ordenado se:</p>
+<div class="math notranslate nohighlight">
+\[x,y\in C\implies x\leqslant_R y\quad\mbox{ou}\quad y\leqslant_R x.\]</div>
+<p>Um elemento <span class="math notranslate nohighlight">\(\omega\in X\)</span> é dito uma <span class="math notranslate nohighlight">\(R\)</span>-cota superior de
+<span class="math notranslate nohighlight">\(C\)</span> se:</p>
+<div class="math notranslate nohighlight">
+\[x\in C\implies x\leqslant_R\omega.\]</div>
+<p>Um elemento <span class="math notranslate nohighlight">\(\omega\in X\)</span> é dito <span class="math notranslate nohighlight">\(R\)</span>-maximal se:</p>
+<div class="math notranslate nohighlight">
+\[y\in X\quad\mbox{e}\quad \omega\leqslant_R y\implies y=\omega.\]</div>
+</div></blockquote>
+<p><strong>Lema de Zorn</strong></p>
+<blockquote>
+<div><p>Seja <span class="math notranslate nohighlight">\((X,R)\)</span> um conjunto parcialmente ordenado. Se todo conjunto
+<span class="math notranslate nohighlight">\(R\)</span>-simplesmente ordenado <span class="math notranslate nohighlight">\(C\subseteq X\)</span>  possui uma
+<span class="math notranslate nohighlight">\(R\)</span>-cota superior em <span class="math notranslate nohighlight">\(X\)</span>, então <span class="math notranslate nohighlight">\(X\)</span> possui um elemento
+<span class="math notranslate nohighlight">\(R\)</span>-maximal.</p>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="monoides.html" class="btn btn-neutral float-right" title="Monóides" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="conjuntos.html" class="btn btn-neutral float-left" title="Conjuntos e Funções" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Marcelo Barboza
+
+    </p>
+  </div>
+    
+    
+    
+    Compilado com <a href="http://sphinx-doc.org/">Sphinx</a> usando um
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">tema</a>
+    
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

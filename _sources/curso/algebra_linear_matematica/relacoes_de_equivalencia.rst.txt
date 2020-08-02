@@ -1,0 +1,135 @@
+Relações de equivalência
+------------------------
+
+**Definição**
+
+   Seja :math:`X` um conjunto não vazio. Uma relação de equivalência em
+   :math:`X` é um conjunto :math:`R\subseteq X\times X` com as seguintes
+   propriedades :
+
+   :reflexividade:
+
+      :math:`(x,x)\in R` para todo :math:`x\in X`;
+
+   :simetria:
+
+      se :math:`(x,y)\in R` então :math:`(y,x)\in R`;
+
+   :transitividade:
+
+      se :math:`(x,y)\in R` e :math:`(y,z)\in R` então :math:`(x,z)\in R`.
+
+.. note::
+
+   :math:`xRy\iff(x,y)\in R`
+
+Exemplos
+~~~~~~~~
+
+#. A igualdade é uma relação de equivalência em todo conjunto não vazio. Mais
+   especificamente, se :math:`X` é qualquer conjunto não vazio, então
+
+   .. math::
+
+      R=\{(x,y)\in X\times X:x=y\},
+
+   é uma relação de equivalência em :math:`X`;
+
+#. Este exemplo é uma generalização de seu antecessor. Se
+   :math:`f:X\longrightarrow Y` é uma função, então
+
+   .. math::
+
+      R = \{(x,y)\in X\times X : f(x) = f(y)\},
+
+   é uma relação de equivalência em :math:`X`.
+
+#. O exemplo obrigatório: se :math:`n\in\mathbb{Z}`, :math:`n\geqslant2`, então
+
+   .. math::
+
+      R=\{(x,y)\in\mathbb{Z}\times\mathbb{Z}:x\equiv y\hspace{-6pt}\pmod n\},
+
+   é uma relação de equivalência em :math:`\mathbb{Z}`.
+
+Conjuntos quocientes
+~~~~~~~~~~~~~~~~~~~~
+
+Sejam :math:`X` um conjunto não vazio e :math:`R` uma relação de equivalência em
+:math:`X`. A *classe de equivalência* de :math:`x\in X` segundo :math:`R` é o
+conjunto
+
+.. math::
+
+   [x]_R=\{y\in X : yRx\},
+
+daqueles elementos de :math:`X` que se equivalem a :math:`x\in X` através de
+:math:`R`. Note que:
+
+#. :math:`xRy\implies[x]_R=[y]_R`:
+
+   de fato, tem-se que
+
+   .. math::
+
+      z\in[x]_R\implies zRx\implies zRx\quad\mbox{e}\quad xRy\implies
+      zRy\implies z\in[y]_R,
+
+   e
+
+   .. math::
+
+      z\in[y]_R\implies zRy\implies zRy\quad\mbox{e}\quad xRy\implies
+      zRy\quad\mbox{e}\quad yRx\implies zRx\implies z\in[x]_R,
+
+   pelo que se chega à conclusão de que
+
+   .. math::
+
+      z\in[x]_R\iff z\in[y]_R,
+
+   e, assim, que estes são um e o mesmo conjunto;
+
+#. :math:`[x]_R\cap[y]_R\neq\emptyset\implies xRy`:
+
+   .. math::
+
+      z\in[x]_R\cap[y]_R\implies zRx\quad\mbox{e}\quad zRy\implies
+      xRz\quad\mbox{e}\quad zRy\implies xRy\implies[x]_R=[y]_R.
+
+Portanto, é correto dizer que
+
+.. _disjunta:
+
+.. math::
+
+   \forall\,\,x,y\in X:\quad[x]_R\cap[y]_R\neq\emptyset\iff xRy.
+
+O conjunto
+
+.. math::
+
+   X/R=\{[x]_R : x\in X\},
+
+de todas as classes de equivalência de elementos de :math:`X` segundo :math:`R`
+é chamado *conjunto quociente* de :math:`X` por :math:`R`. Observe que
+
+.. math::
+
+   X=\bigsqcup\limits_{[x]_R\in X/R}[x]_R.
+
+.. note::
+
+   :math:`\bigsqcup` denota união disjunta_.
+
+A aplicação
+
+.. math::
+
+   \begin{array}{ccccc}
+      \pi_R & : & X & \longrightarrow & X/R, \\
+      & & x & \longmapsto & [x]_R
+   \end{array}
+
+que a cada elemento :math:`x\in X` associa a sua classe de equivalência segundo
+:math:`R`, é chamada de *aplicação quociente*.

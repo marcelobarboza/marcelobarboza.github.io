@@ -1,0 +1,101 @@
+Dependência linear
+------------------
+
+**Definição**
+
+   Seja V um espaço vetorial real. Vetores :math:`v_1,\ldots,v_n\in V` são
+   linearmente dependentes se existem escalares
+   :math:`\alpha_1,\ldots,\alpha_n\in\mathbb{R}` não todos nulos, tais que
+   :math:`\alpha_1 v_1+\cdots+\alpha_n v_n=0`.
+
+Exemplos
+~~~~~~~~
+
+#. Os vetores :math:`v_1=(1,2),v_2=(-2,-4)\in\mathbb{R}^2` são linearmente
+   dependentes:
+   
+   .. math::
+      1\cdot v_1+\dfrac{1}{2}\cdot v_2=(1,2)+(-1,-2)=(1-1,2-2)=(0,0);
+
+#. Os vetores :math:`v_1=(1,2,3),v_2=(0,4,5),v_3=(7,-2,1)\in\mathbb{R}^3` são
+   linearmente dependentes:
+   
+   .. math::
+      7\cdot v_1-4\cdot v_2-1\cdot
+      v_3=(7,14,21)+(0,-16,-20)+(-7,2,-1)=(7-7,14-16+2,21-20-1)=(0,0,0);
+
+#. Se :math:`v_1=0\in V` então os vetores :math:`v_1,v_2,\ldots,v_n\in V` são
+   linearmente dependentes, quaisquer que sejam :math:`v_2,\ldots,v_n\in V`:
+   basta ver que
+   
+   .. math::
+      1\cdot v_1+0\cdot v_2+\cdots+0\cdot v_n=0.
+
+**Exercícios**
+
+   #. Sejam V um espaço vetorial real e :math:`S\subseteq V`. Suponha que
+      :math:`S` seja linearmente dependente em V. Mostre que se
+      :math:`S\subseteq S^\prime\subseteq V` então :math:`S^\prime` é um
+      conjunto de vetores linearmente dependentes em V.
+
+   #. Sejam V um espaço vetorial real e :math:`S=\{v_1,v_2,\ldots,v_n\}\subseteq
+      V`. Suponha que :math:`v_1=v_2`. Prove que :math:`S` é linearmente
+      dependente em V.
+
+   #. Sejam V um espaço vetorial real e :math:`S=\{v_1,v_2\}\subseteq
+      V\setminus\{0\}`. Prove que S  é linearmente dependente em V se, e somente
+      se, os vetores :math:`v_1,v_2` são múltiplos um do outro.
+
+
+Independência linear
+--------------------
+
+**Definição**
+
+   Seja V um espaço vetorial real. Vetores :math:`v_1,\ldots,v_n\in V` são
+   linearmente independentes se :math:`\alpha_1,\ldots,\alpha_n\in\mathbb{R}` e
+   :math:`\alpha_1 v_1+\cdots+\alpha_n v_n=0` implicar em
+   :math:`\alpha_1=\cdots=\alpha_n=0`.
+
+Exemplos
+~~~~~~~~
+
+#. Os vetores :math:`v_1=(1,2),v_2=(-2,4)\in\mathbb{R}^2` são linearmente
+   dependentes:
+   
+   .. math::
+      \alpha_1\cdot v_1+\alpha_2\cdot v_2=
+      (\alpha_1-2\alpha_2,2\alpha_1+4\alpha_2)=(0,0)\iff\left\{
+      \begin{array}{ccccc}
+         1\alpha_1 & - & 2\alpha_2 & = & 0 \\
+         2\alpha_1 & + & 4\alpha_2 & = & 0
+      \end{array}
+      \right.\iff\alpha_1=\alpha_2=0;
+
+#. Os vetores :math:`v_1=(1,2,3),v_2=(0,4,5),v_3=(7,-2,1)\in\mathbb{R}^3` são
+   linearmente independentes:
+   
+   .. math::
+      \alpha_1\cdot v_1+\alpha_2\cdot v_2+\alpha_3\cdot v_3=
+      (\alpha_1+7\alpha_3,2\alpha_1+4\alpha_2-3\alpha_3,3\alpha_1+5\alpha_2-
+      \alpha_3)=(0,0,0)\iff\left\{
+      \begin{array}{cccccc}
+         1\alpha_1 & + & 0\alpha_2 & + & 7\alpha_3 & = & 0 \\
+         2\alpha_1 & + & 4\alpha_2 & - & 3\alpha_3 & = & 0 \\
+         3\alpha_1 & + & 5\alpha_2 & - & 1\alpha_3 & = & 0
+      \end{array}
+      \right.,
+      
+   o que só pode ocorrer se :math:`\alpha_1=\alpha_2=\alpha_3=0`.
+
+**Exercícios**
+
+   #. Seja :math:`V=F(\mathbb{R},\mathbb{R})` o espaço vetorial de todas as
+      funções :math:`f:\mathbb{R}\longrightarrow\mathbb{R}` reais de uma
+      variável real. Mostre que as seguintes funções são linearmente independentes em :math:`V`:
+
+      a. :math:`f_1(t)=e^t\mbox{ e }f_2(t)=e^{2t}`;
+
+      b. :math:`f_1(t)=e^t\mbox{ e }f_2(t)=\cos{t}`;
+
+      c. :math:`f_1(t)=\sin{t}\mbox{ e }f_2(t)=\cos{t}`.

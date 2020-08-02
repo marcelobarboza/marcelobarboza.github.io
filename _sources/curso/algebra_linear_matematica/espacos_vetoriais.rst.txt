@@ -1,0 +1,200 @@
+Espaços vetoriais
+-----------------
+
+Um espaço vetorial real é um conjunto não vazio :math:`V` e duas operações
+
+.. math::
+   \left\{
+   \begin{array}{llll}
+      V\times V\longrightarrow V, & (x,y) & \longmapsto & x+y, \\
+      \mathbb{R}\times V\longrightarrow V, & (\alpha,x) & \longmapsto &
+      \alpha\cdot x,
+   \end{array}
+   \right.
+
+ditas adição e multiplicação por escalar respectivamente, as quais se encontram
+sujeitas às seguintes regras de manipulação algébrica:
+
+#. :math:`(x+y)+z=x+(y+z)` para todos :math:`x,y,z\in V`;
+
+#. existe em :math:`V` um elemento que se denota por :math:`0` e se caracteriza
+   pelo fato de que :math:`x+0=x` para todo :math:`x\in V`;
+
+#. a cada :math:`x\in V` corresponde um :math:`y\in V` tal que :math:`x+y=0`;
+
+#. :math:`x+y=y+x` para todos :math:`x,y\in V`;
+
+#. :math:`\alpha\cdot(x+y)=\alpha\cdot x+\alpha\cdot y` para todos
+   :math:`\alpha\in\mathbb{R}` e :math:`x,y\in V`;
+
+#. :math:`(\alpha+\beta)\cdot x=\alpha\cdot x+\beta\cdot x` para todos
+   :math:`\alpha,\beta\in\mathbb{R}` e :math:`x\in V`;
+
+#. :math:`\alpha\cdot(\beta\cdot x)=(\alpha\beta)\cdot x` para todos
+   :math:`\alpha,\beta\in\mathbb{R}` e :math:`x\in V`;
+
+#. :math:`1\cdot x=x` para todo :math:`x\in V`.
+
+Propriedades
+~~~~~~~~~~~~
+
+Se :math:`V` é um espaço vetorial real, então:
+
+#. há em :math:`V` um único elemento neutro com respeito à adição. Com efeito,
+   se :math:`0,0^\prime\in V` são ambos neutros para a adição em :math:`V` então
+
+   .. math::
+      0^\prime=0+0^\prime=0^\prime+0=0;
+
+#. para cada :math:`x\in V` é único o elemento :math:`y\in V` tal que
+   :math:`x+y=0`. De fato, se :math:`y,z\in V` cumprem :math:`x+y=x+z=0` então
+
+   .. math::
+      y=y+0=y+(x+z)=(y+x)+z=(x+y)+z=0+z=z.
+ 
+   Portanto, não há ambiguidade em se denotar por :math:`-x` ao único elemento
+   :math:`y\in V` para o qual se tem :math:`x+y=0`. Observe que :math:`-(-x)=x`.
+
+#. :math:`0\cdot x=0` para todo :math:`x\in V`. De fato,
+
+   .. math::
+      0\cdot x=(0+0)\cdot x=0\cdot x+0\cdot x.
+
+   Agora tome :math:`y\in V` tal que :math:`0\cdot x+y=0` e veja que
+
+   .. math::
+      0\cdot x=0\cdot x+0=0\cdot x+(0\cdot x+y)=(0\cdot x+0\cdot x)+y=0\cdot
+      x+y=0;
+
+#. :math:`-1\cdot x=-x` para todo :math:`x\in V`. Com efeito, tem-se que
+
+   .. math::
+      -1\cdot x+x=-1\cdot x+1\cdot x=(-1+1)\cdot x=0\cdot x=0\implies-1\cdot
+      x=-x;
+
+#. :math:`\alpha\cdot0=0` para todo :math:`\alpha\in\mathbb{R}`. De fato,
+
+   .. math::
+      \alpha\cdot0=\alpha\cdot(0+0)=\alpha\cdot0+\alpha\cdot0.
+
+   Agora tome :math:`y\in V` tal que :math:`\alpha\cdot0+y=0` e veja que
+
+   .. math::
+      \alpha\cdot0=\alpha\cdot0+0=\alpha\cdot0+(\alpha\cdot0+y)=(\alpha\cdot0+
+      \alpha\cdot0)+y=\alpha\cdot0+y=0;
+
+#. se :math:`\alpha\in\mathbb{R},\,x\in V` e :math:`\alpha\cdot x=0` então
+   :math:`\alpha=0` ou :math:`x=0`. Suponha que :math:`\alpha\neq0`. Então,
+   
+   .. math::
+      x=1\cdot x=\left(\dfrac{1}{\alpha}\alpha\right)\cdot
+      x=\dfrac{1}{\alpha}\cdot(\alpha\cdot x)=\dfrac{1}{\alpha}\cdot0=0.
+
+Exemplos
+~~~~~~~~
+
+#. Seja :math:`X` um conjunto não vazio qualquer. Sobre
+
+   .. math::
+      F(X,\mathbb{R})=\{f:X\longrightarrow\mathbb{R}:f\mbox{ é uma função}\},
+      
+   defina
+
+   .. math::
+      \left\{
+      \begin{array}{rccccrcl}
+         F(X,\mathbb{R})\times F(X,\mathbb{R}) & \longrightarrow &
+         F(X,\mathbb{R}), & (f,g) & \longmapsto & f+g & : & X & \longrightarrow
+         & \mathbb{R} \\
+         & & & & & & & x & \longmapsto & f(x)+g(x), \\
+         \mathbb{R}\times F(X,\mathbb{R}) & \longrightarrow & F(X,\mathbb{R}), &
+         (\alpha,f) & \longmapsto & \alpha\cdot f & : & X & \longrightarrow &
+         \mathbb{R} \\
+         & & & & & & & x & \longmapsto & \alpha f(x).
+      \end{array}
+      \right.
+
+   Afirmamos que :math:`F(X,\mathbb{R})` é um espaço vetorial com estas
+   operações. Com efeito, tem-se que:
+
+   #. para todos :math:`f,g,h\in F(X,\mathbb{R})` e :math:`x\in X`, as seguintes
+      identidades se verificam:
+
+      .. math::
+         \begin{align}
+         \left[(f+g)+h\right](x) &= (f+g)(x)+h(x) \\
+         &= (f(x)+g(x))+h(x) \\
+         &= f(x)+(g(x)+h(x)) \\
+         &= f(x)+(g+h)(x) \\
+         &= \left[f+(g+h)\right](x),
+         \end{align}
+
+      de onde segue que :math:`(f+g)+h` e :math:`f+(g+h)` são uma e a mesma
+      função;
+
+   #. existe em :math:`F(X,\mathbb{R})` a função identicamente nula
+
+      .. math::
+         \begin{array}{ccccc}
+         0 & : & X & \longrightarrow & \mathbb{R}, \\
+         & & x & \longmapsto & 0
+         \end{array}
+
+      tal que, para todos :math:`f\in F(X,\mathbb{R})` e :math:`x\in X`, se tem:
+
+      .. math::
+         (f+0)(x)=f(x)+0(x)=f(x)+0=f(x),
+
+      de onde segue que :math:`f+0=f`;
+
+   #. para cada :math:`f\in F(X,\mathbb{R})` existe
+
+      .. math::
+         \begin{array}{ccccl}
+         g & : & X & \longrightarrow & \mathbb{R}, \\
+         & & x & \longmapsto & -f(x)
+         \end{array}
+
+      tal que
+
+      .. math::
+         (f+g)(x)=f(x)+g(x)=f(x)-f(x)=0,
+
+      para todo :math:`x\in X` e, assim, :math:`f+g=0`;
+
+   #. para todos :math:`\alpha,\beta\in\mathbb{R}`,
+      :math:`f,g\in F(X,\mathbb{R})` e :math:`x\in X`, as seguintes identidades
+      se verificam:
+
+      .. math::
+         \begin{align}
+         \alpha\cdot(f+g)(x) &= \alpha(f+g)(x) \\
+         &= \alpha(f(x)+g(x)) \\
+         &= \alpha f(x)+\alpha g(x) \\
+         &= \alpha\cdot f(x)+\alpha\cdot g(x) \\
+         &= (\alpha\cdot f+\alpha\cdot g)(x), 
+         \end{align}
+
+      .. math::
+         \begin{align}
+         (\alpha+\beta)\cdot f(x) &= (\alpha+\beta)f(x) \\
+         &= \alpha f(x)+\beta f(x) \\
+         &= \alpha\cdot f(x)+\beta\cdot f(x) \\
+         &= (\alpha\cdot f+\beta\cdot f)(x),
+         \end{align}
+
+      .. math::
+         1\cdot f(x)=1f(x)=f(x),
+
+      de onde segue que :math:`\alpha\cdot(f+g)=\alpha\cdot f+\alpha\cdot g`,
+      :math:`(\alpha+\beta)f=\alpha\cdot+\beta\cdot f` e :math:`1\cdot f=f`.
+
+   Deste mode se vê que :math:`F(X,\mathbb{R})` é, assim como se havia afirmado,
+   um espaço vetorial real.
+
+Instâncias particulares do exemplo anterior incluem, mas não se limitam a, dois
+importantes exemplos:
+
+#. :math:`\mathbb{R}^n=F(\{1,\ldots,n\},\mathbb{R})`;
+
+#. :math:`\mbox{Mat}(m\times n,\mathbb{R})=F(\{1,\ldots,m\}\times\{1,\ldots,n\},\mathbb{R})`.

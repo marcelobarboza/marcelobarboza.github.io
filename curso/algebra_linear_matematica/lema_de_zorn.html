@@ -1,0 +1,341 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="pt-BR" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ordens parciais &mdash; documentação Material de Apoio às Aulas 0.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../search.html" />
+    <link rel="next" title="Relações de equivalência" href="relacoes_de_equivalencia.html" />
+    <link rel="prev" title="Álgebra Linear" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Material de Apoio às Aulas
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Pesquisar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Conteúdo:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Notas de Aula</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Álgebra Linear</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Ordens parciais</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#exemplos">Exemplos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lema-de-zorn">Lema de Zorn</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="relacoes_de_equivalencia.html">Relações de equivalência</a></li>
+<li class="toctree-l3"><a class="reference internal" href="espacos_vetoriais.html">Espaços vetoriais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subespacos_vetoriais.html">Subespaços</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dependencia_linear.html">Dependência linear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dependencia_linear.html#independencia-linear">Independência linear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bases_lineares.html">Dependência linear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bases_lineares.html#independencia-linear">Independência linear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bases_lineares.html#bases">Bases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aplicacoes_lineares.html">Aplicações lineares</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../algebra_moderna_matematica/index.html">Álgebra Moderna</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../plano/index.html">Planos de Ensino: 2020/1</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Material de Apoio às Aulas</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Notas de Aula</a> &raquo;</li>
+        
+          <li><a href="index.html">Álgebra Linear</a> &raquo;</li>
+        
+      <li>Ordens parciais</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/curso/algebra_linear_matematica/lema_de_zorn.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ordens-parciais">
+<h1>Ordens parciais<a class="headerlink" href="#ordens-parciais" title="Link permanente para este título">¶</a></h1>
+<p><strong>Definição</strong></p>
+<blockquote>
+<div><p>Seja <span class="math notranslate nohighlight">\(X\)</span> um conjunto não vazio. Uma relação de ordem parcial em
+<span class="math notranslate nohighlight">\(X\)</span> é um conjunto <span class="math notranslate nohighlight">\(R\subseteq X\times X\)</span> com as seguintes
+propriedades:</p>
+<dl class="field-list simple">
+<dt class="field-odd">reflexidade</dt>
+<dd class="field-odd"><p><span class="math notranslate nohighlight">\((x,x)\in R\)</span> para todo <span class="math notranslate nohighlight">\(x\in X\)</span>;</p>
+</dd>
+<dt class="field-even">anti-simetria</dt>
+<dd class="field-even"><p>se <span class="math notranslate nohighlight">\((x,y)\in R\)</span> e <span class="math notranslate nohighlight">\((y,x)\in R\)</span> então <span class="math notranslate nohighlight">\(x=y\)</span>;</p>
+</dd>
+<dt class="field-odd">transitividade</dt>
+<dd class="field-odd"><p>se <span class="math notranslate nohighlight">\((x,y)\in R\)</span> e <span class="math notranslate nohighlight">\((y,z)\in R\)</span> então <span class="math notranslate nohighlight">\((x,z)\in R\)</span>.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Um conjunto parcialmente ordenado é um par <span class="math notranslate nohighlight">\((X,R)\)</span> em que <span class="math notranslate nohighlight">\(X\)</span> é um
+conjunto não vazio e <span class="math notranslate nohighlight">\(R\)</span> é uma relação de ordem parcial em <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p><span class="math notranslate nohighlight">\(x\leqslant_R y\iff(x,y)\in R\)</span></p>
+</div>
+<div class="section" id="exemplos">
+<h2>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Seja <span class="math notranslate nohighlight">\(X=\{d\in\mathbb{N}:d\mid54\}\)</span> o conjunto dos divisores
+inteiros e positivos do número <span class="math notranslate nohighlight">\(54=2\cdot3^3\)</span>. O conjunto</p>
+<div class="math notranslate nohighlight">
+\[R=\{(x,y)\in X\times X:x\mid y\},\]</div>
+<p>constitui uma relação de ordem parcial em <span class="math notranslate nohighlight">\(X\)</span>, como se pode facilmente
+verificar. Uma imagem fala mais que 1000 palavras, certo? Pois bem, a relação
+de ordem <span class="math notranslate nohighlight">\(R\)</span> pode ser representada por seu <em>diagrama de Hasse</em>: o grafo
+<span class="math notranslate nohighlight">\(\mathfrak{H}_R\)</span> definido pelos conjuntos</p>
+<div class="math notranslate nohighlight">
+\[V(\mathfrak{H}_R)=\{1,2,3,6,9,18,27,54\}=X,\]</div>
+<p>de seus vértices, e</p>
+<div class="math notranslate nohighlight">
+\[E(\mathfrak{H}_R)=\{(x,y)\in R:\nexists\,z\in X,\,(x,z)\in R\mbox{ e
+}(z,y)\in R\},\]</div>
+<p>de suas arestas. Tem-se, enfim, a seguinte representação de <span class="math notranslate nohighlight">\(R\)</span>:</p>
+<div class="figure">
+<p><img src="../../_images/tikz-aedf1011b8b926758b019f278559e6e9e636e138.png" alt="\draw[fill=black] ( 0.0, 0.0) circle (1pt);
+\draw[fill=black] (-2.5, 0.5) circle (1pt);
+\draw[fill=black] ( 2.5, 0.5) circle (1pt);
+\draw[fill=black] (-2.5, 1.0) circle (1pt);
+\draw[fill=black] ( 2.5, 1.0) circle (1pt);
+\draw[fill=black] (-2.5, 1.5) circle (1pt);
+\draw[fill=black] ( 2.5, 1.5) circle (1pt);
+\draw[fill=black] ( 0.0, 2.0) circle (1pt);
+
+\node at ( 0.0,-0.5)  {1};
+\node at (-3.0, 0.5)  {2};
+\node at ( 3.0, 0.5)  {3};
+\node at (-3.0, 1.0)  {6};
+\node at ( 3.0, 1.0)  {9};
+\node at (-3.0, 1.5) {18};
+\node at ( 3.0, 1.5) {27};
+\node at ( 0.0, 2.5) {54};
+
+\draw[-&gt;,&gt;=latex] ( 0.0, 0.0) -- (-2.5, 0.5);
+\draw[-&gt;,&gt;=latex] ( 0.0, 0.0) -- ( 2.5, 0.5);
+\draw[-&gt;,&gt;=latex] (-2.5, 0.5) -- (-2.5, 1.0);
+\draw[-&gt;,&gt;=latex] ( 2.5, 0.5) -- ( 2.5, 1.0);
+\draw[-&gt;,&gt;=latex] (-2.5, 1.0) -- (-2.5, 1.5);
+\draw[-&gt;,&gt;=latex] ( 2.5, 1.0) -- ( 2.5, 1.5);
+\draw[-&gt;,&gt;=latex] (-2.5, 1.5) -- ( 0.0, 2.0);
+\draw[-&gt;,&gt;=latex] ( 2.5, 1.5) -- ( 0.0, 2.0);
+\draw[-&gt;,&gt;=latex] ( 2.5, 0.5) -- (-2.5, 1.0);
+\draw[-&gt;,&gt;=latex] ( 2.5, 1.0) -- (-2.5, 1.5);" /></p>
+</div><p>Note que apenas se tem <span class="math notranslate nohighlight">\(x\leqslant_R y\)</span> caso exista em
+<span class="math notranslate nohighlight">\(\mathfrak{H}_R\)</span> um caminho com início em <span class="math notranslate nohighlight">\(x\)</span> e término em
+<span class="math notranslate nohighlight">\(y\)</span>. Deste modo é que se pode dizer, por exemplo, que
+<span class="math notranslate nohighlight">\(2\nleqslant_R 27\)</span> por uma simples inspeção de <span class="math notranslate nohighlight">\(\mathfrak{H}_R\)</span>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="lema-de-zorn">
+<h2>Lema de Zorn<a class="headerlink" href="#lema-de-zorn" title="Link permanente para este título">¶</a></h2>
+<p><strong>Definição</strong></p>
+<blockquote>
+<div><p>Seja <span class="math notranslate nohighlight">\((X,R)\)</span> um conjunto parcialmente ordenado. Um conjunto
+<span class="math notranslate nohighlight">\(C\subseteq X\)</span> é dito <span class="math notranslate nohighlight">\(R\)</span>-simplesmente ordenado se:</p>
+<div class="math notranslate nohighlight">
+\[x,y\in C\implies x\leqslant_R y\quad\mbox{ou}\quad y\leqslant_R x.\]</div>
+<p>Um elemento <span class="math notranslate nohighlight">\(\omega\in X\)</span> é dito uma <span class="math notranslate nohighlight">\(R\)</span>-cota superior de
+<span class="math notranslate nohighlight">\(C\)</span> se:</p>
+<div class="math notranslate nohighlight">
+\[x\in C\implies x\leqslant_R\omega.\]</div>
+<p>Um elemento <span class="math notranslate nohighlight">\(\omega\in X\)</span> é dito <span class="math notranslate nohighlight">\(R\)</span>-maximal se:</p>
+<div class="math notranslate nohighlight">
+\[y\in X\quad\mbox{e}\quad \omega\leqslant_R y\implies y=\omega.\]</div>
+</div></blockquote>
+<p><strong>Lema de Zorn</strong></p>
+<blockquote>
+<div><p>Seja <span class="math notranslate nohighlight">\((X,R)\)</span> um conjunto parcialmente ordenado. Se todo conjunto
+<span class="math notranslate nohighlight">\(R\)</span>-simplesmente ordenado <span class="math notranslate nohighlight">\(C\subseteq X\)</span>  possui uma
+<span class="math notranslate nohighlight">\(R\)</span>-cota superior em <span class="math notranslate nohighlight">\(X\)</span>, então <span class="math notranslate nohighlight">\(X\)</span> possui um elemento
+<span class="math notranslate nohighlight">\(R\)</span>-maximal.</p>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="relacoes_de_equivalencia.html" class="btn btn-neutral float-right" title="Relações de equivalência" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Álgebra Linear" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Marcelo Barboza
+
+    </p>
+  </div>
+    
+    
+    
+    Compilado com <a href="http://sphinx-doc.org/">Sphinx</a> usando um
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">tema</a>
+    
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
