@@ -1,5 +1,5 @@
-Plano de Ensino de Variáveis Complexas
-======================================
+Variáveis Complexas
+===================
 
 Apresentação
 ------------

@@ -1,5 +1,5 @@
-Plano de Ensino de Álgebra Linear
-=================================
+Álgebra Linear
+==============
 
 Apresentação
 ------------
