@@ -97,7 +97,6 @@
 <li class="toctree-l4"><a class="reference internal" href="#id1">Exemplos</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#relacoes-de-ordem">Relações de Ordem</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id2">Exemplos</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#lema-de-zorn">Lema de Zorn</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="monoides.html">Monóides</a></li>
@@ -308,7 +307,7 @@ x^2+y^2\)</span>. As classes de equivalência de</p>
 <span class="math notranslate nohighlight">\(\sqrt{r}\)</span>) para todo <span class="math notranslate nohighlight">\(r&gt;0\)</span>. O conjunto quociente
 <span class="math notranslate nohighlight">\(\mathbb{R}^2/R\)</span> pode, portanto, ser identificado à semi-reta
 <span class="math notranslate nohighlight">\([0,\infty)\)</span> (o círculo <span class="math notranslate nohighlight">\(f^{-1}(r)\)</span> corresponde ao número
-<span class="math notranslate nohighlight">\(\sqrt{r}\)</span> e vice-virsa).</p>
+<span class="math notranslate nohighlight">\(\sqrt{r}\)</span> e vice-versa).</p>
 <div class="figure">
 <p><img src="../../_images/tikz-b4713355b5471d8c969a690aa83653f8cb834f86.png" alt="\draw[-&gt;,&gt;=latex] (0.0,0.0) -- (5.0,0.0);
 \draw[thin] (0.0,0.0) circle (0.8cm);
@@ -350,10 +349,6 @@ válidas para quaisquer elementos <span class="math notranslate nohighlight">\(x
 </dl>
 <p>Um conjunto parcialmente ordenado é um par <span class="math notranslate nohighlight">\((X,R)\)</span> em que <span class="math notranslate nohighlight">\(X\)</span> é um
 conjunto não vazio e <span class="math notranslate nohighlight">\(R\)</span> é uma relação de ordem parcial em <span class="math notranslate nohighlight">\(X\)</span>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Aviso</p>
-<p><span class="math notranslate nohighlight">\(x\leqslant_R y\iff(x,y)\in R\)</span></p>
-</div>
 </div>
 <div class="section" id="id2">
 <h2>Exemplos<a class="headerlink" href="#id2" title="Link permanente para este título">¶</a></h2>
@@ -361,20 +356,19 @@ conjunto não vazio e <span class="math notranslate nohighlight">\(R\)</span> é
 <li><p>Seja</p>
 <div class="math notranslate nohighlight">
 \[X=\{d\in\mathbb{N}:d\mid54\}\]</div>
-<p>o conjunto dos divisores inteiros e positivos de <span class="math notranslate nohighlight">\(54=2\cdot3^3\)</span>. O
+<p>o conjunto dos divisores inteiros positivos de <span class="math notranslate nohighlight">\(54=2\cdot3^3\)</span>. O
 conjunto</p>
 <div class="math notranslate nohighlight">
 \[R=\{(x,y)\in X\times X:x\mid y\},\]</div>
-<p>constitui uma relação de ordem parcial em <span class="math notranslate nohighlight">\(X\)</span>, como se pode facilmente
-verificar. Uma imagem fala mais que 1000 palavras, certo? Neste caso, a
-relação de ordem <span class="math notranslate nohighlight">\(R\)</span> pode ser representada por seu <em>diagrama de Hasse</em>:
-o grafo <span class="math notranslate nohighlight">\(\mathfrak{H}_R\)</span> definido pelos conjuntos</p>
+<p>constitui uma relação de ordem parcial em <span class="math notranslate nohighlight">\(X\)</span> (verifique!). Uma imagem
+fala mais que 1000 palavras, certo? Neste caso, a relação de ordem <span class="math notranslate nohighlight">\(R\)</span>
+pode ser representada por seu <em>diagrama de Hasse</em>: o grafo
+<span class="math notranslate nohighlight">\(\mathfrak{H}_R\)</span> definido pelos conjuntos</p>
 <div class="math notranslate nohighlight">
 \[V(\mathfrak{H}_R)=\{1,2,3,6,9,18,27,54\}=X,\]</div>
 <p>de seus vértices e</p>
 <div class="math notranslate nohighlight">
-\[E(\mathfrak{H}_R)=\{(x,y)\in R:\nexists\,z\in X,\,(x,z)\in R\mbox{ e
-}(z,y)\in R\},\]</div>
+\[E(\mathfrak{H}_R)=\{(x,y)\in R:\nexists\,z\in X,\,xRz\mbox{ e }zRy\},\]</div>
 <p>de suas arestas. Tem-se, enfim, a seguinte representação gráfica de
 <span class="math notranslate nohighlight">\(R\)</span>:</p>
 <div class="figure">
@@ -386,7 +380,6 @@ o grafo <span class="math notranslate nohighlight">\(\mathfrak{H}_R\)</span> def
 \draw[fill=black] (-2.5, 1.5) circle (1pt);
 \draw[fill=black] ( 2.5, 1.5) circle (1pt);
 \draw[fill=black] ( 0.0, 2.0) circle (1pt);
-
 \node at ( 0.0,-0.5)  {1};
 \node at (-3.0, 0.5)  {2};
 \node at ( 3.0, 0.5)  {3};
@@ -395,7 +388,6 @@ o grafo <span class="math notranslate nohighlight">\(\mathfrak{H}_R\)</span> def
 \node at (-3.0, 1.5) {18};
 \node at ( 3.0, 1.5) {27};
 \node at ( 0.0, 2.5) {54};
-
 \draw[-&gt;,&gt;=latex] ( 0.0, 0.0) -- (-2.5, 0.5);
 \draw[-&gt;,&gt;=latex] ( 0.0, 0.0) -- ( 2.5, 0.5);
 \draw[-&gt;,&gt;=latex] (-2.5, 0.5) -- (-2.5, 1.0);
@@ -406,36 +398,57 @@ o grafo <span class="math notranslate nohighlight">\(\mathfrak{H}_R\)</span> def
 \draw[-&gt;,&gt;=latex] ( 2.5, 1.5) -- ( 0.0, 2.0);
 \draw[-&gt;,&gt;=latex] ( 2.5, 0.5) -- (-2.5, 1.0);
 \draw[-&gt;,&gt;=latex] ( 2.5, 1.0) -- (-2.5, 1.5);" /></p>
-</div><p>Note que apenas se tem <span class="math notranslate nohighlight">\(x\leqslant_R y\)</span> caso exista em
-<span class="math notranslate nohighlight">\(\mathfrak{H}_R\)</span> um caminho com início em <span class="math notranslate nohighlight">\(x\)</span> e término em
-<span class="math notranslate nohighlight">\(y\)</span>. Deste modo é que se pode dizer, por exemplo, que
-<span class="math notranslate nohighlight">\(2\nleqslant_R 27\)</span> por uma rápida inspeção de <span class="math notranslate nohighlight">\(\mathfrak{H}_R\)</span>.</p>
+</div><p>Note que <span class="math notranslate nohighlight">\(xRy\)</span> se, e somente se, existe em <span class="math notranslate nohighlight">\(\mathfrak{H}_R\)</span> um
+caminho com início em <span class="math notranslate nohighlight">\(x\)</span> e término em <span class="math notranslate nohighlight">\(y\)</span>. Deste modo é que
+podemos dizer, por exemplo, que <span class="math notranslate nohighlight">\(2\not R27\)</span> por uma rápida inspeção de
+<span class="math notranslate nohighlight">\(\mathfrak{H}_R\)</span>.</p>
 </li>
+<li><p>Seja <span class="math notranslate nohighlight">\(X\)</span> um conjunto não vazio qualquer. O conjunto</p>
+<div class="math notranslate nohighlight">
+\[R=\{(A,B)\in P(X)\times P(X):A\subseteq B\}\]</div>
+<p>é uma relação de ordem parcial em <span class="math notranslate nohighlight">\(P(X)\)</span>, como é fácil de verificar.
+Abaixo esboçamos o diagrama de Hasse de <span class="math notranslate nohighlight">\(R\)</span> para o cojunto
+<span class="math notranslate nohighlight">\(X=\{1,2,3\}\)</span>. Como antes, temos também aqui</p>
+<div class="math notranslate nohighlight">
+\[V(\mathfrak{H}_R)=P(X)\]</div>
+<p>e</p>
+<div class="math notranslate nohighlight">
+\[E(\mathfrak{H}_R)=\{(A,B)\in R:\nexists\,C\in P(X),\,(A,C)\in R\mbox{ e }(C,B)\in R\}\]</div>
+<p>O diagrama de Hasse eh igual a:</p>
+<div class="figure">
+<p><img src="../../_images/tikz-ba34e49a6a4b65ff661d880be391a8eafb91c2d3.png" alt="\draw[fill=black] (0.0,0.0) circle (1pt);
+\draw[fill=black] (-2.0,-1.0) circle (1pt);
+\draw[fill=black] (0.0,-1.0) circle (1pt);
+\draw[fill=black] (2.0,-1.0) circle (1pt);
+\draw[fill=black] (-2.0,-2.0) circle (1pt);
+\draw[fill=black] (0.0,-2.0) circle (1pt);
+\draw[fill=black] (2.0,-2.0) circle (1pt);
+\draw[fill=black] (0.0,-3.0) circle (1pt);
+\draw[-&gt;,&gt;=latex] (0.0,0.0) -- (-2.0,-1.0);
+\draw[-&gt;,&gt;=latex] (0.0,0.0) -- (0.0,-1.0);
+\draw[-&gt;,&gt;=latex] (0.0,0.0) -- (2.0,-1.0);
+\draw[-&gt;,&gt;=latex] (-2.0,-1.0) -- (-2.0,-2.0);
+\draw[-&gt;,&gt;=latex] (-2.0,-1.0) -- (0.0,-2.0);
+\draw[-&gt;,&gt;=latex] (0.0,-1.0) -- (-2.0,-2.0);
+\draw[-&gt;,&gt;=latex] (0.0,-1.0) -- (2.0,-2.0);
+\draw[-&gt;,&gt;=latex] (2.0,-1.0) -- (0.0,-2.0);
+\draw[-&gt;,&gt;=latex] (2.0,-1.0) -- (2.0,-2.0);
+\draw[-&gt;,&gt;=latex] (-2.0,-2.0) -- (0.0,-3.0);
+\draw[-&gt;,&gt;=latex] (0.0,-2.0) -- (0.0,-3.0);
+\draw[-&gt;,&gt;=latex] (2.0,-2.0) -- (0.0,-3.0);
+\node at (0.8,0.3) {$\{1,2,3\}$};
+\node at (-2.6,-1.3) {$\{1,2\}$};
+\node at (0.6,-0.8) {$\{1,3\}$};
+\node at (2.6,-0.7) {$\{2,3\}$};
+\node at (-2.4,-2.3) {$\{1\}$};
+\node at (-0.4,-2.3) {$\{2\}$};
+\node at (2.4,-1.8) {$\{3\}$};
+\node at (-0.2,-3.3) {$\emptyset$};" /></p>
+</div></li>
 </ol>
-</div>
-<div class="section" id="lema-de-zorn">
-<h2>Lema de Zorn<a class="headerlink" href="#lema-de-zorn" title="Link permanente para este título">¶</a></h2>
-<p><strong>Definição</strong></p>
-<blockquote>
-<div><p>Seja <span class="math notranslate nohighlight">\((X,R)\)</span> um conjunto parcialmente ordenado. Um conjunto
-<span class="math notranslate nohighlight">\(C\subseteq X\)</span> é dito <span class="math notranslate nohighlight">\(R\)</span>-simplesmente ordenado se:</p>
-<div class="math notranslate nohighlight">
-\[x,y\in C\implies x\leqslant_R y\quad\mbox{ou}\quad y\leqslant_R x.\]</div>
-<p>Um elemento <span class="math notranslate nohighlight">\(\omega\in X\)</span> é dito uma <span class="math notranslate nohighlight">\(R\)</span>-cota superior de
-<span class="math notranslate nohighlight">\(C\)</span> se:</p>
-<div class="math notranslate nohighlight">
-\[x\in C\implies x\leqslant_R\omega.\]</div>
-<p>Um elemento <span class="math notranslate nohighlight">\(\omega\in X\)</span> é dito <span class="math notranslate nohighlight">\(R\)</span>-maximal se:</p>
-<div class="math notranslate nohighlight">
-\[y\in X\quad\mbox{e}\quad \omega\leqslant_R y\implies y=\omega.\]</div>
-</div></blockquote>
-<p><strong>Lema de Zorn</strong></p>
-<blockquote>
-<div><p>Seja <span class="math notranslate nohighlight">\((X,R)\)</span> um conjunto parcialmente ordenado. Se todo conjunto
-<span class="math notranslate nohighlight">\(R\)</span>-simplesmente ordenado <span class="math notranslate nohighlight">\(C\subseteq X\)</span>  possui uma
-<span class="math notranslate nohighlight">\(R\)</span>-cota superior em <span class="math notranslate nohighlight">\(X\)</span>, então <span class="math notranslate nohighlight">\(X\)</span> possui um elemento
-<span class="math notranslate nohighlight">\(R\)</span>-maximal.</p>
-</div></blockquote>
+<p>Seja <span class="math notranslate nohighlight">\(X\)</span> um conjunto não vazio. Uma relação de ordem parcial <span class="math notranslate nohighlight">\(R\)</span>
+sobre <span class="math notranslate nohighlight">\(X\)</span> se chama <em>total</em> se para cada par <span class="math notranslate nohighlight">\(x,y\)</span> de elementos de
+<span class="math notranslate nohighlight">\(X\)</span> for verdade que <span class="math notranslate nohighlight">\(xRy\)</span> ou <span class="math notranslate nohighlight">\(yRx\)</span>.</p>
 </div>
 </div>
 
