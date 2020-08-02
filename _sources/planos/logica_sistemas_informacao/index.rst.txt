@@ -1,15 +1,15 @@
-Plano de Ensino de Álgebra Linear
-=================================
+Plano de Ensino de Iniciação à Lógica
+=====================================
 
 Apresentação
 ------------
 
 +----------------+-----------------+----------------+-------------+
-| **Curso**      | Licenciatura em Matemática                     |
+| **Curso**      | Sistemas de Informação                         |
 +----------------+-----------------+----------------+-------------+
-| **Disciplina** | Álgebra Linear  | **Modalidade** | Obrigatória |
+| **Disciplina** | Lógica          | **Modalidade** | Obrigatória |
 +----------------+-----------------+----------------+-------------+
-| **Código**     | MAT302          | **Requisito**  |             |
+| **Código**     |                 | **Requisito**  |             |
 +----------------+-----------------+----------------+-------------+
 |                | **À Distância** | **Teórica**    | 0h          |
 | **Carga**      +-----------------+----------------+-------------+

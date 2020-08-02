@@ -7,4 +7,5 @@ Planos de Ensino: 2020/1
 
    algebra_linear_matematica/index.rst
    algebra_moderna_matematica/index.rst
+   logica_sistemas_informacao/index.rst
    variaveis_complexas_matematica/index.rst

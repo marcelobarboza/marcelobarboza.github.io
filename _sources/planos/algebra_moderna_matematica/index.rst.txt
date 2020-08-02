@@ -1,20 +1,24 @@
 Plano de Ensino de Álgebra Moderna
 ==================================
 
-Identificação
--------------
+Apresentação
+------------
 
-+----------------+-------------+---------------+--------+--------------+-------------+-------------+
-| **Disciplina** | Álgebra Moderna                      | **Carga Horária**                        |
-+----------------+-------------+---------------+--------+--------------+-------------+-------------+
-| **Modalidade** | Obrigatória | **Código**    | MAT501 | **Presencial**             | **Remota**  |
-+----------------+-------------+---------------+--------+--------------+-------------+-------------+
-| **Sugestão**   | 5º Período  | **Requisito** |        | **Teórica**  | **Prática** | **Teórica** |
-+----------------+-------------+---------------+--------+--------------+-------------+-------------+
-| **Curso**      | Licenciatura em Matemática           | 68h          | 0h          | 0h          |
-+----------------+-------------+---------------+--------+--------------+-------------+-------------+
-| **Docente**    | Marcelo Barboza                      | **Semestre** | 2020/1                    |
-+----------------+-------------+---------------+--------+--------------+-------------+-------------+
++----------------+-----------------+----------------+-------------+
+| **Curso**      | Licenciatura em Matemática                     |
++----------------+-----------------+----------------+-------------+
+| **Disciplina** | Álgebra Moderna | **Modalidade** | Obrigatória |
++----------------+-----------------+----------------+-------------+
+| **Código**     | MAT501          | **Requisito**  |             |
++----------------+-----------------+----------------+-------------+
+|                | **À Distância** | **Teórica**    | 0h          |
+| **Carga**      +-----------------+----------------+-------------+
+| **Horária**    |                 | **Prática**    | 0h          |
+|                | **Presencial**  +----------------+-------------+
+|                |                 | **Teórica**    | 68h         |
++----------------+-----------------+----------------+-------------+
+
+Disciplina ministrada por Marcelo Barboza em 2020/1.
 
 Ementa
 ------
@@ -112,8 +116,11 @@ Avaliação
    seminário é uma apresentação oral e individual, com duração aproximada de 60
    minutos assim distribuídos:
 
-   :exposição: 50 minutos;
-   :arguição: 10 minutos.
+   +-------------+------------+
+   | Exposição   | Arguição   |
+   +=============+============+
+   | 50 minuntos | 10 minutos |
+   +-------------+------------+
 
    Os seminários serão apresentados de maneira consecutiva, sempre dois a cada
    aula ou assim até que não se possa mais, em datas previstas por este
@@ -279,7 +286,7 @@ Bibliografia
 ------------
 
 .. bibliography:: refs.bib
-   :style: plain
+   :style: alpha
    :all:
 
 .. _aqui:
@@ -300,4 +307,3 @@ Cronograma
    :header: "Previsão", "Aulas", "Conteúdo"
    :widths: 4, 5, 20
    :file: cronograma.csv
-
