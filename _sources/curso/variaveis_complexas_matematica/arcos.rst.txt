@@ -1,0 +1,58 @@
+Arcos
+-----
+
+Um *arco* é um conjunto de pontos dados de forma paramétrica
+
+.. math:: C=\{z(t)=x(t)+iy(t):t\in [a,b]\}\subseteq\mathbb{C},
+
+onde
+
+.. math:: z:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C},\quad t\longmapsto z(t)=x(t)+iy(t),
+
+é uma função contínua. A representação paramétrica :math:`z=z(t)` confere a
+:math:`C` um sentido de percurso: à medida que o parâmetro :math:`t` varia em
+:math:`[a,b]`, de :math:`a` até :math:`b`, o ponto :math:`z(t)` caminha sobre
+:math:`C`, de :math:`z(a)` até :math:`z(b)`.  Denotamos por :math:`-C` ao arco
+:math:`C` percorrido em sentido contrário, ou seja, dado pela pela
+parametrização
+
+.. math:: -C=\{z_1(t)=z(b-(t-a)):t\in[a,b]\},
+
+Como o que importa num arco :math:`C` é o conjunto imagem da parametrização
+:math:`z=z(t)`, nós vemos que um mesmo arco pode ser apresentado por muitas
+parametrizações distintas uma da outra. Veja o caso do arco :math:`-C` acima,
+que poderia também ter sido parametrizado pela função
+
+.. math:: z_2:[-b,-a]\subseteq\mathbb{R}\longrightarrow\mathbb{C},\quad t\longmapsto z_2(t)=z(-t).
+
+Um *arco simples* é um arco cuja parametrização :math:`z=z(t)` é uma função
+(contínua) injetiva: à medida que :math:`t` varia em :math:`[a,b]`, de :math:`a`
+até :math:`b`, o ponto :math:`z(t)` percorre :math:`C`, de :math:`z(a)` a
+:math:`z(b)`, passando por cada ponto uma única vez.  Portanto, para que um arco
+não seja simples é necessário que ele contenha ao menos um ponto múltiplo: todo
+aquele para o qual existam :math:`a\leqslant t_1<t_2\leqslant b` tais que
+:math:`z(t_1)=z(t_2)`. Um *arco fechado* é um arco em que :math:`z(a)=z(b)`.
+Uma *curva de Jordan* é um arco fechado :math:`C` que à exceção dos pontos
+:math:`z(a)=z(b)` é um arco simples (em outras palavras, a restrição
+:math:`z\mid_{(a,b)}:(a,b)\subseteq\mathbb{R}\longrightarrow\mathbb{C}`,
+:math:`t\longmapsto z(t)`, de :math:`z` ao intervalo aberto
+:math:`(a,b)\subseteq[a,b]`, é uma função injetiva).
+
+Será, às vezes, necessário nos referirmos a um arco como um subconjunto fechado
+de :math:`\mathbb{C}` (no sentido topológico). Não confunda conjunto fechado com
+arco fechado (ainda que o conjunto sob consideração seja um arco!).
+
+Exemplos
+~~~~~~~~
+
+#. O segmento de reta parametrizado por
+
+   .. math:: z:[0,2]\subseteq\mathbb{R}\longrightarrow\mathbb{C},\quad t\longmapsto 1-it;
+
+#. A parametrização
+
+   .. math:: z:\mathbb{R}\longrightarrow\mathbb{C},\quad t\longmapsto t^2+it,
+
+   representa uma parábola (note que :math:`x(t)=t^2`, :math:`y(t)=t` e portanto
+   que :math:`x=y^2`);
+

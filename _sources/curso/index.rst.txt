@@ -7,3 +7,4 @@ Notas de Aula
 
    algebra_linear_matematica/index.rst
    algebra_moderna_matematica/index.rst
+   variaveis_complexas_matematica/index.rst
