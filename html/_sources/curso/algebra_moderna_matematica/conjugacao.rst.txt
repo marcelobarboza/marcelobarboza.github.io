@@ -1,0 +1,102 @@
+Classe de conjugação
+--------------------
+
+Seja G um grupo. Considere, em G, a seguinte relação binária:
+
+.. math::
+   \forall\,\,x,y\in G:\quad x\sim_G y\iff\exists\,\,\,g\in G,\,\,g^{-1}xg=y.
+
+Tal relação, dita de conjugação, é uma relação de equivalência em G. Com efeito,
+
+#. :math:`x\sim_G x` para todo :math:`x\in G`, pois :math:`e^{-1}xe=x`;
+
+#. se :math:`x\sim_G y`, então :math:`g^{-1}xg=y` para algum :math:`g\in G`.
+   Logo, existe :math:`u=g^{-1}\in G` tal que
+
+   .. math::
+      u^{-1}yu=g(g^{-1}xg)g^{-1}=x,
+
+   e, assim, :math:`y\sim_G x`;
+
+#. se :math:`x\sim_G y` e :math:`y\sim_G z`, então existem certos
+   :math:`g,h\in G` próprios para que :math:`g^{-1}xg=y` e :math:`h^{-1}yh=z`.
+   Deste modo,
+
+   .. math::
+      (gh)^{-1}x(gh)=h^{-1}(g^{-1}xg)h=h^{-1}yh=z,
+
+   e, assim, :math:`x\sim_G z`.
+
+.. note::
+   :math:`x^g=g^{-1}xg`, para todos :math:`x,g\in G`.
+
+A classe
+
+.. math::
+   x^G=\{y\in G:y\sim_Gx\}=\{x^g:g\in G\},
+
+é chamada *classe de conjugação de x em G*.
+
+Equação de classes
+~~~~~~~~~~~~~~~~~~
+
+Se G é um grupo finito, ele contém tão somente a um número finito de classes de
+conjugação, digamos: :math:`x_1^G,\ldots,x_n^G`. Como
+
+.. math::
+   G=x_1^G\sqcup\cdots\sqcup x_n^G,
+
+nós chegamos à equação de classes:
+
+.. math::
+   \vert G\vert=\vert x_1^G\vert+\cdots+\vert x_n^G\vert.
+
+Observe que
+
+.. math::
+   x\in Z(G)\iff x^G=\{x\},
+
+de modo que a equação de classes passa a se escrever assim:
+
+.. math::
+   \vert G\vert=\vert Z(G)\vert+\sum\limits_{x_i\notin Z(G)}\vert x_i^G\vert.
+
+.. note::
+   :math:`\sqcup` denota união disjunta.
+
+**Proposição**
+    Sejam G um grupo e x um elemento arbitrariamente fixado em G. Então, a
+    função
+
+    .. math::
+       \Phi_x:G/C_G(x)\longrightarrow x^G,\quad C_G(x)g\longmapsto x^g,
+
+    é uma bijeção. Tem-se, pelo Teorema de Lagrange, que
+    :math:`\vert x^G\vert=[G:C_G(x)]`.
+
+**Prova**
+    Basta observar que se :math:`g,h\in G`, então
+
+    .. math::
+       \Phi_x(C_G(x)g)=\Phi_x(C_G(x)h)\iff x^g=x^h\iff x^{gh^{-1}}=x\iff gh^{-1}\in C_G(x)\iff C_G(x)g=C_G(x)h,
+
+    de onde segue que :math:`\Phi_x` é uma bem definida e injetora função. Como
+    ela é obviamente sobrejetora, deve ser ainda bijetora. Isto conclui a
+    demontração.
+
+A equação de classes assume, finalmente, a forma seguinte:
+
+.. math::
+   \vert G\vert=\vert Z(G)\vert+\sum\limits_{x_i\notin Z(G)}[G:C_G(x_i)].
+
+Aplicações
+~~~~~~~~~~
+
+#. Seja G um grupo finito de ordem :math:`\vert G\vert=p^n>1`, p um número
+   primo. Então, :math:`Z(G)\neq\{e\}` (exercício);
+
+#. Se G é um grupo finito de ordem :math:`p^2`, p um primo, então G é um grupo
+   abeliano (exercício);
+
+#. Se G é um grupo não abeliano de ordem :math:`p^3`, então
+   :math:`\vert Z(G)\vert=p`.

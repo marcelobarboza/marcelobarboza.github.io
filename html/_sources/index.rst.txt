@@ -1,0 +1,15 @@
+Bem vindo à página do Professor Marcelo Barboza!
+================================================
+
+.. toctree::
+   :caption: Conteúdo:
+   :maxdepth: 1
+
+   curso/index.rst
+   plano/index.rst
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`

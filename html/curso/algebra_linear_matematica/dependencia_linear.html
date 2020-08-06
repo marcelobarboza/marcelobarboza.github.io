@@ -1,0 +1,341 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="pt-BR" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Dependência linear &mdash; documentação Material de Apoio às Aulas 0.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../search.html" />
+    <link rel="next" title="Dependência linear" href="bases_lineares.html" />
+    <link rel="prev" title="Subespaços" href="subespacos_vetoriais.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Material de Apoio às Aulas
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Pesquisar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Conteúdo:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Notas de Aula</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Álgebra Linear</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="lema_de_zorn.html">Ordens parciais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="relacoes_de_equivalencia.html">Relações de equivalência</a></li>
+<li class="toctree-l3"><a class="reference internal" href="espacos_vetoriais.html">Espaços vetoriais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subespacos_vetoriais.html">Subespaços</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Dependência linear</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#exemplos">Exemplos</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#independencia-linear">Independência linear</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Exemplos</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bases_lineares.html">Dependência linear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bases_lineares.html#independencia-linear">Independência linear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bases_lineares.html#bases">Bases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aplicacoes_lineares.html">Aplicações lineares</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../algebra_moderna_matematica/index.html">Álgebra Moderna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../variaveis_complexas_matematica/index.html">Variáveis Complexas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../plano/index.html">Planos de Ensino: 2020/1</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Material de Apoio às Aulas</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Notas de Aula</a> &raquo;</li>
+        
+          <li><a href="index.html">Álgebra Linear</a> &raquo;</li>
+        
+      <li>Dependência linear</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/curso/algebra_linear_matematica/dependencia_linear.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dependencia-linear">
+<h1>Dependência linear<a class="headerlink" href="#dependencia-linear" title="Link permanente para este título">¶</a></h1>
+<p><strong>Definição</strong></p>
+<blockquote>
+<div><p>Seja V um espaço vetorial real. Vetores <span class="math notranslate nohighlight">\(v_1,\ldots,v_n\in V\)</span> são
+linearmente dependentes se existem escalares
+<span class="math notranslate nohighlight">\(\alpha_1,\ldots,\alpha_n\in\mathbb{R}\)</span> não todos nulos, tais que
+<span class="math notranslate nohighlight">\(\alpha_1 v_1+\cdots+\alpha_n v_n=0\)</span>.</p>
+</div></blockquote>
+<div class="section" id="exemplos">
+<h2>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Os vetores <span class="math notranslate nohighlight">\(v_1=(1,2),v_2=(-2,-4)\in\mathbb{R}^2\)</span> são linearmente
+dependentes:</p>
+<div class="math notranslate nohighlight">
+\[1\cdot v_1+\dfrac{1}{2}\cdot v_2=(1,2)+(-1,-2)=(1-1,2-2)=(0,0);\]</div>
+</li>
+<li><p>Os vetores <span class="math notranslate nohighlight">\(v_1=(1,2,3),v_2=(0,4,5),v_3=(7,-2,1)\in\mathbb{R}^3\)</span> são
+linearmente dependentes:</p>
+<div class="math notranslate nohighlight">
+\[7\cdot v_1-4\cdot v_2-1\cdot
+v_3=(7,14,21)+(0,-16,-20)+(-7,2,-1)=(7-7,14-16+2,21-20-1)=(0,0,0);\]</div>
+</li>
+<li><p>Se <span class="math notranslate nohighlight">\(v_1=0\in V\)</span> então os vetores <span class="math notranslate nohighlight">\(v_1,v_2,\ldots,v_n\in V\)</span> são
+linearmente dependentes, quaisquer que sejam <span class="math notranslate nohighlight">\(v_2,\ldots,v_n\in V\)</span>:
+basta ver que</p>
+<div class="math notranslate nohighlight">
+\[1\cdot v_1+0\cdot v_2+\cdots+0\cdot v_n=0.\]</div>
+</li>
+</ol>
+<p><strong>Exercícios</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Sejam V um espaço vetorial real e <span class="math notranslate nohighlight">\(S\subseteq V\)</span>. Suponha que
+<span class="math notranslate nohighlight">\(S\)</span> seja linearmente dependente em V. Mostre que se
+<span class="math notranslate nohighlight">\(S\subseteq S^\prime\subseteq V\)</span> então <span class="math notranslate nohighlight">\(S^\prime\)</span> é um
+conjunto de vetores linearmente dependentes em V.</p></li>
+<li><p>Sejam V um espaço vetorial real e <span class="math notranslate nohighlight">\(S=\{v_1,v_2,\ldots,v_n\}\subseteq
+V\)</span>. Suponha que <span class="math notranslate nohighlight">\(v_1=v_2\)</span>. Prove que <span class="math notranslate nohighlight">\(S\)</span> é linearmente
+dependente em V.</p></li>
+<li><p>Sejam V um espaço vetorial real e <span class="math notranslate nohighlight">\(S=\{v_1,v_2\}\subseteq
+V\setminus\{0\}\)</span>. Prove que S  é linearmente dependente em V se, e somente
+se, os vetores <span class="math notranslate nohighlight">\(v_1,v_2\)</span> são múltiplos um do outro.</p></li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="independencia-linear">
+<h1>Independência linear<a class="headerlink" href="#independencia-linear" title="Link permanente para este título">¶</a></h1>
+<p><strong>Definição</strong></p>
+<blockquote>
+<div><p>Seja V um espaço vetorial real. Vetores <span class="math notranslate nohighlight">\(v_1,\ldots,v_n\in V\)</span> são
+linearmente independentes se <span class="math notranslate nohighlight">\(\alpha_1,\ldots,\alpha_n\in\mathbb{R}\)</span> e
+<span class="math notranslate nohighlight">\(\alpha_1 v_1+\cdots+\alpha_n v_n=0\)</span> implicar em
+<span class="math notranslate nohighlight">\(\alpha_1=\cdots=\alpha_n=0\)</span>.</p>
+</div></blockquote>
+<div class="section" id="id1">
+<h2>Exemplos<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Os vetores <span class="math notranslate nohighlight">\(v_1=(1,2),v_2=(-2,4)\in\mathbb{R}^2\)</span> são linearmente
+dependentes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\alpha_1\cdot v_1+\alpha_2\cdot v_2=
+(\alpha_1-2\alpha_2,2\alpha_1+4\alpha_2)=(0,0)\iff\left\{
+\begin{array}{ccccc}
+   1\alpha_1 &amp; - &amp; 2\alpha_2 &amp; = &amp; 0 \\
+   2\alpha_1 &amp; + &amp; 4\alpha_2 &amp; = &amp; 0
+\end{array}
+\right.\iff\alpha_1=\alpha_2=0;\end{split}\]</div>
+</li>
+<li><p>Os vetores <span class="math notranslate nohighlight">\(v_1=(1,2,3),v_2=(0,4,5),v_3=(7,-2,1)\in\mathbb{R}^3\)</span> são
+linearmente independentes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\alpha_1\cdot v_1+\alpha_2\cdot v_2+\alpha_3\cdot v_3=
+(\alpha_1+7\alpha_3,2\alpha_1+4\alpha_2-3\alpha_3,3\alpha_1+5\alpha_2-
+\alpha_3)=(0,0,0)\iff\left\{
+\begin{array}{cccccc}
+   1\alpha_1 &amp; + &amp; 0\alpha_2 &amp; + &amp; 7\alpha_3 &amp; = &amp; 0 \\
+   2\alpha_1 &amp; + &amp; 4\alpha_2 &amp; - &amp; 3\alpha_3 &amp; = &amp; 0 \\
+   3\alpha_1 &amp; + &amp; 5\alpha_2 &amp; - &amp; 1\alpha_3 &amp; = &amp; 0
+\end{array}
+\right.,\end{split}\]</div>
+<p>o que só pode ocorrer se <span class="math notranslate nohighlight">\(\alpha_1=\alpha_2=\alpha_3=0\)</span>.</p>
+</li>
+</ol>
+<p><strong>Exercícios</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Seja <span class="math notranslate nohighlight">\(V=F(\mathbb{R},\mathbb{R})\)</span> o espaço vetorial de todas as
+funções <span class="math notranslate nohighlight">\(f:\mathbb{R}\longrightarrow\mathbb{R}\)</span> reais de uma
+variável real. Mostre que as seguintes funções são linearmente independentes em <span class="math notranslate nohighlight">\(V\)</span>:</p>
+<ol class="loweralpha simple">
+<li><p><span class="math notranslate nohighlight">\(f_1(t)=e^t\mbox{ e }f_2(t)=e^{2t}\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(f_1(t)=e^t\mbox{ e }f_2(t)=\cos{t}\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(f_1(t)=\sin{t}\mbox{ e }f_2(t)=\cos{t}\)</span>.</p></li>
+</ol>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bases_lineares.html" class="btn btn-neutral float-right" title="Dependência linear" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="subespacos_vetoriais.html" class="btn btn-neutral float-left" title="Subespaços" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Marcelo Barboza
+
+    </p>
+  </div>
+    
+    
+    
+    Compilado com <a href="http://sphinx-doc.org/">Sphinx</a> usando um
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">tema</a>
+    
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

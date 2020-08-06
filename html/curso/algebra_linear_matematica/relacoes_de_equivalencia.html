@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="pt-BR" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Relações de equivalência &mdash; documentação Material de Apoio às Aulas 0.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../search.html" />
+    <link rel="next" title="Espaços vetoriais" href="espacos_vetoriais.html" />
+    <link rel="prev" title="Ordens parciais" href="lema_de_zorn.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Material de Apoio às Aulas
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Pesquisar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Conteúdo:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Notas de Aula</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Álgebra Linear</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="lema_de_zorn.html">Ordens parciais</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Relações de equivalência</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#exemplos">Exemplos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conjuntos-quocientes">Conjuntos quocientes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="espacos_vetoriais.html">Espaços vetoriais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subespacos_vetoriais.html">Subespaços</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dependencia_linear.html">Dependência linear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dependencia_linear.html#independencia-linear">Independência linear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bases_lineares.html">Dependência linear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bases_lineares.html#independencia-linear">Independência linear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bases_lineares.html#bases">Bases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aplicacoes_lineares.html">Aplicações lineares</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../algebra_moderna_matematica/index.html">Álgebra Moderna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../variaveis_complexas_matematica/index.html">Variáveis Complexas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../plano/index.html">Planos de Ensino: 2020/1</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Material de Apoio às Aulas</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Notas de Aula</a> &raquo;</li>
+        
+          <li><a href="index.html">Álgebra Linear</a> &raquo;</li>
+        
+      <li>Relações de equivalência</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/curso/algebra_linear_matematica/relacoes_de_equivalencia.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="relacoes-de-equivalencia">
+<h1>Relações de equivalência<a class="headerlink" href="#relacoes-de-equivalencia" title="Link permanente para este título">¶</a></h1>
+<p><strong>Definição</strong></p>
+<blockquote>
+<div><p>Seja <span class="math notranslate nohighlight">\(X\)</span> um conjunto não vazio. Uma relação de equivalência em
+<span class="math notranslate nohighlight">\(X\)</span> é um conjunto <span class="math notranslate nohighlight">\(R\subseteq X\times X\)</span> com as seguintes
+propriedades :</p>
+<dl class="field-list simple">
+<dt class="field-odd">reflexividade</dt>
+<dd class="field-odd"><p><span class="math notranslate nohighlight">\((x,x)\in R\)</span> para todo <span class="math notranslate nohighlight">\(x\in X\)</span>;</p>
+</dd>
+<dt class="field-even">simetria</dt>
+<dd class="field-even"><p>se <span class="math notranslate nohighlight">\((x,y)\in R\)</span> então <span class="math notranslate nohighlight">\((y,x)\in R\)</span>;</p>
+</dd>
+<dt class="field-odd">transitividade</dt>
+<dd class="field-odd"><p>se <span class="math notranslate nohighlight">\((x,y)\in R\)</span> e <span class="math notranslate nohighlight">\((y,z)\in R\)</span> então <span class="math notranslate nohighlight">\((x,z)\in R\)</span>.</p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p><span class="math notranslate nohighlight">\(xRy\iff(x,y)\in R\)</span></p>
+</div>
+<div class="section" id="exemplos">
+<h2>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p>A igualdade é uma relação de equivalência em todo conjunto não vazio. Mais
+especificamente, se <span class="math notranslate nohighlight">\(X\)</span> é qualquer conjunto não vazio, então</p>
+<div class="math notranslate nohighlight">
+\[R=\{(x,y)\in X\times X:x=y\},\]</div>
+<p>é uma relação de equivalência em <span class="math notranslate nohighlight">\(X\)</span>;</p>
+</li>
+<li><p>Este exemplo é uma generalização de seu antecessor. Se
+<span class="math notranslate nohighlight">\(f:X\longrightarrow Y\)</span> é uma função, então</p>
+<div class="math notranslate nohighlight">
+\[R = \{(x,y)\in X\times X : f(x) = f(y)\},\]</div>
+<p>é uma relação de equivalência em <span class="math notranslate nohighlight">\(X\)</span>.</p>
+</li>
+<li><p>O exemplo obrigatório: se <span class="math notranslate nohighlight">\(n\in\mathbb{Z}\)</span>, <span class="math notranslate nohighlight">\(n\geqslant2\)</span>, então</p>
+<div class="math notranslate nohighlight">
+\[R=\{(x,y)\in\mathbb{Z}\times\mathbb{Z}:x\equiv y\hspace{-6pt}\pmod n\},\]</div>
+<p>é uma relação de equivalência em <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="conjuntos-quocientes">
+<h2>Conjuntos quocientes<a class="headerlink" href="#conjuntos-quocientes" title="Link permanente para este título">¶</a></h2>
+<p>Sejam <span class="math notranslate nohighlight">\(X\)</span> um conjunto não vazio e <span class="math notranslate nohighlight">\(R\)</span> uma relação de equivalência em
+<span class="math notranslate nohighlight">\(X\)</span>. A <em>classe de equivalência</em> de <span class="math notranslate nohighlight">\(x\in X\)</span> segundo <span class="math notranslate nohighlight">\(R\)</span> é o
+conjunto</p>
+<div class="math notranslate nohighlight">
+\[[x]_R=\{y\in X : yRx\},\]</div>
+<p>daqueles elementos de <span class="math notranslate nohighlight">\(X\)</span> que se equivalem a <span class="math notranslate nohighlight">\(x\in X\)</span> através de
+<span class="math notranslate nohighlight">\(R\)</span>. Note que:</p>
+<ol class="arabic">
+<li><p><span class="math notranslate nohighlight">\(xRy\implies[x]_R=[y]_R\)</span>:</p>
+<p>de fato, tem-se que</p>
+<div class="math notranslate nohighlight">
+\[z\in[x]_R\implies zRx\implies zRx\quad\mbox{e}\quad xRy\implies
+zRy\implies z\in[y]_R,\]</div>
+<p>e</p>
+<div class="math notranslate nohighlight">
+\[z\in[y]_R\implies zRy\implies zRy\quad\mbox{e}\quad xRy\implies
+zRy\quad\mbox{e}\quad yRx\implies zRx\implies z\in[x]_R,\]</div>
+<p>pelo que se chega à conclusão de que</p>
+<div class="math notranslate nohighlight">
+\[z\in[x]_R\iff z\in[y]_R,\]</div>
+<p>e, assim, que estes são um e o mesmo conjunto;</p>
+</li>
+<li><p><span class="math notranslate nohighlight">\([x]_R\cap[y]_R\neq\emptyset\implies xRy\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[z\in[x]_R\cap[y]_R\implies zRx\quad\mbox{e}\quad zRy\implies
+xRz\quad\mbox{e}\quad zRy\implies xRy\implies[x]_R=[y]_R.\]</div>
+</li>
+</ol>
+<p>Portanto, é correto dizer que</p>
+<div class="math notranslate nohighlight" id="disjunta">
+\[\forall\,\,x,y\in X:\quad[x]_R\cap[y]_R\neq\emptyset\iff xRy.\]</div>
+<p>O conjunto</p>
+<div class="math notranslate nohighlight">
+\[X/R=\{[x]_R : x\in X\},\]</div>
+<p>de todas as classes de equivalência de elementos de <span class="math notranslate nohighlight">\(X\)</span> segundo <span class="math notranslate nohighlight">\(R\)</span>
+é chamado <em>conjunto quociente</em> de <span class="math notranslate nohighlight">\(X\)</span> por <span class="math notranslate nohighlight">\(R\)</span>. Observe que</p>
+<div class="math notranslate nohighlight">
+\[X=\bigsqcup\limits_{[x]_R\in X/R}[x]_R.\]</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p><span class="math notranslate nohighlight">\(\bigsqcup\)</span> denota união <a class="reference internal" href="#disjunta">disjunta</a>.</p>
+</div>
+<p>A aplicação</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{ccccc}
+   \pi_R &amp; : &amp; X &amp; \longrightarrow &amp; X/R, \\
+   &amp; &amp; x &amp; \longmapsto &amp; [x]_R
+\end{array}\end{split}\]</div>
+<p>que a cada elemento <span class="math notranslate nohighlight">\(x\in X\)</span> associa a sua classe de equivalência segundo
+<span class="math notranslate nohighlight">\(R\)</span>, é chamada de <em>aplicação quociente</em>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="espacos_vetoriais.html" class="btn btn-neutral float-right" title="Espaços vetoriais" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="lema_de_zorn.html" class="btn btn-neutral float-left" title="Ordens parciais" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Marcelo Barboza
+
+    </p>
+  </div>
+    
+    
+    
+    Compilado com <a href="http://sphinx-doc.org/">Sphinx</a> usando um
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">tema</a>
+    
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
