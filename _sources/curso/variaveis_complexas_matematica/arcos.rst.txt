@@ -7,7 +7,9 @@ Um *arco* é um conjunto de pontos dados de forma paramétrica
 
 onde
 
-.. math:: z:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C},\quad t\longmapsto z(t)=x(t)+iy(t),
+.. math::
+   z:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C},
+   \quad t\longmapsto z(t)=x(t)+iy(t),
 
 é uma função contínua. A representação paramétrica :math:`z=z(t)` confere a
 :math:`C` um sentido de percurso: à medida que o parâmetro :math:`t` varia em
@@ -23,7 +25,9 @@ Como o que importa num arco :math:`C` é o conjunto imagem da parametrização
 parametrizações distintas uma da outra. Veja o caso do arco :math:`-C` acima,
 que poderia também ter sido parametrizado pela função
 
-.. math:: z_2:[-b,-a]\subseteq\mathbb{R}\longrightarrow\mathbb{C},\quad t\longmapsto z_2(t)=z(-t).
+.. math::
+   z_2:[-b,-a]\subseteq\mathbb{R}\longrightarrow\mathbb{C},
+   \quad t\longmapsto z_2(t)=z(-t).
 
 Um *arco simples* é um arco cuja parametrização :math:`z=z(t)` é uma função
 (contínua) injetiva: à medida que :math:`t` varia em :math:`[a,b]`, de :math:`a`
@@ -47,12 +51,94 @@ Exemplos
 
 #. O segmento de reta parametrizado por
 
-   .. math:: z:[0,2]\subseteq\mathbb{R}\longrightarrow\mathbb{C},\quad t\longmapsto 1-it;
+   .. math::
+      z:[0,2]\subseteq\mathbb{R}\longrightarrow\mathbb{C},
+      \quad t\longmapsto 1-it;
 
 #. A parametrização
 
    .. math:: z:\mathbb{R}\longrightarrow\mathbb{C},\quad t\longmapsto t^2+it,
 
-   representa uma parábola (note que :math:`x(t)=t^2`, :math:`y(t)=t` e portanto
-   que :math:`x=y^2`);
+   representa uma parábola (note que :math:`x(t)=t^2`, :math:`y(t)=t` e,
+   portanto, que :math:`x=y^2`);
 
+Teorema da Curva de Jordan
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+O `Teorema da Curva de Jordan <https://en.wikipedia.org/wiki/Jordan_curve_theore
+m>`_ afirma que se :math:`\Gamma\subseteq\mathbb{R}^2` é uma curva de Jordan
+então :math:`\mathbb{R}^2\setminus\Gamma` é desconexo e consiste de duas
+compenentes, uma das quais é limitada pela curva.
+
+.. _demonstração: https://www.maths.ed.ac.uk/~v1ranick/jordan/tverberg.pdf
+.. _Cortella: https://pt.wikipedia.org/wiki/Mario_Sergio_Cortella
+
+Até recentemente eu nunca havia lido uma demonstração_ deste importante Teorema.
+Como diz Cortella_, é tempo para o conhecimento!
+
+Contornos
+~~~~~~~~~
+
+Chamamos de *contorno* a um arco :math:`C` cuja representação paramétrica
+:math:`z:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C}` cumpre aos seguintes
+requisitos:
+
+#. :math:`z` é contínua em :math:`[a,b]`;
+#. :math:`[a,b]=[a_1,b_1]\cup[a_2,b_2]\cup\cdots\cup[a_n,b_n]` onde
+   :math:`a=a_1<b_1=a_2<\cdots<b_{i-1}=a_i<b_i=a_{i+1}<\cdots<b_{n-1}=a_n<b_n=b`;
+#. para cada :math:`i\in\{1,\ldots,n\}` a restrição :math:`z=z\mid_{(a_i,b_i)}`
+   é uma função derivável e sua derivada :math:`z^\prime(t)` é uma função
+   contínua de :math:`t` que não se anula em :math:`(a_i,b_i)`;
+#. existem, são iguais entre si e distintas de zero as derivadas laterais
+
+   .. math::
+      z^\prime(a_i^+)=\lim\limits_{t\to a_i^+}\dfrac{z(t)-z(a_i)}{t-a_i}=
+      \lim\limits_{t\to b_{i-1}^-}\dfrac{z(t)-z(b_{i-1})}{t-b_{i-1}}=
+      z^\prime(b_{i-1}^-).
+
+Integrais
+~~~~~~~~~
+
+Seja
+
+.. math::
+   F:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C},
+   \quad t\longmapsto U(t)+iV(t),
+
+uma função contínua. A integral de :math:`F` em :math:`[a,b]` é definida por
+
+.. math:: \int_a^bF(t)\,dt=\int_a^bU(t)\,dt+i\int_a^bV(t)\,dt.
+
+Deste modo, são imediatas as propriedades seguintes, válidas para abitrárias
+funções contínuas :math:`F,G:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C}`
+e constante complexa :math:`c\in\mathbb{C}`:
+
+1. :math:`\mathfrak{Re}\left(\int_a^bF(t)\,dt\right)=\int_a^b\mathfrak{Re}\left(
+   F(t)\right)\,dt\,\,\,\mbox{e}\,\,\,\mathfrak{Im}\left(\int_a^bF(t)\,dt\right)
+   = \int_a^b\mathfrak{Im}\left(F(t)\right)\,dt`;
+2. :math:`\int_a^b\left(F(t)+c\,G(t)\right)\,dt=\int_a^bF(t)\,dt+c\int_a^bG(t)\,
+   dt`;
+
+Finalmente, caso :math:`\int_a^bF(t)\,dt\neq0`, escreva
+:math:`\int_a^bF(t)\,dt=re^{i\theta}` (:math:`r>0`) para concluir que
+
+.. math::
+   \vert\int_a^bF(t)\,dt\vert&=\vert re^{i\theta}\vert=r=
+   e^{-i\theta}\int_a^bF(t)\,dt=\int_a^be^{-i\theta}F(t)\,dt=
+
+   &=\mathfrak{Re}\left(\int_a^be^{-i\theta}F(t)\,dt\right)=
+   \int_a^b\mathfrak{Re}\left(e^{-i\theta}F(t)\right)\,dt\leqslant
+
+   &\leqslant\int_a^b\vert\mathfrak{Re}\left(e^{-i\theta}F(t)\right)\vert\,dt
+   \leqslant\int_a^b\vert e^{-i\theta}F(t)\vert\,dt=\int_a^b\vert F(t)\vert\,dt.
+
+Se :math:`\int_a^bF(t)\,dt=0` é claro que
+
+.. math:: \vert\int_a^bF(t)\,dt\vert=0\leqslant\int_a^b\vert F(t)\vert\,dt
+
+Deste modo, é também verdade que:
+
+3. :math:`\vert\int_a^bF(t)\,dt\vert\leqslant\int_a^b\vert F(t)\vert\,dt`,
+
+para toda função contínua
+:math:`F:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C}`.

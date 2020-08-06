@@ -1,9 +1,0 @@
-Variáveis Complexas
-===================
-
-.. toctree::
-   :caption: Conteúdo:
-   :maxdepth: 2
-   :name: Variáveis Complexas
-
-   arcos.rst

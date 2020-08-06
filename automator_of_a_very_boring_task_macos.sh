@@ -1,7 +1,7 @@
 #!/bin/bash
 # automator_of_a_very_boring_task_macos.sh
 
-SOURCE="/Users/barboza/Projects/Bitbucket/notas_de_aula/sphinx/build/*"
+SOURCE="/Users/barboza/Projects/Bitbucket/notas_de_aula/sphinx/build/html/*"
 DESTINATION="/Users/barboza/Projects/GitHub/marcelobarboza.github.io/"
 
 cp -r $SOURCE $DESTINATION
