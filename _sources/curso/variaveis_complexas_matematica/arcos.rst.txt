@@ -85,10 +85,11 @@ requisitos:
 
 #. :math:`z` é contínua em :math:`[a,b]`;
 #. :math:`[a,b]=[a_1,b_1]\cup[a_2,b_2]\cup\cdots\cup[a_n,b_n]` onde
-   :math:`a=a_1<b_1=a_2<\cdots<b_{i-1}=a_i<b_i=a_{i+1}<\cdots<b_{n-1}=a_n<b_n=b`;
-#. para cada :math:`i\in\{1,\ldots,n\}` a restrição :math:`z=z\mid_{(a_i,b_i)}`
-   é uma função derivável e sua derivada :math:`z^\prime(t)` é uma função
-   contínua de :math:`t` que não se anula em :math:`(a_i,b_i)`;
+   :math:`n\in\mathbb{N}`, :math:`a_1=a`, :math:`b_{i-1}=a_i<b_i=a_{i+1}`
+   (:math:`2\leqslant i\leqslant n-1`) e :math:`b_n=b`;
+#. a restrição :math:`z=z\mid_{(a_i,b_i)}` é uma função derivável e sua derivada
+   :math:`z^\prime(t)` é uma função contínua de :math:`t` que não se anula em
+   :math:`(a_i,b_i)`, para cada :math:`i\in\{1,\ldots,n\}`;
 #. existem, são iguais entre si e distintas de zero as derivadas laterais
 
    .. math::
