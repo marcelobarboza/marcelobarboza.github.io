@@ -31,20 +31,18 @@ que poderia também ter sido parametrizado pela função
 
 Um *arco simples* é um arco cuja parametrização :math:`z=z(t)` é uma função
 (contínua) injetiva: à medida que :math:`t` varia em :math:`[a,b]`, de :math:`a`
-até :math:`b`, o ponto :math:`z(t)` percorre :math:`C`, de :math:`z(a)` a
-:math:`z(b)`, passando por cada ponto uma única vez.  Portanto, para que um arco
-não seja simples é necessário que ele contenha ao menos um ponto múltiplo: todo
-aquele para o qual existam :math:`a\leqslant t_1<t_2\leqslant b` tais que
-:math:`z(t_1)=z(t_2)`. Um *arco fechado* é um arco em que :math:`z(a)=z(b)`.
-Uma *curva de Jordan* é um arco fechado :math:`C` que à exceção dos pontos
-:math:`z(a)=z(b)` é um arco simples (em outras palavras, a restrição
-:math:`z\mid_{(a,b)}:(a,b)\subseteq\mathbb{R}\longrightarrow\mathbb{C}`,
-:math:`t\longmapsto z(t)`, de :math:`z` ao intervalo aberto
-:math:`(a,b)\subseteq[a,b]`, é uma função injetiva).
+até :math:`b`, o ponto :math:`z(t)` caminha em :math:`C`, de :math:`z(a)` a
+:math:`z(b)`, passando em cada ponto de :math:`C` uma única vez.  Portanto, para
+que um arco não seja simples é necessário que ele contenha ao menos um ponto
+múltiplo: todo aquele para o qual existam :math:`a\leqslant t_1<t_2\leqslant b`
+tais que :math:`z(t_1)=z(t_2)`. Um *arco fechado* é um arco em que
+:math:`z(a)=z(b)`. Uma *curva de Jordan* é um arco fechado :math:`C` que à
+exceção de :math:`z(a)=z(b)` não possui ponto múltiplos (em outras palavras, a
+restrição :math:`z=z\mid_{[a,b)}`, de :math:`z` ao intervalo semi-aberto
+:math:`[a,b)\subseteq[a,b]`, é uma função injetiva).
 
-Será, às vezes, necessário nos referirmos a um arco como um subconjunto fechado
-de :math:`\mathbb{C}` (no sentido topológico). Não confunda conjunto fechado com
-arco fechado (ainda que o conjunto sob consideração seja um arco!).
+.. note::
+   Não confunda *arco fechado* com *conjunto fechado* (no sentido topológico).
 
 Exemplos
 ~~~~~~~~
@@ -79,26 +77,31 @@ Como diz Cortella_, é tempo para o conhecimento!
 Contornos
 ~~~~~~~~~
 
-Chamamos de *contorno* a um arco :math:`C` cuja representação paramétrica
-:math:`z:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C}` cumpre aos seguintes
-requisitos:
+Chamamos *contorno* a um arco :math:`C` cuja representação paramétrica
+:math:`z:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C}` cumpra às seguintes
+condições:
 
 #. :math:`z` é contínua em :math:`[a,b]`;
-#. :math:`[a,b]=[a_1,b_1]\cup[a_2,b_2]\cup\cdots\cup[a_n,b_n]` onde
-   :math:`n\in\mathbb{N}`, :math:`a_1=a`, :math:`b_{i-1}=a_i<b_i=a_{i+1}`
-   (:math:`2\leqslant i\leqslant n-1`) e :math:`b_n=b`;
+#. :math:`[a,b]=[a_1,b_1]\cup\cdots\cup[a_n,b_n]` onde :math:`n\in\mathbb{N}` e
+
+   .. math:: a=a_1<b_{i-1}=a_i<b_i=a_{i+1}<b_n=b,
+
+   para todo :math:`i=2,\ldots,n-1`;
 #. a restrição :math:`z=z\mid_{(a_i,b_i)}` é uma função derivável e sua derivada
    :math:`z^\prime(t)` é uma função contínua de :math:`t` que não se anula em
-   :math:`(a_i,b_i)`, para cada :math:`i\in\{1,\ldots,n\}`;
-#. existem, são iguais entre si e distintas de zero as derivadas laterais
+   :math:`(a_i,b_i)`, para cada :math:`i=1,\ldots,n`;
+#. existem, são coincidentes e não nulas as derivadas laterais
 
    .. math::
-      z^\prime(a_i^+)=\lim\limits_{t\to a_i^+}\dfrac{z(t)-z(a_i)}{t-a_i}=
+      z^\prime(b_{i-1}^-)=
       \lim\limits_{t\to b_{i-1}^-}\dfrac{z(t)-z(b_{i-1})}{t-b_{i-1}}=
-      z^\prime(b_{i-1}^-).
+      \lim\limits_{t\to a_i^+}\dfrac{z(t)-z(a_i)}{t-a_i}=
+      z^\prime(a_i^+),
 
-Integrais
-~~~~~~~~~
+   para todo :math:`i=2,\ldots,n`.
+
+Integrais de contorno
+~~~~~~~~~~~~~~~~~~~~~
 
 Seja
 
@@ -143,3 +146,14 @@ Deste modo, é também verdade que:
 
 para toda função contínua
 :math:`F:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C}`.
+
+Sejam :math:`f:U\subseteq\mathbb{C}\longrightarrow\mathbb{C}` uma função
+contínua e :math:`C\subseteq U` um contorno qualquer no domínio de :math:`f`.
+Neste caso, definimos
+
+.. math:: \int_Cf(z)\,dz=\int_a^bf(z(t))\,z^\prime(t)\,dt
+
+onde :math:`z:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C}` é uma
+arbitrária parametrização de :math:`C`.
+
+

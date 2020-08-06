@@ -94,7 +94,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#exemplos">Exemplos</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#teorema-da-curva-de-jordan">Teorema da Curva de Jordan</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#contornos">Contornos</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#integrais">Integrais</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#integrais-de-contorno">Integrais de contorno</a></li>
 </ul>
 </li>
 </ul>
@@ -197,19 +197,19 @@ que poderia também ter sido parametrizado pela função</p>
 \quad t\longmapsto z_2(t)=z(-t).\]</div>
 <p>Um <em>arco simples</em> é um arco cuja parametrização <span class="math notranslate nohighlight">\(z=z(t)\)</span> é uma função
 (contínua) injetiva: à medida que <span class="math notranslate nohighlight">\(t\)</span> varia em <span class="math notranslate nohighlight">\([a,b]\)</span>, de <span class="math notranslate nohighlight">\(a\)</span>
-até <span class="math notranslate nohighlight">\(b\)</span>, o ponto <span class="math notranslate nohighlight">\(z(t)\)</span> percorre <span class="math notranslate nohighlight">\(C\)</span>, de <span class="math notranslate nohighlight">\(z(a)\)</span> a
-<span class="math notranslate nohighlight">\(z(b)\)</span>, passando por cada ponto uma única vez.  Portanto, para que um arco
-não seja simples é necessário que ele contenha ao menos um ponto múltiplo: todo
-aquele para o qual existam <span class="math notranslate nohighlight">\(a\leqslant t_1&lt;t_2\leqslant b\)</span> tais que
-<span class="math notranslate nohighlight">\(z(t_1)=z(t_2)\)</span>. Um <em>arco fechado</em> é um arco em que <span class="math notranslate nohighlight">\(z(a)=z(b)\)</span>.
-Uma <em>curva de Jordan</em> é um arco fechado <span class="math notranslate nohighlight">\(C\)</span> que à exceção dos pontos
-<span class="math notranslate nohighlight">\(z(a)=z(b)\)</span> é um arco simples (em outras palavras, a restrição
-<span class="math notranslate nohighlight">\(z\mid_{(a,b)}:(a,b)\subseteq\mathbb{R}\longrightarrow\mathbb{C}\)</span>,
-<span class="math notranslate nohighlight">\(t\longmapsto z(t)\)</span>, de <span class="math notranslate nohighlight">\(z\)</span> ao intervalo aberto
-<span class="math notranslate nohighlight">\((a,b)\subseteq[a,b]\)</span>, é uma função injetiva).</p>
-<p>Será, às vezes, necessário nos referirmos a um arco como um subconjunto fechado
-de <span class="math notranslate nohighlight">\(\mathbb{C}\)</span> (no sentido topológico). Não confunda conjunto fechado com
-arco fechado (ainda que o conjunto sob consideração seja um arco!).</p>
+até <span class="math notranslate nohighlight">\(b\)</span>, o ponto <span class="math notranslate nohighlight">\(z(t)\)</span> caminha em <span class="math notranslate nohighlight">\(C\)</span>, de <span class="math notranslate nohighlight">\(z(a)\)</span> a
+<span class="math notranslate nohighlight">\(z(b)\)</span>, passando em cada ponto de <span class="math notranslate nohighlight">\(C\)</span> uma única vez.  Portanto, para
+que um arco não seja simples é necessário que ele contenha ao menos um ponto
+múltiplo: todo aquele para o qual existam <span class="math notranslate nohighlight">\(a\leqslant t_1&lt;t_2\leqslant b\)</span>
+tais que <span class="math notranslate nohighlight">\(z(t_1)=z(t_2)\)</span>. Um <em>arco fechado</em> é um arco em que
+<span class="math notranslate nohighlight">\(z(a)=z(b)\)</span>. Uma <em>curva de Jordan</em> é um arco fechado <span class="math notranslate nohighlight">\(C\)</span> que à
+exceção de <span class="math notranslate nohighlight">\(z(a)=z(b)\)</span> não possui ponto múltiplos (em outras palavras, a
+restrição <span class="math notranslate nohighlight">\(z=z\mid_{[a,b)}\)</span>, de <span class="math notranslate nohighlight">\(z\)</span> ao intervalo semi-aberto
+<span class="math notranslate nohighlight">\([a,b)\subseteq[a,b]\)</span>, é uma função injetiva).</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Não confunda <em>arco fechado</em> com <em>conjunto fechado</em> (no sentido topológico).</p>
+</div>
 <div class="section" id="exemplos">
 <h2>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h2>
 <ol class="arabic">
@@ -236,27 +236,31 @@ Como diz <a class="reference external" href="https://pt.wikipedia.org/wiki/Mario
 </div>
 <div class="section" id="contornos">
 <h2>Contornos<a class="headerlink" href="#contornos" title="Link permanente para este título">¶</a></h2>
-<p>Chamamos de <em>contorno</em> a um arco <span class="math notranslate nohighlight">\(C\)</span> cuja representação paramétrica
-<span class="math notranslate nohighlight">\(z:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C}\)</span> cumpre aos seguintes
-requisitos:</p>
+<p>Chamamos <em>contorno</em> a um arco <span class="math notranslate nohighlight">\(C\)</span> cuja representação paramétrica
+<span class="math notranslate nohighlight">\(z:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C}\)</span> cumpra às seguintes
+condições:</p>
 <ol class="arabic">
 <li><p><span class="math notranslate nohighlight">\(z\)</span> é contínua em <span class="math notranslate nohighlight">\([a,b]\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\([a,b]=[a_1,b_1]\cup[a_2,b_2]\cup\cdots\cup[a_n,b_n]\)</span> onde
-<span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(a_1=a\)</span>, <span class="math notranslate nohighlight">\(b_{i-1}=a_i&lt;b_i=a_{i+1}\)</span>
-(<span class="math notranslate nohighlight">\(2\leqslant i\leqslant n-1\)</span>) e <span class="math notranslate nohighlight">\(b_n=b\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\([a,b]=[a_1,b_1]\cup\cdots\cup[a_n,b_n]\)</span> onde <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> e</p>
+<div class="math notranslate nohighlight">
+\[a=a_1&lt;b_{i-1}=a_i&lt;b_i=a_{i+1}&lt;b_n=b,\]</div>
+<p>para todo <span class="math notranslate nohighlight">\(i=2,\ldots,n-1\)</span>;</p>
+</li>
 <li><p>a restrição <span class="math notranslate nohighlight">\(z=z\mid_{(a_i,b_i)}\)</span> é uma função derivável e sua derivada
 <span class="math notranslate nohighlight">\(z^\prime(t)\)</span> é uma função contínua de <span class="math notranslate nohighlight">\(t\)</span> que não se anula em
-<span class="math notranslate nohighlight">\((a_i,b_i)\)</span>, para cada <span class="math notranslate nohighlight">\(i\in\{1,\ldots,n\}\)</span>;</p></li>
-<li><p>existem, são iguais entre si e distintas de zero as derivadas laterais</p>
+<span class="math notranslate nohighlight">\((a_i,b_i)\)</span>, para cada <span class="math notranslate nohighlight">\(i=1,\ldots,n\)</span>;</p></li>
+<li><p>existem, são coincidentes e não nulas as derivadas laterais</p>
 <div class="math notranslate nohighlight">
-\[z^\prime(a_i^+)=\lim\limits_{t\to a_i^+}\dfrac{z(t)-z(a_i)}{t-a_i}=
+\[z^\prime(b_{i-1}^-)=
 \lim\limits_{t\to b_{i-1}^-}\dfrac{z(t)-z(b_{i-1})}{t-b_{i-1}}=
-z^\prime(b_{i-1}^-).\]</div>
+\lim\limits_{t\to a_i^+}\dfrac{z(t)-z(a_i)}{t-a_i}=
+z^\prime(a_i^+),\]</div>
+<p>para todo <span class="math notranslate nohighlight">\(i=2,\ldots,n\)</span>.</p>
 </li>
 </ol>
 </div>
-<div class="section" id="integrais">
-<h2>Integrais<a class="headerlink" href="#integrais" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="integrais-de-contorno">
+<h2>Integrais de contorno<a class="headerlink" href="#integrais-de-contorno" title="Link permanente para este título">¶</a></h2>
 <p>Seja</p>
 <div class="math notranslate nohighlight">
 \[F:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C},
@@ -290,6 +294,13 @@ e^{-i\theta}\int_a^bF(t)\,dt=\int_a^be^{-i\theta}F(t)\,dt=\\&amp;=\mathfrak{Re}\
 </ol>
 <p>para toda função contínua
 <span class="math notranslate nohighlight">\(F:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C}\)</span>.</p>
+<p>Sejam <span class="math notranslate nohighlight">\(f:U\subseteq\mathbb{C}\longrightarrow\mathbb{C}\)</span> uma função
+contínua e <span class="math notranslate nohighlight">\(C\subseteq U\)</span> um contorno qualquer no domínio de <span class="math notranslate nohighlight">\(f\)</span>.
+Neste caso, definimos</p>
+<div class="math notranslate nohighlight">
+\[\int_Cf(z)\,dz=\int_a^bf(z(t))\,z^\prime(t)\,dt\]</div>
+<p>onde <span class="math notranslate nohighlight">\(z:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C}\)</span> é uma
+arbitrária parametrização de <span class="math notranslate nohighlight">\(C\)</span>.</p>
 </div>
 </div>
 
