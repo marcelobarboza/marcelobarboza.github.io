@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Arcos &mdash; documentação Material de Apoio às Aulas 0.1</title>
+  <title>Integrais &mdash; documentação Material de Apoio às Aulas 0.1</title>
   
 
   
@@ -90,7 +90,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../algebra_linear_matematica/index.html">Álgebra Linear</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../algebra_moderna_matematica/index.html">Álgebra Moderna</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Variáveis Complexas</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Arcos</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Integrais</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#arcos">Arcos</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#exemplos">Exemplos</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#teorema-da-curva-de-jordan">Teorema da Curva de Jordan</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#contornos">Contornos</a></li>
@@ -152,7 +153,7 @@
         
           <li><a href="index.html">Variáveis Complexas</a> &raquo;</li>
         
-      <li>Arcos</li>
+      <li>Integrais</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -171,8 +172,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="arcos">
-<h1>Arcos<a class="headerlink" href="#arcos" title="Link permanente para este título">¶</a></h1>
+  <div class="section" id="integrais">
+<h1>Integrais<a class="headerlink" href="#integrais" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="arcos">
+<h2>Arcos<a class="headerlink" href="#arcos" title="Link permanente para este título">¶</a></h2>
 <p>Um <em>arco</em> é um conjunto de pontos dados de forma paramétrica</p>
 <div class="math notranslate nohighlight">
 \[C=\{z(t)=x(t)+iy(t):t\in [a,b]\}\subseteq\mathbb{C},\]</div>
@@ -209,6 +212,7 @@ restrição <span class="math notranslate nohighlight">\(z=z\mid_{[a,b)}\)</span
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <p>Não confunda <em>arco fechado</em> com <em>conjunto fechado</em> (no sentido topológico).</p>
+</div>
 </div>
 <div class="section" id="exemplos">
 <h2>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h2>
@@ -299,8 +303,33 @@ contínua e <span class="math notranslate nohighlight">\(C\subseteq U\)</span> u
 Neste caso, definimos</p>
 <div class="math notranslate nohighlight">
 \[\int_Cf(z)\,dz=\int_a^bf(z(t))\,z^\prime(t)\,dt\]</div>
-<p>onde <span class="math notranslate nohighlight">\(z:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C}\)</span> é uma
-arbitrária parametrização de <span class="math notranslate nohighlight">\(C\)</span>.</p>
+<p>onde</p>
+<div class="math notranslate nohighlight">
+\[z:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C},\quad
+t\longmapsto x(t)+iy(t),\]</div>
+<p>é uma arbitrária parametrização de <span class="math notranslate nohighlight">\(C\)</span>. Se, por acaso, você estiver se
+perguntando</p>
+<blockquote>
+<div><p>&quot;<cite>Mas, e se eu utilizasse uma outra parametrização do mesmo caminho?</cite>&quot;</p>
+</div></blockquote>
+<p>fique tranquilo, pois você está coberto de razão! Acontece que o integrando à
+direita na igualdade que define a integral complexa é dado por</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\mathfrak{Re}\left(f(z(t))\,z^\prime(t)\right)&amp;=
+[U(x(t),y(t))x^\prime(t)-V(x(t),y(t))y^\prime(t)]\\\mathfrak{Im}(f(z(t))\,z^\prime(t))&amp;=
+[U(x(t),y(t))y^\prime(t)+V(x(t),y(t))x^\prime(t)]\end{aligned}\end{align} \]</div>
+<p>de onde segue que</p>
+<div class="math notranslate nohighlight">
+\[\int_a^bf(z(t))\,z^\prime(t)\,dt=\int_{\alpha}^{\beta}f(z(t(\tau)))\,
+z^\prime(t(\tau))\,t^\prime(\tau)\,d\tau\]</div>
+<p>pelo <a class="reference external" href="http://elib.mi.sanu.ac.rs/files/journals/tm/34/tmn34p25-28.pdf">Teorema da mudança de variável para a integral de Riemann</a>, válido para toda função
+derivável</p>
+<div class="math notranslate nohighlight">
+\[t:[\alpha,\beta]\longrightarrow[a,b],\quad\tau\longmapsto t(\tau),\]</div>
+<p>cuja derivada <span class="math notranslate nohighlight">\(t^\prime(\tau)\)</span> seja uma função integrável à Riemann, o que
+expressa a invariância da integral em relação à parametrização utilizada.
+Podemos, assim, omitir a parametrização em uso sem com isso comprometermos o
+significado único e preciso atribuído a <span class="math notranslate nohighlight">\(\int_Cf(z)\,dz\)</span>.</p>
 </div>
 </div>
 

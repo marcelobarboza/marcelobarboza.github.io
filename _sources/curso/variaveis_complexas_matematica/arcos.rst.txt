@@ -1,5 +1,8 @@
+Integrais
+---------
+
 Arcos
------
+~~~~~
 
 Um *arco* é um conjunto de pontos dados de forma paramétrica
 
@@ -153,7 +156,40 @@ Neste caso, definimos
 
 .. math:: \int_Cf(z)\,dz=\int_a^bf(z(t))\,z^\prime(t)\,dt
 
-onde :math:`z:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C}` é uma
-arbitrária parametrização de :math:`C`.
+onde
 
+.. math::
+   z:[a,b]\subseteq\mathbb{R}\longrightarrow\mathbb{C},\quad
+   t\longmapsto x(t)+iy(t),
 
+é uma arbitrária parametrização de :math:`C`. Se, por acaso, você estiver se
+perguntando
+
+    \"`Mas, e se eu utilizasse uma outra parametrização do mesmo caminho?`\"
+
+fique tranquilo, pois você está coberto de razão! Acontece que o integrando à
+direita na igualdade que define a integral complexa é dado por
+
+.. math::
+   \mathfrak{Re}\left(f(z(t))\,z^\prime(t)\right)&=
+   [U(x(t),y(t))x^\prime(t)-V(x(t),y(t))y^\prime(t)]
+
+   \mathfrak{Im}(f(z(t))\,z^\prime(t))&=
+   [U(x(t),y(t))y^\prime(t)+V(x(t),y(t))x^\prime(t)]
+
+de onde segue que
+
+.. math::
+   \int_a^bf(z(t))\,z^\prime(t)\,dt=\int_{\alpha}^{\beta}f(z(t(\tau)))\,
+   z^\prime(t(\tau))\,t^\prime(\tau)\,d\tau
+
+pelo `Teorema da mudança de variável para a integral de Riemann <http://elib.mi.
+san u.ac.rs/files/journals/tm/34/tmn34p25-28.pdf>`_, válido para toda função
+derivável
+
+.. math:: t:[\alpha,\beta]\longrightarrow[a,b],\quad\tau\longmapsto t(\tau),
+
+cuja derivada :math:`t^\prime(\tau)` seja uma função integrável à Riemann, o que
+expressa a invariância da integral em relação à parametrização utilizada.
+Podemos, assim, omitir a parametrização em uso sem com isso comprometermos o
+significado único e preciso atribuído a :math:`\int_Cf(z)\,dz`.
