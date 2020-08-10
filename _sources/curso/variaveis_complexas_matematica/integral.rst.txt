@@ -63,17 +63,21 @@ Exemplos
       z:[-1,1]\subseteq\mathbb{R}\longrightarrow\mathbb{C},
       \quad t\longmapsto 1-it;
 
-#. A parametrização
-
-   .. math:: z:\mathbb{R}\longrightarrow\mathbb{C},\quad t\longmapsto t^2+it,
-
-   representa uma parábola (note que :math:`x(t)=t^2`, :math:`y(t)=t` e,
-   portanto, que :math:`x=y^2`);
+#. A parábola
 
    .. tikz::
       \draw[->] (-1,0) -- (5,0) node[right] {$x$};
       \draw[->] (0,-3) -- (0,3) node[above] {$y$};
       \draw[scale=0.5, domain=-3:3, smooth, variable=\y, blue, ->] plot ({\y*\y},{\y});
+
+   parametrizada por
+
+   .. math::
+      z:[-3,3]\subseteq\mathbb{R}\longrightarrow\mathbb{C},\quad
+      t\longmapsto t^2+it,
+
+   (observe que :math:`x(t)=t^2`, :math:`y(t)=t` e, deste modo, que
+   :math:`x=y^2`);
 
 Teorema da Curva de Jordan
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
