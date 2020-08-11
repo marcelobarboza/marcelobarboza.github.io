@@ -50,18 +50,34 @@ restrição :math:`z=z\mid_{[a,b)}`, de :math:`z` ao intervalo semi-aberto
 Exemplos
 ~~~~~~~~
 
-#. O segmento de reta parametrizado por
+#. O segmento de reta
+
+   .. tikz::
+      \draw[->] (-1,0) -- (2,0) node[right] {$x$};
+      \draw[->] (0,-1.5) -- (0,1.5) node[above] {$y$};
+      \draw[scale=1.0, domain=-1:1, smooth, variable=\y, blue, ->] plot (1,{\y});
+
+   parametrizado por
 
    .. math::
-      z:[0,2]\subseteq\mathbb{R}\longrightarrow\mathbb{C},
+      z:[-1,1]\subseteq\mathbb{R}\longrightarrow\mathbb{C},
       \quad t\longmapsto 1-it;
 
-#. A parametrização
+#. A parábola
 
-   .. math:: z:\mathbb{R}\longrightarrow\mathbb{C},\quad t\longmapsto t^2+it,
+   .. tikz::
+      \draw[->] (-1,0) -- (5,0) node[right] {$x$};
+      \draw[->] (0,-3) -- (0,3) node[above] {$y$};
+      \draw[scale=0.5, domain=-3:3, smooth, variable=\y, blue, ->] plot ({\y*\y},{\y});
 
-   representa uma parábola (note que :math:`x(t)=t^2`, :math:`y(t)=t` e,
-   portanto, que :math:`x=y^2`);
+   parametrizada por
+
+   .. math::
+      z:[-3,3]\subseteq\mathbb{R}\longrightarrow\mathbb{C},\quad
+      t\longmapsto t^2+it,
+
+   (observe que :math:`x(t)=t^2`, :math:`y(t)=t` e, deste modo, que
+   :math:`x=y^2`);
 
 Teorema da Curva de Jordan
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -189,7 +205,7 @@ derivável
 
 .. math:: t:[\alpha,\beta]\longrightarrow[a,b],\quad\tau\longmapsto t(\tau),
 
-cuja derivada :math:`t^\prime(\tau)` seja uma função integrável à Riemann, o que
+cuja derivada :math:`t^\prime(\tau)` seja uma função integrável a Riemann, o que
 expressa a invariância da integral em relação à parametrização utilizada.
 Podemos, assim, omitir a parametrização em uso sem com isso comprometermos o
 significado único e preciso atribuído a :math:`\int_Cf(z)\,dz`.

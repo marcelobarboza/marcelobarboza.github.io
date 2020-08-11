@@ -38,7 +38,7 @@
     
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Buscar" href="../../search.html" />
-    <link rel="next" title="Planos de Ensino: 2020/1" href="../../plano/index.html" />
+    <link rel="next" title="Propriedades da Integral" href="propriedades_da_integral.html" />
     <link rel="prev" title="Variáveis Complexas" href="index.html" /> 
 </head>
 
@@ -98,6 +98,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#integrais-de-contorno">Integrais de contorno</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="propriedades_da_integral.html">Propriedades da Integral</a></li>
 </ul>
 </li>
 </ul>
@@ -159,7 +160,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/curso/variaveis_complexas_matematica/arcos.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
+            <a href="../../_sources/curso/variaveis_complexas_matematica/integral.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
           
         
       </li>
@@ -217,16 +218,27 @@ restrição <span class="math notranslate nohighlight">\(z=z\mid_{[a,b)}\)</span
 <div class="section" id="exemplos">
 <h2>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h2>
 <ol class="arabic">
-<li><p>O segmento de reta parametrizado por</p>
+<li><p>O segmento de reta</p>
+<div class="figure">
+<p><img src="../../_images/tikz-08d1e1304c509c3b6dd68f8048af9acefcb80ad0.png" alt="\draw[-&gt;] (-1,0) -- (2,0) node[right] {$x$};
+\draw[-&gt;] (0,-1.5) -- (0,1.5) node[above] {$y$};
+\draw[scale=1.0, domain=-1:1, smooth, variable=\y, blue, -&gt;] plot (1,{\y});" /></p>
+</div><p>parametrizado por</p>
 <div class="math notranslate nohighlight">
-\[z:[0,2]\subseteq\mathbb{R}\longrightarrow\mathbb{C},
+\[z:[-1,1]\subseteq\mathbb{R}\longrightarrow\mathbb{C},
 \quad t\longmapsto 1-it;\]</div>
 </li>
-<li><p>A parametrização</p>
+<li><p>A parábola</p>
+<div class="figure">
+<p><img src="../../_images/tikz-9af4495f5fbc94b0bbe1272ad07b5a407df98161.png" alt="\draw[-&gt;] (-1,0) -- (5,0) node[right] {$x$};
+\draw[-&gt;] (0,-3) -- (0,3) node[above] {$y$};
+\draw[scale=0.5, domain=-3:3, smooth, variable=\y, blue, -&gt;] plot ({\y*\y},{\y});" /></p>
+</div><p>parametrizada por</p>
 <div class="math notranslate nohighlight">
-\[z:\mathbb{R}\longrightarrow\mathbb{C},\quad t\longmapsto t^2+it,\]</div>
-<p>representa uma parábola (note que <span class="math notranslate nohighlight">\(x(t)=t^2\)</span>, <span class="math notranslate nohighlight">\(y(t)=t\)</span> e,
-portanto, que <span class="math notranslate nohighlight">\(x=y^2\)</span>);</p>
+\[z:[-3,3]\subseteq\mathbb{R}\longrightarrow\mathbb{C},\quad
+t\longmapsto t^2+it,\]</div>
+<p>(observe que <span class="math notranslate nohighlight">\(x(t)=t^2\)</span>, <span class="math notranslate nohighlight">\(y(t)=t\)</span> e, deste modo, que
+<span class="math notranslate nohighlight">\(x=y^2\)</span>);</p>
 </li>
 </ol>
 </div>
@@ -326,7 +338,7 @@ z^\prime(t(\tau))\,t^\prime(\tau)\,d\tau\]</div>
 derivável</p>
 <div class="math notranslate nohighlight">
 \[t:[\alpha,\beta]\longrightarrow[a,b],\quad\tau\longmapsto t(\tau),\]</div>
-<p>cuja derivada <span class="math notranslate nohighlight">\(t^\prime(\tau)\)</span> seja uma função integrável à Riemann, o que
+<p>cuja derivada <span class="math notranslate nohighlight">\(t^\prime(\tau)\)</span> seja uma função integrável a Riemann, o que
 expressa a invariância da integral em relação à parametrização utilizada.
 Podemos, assim, omitir a parametrização em uso sem com isso comprometermos o
 significado único e preciso atribuído a <span class="math notranslate nohighlight">\(\int_Cf(z)\,dz\)</span>.</p>
@@ -341,7 +353,7 @@ significado único e preciso atribuído a <span class="math notranslate nohighli
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../plano/index.html" class="btn btn-neutral float-right" title="Planos de Ensino: 2020/1" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="propriedades_da_integral.html" class="btn btn-neutral float-right" title="Propriedades da Integral" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="Variáveis Complexas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Anterior</a>
