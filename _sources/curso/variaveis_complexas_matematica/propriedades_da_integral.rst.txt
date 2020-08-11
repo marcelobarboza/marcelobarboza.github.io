@@ -1,3 +1,6 @@
 Propriedades da Integral
 ------------------------
 
+Veja :cite:`conway_functions_1995`
+
+Veja :cite:`avila_variaveis_2000`

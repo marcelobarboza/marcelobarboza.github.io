@@ -1,0 +1,6 @@
+Referências
+-----------
+
+.. bibliography:: refs.bib
+   :style: alpha
+   :all:

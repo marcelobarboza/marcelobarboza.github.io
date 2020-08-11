@@ -8,3 +8,5 @@ Variáveis Complexas
 
    integral.rst
    propriedades_da_integral.rst
+   references.rst
+   videos.rst

@@ -1,0 +1,7 @@
+Vídeos do IMPA
+--------------
+
+Acesse `aqui <https://goo.gl/1TmbuX>`_ a lista de vídeos gravados no `IMPA
+<https://impa.br>`_, em 2013, de um curso em Análise Complexa ministrado pelo
+Professor e Pesquisador Alcides Lins Neto, autor da referência
+:cite:`neto_funcoes_2016`.
