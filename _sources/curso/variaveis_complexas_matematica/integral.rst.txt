@@ -63,14 +63,14 @@ Exemplos
       z:[-1,1]\subseteq\mathbb{R}\longrightarrow\mathbb{C},
       \quad t\longmapsto 1-it;
 
-#. A parábola
+#. O segmento de parábola
 
    .. tikz::
       \draw[->] (-1,0) -- (5,0) node[right] {$x$};
       \draw[->] (0,-3) -- (0,3) node[above] {$y$};
       \draw[scale=0.5, domain=-3:3, smooth, variable=\y, blue, ->] plot ({\y*\y},{\y});
 
-   parametrizada por
+   parametrizado por
 
    .. math::
       z:[-3,3]\subseteq\mathbb{R}\longrightarrow\mathbb{C},\quad
